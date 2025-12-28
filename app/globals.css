@@ -1,0 +1,304 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.7s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animated-arrow {
+  display: inline-block;
+  animation: arrowSlide 1.8s infinite ease-in-out;
+  transition: 0.3s;
+}
+
+@keyframes arrowSlide {
+  0% {
+    transform: translateX(0);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateX(6px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 0.8;
+  }
+}
+
+
+:root {
+  --brand-purple: #6B5CFF;
+  --brand-green: #CCFF33;
+  --bg-white: #FFFFFF;
+  --text-dark: #0F172A;
+}
+
+/* GLOBAL RESET */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;  /* prevents horizontal scrolling */
+  font-family: Inter, system-ui, sans-serif;
+  background: var(--bg-white);
+  color: var(--text-dark);
+}
+
+/* FIX LAYOUT WITHOUT BREAKING NAVBAR */
+.site-root {
+  width: 100%;
+  min-height: 100vh;
+  display: block;           /* avoid flex shrinking hero */
+  overflow-x: hidden;
+}
+
+main {
+  display: block;
+  width: 100%;
+}
+
+/* REMOVE THE BAD LINE — THIS WAS HIDING NAVBAR */
+* {
+  box-sizing: border-box;
+  /* ❌ DO NOT FORCE z-index HERE */
+  /* z-index: auto !important; -- removed */
+}
+
+/* ALLOW ABSOLUTE ELEMENTS LIKE NAVBAR TO APPEAR ABOVE */
+body, html {
+  position: relative;
+  z-index: 0;
+}
+
+/* ------------------ BRAND FONT: MANROPE ------------------ */
+
+:root {
+  /* ------------------------------
+     CORE PALETTE
+  ------------------------------ */
+  --brand-purple: #813DFF;
+  --brand-green: #DFFA33;
+  --brand-black: #1C1C1C;
+  --brand-white: #FFFFFF;
+
+  /* TEXT + BASE */
+  --text-dark: var(--brand-black);
+  --bg-white: var(--brand-white);
+
+  /* ------------------------------
+     PURPLE SHADES
+  ------------------------------ */
+  --purple-10: #7D3BF6;
+  --purple-20: #6C33D3;
+  --purple-30: #5A2BB3;
+  --purple-40: #492391;
+  --purple-50: #381B6F;
+    --purple-2: #d4bcff;
+    
+
+
+  /* ------------------------------
+     GREEN SHADES
+  ------------------------------ */
+  --green-10: #D8F130;
+  --green-20: #B9CF29;
+  --green-30: #9BAD23;
+  --green-40: #7D8B1C;
+  --green-50: #5E6915;
+
+  /* ------------------------------
+     PURPLE TINTS (LIGHT)
+  ------------------------------ */
+  --purple-tint-10: #EDE5FF;
+  --purple-tint-20: #D2BFFF;
+  --purple-tint-30: #B79AFF;
+  --purple-tint-40: #9C75FF;
+
+  /* ------------------------------
+     GREEN TINTS (LIGHT)
+  ------------------------------ */
+  --green-tint-10: #F9FED6;
+  --green-tint-20: #F2FDAD;
+  --green-tint-30: #ECFC85;
+  --green-tint-40: #E5FB5C;
+
+  /* ------------------------------
+     NEUTRAL GRAYS
+  ------------------------------ */
+  --gray-10: #DADADA;
+  --gray-20: #949494;
+  --gray-30: #565656;
+
+  /* ------------------------------
+     OPTIONAL UTILITY (Recommended)
+  ------------------------------ */
+  --shadow-purple: rgba(129, 61, 255, 0.25);
+  --shadow-green: rgba(223, 250, 51, 0.25);
+
+  --gradient-brand: linear-gradient(90deg, #813DFF, #DFFA33);
+}
+
+html, body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('/rebrand/fonts/Manrope-Files/manrope-regular.otf') format('opentype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('/rebrand/fonts/Manrope-Files/manrope-medium.otf') format('opentype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('/rebrand/fonts/Manrope-Files/manrope-semibold.otf') format('opentype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('/rebrand/fonts/Manrope-Files/manrope-bold.otf') format('opentype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('/rebrand/fonts/Manrope-Files/manrope-light.otf') format('opentype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('/rebrand/fonts/Manrope-Files/manrope-thin.otf') format('opentype');
+  font-weight: 100;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+}
+
+/* 
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('/rebrand/fonts/Manrope-Files/manrope-regular.otf') format('opentype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('/rebrand/fonts/Manrope-Files/manrope-medium.otf') format('opentype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('/rebrand/fonts/Manrope-Files/manrope-semibold.otf') format('opentype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('/rebrand/fonts/Manrope-Files/manrope-bold.otf') format('opentype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('/rebrand/fonts/Manrope-Files/manrope-light.otf') format('opentype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('/rebrand/fonts/Manrope-Files/manrope-thin.otf') format('opentype');
+  font-weight: 100;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+} */
+
+/* Apply to all headings ONLY reduce spacing */
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -1px !important;
+}
+
+/* Apply to ANY bold text ONLY reduce spacing */
+b, strong, .bold, 
+[style*="font-weight: 700"], 
+[style*="font-weight:900"] {
+  letter-spacing: 1px !important;
+}
+/* reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* experience drop */
+.exp-drop {
+  opacity: 0;
+  transform: translateY(-120px);
+  transition: transform 0.7s ease-out, opacity 0.7s ease-out;
+}
+.exp-drop.drop-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* wobble loop */
+.exp-drop.wobble {
+  animation: wobbleLoop 3s ease-in-out infinite;
+}
+
+@keyframes wobbleLoop {
+  0%   { transform: translateY(0) rotate(0deg); }
+  25%  { transform: translateY(-4px) rotate(1.5deg); }
+  50%  { transform: translateY(0) rotate(-1.5deg); }
+  75%  { transform: translateY(3px) rotate(1deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
