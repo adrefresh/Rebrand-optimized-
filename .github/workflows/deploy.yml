@@ -23,13 +23,21 @@ jobs:
         run: npm ci
 
       - name: Build Next.js App
-        run: npm run build
+        run: |
+          npm run build
+          npm run export
 
-      - name: Sync to Hostgator
+      - name: Deploy to Hostgator via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
+          port: 21
+          protocol: ftp
           local-dir: ./out/
           server-dir: ./
+          exclude: |
+            **/.git*
+            **/.github*
+            **/node_modules/**
