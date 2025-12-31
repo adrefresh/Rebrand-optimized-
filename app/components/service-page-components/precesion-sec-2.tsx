@@ -27,7 +27,7 @@ export default function PrecisionSectionGray() {
         className="absolute inset-0 z-0"
         style={{
           backgroundImage:
-            "url('/rebrand/images/service-page-images-videos/Gray-Dual.svg')",
+            "url('/images/service-page-images-videos/Gray-Dual.svg')",
           backgroundRepeat: "repeat-x",
           backgroundPosition: "top center",
           backgroundSize: "auto 100%",

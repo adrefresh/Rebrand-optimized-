@@ -27,10 +27,10 @@ export default function PrecisionSection() {
         className="absolute inset-0 pointer-events-none z-0"
         style={{
           backgroundColor: "#cfcfcf",
-          WebkitMaskImage: `url(${basePath}/images/contact-us-images-videos/GrayOutline.svg)`,
+          WebkitMaskImage: `url(/images/contact-us-images-videos/GrayOutline.svg)`,
           WebkitMaskRepeat: "repeat",
           WebkitMaskSize: "800px auto",
-          maskImage: `url(${basePath}/images/contact-us-images-videos/GrayOutline.svg)`,
+          maskImage: `url(/images/contact-us-images-videos/GrayOutline.svg)`,
           maskRepeat: "repeat",
           maskSize: "700px auto",
           opacity: 1.15,
