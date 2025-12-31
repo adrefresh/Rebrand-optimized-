@@ -1,35 +1,23 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
+    output: 'export',      // Required: Generates the 'out' folder 
 
-  basePath: "/rebrand",
+  images: { 
 
-  assetPrefix: "/rebrand/",
+    unoptimized: true,   // Required for static hosting 
 
-  images: {
-    unoptimized: true,
-  },
+  }, 
+
+  trailingSlash: true, 
 };
 
 module.exports = nextConfig;
 
-// import type { NextConfig } from "next"; 
+
 
  
 
-// const nextConfig: NextConfig = { 
 
-//   output: 'export',      // Required: Generates the 'out' folder 
-
-//   images: { 
-
-//     unoptimized: true,   // Required for static hosting 
-
-//   }, 
-
-//   trailingSlash: true,   // Clean URLs (e.g., /contact/) on Apache servers 
-
-// }; 
 
  
 
