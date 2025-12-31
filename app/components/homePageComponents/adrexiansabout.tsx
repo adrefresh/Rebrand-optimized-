@@ -471,9 +471,7 @@ export default function About() {
    
                 "
               >
-                AdRefresh is a next-gen Digital Ad Performance Management partner,
-                bringing together strategy, execution and intelligent optimization
-                under one agile powerhouse.
+              AdRefresh is a next-gen Digital Ad Performance Management partner, bringing together strategy, execution and intelligent optimization under one agile powerhouse
               </p>
 
               <p
@@ -491,9 +489,7 @@ export default function About() {
  
                 "
               >
-                With AI-enhanced workflows and multi-shift teams operating from
-                sunrise to late hours, we keep your campaigns performing,
-                adapting and accelerating without pause.
+            With AI-enhanced workflows and multi-shift teams operating from sunrise to late hours, we keep your campaigns performing, adapting and accelerating without pause.With AI-enhanced workflows and multi-shift teams operating from sunrise to late hours, we keep your campaigns performing, adapting and accelerating without pause. 
               </p>
 
               {/* CTA */}

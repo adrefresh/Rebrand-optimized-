@@ -109,7 +109,7 @@ export default function DigitalMarketingPage() {
         {/* VIDEO */}
         <video
           className="absolute inset-0 h-full w-full object-cover z-[1]"
-          src={`${basePath}/images/about-page-videos-images/dgm1.mp4`}
+          src={`${basePath}/images/about-page-videos-images/dgmvd.mp4`}
           autoPlay
           muted
           loop
@@ -158,7 +158,7 @@ export default function DigitalMarketingPage() {
       >
         {/* Precision Section */}
         <div className="mt-[-10%] max-[768px]:mt-[-15%]">
-          <PrecisionSectionGray />
+          <PrecisionSectionGray/>
         </div>
 
         {/* ZigZag Section */}

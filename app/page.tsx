@@ -150,7 +150,9 @@ export default function HomePage() {
       <CustomizedWorkflow />
       <CaseHeader />
       <Services />
-      <ListenPerform />
+     <div className="mb-[-162px] sm:mb-0">
+  <ListenPerform />
+</div>
 
       {/* SCROLL TARGET */}
       <section

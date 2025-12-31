@@ -635,6 +635,7 @@
 //     </>
 //   );
 // }
+
 import type { Metadata } from "next";
 import Link from "next/link";
 import ListenPerform from "../components/homePageComponents/we-listen";
@@ -675,26 +676,35 @@ export default function ClientSuccessPage() {
   return (
     <>
       {/* ================= HERO ================= */}
-      <section className="relative w-screen h-[80vh] ml-[calc(50%-50vw)] flex items-center justify-center overflow-hidden">
-        <video
-          className="absolute inset-0 w-full h-full object-cover"
-          autoPlay
-          muted
-          loop
-          playsInline
-          src={`${basePath}/images/about-page-videos-images/2.mp4`}
-        />
-        <div className="absolute inset-0 bg-black/65" />
+     {/* ================= HERO ================= */}
+<section
+  className="
+    relative w-screen
+    ml-[calc(50%-50vw)]
+    flex items-center justify-center overflow-hidden
+    h-[60vh]        /* 📱 mobile */
+    sm:h-[80vh]     /* 💻 tablet & above */
+  "
+>
+  <video
+    className="absolute inset-0 w-full h-full object-cover"
+    autoPlay
+    muted
+    loop
+    playsInline
+    src={`${basePath}/images/about-page-videos-images/clientvd.mp4`}
+  />
+  <div className="absolute inset-0 bg-black/65" />
 
-        <div className="relative z-10 text-center text-white px-4">
-          <h1 className="font-black text-[clamp(2.5rem,6vw,4rem)]">
-            Client Success
-          </h1>
-          <p className="mt-3 text-[clamp(1rem,2vw,1.25rem)] opacity-90">
-            Real-world outcomes powered by operational excellence
-          </p>
-        </div>
-      </section>
+  <div className="relative z-10 text-center text-white px-4">
+    <h1 className="font-black text-[clamp(2.5rem,6vw,4rem)]">
+      Client Success
+    </h1>
+    <p className="mt-3 text-[clamp(1rem,2vw,1.25rem)] opacity-90">
+      Real-world outcomes powered by operational excellence
+    </p>
+  </div>
+</section>
 
       {/* ================= PATTERN STRIP ================= */}
       <div className="relative w-full h-[14vh] overflow-hidden">

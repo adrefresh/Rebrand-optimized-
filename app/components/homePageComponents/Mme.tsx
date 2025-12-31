@@ -1526,7 +1526,8 @@ lg:mt-[-5%]">
                   sm:text-[4.6rem]
                   lg:text-[5rem]
 
-                  ml-[-10px]      /* mobile only */
+                  ml-[-30px]   
+                  mr-[10px]   /* mobile only */
                   sm:ml-0
 
                   text-[rgba(223,250,51,0.85)]

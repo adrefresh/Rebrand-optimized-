@@ -393,7 +393,7 @@ export default function DgZigZagSections() {
 
         .pattern-left::after {
           left: 0%;
-          top: -60%;
+          top: -45%;
           background: linear-gradient(to right, #565656 0%, #ffffff 55%);
           -webkit-mask: var(--mask-url) no-repeat right center / 135% 120%;
           mask: var(--mask-url) no-repeat right center / 135% 120%;
@@ -401,7 +401,7 @@ export default function DgZigZagSections() {
 
         .pattern-right::after {
           right: 0%;
-          top: -50%;
+          top: -40%;
           background: linear-gradient(to left, #565656 0%, #ffffff 55%);
           -webkit-mask: var(--mask-url) no-repeat left center / 135% 120%;
           mask: var(--mask-url) no-repeat left center / 135% 120%;

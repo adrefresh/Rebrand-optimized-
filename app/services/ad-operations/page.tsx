@@ -105,6 +105,7 @@
 //     </>
 //   );
 // }
+
 "use client";
 
 import {
@@ -116,13 +117,18 @@ import {
   Wrench,
 } from "lucide-react";
 
-import PrecisionSectionGray from "../../components/service-page-components/precesion-section-serv";
+// import PrecisionSectionGray from "../../components/service-page-components/precesion-section-serv";
 import ZigZagSections from "../../components/service-page-components/zig-zag-section";
 import AdOpsContactHero2 from "../../components/service-page-components/adops-contact-hero";
+import PrecisionSectionGray from "@/app/components/service-page-components/precesion-sec-2";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
+
 export default function AdOpsPageWithVideo() {
+
+  const dataHead="Let’s Build Smarter Digital Growth Together"
+  const dataDesc=" Connect with our experts to discuss your goals, challenges, and the right digital strategies for measurable, scalable results"
   return (
     <>
       {/* ============================================================
@@ -151,7 +157,7 @@ export default function AdOpsPageWithVideo() {
             object-cover
             z-[1]
           "
-          src={`${basePath}/images/about-page-videos-images/Adopsbg.mp4`}
+          src={`${basePath}/images/about-page-videos-images/adopsvd.mp4`}
           autoPlay
           muted
           loop
@@ -214,7 +220,7 @@ export default function AdOpsPageWithVideo() {
             max-[480px]:mt-0
           "
         >
-          <PrecisionSectionGray />
+          <PrecisionSectionGray/>
         </div>
 
         <br />

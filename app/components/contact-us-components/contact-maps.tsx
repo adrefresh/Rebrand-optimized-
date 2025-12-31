@@ -232,6 +232,7 @@
 //     </>
 //   );
 // }
+
 "use client";
 
 import React, { useState } from "react";
@@ -356,22 +357,30 @@ export default function ContactClient() {
   return (
     <>
       {/* ================= HERO ================= */}
-      <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
-        <video
-          className="absolute inset-0 w-full h-full object-cover z-[1]"
-          src={`${basePath}/images/contact-us-images-videos/3.mp4`}
-          autoPlay
-          loop
-          muted
-          playsInline
-        />
+{/* ================= HERO ================= */}
+<section
+  className="
+    relative flex items-center justify-center overflow-hidden
+    h-[60vh]        /* 📱 mobile */
+    sm:h-[90vh]     /* 💻 tablet & above */
+  "
+>
+  <video
+    className="absolute inset-0 w-full h-full object-cover z-[1]"
+    src={`${basePath}/images/contact-us-images-videos/3.mp4`}
+    autoPlay
+    loop
+    muted
+    playsInline
+  />
 
-        <div className="absolute inset-0 z-[3] bg-gradient-to-b from-black/10 via-black/40 to-black/50" />
+  <div className="absolute inset-0 z-[3] bg-gradient-to-b from-black/10 via-black/40 to-black/50" />
 
-        <h1 className="relative z-[5] text-[5rem] font-black text-white max-[768px]:text-[3rem]">
-          CONTACT US
-        </h1>
-      </section>
+  <h1 className="relative z-[5] text-[5rem] font-black text-white max-[768px]:text-[3rem]">
+    CONTACT US
+  </h1>
+</section>
+
 
       {/* ================= PRECISION ================= */}
       <PrecisionSection />

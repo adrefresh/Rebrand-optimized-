@@ -79,8 +79,8 @@ export default function VisionMission() {
                 text-[#333]
               "
             >
-              To build a future-ready media operations ecosystem through intelligent,
-              scalable, and cost-efficient solutions.
+            To be a trusted leader in digital marketing empowering brands to grow with AI-driven technology, skilled talent, and data-backed strategies. 
+We envision a future where businesses of all sizes can scale effortlessly through intelligent automation, transparent processes, and measurable, high-impact results. 
             </p>
           </div>
 
@@ -105,8 +105,7 @@ export default function VisionMission() {
                 text-[#333]
               "
             >
-              To execute media workflows with transparency, accountability,
-              and operational excellence.
+           Our mission is to deliver performance-driven digital marketing solutions using smart AI, automation, and expert execution. We focus on sustainable growth through tailored strategies, high-quality delivery, real-time support, and continuous improvement. 
             </p>
           </div>
 
@@ -131,8 +130,8 @@ export default function VisionMission() {
                 text-[#333]
               "
             >
-              Empower partners to grow confidently with resilient and future-proof
-              operational frameworks.
+           To be a trusted leader in digital marketing empowering brands to grow with AI-driven technology, skilled talent, and data-backed strategies. 
+We envision a future where businesses of all sizes can scale effortlessly through intelligent automation, transparent processes, and measurable, high-impact results. 
             </p>
           </div>
 
@@ -157,8 +156,8 @@ export default function VisionMission() {
                 text-[#333]
               "
             >
-              Combine expertise, automation, and discipline to exceed performance
-              benchmarks consistently.
+                      Our mission is to deliver performance-driven digital marketing solutions using smart AI, automation, and expert execution. We focus on sustainable growth through tailored strategies, high-quality delivery, real-time support, and continuous improvement. 
+
             </p>
           </div>
         </div>

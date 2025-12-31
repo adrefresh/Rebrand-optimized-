@@ -3,42 +3,42 @@
     {
       "id": 1,
       "title": "CAMPAIGN SETUP & MANAGEMENT",
-      "description": "End-to-end campaign setup across platforms, including configurations, targeting, creatives, and optimizations to ensure smooth execution and reliable delivery.",
+      "description": "End-to-end campaign setup across platforms, covering configurations, targeting, creative setup, and ongoing optimizations to ensure smooth execution and reliable delivery.",
       "side": "left",
       "pattern": "pattern-right"
     },
     {
       "id": 2,
       "title": "AD TRAFFICKING & TAG IMPLEMENTATION",
-      "description": "Accurate trafficking of ads with correct tags, placements, and specifications to ensure timely launches and error-free ad serving.",
+      "description": "Accurate trafficking of ads with correct tags, placements, formats, and specifications to enable timely launches and error-free ad serving across platforms.",
       "side": "right",
       "pattern": "pattern-left"
     },
     {
       "id": 3,
       "title": "PIXEL, TRACKING & MEASUREMENT SETUP",
-      "description": "Implementation and validation of pixels, events, and tracking tools to capture reliable data for performance measurement and optimization.",
+      "description": "Implementation, validation, and maintenance of pixels, events, and tracking tools to capture reliable data for performance measurement, attribution, and optimization.",
       "side": "left",
       "pattern": "pattern-right"
     },
     {
       "id": 4,
       "title": "CAMPAIGN MONITORING & PACING",
-      "description": "Continuous monitoring of live campaigns to control pacing, budgets, and delivery, ensuring performance stays aligned with business objectives.",
+      "description": "Continuous monitoring of live campaigns to manage pacing, budgets, and delivery, ensuring performance remains aligned with defined objectives and KPIs.",
       "side": "right",
       "pattern": "pattern-left"
     },
     {
       "id": 5,
       "title": "REPORTING, DASHBOARDS & INSIGHTS",
-      "description": "Clear reports and dashboards that translate campaign data into actionable insights for optimization, transparency, and smarter decision-making.",
+      "description": "Clear, transparent reports and dashboards that transform campaign data into actionable insights, supporting optimization, accountability, and informed decision-making.",
       "side": "left",
       "pattern": "pattern-right"
     },
     {
       "id": 6,
       "title": "AD TECH & PLATFORM ADMINISTRATION",
-      "description": "Ongoing management of ad platforms, user access, integrations, and tools to maintain operational efficiency and data accuracy.",
+      "description": "Ongoing administration of ad platforms, user access, integrations, and tools to maintain operational efficiency, governance, and data accuracy.",
       "side": "right",
       "pattern": "pattern-left"
     }

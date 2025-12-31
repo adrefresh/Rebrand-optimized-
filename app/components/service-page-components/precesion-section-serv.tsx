@@ -188,6 +188,7 @@
 //     </section>
 //   );
 // }
+
 "use client";
 
 export default function PrecisionSectionGray() {
