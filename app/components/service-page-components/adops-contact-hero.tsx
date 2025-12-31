@@ -1,8 +1,297 @@
-"use client";
+// // "use client";
 
+// // export default function AdOpsContactHero2() {
+// //   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
+// //   return (
+// //     <section
+// //       className="
+// //         relative
+// //         w-screen
+// //         overflow-hidden
+// //         text-center
+// //         py-[80px]
+// //         px-10
+// //         mb-[-11.6%]
+// //       "
+// //       style={{
+// //         marginLeft: "calc(50% - 50vw)",
+// //         background:
+// //           "linear-gradient(135deg, #813DFF 0%, #813DFF 100%)",
+// //       }}
+// //     >
+// //       {/* LEFT MASK LOGO */}
+// //       <div
+// //         className="
+// //           absolute
+// //           top-[-30px]
+// //           left-[50px]
+// //           w-[32vw]
+// //           h-[85vh]
+// //           z-[1]
+// //           pointer-events-none
+// //           opacity-[0.15]
+// //           max-[900px]:w-full
+// //           max-[900px]:h-[40%]
+// //           max-[900px]:opacity-[0.16]
+// //         "
+// //         style={{
+// //           backgroundColor: "#492391",
+// //           WebkitMaskImage: `url(${basePath}/images/service-page-images-videos/IconmarkVv.svg)`,
+// //           WebkitMaskRepeat: "no-repeat",
+// //           WebkitMaskSize: "contain",
+// //           WebkitMaskPosition: "center",
+// //           maskImage: `url(${basePath}/images/service-page-images-videos/IconmarkVv.svg)`,
+// //           maskRepeat: "no-repeat",
+// //           maskSize: "contain",
+// //           maskPosition: "center",
+// //         }}
+// //       />
+
+// //       {/* RIGHT OUTLINE PATTERN */}
+// //       <div
+// //         className="
+// //           absolute
+// //           top-1/2
+         
+// //           right-[-4%]
+// //           -translate-y-1/2
+// //           w-[95%]
+// //           h-full
+// //           z-[1]
+// //           pointer-events-none
+// //           opacity-[0.36]
+
+// //           max-[900px]:top-auto
+// //           max-[900px]:bottom-0
+// //           max-[900px]:translate-y-0
+// //           max-[900px]:w-full
+// //           max-[900px]:h-[40%]
+// //           max-[900px]:opacity-[0.28]
+// //         "
+// //         style={{
+// //           backgroundImage: `url(${basePath}/images/service-page-images-videos/VvOutline.svg)`,
+// //           backgroundRepeat: "no-repeat",
+// //           backgroundSize: "70%",
+// //           backgroundPosition: "center right",
+         
+// //         }}
+// //       />
+
+// //       {/* CONTENT */}
+// //       <div className="relative z-[5] max-w-[940px] mx-auto">
+// //         <h1
+// //           className="
+// //             text-white
+// //             font-black
+// //             mb-[18px]
+// //             mr-[-50%]
+
+// //             text-[44px]
+// //             max-[900px]:text-[36px]
+// //             max-[600px]:text-[28px]
+// //           "
+// //         >
+// // Simplify Your Ad Operations <br /> with Expert Support
+// //         </h1>
+
+// //         <p
+// //           className="
+// //             text-white
+// //             opacity-[0.95]
+// //             mb-[28px]
+// //             mr-[-50%]
+// //             text-[18px]
+// //           "
+// //         >
+// //                Talk to our specialists to streamline execution,
+// //           <br /> improve accuracy, and ensure your advertising operations run smoothly at scale.
+// //         </p>
+
+// //         <button
+// //           className="
+// //             mr-[-50%]
+// //             px-[36px]
+// //             py-[14px]
+// //             text-[17px]
+// //             rounded-[40px]
+// //             border
+// //             border-black
+// //             text-black
+// //             bg-transparent
+// //             transition
+// //             hover:bg-white
+// //           "
+// //         >
+// //           Request a Consultation
+// //         </button>
+// //       </div>
+// //     </section>
+// //   );
+// // }
+// "use client";
+
+// export default function AdOpsContactHero2() {
+//   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
+//   return (
+//     <section
+//       className="
+//         relative
+//         w-screen
+//         overflow-hidden
+//         text-center
+//         py-[80px]
+//         px-10
+//         max-[1280px]:py-[70px]
+//         max-[1024px]:py-[65px]
+//         max-[768px]:py-[60px]
+//         max-[600px]:py-[50px]
+//         mb-[-11.6%]
+//       "
+//       style={{
+//         marginLeft: "calc(50% - 50vw)",
+//         background:
+//           "linear-gradient(135deg, #813DFF 0%, #813DFF 100%)",
+//       }}
+//     >
+//       {/* LEFT MASK LOGO */}
+//       <div
+//         className="
+//           absolute
+//           top-[-30px]
+//           left-[50px]
+//           w-[32vw]
+//           h-[85vh]
+//           z-[1]
+//           pointer-events-none
+//           opacity-[0.15]
+
+//           max-[1280px]:w-[38vw]
+//           max-[1024px]:w-[45vw]
+//           max-[900px]:left-0
+//           max-[900px]:w-full
+//           max-[900px]:h-[40%]
+//           max-[900px]:opacity-[0.16]
+//         "
+//         style={{
+//           backgroundColor: "#492391",
+//           WebkitMaskImage: `url(${basePath}/images/service-page-images-videos/IconmarkVv.svg)`,
+//           WebkitMaskRepeat: "no-repeat",
+//           WebkitMaskSize: "contain",
+//           WebkitMaskPosition: "center",
+//           maskImage: `url(${basePath}/images/service-page-images-videos/IconmarkVv.svg)`,
+//           maskRepeat: "no-repeat",
+//           maskSize: "contain",
+//           maskPosition: "center",
+//         }}
+//       />
+
+//       {/* RIGHT OUTLINE PATTERN */}
+//       <div
+//         className="
+//           absolute
+//           top-1/2
+//           right-[-4%]
+//           -translate-y-1/2
+//           w-[95%]
+//           h-full
+//           z-[1]
+//           pointer-events-none
+//           opacity-[0.36]
+
+//           max-[1280px]:w-full
+//           max-[1024px]:opacity-[0.32]
+//           max-[900px]:top-auto
+//           max-[900px]:bottom-0
+//           max-[900px]:translate-y-0
+//           max-[900px]:w-full
+//           max-[900px]:h-[40%]
+//           max-[900px]:opacity-[0.28]
+//         "
+//         style={{
+//           backgroundImage: `url(${basePath}/images/service-page-images-videos/VvOutline.svg)`,
+//           backgroundRepeat: "no-repeat",
+//           backgroundSize: "70%",
+//           backgroundPosition: "center right",
+//         }}
+//       />
+
+//       {/* CONTENT */}
+//       <div className="relative z-[5] max-w-[940px] mx-auto">
+//         <h1
+//           className="
+//             text-white
+//             font-black
+//             mb-[18px]
+//             mr-[-50%]
+
+//             text-[44px]
+//             leading-tight
+//             max-[1280px]:text-[40px]
+//             max-[1024px]:text-[36px]
+//             max-[900px]:mr-0
+//             max-[768px]:text-[32px]
+//             max-[600px]:text-[28px]
+//           "
+//         >
+//           Simplify Your Ad Operations <br /> with Expert Support
+//         </h1>
+
+//         <p
+//           className="
+//             text-white
+//             opacity-[0.95]
+//             mb-[28px]
+//             mr-[-50%]
+
+//             text-[18px]
+//             max-[1024px]:text-[17px]
+//             max-[900px]:mr-0
+//             max-[768px]:text-[16px]
+//             max-[600px]:text-[15px]
+//           "
+//         >
+//           Talk to our specialists to streamline execution,
+//           <br />
+//           improve accuracy, and ensure your advertising operations run smoothly
+//           at scale.
+//         </p>
+
+//         <button
+//           className="
+//             mr-[-50%]
+//             px-[36px]
+//             py-[14px]
+//             text-[17px]
+//             rounded-[40px]
+//             border
+//             border-black
+//             text-black
+//             bg-transparent
+//             transition
+//             hover:bg-white
+
+//             max-[900px]:mr-0
+//             max-[600px]:px-[28px]
+//             max-[600px]:py-[12px]
+//             max-[600px]:text-[16px]
+//           "
+//         >
+//           Request a Consultation
+//         </button>
+//       </div>
+//     </section>
+//   );
+// }
+"use client";
+import { useRouter } from "next/navigation";
 export default function AdOpsContactHero2() {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
+
+
+  const router = useRouter();
   return (
     <section
       className="
@@ -12,28 +301,38 @@ export default function AdOpsContactHero2() {
         text-center
         py-[80px]
         px-10
+        max-[1280px]:py-[70px]
+        max-[1024px]:py-[65px]
+        max-[768px]:py-[60px]
+        max-[600px]:py-[50px]
         mb-[-11.6%]
       "
       style={{
         marginLeft: "calc(50% - 50vw)",
-        background:
-          "linear-gradient(135deg, #813DFF 0%, #813DFF 100%)",
+        background: "linear-gradient(135deg, #813DFF 0%, #813DFF 100%)",
       }}
     >
       {/* LEFT MASK LOGO */}
       <div
         className="
           absolute
-          top-[-18px]
+          top-[-20px]
           left-[50px]
           w-[32vw]
-          h-[85vh]
+          h-[78vh]
           z-[1]
           pointer-events-none
           opacity-[0.15]
+
+          max-[1280px]:w-[38vw]
+          max-[1024px]:w-[45vw]
+
+          /* MOBILE FIX */
+          max-[900px]:top-[10%]
+          max-[900px]:left-0
           max-[900px]:w-full
-          max-[900px]:h-[40%]
-          max-[900px]:opacity-[0.16]
+          max-[900px]:h-[45%]
+          max-[900px]:opacity-[0.25]
         "
         style={{
           backgroundColor: "#492391",
@@ -53,7 +352,6 @@ export default function AdOpsContactHero2() {
         className="
           absolute
           top-1/2
-         
           right-[-4%]
           -translate-y-1/2
           w-[95%]
@@ -62,19 +360,22 @@ export default function AdOpsContactHero2() {
           pointer-events-none
           opacity-[0.36]
 
+          max-[1280px]:w-full
+          max-[1024px]:opacity-[0.32]
+
+          /* MOBILE FIX */
           max-[900px]:top-auto
           max-[900px]:bottom-0
           max-[900px]:translate-y-0
           max-[900px]:w-full
-          max-[900px]:h-[40%]
-          max-[900px]:opacity-[0.28]
+          max-[900px]:h-[45%]
+          max-[900px]:opacity-[0.55]
         "
         style={{
           backgroundImage: `url(${basePath}/images/service-page-images-videos/VvOutline.svg)`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "70%",
           backgroundPosition: "center right",
-         
         }}
       />
 
@@ -87,14 +388,16 @@ export default function AdOpsContactHero2() {
             mb-[18px]
             mr-[-50%]
 
-            text-[52px]
-            max-[900px]:text-[36px]
+            text-[44px]
+            leading-tight
+            max-[1280px]:text-[40px]
+            max-[1024px]:text-[36px]
+            max-[900px]:mr-0
+            max-[768px]:text-[32px]
             max-[600px]:text-[28px]
           "
         >
-          Let’s Refine Your Advertising
-          <br />
-          Strategy for Greater Returns
+          Simplify Your Ad Operations <br /> with Expert Support
         </h1>
 
         <p
@@ -103,31 +406,43 @@ export default function AdOpsContactHero2() {
             opacity-[0.95]
             mb-[28px]
             mr-[-50%]
+
             text-[18px]
+            max-[1024px]:text-[17px]
+            max-[900px]:mr-0
+            max-[768px]:text-[16px]
+            max-[600px]:text-[15px]
           "
         >
-          Get expert media operations services to improve campaign effectiveness
+          Talk to our specialists to streamline execution,
           <br />
-          and overall ad performance.
+          improve accuracy, and ensure your advertising operations run smoothly
+          at scale.
         </p>
 
-        <button
-          className="
-            mr-[-50%]
-            px-[36px]
-            py-[14px]
-            text-[17px]
-            rounded-[40px]
-            border
-            border-black
-            text-black
-            bg-transparent
-            transition
-            hover:bg-white
-          "
-        >
-          Request a Consultation
-        </button>
+      <button
+      onClick={() => router.push("/contact-us")}
+      className="
+        mr-[-50%]
+        px-[36px]
+        py-[14px]
+        text-[17px]
+        rounded-[40px]
+        border
+        border-black
+        text-black
+        bg-transparent
+        transition
+        hover:bg-white
+
+        max-[900px]:mr-0
+        max-[600px]:px-[28px]
+        max-[600px]:py-[12px]
+        max-[600px]:text-[16px]
+      "
+    >
+      Request a Consultation
+    </button>
       </div>
     </section>
   );

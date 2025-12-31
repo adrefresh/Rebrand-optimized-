@@ -32,7 +32,7 @@ export default function PrecisionSection() {
           WebkitMaskSize: "800px auto",
           maskImage: `url(${basePath}/images/contact-us-images-videos/GrayOutline.svg)`,
           maskRepeat: "repeat",
-          maskSize: "420px auto",
+          maskSize: "700px auto",
           opacity: 1.15,
         }}
       />

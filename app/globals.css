@@ -302,3 +302,12 @@ b, strong, .bold,
   75%  { transform: translateY(3px) rotate(1deg); }
   100% { transform: translateY(0) rotate(0deg); }
 }
+.layout-root {
+  min-height: 100svh; /* mobile-safe viewport */
+  display: flex;
+  flex-direction: column;
+}
+html,
+body {
+  overscroll-behavior-y: none;
+}

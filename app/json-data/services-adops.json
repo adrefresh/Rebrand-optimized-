@@ -1,0 +1,46 @@
+{
+  "services": [
+    {
+      "id": 1,
+      "title": "PAID ADVERTISING",
+      "description": "Strategic paid campaigns on search and social channels optimized continuously to improve reach, clicks, conversions, and ROI.",
+      "side": "left",
+      "pattern": "pattern-right"
+    },
+    {
+      "id": 2,
+      "title": "SEARCH ENGINE OPTIMIZATION",
+      "description": "Expert SEO that improves rankings, increases organic traffic, and enhances visibility in search results over time.",
+      "side": "right",
+      "pattern": "pattern-left"
+    },
+    {
+      "id": 3,
+      "title": "CREATIVES & BRANDING",
+      "description": "Purpose-driven designs and messaging that strengthen brand identity and grab attention across platforms and formats.",
+      "side": "left",
+      "pattern": "pattern-right"
+    },
+    {
+      "id": 4,
+      "title": "WEBSITE-DEVELOPMENT",
+      "description": "Fast, responsive, and performance-optimized websites designed for usability, conversions, and seamless user experience.",
+      "side": "right",
+      "pattern": "pattern-left"
+    },
+    {
+      "id": 5,
+      "title": "ANALYTICS & REPORTING",
+      "description": "Actionable metrics and insights delivered through easy-to-understand dashboards that help refine strategies and drive performance.",
+      "side": "left",
+      "pattern": "pattern-right"
+    },
+    {
+      "id": 6,
+      "title": "MEDIA BUYING SUPPORT",
+      "description": "Forecasting, vendor negotiation, and premium inventory strategies.",
+      "side": "right",
+      "pattern": "pattern-left"
+    }
+  ]
+}
