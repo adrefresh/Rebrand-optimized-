@@ -23,7 +23,9 @@ jobs:
         run: npm ci
 
       - name: Build Next.js App
-        run: npm run build
+        run: |
+          npm run build
+          npm run export
 
       - name: Deploy to Hostgator via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
