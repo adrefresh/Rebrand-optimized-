@@ -113,20 +113,11 @@ export default function WhyUsSection() {
         {/* CENTER LINE + DOTS (DESKTOP UNCHANGED) */}
         <div className="relative flex justify-center">
           <div className="absolute top-0 h-full w-[2px] bg-white" />
-          {/* MOBILE DOT */}
-<span
-  className="
-    absolute
-    left-[6px]   /* aligns with mobile vertical line */
-    top-[22px]
-    h-3 w-3
-    rounded-full
-    border-2 border-white
-    bg-[var(--green-20)]
-  "
-/>
+          <span className="absolute top-[80px] h-4 w-4 rounded-full border-2 border-white bg-[var(--green-20)]" />
+          <span className="absolute top-[260px] h-4 w-4 rounded-full border-2 border-white bg-[var(--green-20)]" />
+          <span className="absolute bottom-[40px] h-4 w-4 rounded-full border-2 border-white bg-[var(--green-20)]" />
+        </div>
 
-</div>
         {/* RIGHT */}
         <div className="flex flex-col gap-[100px] pt-[28px] pl-[100px]">
           <p className="max-w-[520px] text-[1.05rem] leading-snug mt-[10px]">

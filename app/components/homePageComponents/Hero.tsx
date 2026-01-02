@@ -686,9 +686,8 @@ export default function Hero() {
     xl:text-[6rem]
 
     /* spacing */
-    mt-[-100px]                /* 📱 mobile only */
-    sm:mt-[-100px]
-  ml-[-25px]
+    mt-6                 /* 📱 mobile only */
+    sm:mt-0
 
     font-bold
     tracking-tight
