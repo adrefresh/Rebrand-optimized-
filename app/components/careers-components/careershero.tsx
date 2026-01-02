@@ -120,15 +120,18 @@ export default function CareersHero() {
 
       {/* CONTENT */}
       <div className="relative z-10 px-4 text-center text-white">
-        <h1
+       <h1
           className="
-            font-black
-            tracking-[0.12em]
-            text-[2.8rem]
+            mb-4
+            font-extrabold
+            tracking-wide
+            whitespace-nowrap
 
-            sm:text-[3.6rem] sm:tracking-[0.18em]
-            md:text-[4.6rem] md:tracking-[0.22em]
-            lg:text-[6rem]  lg:tracking-[0.25em]
+           text-[3.4rem]
+            sm:text-[4.2rem]
+            md:text-[5rem]
+            lg:text-[6rem]
+            xl:text-[6.4rem]
           "
         >
           CAREERS

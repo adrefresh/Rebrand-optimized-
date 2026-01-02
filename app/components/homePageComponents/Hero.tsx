@@ -659,38 +659,51 @@ export default function Hero() {
           max-w-7xl
           mx-auto
           flex-col
-          items-center
-          justify-center
+          items-left
+          justify-left
           px-6 sm:px-16
-          text-center
+          text-left
 
-          pt-20
-          md:pt-24
-          lg:pt-28
+          pt-35
+          md:pt-28
+          lg:pt-38
         "
       >
-        <h1
-          className="
-            hero-title
-            reveal
-            max-w-5xl
-            text-[2.2rem]
-            sm:text-[2.6rem]
-            md:text-[3rem]
-            lg:text-[4.5rem]
-            xl:text-[5.5rem]
-            font-bold
-            tracking-tight
-            leading-tight
-            text-white
+       <h1
+  className="
+    hero-title
+    reveal
+    max-w-5xl
 
-            translate-y-0
-            xl:translate-y-8
-          "
-        >
-          YOUR REMOTE TEAM <br />
-          THAT FEELS ON SITE
-        </h1>
+    /* alignment */
+    text-center
+
+    /* font sizes */
+    text-[2.2rem]        /* 📱 mobile */
+    sm:text-[2.6rem]
+    md:text-[4rem]
+    lg:text-[5rem]
+    xl:text-[6rem]
+
+    /* spacing */
+    mt-[-100px]                /* 📱 mobile only */
+    sm:mt-[-100px]
+  ml-[-25px]
+
+    font-bold
+    tracking-tight
+    leading-tight
+    text-white
+
+    /* animation positioning */
+    translate-y-0
+    xl:translate-y-8
+  "
+>
+  YOUR REMOTE TEAM <br />
+  THAT FEELS ON SITE
+</h1>
+
       </main>
 
       {/* SCROLL BUTTON – desktop only */}

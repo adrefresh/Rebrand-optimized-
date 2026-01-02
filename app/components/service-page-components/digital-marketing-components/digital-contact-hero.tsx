@@ -165,7 +165,7 @@ export default function AdOpsContactHero2() {
         "
         style={{
           backgroundImage:
-            "url(/rebrand/images/service-page-images-videos/IconmarkLimeYellow.png)",
+            "url(/images/service-page-images-videos/IconmarkLimeYellow.png)",
         }}
       />
 
@@ -195,7 +195,7 @@ export default function AdOpsContactHero2() {
         "
         style={{
           backgroundImage:
-            "url(/rebrand/images/service-page-images-videos/Lmoutline.svg)",
+            "url(/images/service-page-images-videos/Lmoutline.svg)",
         }}
       />
 

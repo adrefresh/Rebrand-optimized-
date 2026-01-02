@@ -683,7 +683,7 @@ export default function ClientSuccessPage() {
     ml-[calc(50%-50vw)]
     flex items-center justify-center overflow-hidden
     h-[60vh]        /* 📱 mobile */
-    sm:h-[80vh]     /* 💻 tablet & above */
+    sm:h-[88vh]     /* 💻 tablet & above */
   "
 >
   <video
@@ -697,9 +697,29 @@ export default function ClientSuccessPage() {
   <div className="absolute inset-0 bg-black/65" />
 
   <div className="relative z-10 text-center text-white px-4">
-    <h1 className="font-black text-[clamp(2.5rem,6vw,4rem)]">
-      Client Success
-    </h1>
+     <h1
+  className="
+    mb-4
+    font-extrabold
+    tracking-wide
+    text-center
+    leading-[1.05]
+
+    /* font sizes */
+    text-[2.2rem]        /* 📱 mobile */
+    sm:text-[2.8rem]
+    md:text-[3.6rem]     /* 📱 tablet */
+    lg:text-[5.5rem]     /* 💻 laptop */
+    xl:text-[6rem]       /* 🖥 desktop */
+
+    /* wrapping */
+    whitespace-normal
+    lg:whitespace-nowrap
+  "
+>
+  CLIENT SUCCESS
+</h1>
+
     <p className="mt-3 text-[clamp(1rem,2vw,1.25rem)] opacity-90">
       Real-world outcomes powered by operational excellence
     </p>
@@ -707,13 +727,14 @@ export default function ClientSuccessPage() {
 </section>
 
       {/* ================= PATTERN STRIP ================= */}
-      <div className="relative w-full h-[14vh] overflow-hidden">
+      <div className="relative w-full h-[12vh] overflow-hidden">
         <div
           className="absolute inset-0 bg-repeat-x opacity-[0.9]"
           style={{
+            zIndex:-3,
             backgroundImage:
-              "url(/rebrand/images/service-page-images-videos/GrayOutline.svg)",
-            backgroundSize: "600px",
+              "url(/images/service-page-images-videos/GrayOutline.svg)",
+            backgroundSize: "700px",
             transform: "rotate(180deg)",
             maskImage:
               "linear-gradient(to bottom, transparent, black 40%, black 85%, transparent)",
@@ -724,7 +745,7 @@ export default function ClientSuccessPage() {
       </div>
 
       {/* ================= HEADER ================= */}
-      <section className="max-w-[1200px] mx-auto text-center px-4 mt-[-4%] mb-16">
+      <section className="max-w-[1200px] mx-auto text-center px-4 mt-[-1%] mb-16">
         <h2 className="font-black text-[clamp(2.4rem,5vw,4rem)] mb-4">
           Case Studies
         </h2>

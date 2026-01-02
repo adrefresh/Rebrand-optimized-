@@ -239,7 +239,7 @@ export default function AdOpsPageWithVideo() {
         {/* CTA Hero */}
         <div
           className="
-            -mb-[10%]
+            -mb-[11.7%]
             max-[1024px]:-mb-[6%]
             max-[768px]:-mb-[3%]
             max-[480px]:mb-0

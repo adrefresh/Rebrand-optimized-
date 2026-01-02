@@ -364,6 +364,175 @@
 //     </div>
 //   );
 // }
+
+// "use client";
+
+// const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
+// export default function Section7() {
+//   const platforms = [
+//     { name: "YouTube", img: `${BASE_PATH}/images/platform-experience-images/youtubeads.jpg` },
+//     { name: "Yelp", img: `${BASE_PATH}/images/platform-experience-images/YelpAds.png` },
+//     { name: "Xandr", img: `${BASE_PATH}/images/platform-experience-images/xandr.webp` },
+//     { name: "X Ads", img: `${BASE_PATH}/images/platform-experience-images/xads.jpg` },
+
+//     { name: "Verve", img: `${BASE_PATH}/images/platform-experience-images/verve.jpg` },
+//     { name: "TikTok", img: `${BASE_PATH}/images/platform-experience-images/tiktok.png` },
+//     { name: "The Trade Desk", img: `${BASE_PATH}/images/platform-experience-images/TheTradeDesk.png` },
+//     { name: "The Media Trust", img: `${BASE_PATH}/images/platform-experience-images/themediatrust.png` },
+
+//     { name: "SpringServe", img: `${BASE_PATH}/images/platform-experience-images/SpringServe.png` },
+//     { name: "Snapchat", img: `${BASE_PATH}/images/platform-experience-images/Snapchat.png` },
+//     { name: "Salesforce", img: `${BASE_PATH}/images/platform-experience-images/salesforce.jpg` },
+//     { name: "SA360", img: `${BASE_PATH}/images/platform-experience-images/sa360.png` },
+
+//     { name: "Reddit", img: `${BASE_PATH}/images/platform-experience-images/Reddit.png` },
+//     { name: "Quantcast", img: `${BASE_PATH}/images/platform-experience-images/quantcast.png` },
+//     { name: "PubMatic", img: `${BASE_PATH}/images/platform-experience-images/pubmatic.svg` },
+//     { name: "Pixalate", img: `${BASE_PATH}/images/platform-experience-images/pixalate.webp` },
+
+//     { name: "Pinterest", img: `${BASE_PATH}/images/platform-experience-images/pinterest.png` },
+//     { name: "Operative", img: `${BASE_PATH}/images/platform-experience-images/operative.png` },
+//     { name: "OpenX", img: `${BASE_PATH}/images/platform-experience-images/OpenX.png` },
+//     { name: "MOAT", img: `${BASE_PATH}/images/platform-experience-images/moat.jpg` },
+
+//     { name: "Microsoft Ads", img: `${BASE_PATH}/images/platform-experience-images/microsoftads.png` },
+//     { name: "Meta", img: `${BASE_PATH}/images/platform-experience-images/Meta.png` },
+//     { name: "Magnite", img: `${BASE_PATH}/images/platform-experience-images/Magnite.png` },
+//     { name: "LinkedIn Ads", img: `${BASE_PATH}/images/platform-experience-images/LinkedInAds.png` },
+
+//     { name: "IAS", img: `${BASE_PATH}/images/platform-experience-images/integralscience.png` },
+//     { name: "Human", img: `${BASE_PATH}/images/platform-experience-images/HUMAN.jpg` },
+//     { name: "Google Ad Manager", img: `${BASE_PATH}/images/platform-experience-images/googleadmanager.png` },
+//     { name: "Google Ads", img: `${BASE_PATH}/images/platform-experience-images/GAds.png` },
+
+//     { name: "DV360", img: `${BASE_PATH}/images/platform-experience-images/dv360.png` },
+//     { name: "Amazon Ads", img: `${BASE_PATH}/images/platform-experience-images/amazonads.webp` },
+//     { name: "Adobe Ads", img: `${BASE_PATH}/images/platform-experience-images/Adobe_Advertising_Cloud.png` },
+//     { name: "Adform", img: `${BASE_PATH}/images/platform-experience-images/Adform.png` },
+//   ];
+
+//   const line1 = platforms.slice(0, 14);
+//   const line2 = platforms.slice(14, 28);
+//   const line3 = platforms.slice(28);
+
+//   return (
+//     <section className="relative w-screen overflow-hidden bg-white py-6 text-center">
+//       <div className="pointer-events-none absolute inset-0">
+//         <Marquee items={line1} top="mt-[14px]" />
+//         <Marquee items={line2} top="mt-[60px]" reverse />
+
+//         <div className="hidden md:block">
+//           <Marquee items={line3} top="mt-[66px]" speed="60s" />
+//         </div>
+//       </div>
+
+//       {/* CENTER CONTENT */}
+//       <div className="relative z-10 mt-16 flex flex-col items-center">
+//         <svg
+//           className="mb-3 h-[110px] w-[150px] animate-[spin_26s_linear_infinite] md:h-[70px] md:w-[70px]"
+//           viewBox="0 0 64 64"
+//         >
+//           <circle cx="32" cy="32" r="30" fill="none" stroke="black" strokeWidth="2" />
+//           <ellipse cx="32" cy="32" rx="12" ry="30" fill="none" stroke="black" strokeWidth="2" />
+//           <ellipse cx="32" cy="32" rx="22" ry="30" fill="none" stroke="black" strokeWidth="1.5" />
+//           <line x1="2" y1="32" x2="62" y2="32" stroke="black" strokeWidth="2" />
+//         </svg>
+
+//         <h1 className="text-[34px] font-black leading-[1.1] md:text-[24px]">
+//           NOT YOUR AVERAGE <br />
+//           DIGITAL MARKETING <br />
+//           AGENCY
+//         </h1>
+//       </div>
+
+//       {/* MARQUEE ANIMATIONS */}
+//       <style jsx global>{`
+//         @keyframes marquee {
+//           from {
+//             transform: translateX(0);
+//           }
+//           to {
+//             transform: translateX(-50%);
+//           }
+//         }
+
+//         @keyframes marquee-reverse {
+//           from {
+//             transform: translateX(-50%);
+//           }
+//           to {
+//             transform: translateX(0);
+//           }
+//         }
+
+//         .animate-marquee {
+//           animation: marquee 90s linear infinite;
+//           will-change: transform;
+//         }
+
+//         .animate-marquee-reverse {
+//           animation: marquee-reverse 90s linear infinite;
+//           will-change: transform;
+//         }
+
+//         .animate-marquee-fast {
+//           animation: marquee 60s linear infinite;
+//           will-change: transform;
+//         }
+//       `}</style>
+//     </section>
+//   );
+// }
+
+// /* ---------------- MARQUEE ---------------- */
+
+// function Marquee({
+//   items,
+//   reverse,
+//   top,
+//   speed,
+// }: {
+//   items: { name: string; img: string }[];
+//   reverse?: boolean;
+//   top: string;
+//   speed?: "60s" | "90s";
+// }) {
+//   const animation =
+//     reverse
+//       ? "animate-marquee-reverse"
+//       : speed === "60s"
+//       ? "animate-marquee-fast"
+//       : "animate-marquee";
+
+//   return (
+//     <div className={`w-full overflow-hidden ${top}`}>
+//       <div className={`flex w-max ${animation}`}>
+//         {[0, 1].map((copy) => (
+//           <div key={copy} className="flex gap-[70px] pr-[70px]">
+//             {items.map((p, i) => (
+//               <img
+//                 key={`${copy}-${i}`}
+//                 src={p.img}
+//                 alt={p.name}
+//                 className="
+//                   w-[120px] h-[44px]
+//                   object-contain
+//                   grayscale
+//                   opacity-[0.6]
+
+//                   md:w-[110px] md:h-[40px]
+//                   max-[768px]:w-[96px]
+//                   max-[768px]:h-[34px]
+//                 "
+//               />
+//             ))}
+//           </div>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// }
 "use client";
 
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
@@ -398,9 +567,9 @@ export default function Section7() {
     { name: "Microsoft Ads", img: `${BASE_PATH}/images/platform-experience-images/microsoftads.png` },
     { name: "Meta", img: `${BASE_PATH}/images/platform-experience-images/Meta.png` },
     { name: "Magnite", img: `${BASE_PATH}/images/platform-experience-images/Magnite.png` },
-    { name: "LinkedIn Ads", img: `${BASE_PATH}/images/platform-experience-images/LinkedInAds.png` },
+    { name: "LinkedIn Ads", img: `${BASE_PATH}/images/platform-experience-images/LinkedinAds.png` },
 
-    { name: "IAS", img: `${BASE_PATH}/images/platform-experience-images/integralscience.png` },
+    { name: "IAS", img: `${BASE_PATH}/images/platform-experience-images/integraladscience.png` },
     { name: "Human", img: `${BASE_PATH}/images/platform-experience-images/HUMAN.jpg` },
     { name: "Google Ad Manager", img: `${BASE_PATH}/images/platform-experience-images/googleadmanager.png` },
     { name: "Google Ads", img: `${BASE_PATH}/images/platform-experience-images/GAds.png` },
@@ -411,38 +580,16 @@ export default function Section7() {
     { name: "Adform", img: `${BASE_PATH}/images/platform-experience-images/Adform.png` },
   ];
 
-  const line1 = platforms.slice(0, 14);
-  const line2 = platforms.slice(14, 28);
+  const line1 = platforms.slice(0, 10);
+  const line2 = platforms.slice(10, 20);
   const line3 = platforms.slice(28);
 
   return (
-    <section className="relative w-screen overflow-hidden bg-white py-6 text-center">
-      <div className="pointer-events-none absolute inset-0">
-        <Marquee items={line1} top="mt-[14px]" />
-        <Marquee items={line2} top="mt-[60px]" reverse />
-
-        <div className="hidden md:block">
-          <Marquee items={line3} top="mt-[66px]" speed="60s" />
-        </div>
-      </div>
-
-      {/* CENTER CONTENT */}
-      <div className="relative z-10 mt-16 flex flex-col items-center">
-        <svg
-          className="mb-3 h-[110px] w-[150px] animate-[spin_26s_linear_infinite] md:h-[70px] md:w-[70px]"
-          viewBox="0 0 64 64"
-        >
-          <circle cx="32" cy="32" r="30" fill="none" stroke="black" strokeWidth="2" />
-          <ellipse cx="32" cy="32" rx="12" ry="30" fill="none" stroke="black" strokeWidth="2" />
-          <ellipse cx="32" cy="32" rx="22" ry="30" fill="none" stroke="black" strokeWidth="1.5" />
-          <line x1="2" y1="32" x2="62" y2="32" stroke="black" strokeWidth="2" />
-        </svg>
-
-        <h1 className="text-[34px] font-black leading-[1.1] md:text-[24px]">
-          NOT YOUR AVERAGE <br />
-          DIGITAL MARKETING <br />
-          AGENCY
-        </h1>
+    <section className="relative w-full overflow-hidden bg-white py-10">
+      <div className="pointer-events-none relative">
+        <Marquee items={line1} top="mt-[10px]" />
+        <Marquee items={line2} top="mt-[50px]" reverse />
+        <Marquee items={line3} top="mt-[50px]" />
       </div>
 
       {/* MARQUEE ANIMATIONS */}
@@ -466,17 +613,12 @@ export default function Section7() {
         }
 
         .animate-marquee {
-          animation: marquee 90s linear infinite;
+          animation: marquee 60s linear infinite;
           will-change: transform;
         }
 
         .animate-marquee-reverse {
-          animation: marquee-reverse 90s linear infinite;
-          will-change: transform;
-        }
-
-        .animate-marquee-fast {
-          animation: marquee 60s linear infinite;
+          animation: marquee-reverse 60s linear infinite;
           will-change: transform;
         }
       `}</style>
@@ -490,19 +632,14 @@ function Marquee({
   items,
   reverse,
   top,
-  speed,
 }: {
   items: { name: string; img: string }[];
   reverse?: boolean;
   top: string;
-  speed?: "60s" | "90s";
 }) {
-  const animation =
-    reverse
-      ? "animate-marquee-reverse"
-      : speed === "60s"
-      ? "animate-marquee-fast"
-      : "animate-marquee";
+  const animation = reverse
+    ? "animate-marquee-reverse"
+    : "animate-marquee";
 
   return (
     <div className={`w-full overflow-hidden ${top}`}>
@@ -519,7 +656,6 @@ function Marquee({
                   object-contain
                   grayscale
                   opacity-[0.6]
-
                   md:w-[110px] md:h-[40px]
                   max-[768px]:w-[96px]
                   max-[768px]:h-[34px]

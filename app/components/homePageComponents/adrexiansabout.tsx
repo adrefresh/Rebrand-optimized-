@@ -351,7 +351,7 @@ import Image from "next/image";
 
 import { useEffect } from "react";
 import conference from "@/public/images/HomePageImages/conference.jpg";
-import start from "@/public/images/HomePageImages/star3.png";
+import start from "@/public/images/HomePageImages/5stars.png";
 
 export default function About() {
   useEffect(() => {
@@ -382,6 +382,11 @@ export default function About() {
           fill
           priority
           className="object-cover grayscale brightness-[0.25]"
+            style={{
+ 
+    backgroundColor: "transparent",
+    backgroundBlendMode: "multiply",
+  }}
         />
       </div>
 
@@ -401,6 +406,7 @@ export default function About() {
                 md:text-[4rem]
                 lg:text-[5rem]
                 md:mb-[-2%]
+                md:ml-[50px]
               "
             >
               ADREXIANS
@@ -409,9 +415,9 @@ export default function About() {
             <Image
               src={start}
               alt="stars"
-              width={80}
-              height={50}
-              className="w-[50px] sm:w-[60px] md:w-[80px]"
+              width={100}
+              height={100}
+              className="w-[50px] sm:w-[60px] md:w-[120px] md:h-[80px]"
             />
           </div>
 
@@ -422,7 +428,7 @@ export default function About() {
               grid
               grid-cols-1
               md:grid-cols-[70px_1fr]
-              gap-4 md:gap-6
+              gap-2 md:gap-3
               items-start
               text-center md:text-left
             "
@@ -445,7 +451,7 @@ export default function About() {
     md:text-[5rem]
     md:[writing-mode:vertical-rl]
     md:rotate-180
-    md:ml-[150%]
+    md:ml-[157%]
      whitespace-nowrap 
   "
 >
@@ -458,15 +464,14 @@ export default function About() {
               <p
                 className="
                   reveal
-                  text-[15px]
+                                   text-[12px]
                   sm:text-[17px]
-                  md:text-[18px]
-                  lg:text-[20px]
-                  leading-[1.7]
-                  mb-4
+                  md:text-[14px]
+                  lg:text-[18px]
+                  leading-[1.6]
+                  mb-8
                   ml-0
                   md:ml-[10%]
-                  
     
    
                 "
@@ -477,11 +482,11 @@ export default function About() {
               <p
                 className="
                   reveal
-                  text-[15px]
+                  text-[12px]
                   sm:text-[17px]
-                  md:text-[18px]
-                  lg:text-[20px]
-                  leading-[1.7]
+                  md:text-[14px]
+                  lg:text-[18px]
+                  leading-[1.6]
                   mb-8
                   ml-0
                   md:ml-[10%]

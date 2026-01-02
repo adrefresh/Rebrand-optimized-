@@ -299,13 +299,14 @@ export default function AdOpsContactHero2() {
         w-screen
         overflow-hidden
         text-center
-        py-[80px]
-        px-10
+        py-[100px]
+        px-20
         max-[1280px]:py-[70px]
         max-[1024px]:py-[65px]
         max-[768px]:py-[60px]
         max-[600px]:py-[50px]
-        mb-[-11.6%]
+     
+     
       "
       style={{
         marginLeft: "calc(50% - 50vw)",
@@ -316,7 +317,7 @@ export default function AdOpsContactHero2() {
       <div
         className="
           absolute
-          top-[-20px]
+          top-[-14px]
           left-[50px]
           w-[32vw]
           h-[78vh]

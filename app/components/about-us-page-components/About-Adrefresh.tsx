@@ -46,7 +46,7 @@
 //   );
 // }
 "use client";
-
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 export default function AboutAdRefresh() {
   return (
     <section
@@ -68,8 +68,8 @@ export default function AboutAdRefresh() {
       <div
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage:
-            "url('images/service-page-images-videos/GrayOutline.svg')",
+        
+backgroundImage: `url('${basePath}/images/service-page-images-videos/GrayOutline.svg')`,
           backgroundRepeat: "repeat",
           backgroundPosition: "0 0",
           backgroundSize: "auto",

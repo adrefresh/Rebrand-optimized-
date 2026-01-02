@@ -622,7 +622,7 @@ export default function ListenPerform() {
     type NodePoint = { x: number; y: number; dx: number; dy: number };
 
     const count =
-      window.innerWidth < 768 ? 20 : window.innerWidth < 1024 ? 35 : 55;
+      window.innerWidth < 768 ? 30 : window.innerWidth < 1024 ? 45 : 65;
 
     const nodes: NodePoint[] = Array.from({ length: count }, () => ({
       x: Math.random() * canvas.width,

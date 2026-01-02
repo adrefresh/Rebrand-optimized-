@@ -547,7 +547,7 @@ export default async function ClientSuccessDetail({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "/rebrand";
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH;
 
   const data = (DATA as Record<string, CaseStudy>)[slug];
   if (!data) notFound();
@@ -604,9 +604,16 @@ export default async function ClientSuccessDetail({
           )}
         </nav>
 
-        <div style={{ marginTop: "5%", marginBottom: "-3.5%" }}>
-          <ListenPerform />
-        </div>
+        <div
+  className="
+    mt-[5%]
+    mb-[-10%]        /* 📱 mobile */
+    sm:mb-[-3.5%]   /* 💻 tablet & up */
+  "
+>
+  <ListenPerform />
+</div>
+
       </div>
     </>
   );

@@ -660,6 +660,8 @@
 import type { Metadata } from "next";
 import ContactClient from "../components/contact-us-components/contact-maps";
 import GlobalPresence from "../components/contact-us-components/Globalpresence";
+import ContactHero from "../components/contact-us-components/contact-hero";
+import ContactForm from "../components/contact-us-components/contact-form";
 
 export const metadata: Metadata = {
   title: "Contact AdRefresh | Get in Touch With Our Global Team",
@@ -673,8 +675,10 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <main className="relative bg-[#fafafa] text-[#111]">
-      <ContactClient />
+      {/* <ContactClient /> */}
+      <ContactHero/>
       <GlobalPresence />
+      <ContactForm/>
     </main>
   );
 }
