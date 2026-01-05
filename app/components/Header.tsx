@@ -532,7 +532,7 @@ export default function Header() {
       px-5
       py-5
 
-      backdrop-blur-[30px]
+    
     "
   >
                 <Link

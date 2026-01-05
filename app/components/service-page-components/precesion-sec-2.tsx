@@ -30,13 +30,12 @@ export default function PrecisionSectionGray() {
   style={{
     backgroundImage:
       "url('/images/service-page-images-videos/Gray-Dual.svg')",
-    backgroundRepeat: "repeat",
-    backgroundPosition: "0 0",
-    backgroundSize: "850px 100% ",
+    backgroundRepeat: "repeat-x",
+    backgroundPosition: "top center",
+    backgroundSize: "auto 100%",
   }}
 />
-  
- 
+
 {/* DIRECTIONAL SHADE OVERLAY */}
 <div
   className="absolute inset-0 z-[1]"
