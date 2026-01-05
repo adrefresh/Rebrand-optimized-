@@ -591,6 +591,7 @@
 //     </section>
 //   );
 // }
+
 "use client";
 
 import { useEffect } from "react";
@@ -630,7 +631,7 @@ export default function Hero() {
         bg-black
 
         h-[100dvh]  /* mobile */
-        [@media(min-width:768px)_and_(max-width:1023px)]:h-[75vh] /* tablets */
+        [@media(min-width:768px)_and_(max-width:1023px)]:h-[85vh] /* tablets */
         lg:h-[100vh] /* laptop & desktop */
       "
     >
@@ -659,17 +660,17 @@ export default function Hero() {
           max-w-7xl
           mx-auto
           flex-col
-          items-left
-          justify-left
+          items-start
+          justify-start
           px-6 sm:px-16
           text-left
 
           pt-35
-          md:pt-28
+          md:pt-18
           lg:pt-38
         "
       >
-       <h1
+       <h1 
   className="
     hero-title
     reveal
@@ -679,15 +680,16 @@ export default function Hero() {
     text-center
 
     /* font sizes */
-    text-[2.2rem]        /* 📱 mobile */
+    text-[1.4rem]        /* 📱 mobile */
     sm:text-[2.6rem]
     md:text-[4rem]
     lg:text-[5rem]
     xl:text-[6rem]
 
     /* spacing */
-    mt-6                 /* 📱 mobile only */
-    sm:mt-0
+  mt-[-50px]         /* mobile */
+sm:mt-4       /* tablet */
+
 
     font-bold
     tracking-tight
@@ -724,6 +726,19 @@ export default function Hero() {
       >
         <FaAngleDoubleDown size={42} color="white" />
       </button>
+      <style>{`
+  @media (max-width: 639px) {
+    .hero-title {
+      font-size: 1.4rem;
+      margin-top: -100px;
+      text-align: center;
+      margin-left:-20px;
+    }
+  }
+`}</style>
+
     </section>
+    
+
   );
 }

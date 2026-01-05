@@ -148,7 +148,7 @@ export default function WhyUsSection() {
             className="
               absolute
               left-[3px]   /* 👈 ONLY CHANGE */
-              top-[22px]
+              top-[40px]
               h-3 w-3
               rounded-full
               border-2 border-white
@@ -172,7 +172,7 @@ export default function WhyUsSection() {
             className="
               absolute
             left-[3px]     /* 👈 ONLY CHANGE */
-              top-[22px]
+              top-[70px]
               h-3 w-3
               rounded-full
               border-2 border-white
@@ -228,7 +228,7 @@ export default function WhyUsSection() {
             className="
               absolute
            left-[3px]      /* 👈 ONLY CHANGE */
-              top-[22px]
+              top-[70px]
               h-3 w-3
               rounded-full
               border-2 border-white

@@ -4,6 +4,8 @@ import AboutAdRefresh from "../components/about-us-page-components/About-Adrefre
 import AboutVisionMission from "../components/about-us-page-components/mission-vision";
 import VisionMission from "../components/about-us-page-components/vision";
 import ListenPerform from "../components/homePageComponents/we-listen";
+import MissionVisionSection from "../components/about-us-page-components/CardsMission";
+
  // adjust path if needed
 
 export const metadata: Metadata = {
@@ -58,9 +60,13 @@ export default function AboutUsPage() {
 
 
 <AboutHero/>
+
 <AboutAdRefresh/>
+
 <AboutVisionMission/>
+
 <VisionMission/>
+<MissionVisionSection/>
 <ListenPerform/>
       {/* Add more sections below when ready */}
       {/* <WhyUsSection /> */}

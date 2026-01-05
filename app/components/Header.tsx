@@ -370,6 +370,7 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { IoIosArrowDown } from "react-icons/io";
 
 import WhiteLogo from "@/public/images/HeaderImages/White.png";
 import colorLogo from "@/public/images/HeaderImages/second.svg";
@@ -499,7 +500,7 @@ export default function Header() {
           <Link
             onClick={closeMenu}
             href="/"
-            className="text-[1.6rem] sm:text-[2rem] md:text-[2.4rem] lg:text-[2.8rem] font-bold hover:text-[#813DFF]"
+            className="text-[2rem] sm:text-[2rem] md:text-[2.4rem] lg:text-[2.8rem] font-bold hover:text-[#813DFF]"
           >
             Home
           </Link>
@@ -508,31 +509,43 @@ export default function Header() {
           <div className="flex flex-col items-end">
             <button
               onClick={() => setServicesOpen(v => !v)}
-              className="flex items-center gap-2 text-[1.6rem] sm:text-[2rem] md:text-[2.4rem] lg:text-[2.8rem] font-bold"
+              className="flex items-center gap-2 text-[2rem] sm:text-[2rem] md:text-[2.4rem] lg:text-[2.8rem] font-bold hover:pointer"
             >
-              Services
+              Services 
               <span
-                className={`text-[1.2rem] sm:text-[1.4rem] transition-transform duration-300 ${
+                className={`text-[2rem] sm:text-[2rem] transition-transform duration-300 ${
                   servicesOpen ? "rotate-180" : ""
                 }`}
               >
-                ▾
+                <IoIosArrowDown />
               </span>
             </button>
 
             {servicesOpen && (
-              <div className="mt-[6px] mr-[8px] flex flex-col">
+<div
+    className="
+      relative
+      mt-[6px]
+      mr-[8px]
+      flex
+      flex-col
+      px-5
+      py-5
+
+      backdrop-blur-[30px]
+    "
+  >
                 <Link
                   onClick={closeMenu}
                   href="/services/digital-marketing"
-                  className="text-[1.1rem] sm:text-[1.25rem] md:text-[1.4rem] lg:text-[1.5rem] font-medium hover:text-[#813DFF]"
+                  className="text-[1.5rem] sm:text-[1.25rem] md:text-[1.4rem] lg:text-[1.5rem] font-medium hover:text-[#813DFF]"
                 >
                   Digital Marketing
                 </Link>
                 <Link
                   onClick={closeMenu}
                   href="/services/ad-operations"
-                  className="text-[1.1rem] sm:text-[1.25rem] md:text-[1.4rem] lg:text-[1.5rem] font-medium hover:text-[#813DFF]"
+                  className="text-[1.5rem] sm:text-[1.25rem] md:text-[1.4rem] lg:text-[1.5rem] font-medium hover:text-[#813DFF]"
                 >
                   Ad Operations
                 </Link>
@@ -543,7 +556,7 @@ export default function Header() {
           <Link
             onClick={closeMenu}
             href="/client-success"
-            className="text-[1.6rem] sm:text-[2rem] md:text-[2.4rem] lg:text-[2.8rem] font-bold hover:text-[#813DFF]"
+            className="text-[2rem] sm:text-[2rem] md:text-[2.4rem] lg:text-[2.8rem] font-bold hover:text-[#813DFF]"
           >
             Client Success
           </Link>
@@ -551,7 +564,7 @@ export default function Header() {
           <Link
             onClick={closeMenu}
             href="/about-us"
-            className="text-[1.6rem] sm:text-[2rem] md:text-[2.4rem] lg:text-[2.8rem] font-bold hover:text-[#813DFF]"
+            className="text-[2rem] sm:text-[2rem] md:text-[2.4rem] lg:text-[2.8rem] font-bold hover:text-[#813DFF]"
           >
             About Us
           </Link>
@@ -559,7 +572,7 @@ export default function Header() {
           <Link
             onClick={closeMenu}
             href="/contact-us"
-            className="text-[1.6rem] sm:text-[2rem] md:text-[2.4rem] lg:text-[2.8rem] font-bold hover:text-[#813DFF]"
+            className="text-[2rem] sm:text-[2rem] md:text-[2.4rem] lg:text-[2.8rem] font-bold hover:text-[#813DFF]"
           >
             Contact
           </Link>
@@ -567,7 +580,7 @@ export default function Header() {
           <Link
             onClick={closeMenu}
             href="/careers"
-            className="text-[1.6rem] sm:text-[2rem] md:text-[2.4rem] lg:text-[2.8rem] font-bold hover:text-[#813DFF]"
+            className="text-[2rem] sm:text-[2rem] md:text-[2.4rem] lg:text-[2.8rem] font-bold hover:text-[#813DFF]"
           >
             Careers
           </Link>

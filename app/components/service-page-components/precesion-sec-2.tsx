@@ -36,7 +36,7 @@ export default function PrecisionSectionGray() {
       />
 
       {/* LIGHT WASH */}
-      <div className="absolute inset-0 z-[1] bg-white/10" />
+      <div className="absolute inset-0 z-[1]" />
 
       {/* CONTENT */}
       <div
@@ -84,8 +84,7 @@ export default function PrecisionSectionGray() {
             max-[640px]:text-[15px]
           "
         >
-     Connect with our experts to discuss your goals, challenges, and the right digital strategies for measurable, scalable results. 
-        </p>
+We power advertising operations through structured execution, accurate trafficking, advanced tracking, and continuous monitoring to ensure efficiency, compliance, and measurable performance.         </p>
       </div>
     </section>
   );

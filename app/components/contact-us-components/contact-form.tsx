@@ -165,93 +165,30 @@
 // }
 "use client";
 
-import React, { useState } from "react";
-
-type FormState = {
-  name: string;
-  email: string;
-  phone: string;
-  company: string;
-  subject: string;
-  message: string;
-};
+import React from "react";
+import { useActionState } from "react";
+import { submitContactForm } from "@/app/actions/contact";
 
 export default function ContactForm() {
-  const [form, setForm] = useState<FormState>({
-    name: "",
-    email: "",
-    phone: "",
-    company: "",
-    subject: "",
-    message: "",
-  });
-
-  const [status, setStatus] = useState<
-    "sending" | "sent" | "error" | null
-  >(null);
-
-  function handleChange(
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) {
-    const { name, value } = e.target;
-    setForm((prev) => ({ ...prev, [name]: value }));
-  }
-
-  async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    setStatus("sending");
-
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
-      });
-
-      if (!res.ok) throw new Error();
-
-      setStatus("sent");
-      setForm({
-        name: "",
-        email: "",
-        phone: "",
-        company: "",
-        subject: "",
-        message: "",
-      });
-
-      setTimeout(() => setStatus(null), 2000);
-    } catch {
-      setStatus("error");
-    }
-  }
+  const [state, formAction, isPending] = useActionState(
+    submitContactForm,
+    null
+  );
 
   return (
     <section
       className="
         mx-auto
-
-        w-[92vw]          /* 📱 mobile */
-        sm:w-[88vw]
-        md:w-[80vw]       /* 📱 tablet */
-        lg:w-[70vw]       /* 💻 laptop */
-        xl:w-[65vw]       /* 🖥 desktop */
-
-        mt-12
-        sm:mt-16
-        pb-24
+        w-[92vw] sm:w-[88vw] md:w-[80vw] lg:w-[70vw] xl:w-[65vw]
+        mt-12 sm:mt-16 pb-24
       "
     >
       {/* TITLE */}
       <h2
         className="
           text-center font-bold mb-10
-
-          text-[2.2rem]     /* 📱 mobile */
-          sm:text-[2.6rem]
-          md:text-[3rem]    /* 📱 tablet */
-          lg:text-[3.5rem]  /* 💻 laptop */
-          xl:text-[4rem]    /* 🖥 desktop */
+          text-[2.2rem] sm:text-[2.6rem] md:text-[3rem]
+          lg:text-[3.5rem] xl:text-[4rem]
         "
       >
         Drop Us a Message
@@ -259,23 +196,32 @@ export default function ContactForm() {
 
       {/* FORM */}
       <form
-        onSubmit={handleSubmit}
+        action={formAction}
         className="
-          grid
-          grid-cols-1            /* 📱 mobile */
-          sm:grid-cols-2         /* 📱 tablet+ */
-          gap-4
-          sm:gap-6
+          grid grid-cols-1 sm:grid-cols-2
+          gap-4 sm:gap-6
         "
       >
+        {/* Honeypot */}
+        <input
+          type="text"
+          name="website_url"
+          className="sr-only"
+          tabIndex={-1}
+          autoComplete="off"
+        />
+
         {/* ROW 1 */}
         <input
           name="name"
           placeholder="Your Name*"
           required
-          value={form.name}
-          onChange={handleChange}
-          className="px-4 py-3 rounded-md border border-[#ddd]"
+          className="
+            px-4 py-3
+            rounded-lg border border-[#ddd]
+            text-[16px] placeholder:text-[#999]
+            focus:outline-none focus:ring-2 focus:ring-black
+          "
         />
 
         <input
@@ -283,9 +229,12 @@ export default function ContactForm() {
           type="email"
           placeholder="Email*"
           required
-          value={form.email}
-          onChange={handleChange}
-          className="px-4 py-3 rounded-md border border-[#ddd]"
+          className="
+            px-4 py-3
+            rounded-lg border border-[#ddd]
+            text-[16px] placeholder:text-[#999]
+            focus:outline-none focus:ring-2 focus:ring-black
+          "
         />
 
         {/* ROW 2 */}
@@ -293,17 +242,23 @@ export default function ContactForm() {
           name="phone"
           placeholder="Phone*"
           required
-          value={form.phone}
-          onChange={handleChange}
-          className="px-4 py-3 rounded-md border border-[#ddd]"
+          className="
+            px-4 py-3
+            rounded-lg border border-[#ddd]
+            text-[16px] placeholder:text-[#999]
+            focus:outline-none focus:ring-2 focus:ring-black
+          "
         />
 
         <input
           name="company"
           placeholder="Company"
-          value={form.company}
-          onChange={handleChange}
-          className="px-4 py-3 rounded-md border border-[#ddd]"
+          className="
+            px-4 py-3
+            rounded-lg border border-[#ddd]
+            text-[16px] placeholder:text-[#999]
+            focus:outline-none focus:ring-2 focus:ring-black
+          "
         />
 
         {/* SUBJECT – FULL WIDTH */}
@@ -311,9 +266,13 @@ export default function ContactForm() {
           name="subject"
           placeholder="Subject*"
           required
-          value={form.subject}
-          onChange={handleChange}
-          className="sm:col-span-2 px-4 py-3 rounded-md border border-[#ddd]"
+          className="
+            sm:col-span-2
+            px-4 py-3
+            rounded-lg border border-[#ddd]
+            text-[16px] placeholder:text-[#999]
+            focus:outline-none focus:ring-2 focus:ring-black
+          "
         />
 
         {/* MESSAGE – FULL WIDTH */}
@@ -321,15 +280,21 @@ export default function ContactForm() {
           name="message"
           placeholder="Message"
           rows={6}
-          value={form.message}
-          onChange={handleChange}
-          className="sm:col-span-2 px-4 py-3 rounded-md border border-[#ddd] resize-y"
+          required
+          className="
+            sm:col-span-2
+            px-4 py-3
+            rounded-lg border border-[#ddd]
+            text-[16px] placeholder:text-[#999]
+            focus:outline-none focus:ring-2 focus:ring-black
+            resize-y
+          "
         />
 
         {/* BUTTON */}
         <button
           type="submit"
-          disabled={status === "sending"}
+          disabled={isPending}
           className="
             sm:col-span-2
             bg-black text-white py-4 rounded-md
@@ -337,19 +302,19 @@ export default function ContactForm() {
             disabled:opacity-60
           "
         >
-          {status === "sending" ? "Sending..." : "Send Message"}
+          {isPending ? "Sending..." : "Send Message"}
         </button>
 
         {/* STATUS */}
-        {status === "sent" && (
+        {state?.success && (
           <p className="sm:col-span-2 text-green-600 text-sm text-center">
             Message sent successfully!
           </p>
         )}
 
-        {status === "error" && (
+        {state?.error && (
           <p className="sm:col-span-2 text-red-600 text-sm text-center">
-            Something went wrong. Please try again.
+            {state.error}
           </p>
         )}
       </form>

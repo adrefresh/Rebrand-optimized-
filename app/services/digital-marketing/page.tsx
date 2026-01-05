@@ -185,6 +185,121 @@
 //     </>
 //   );
 // }
+
+// "use client";
+
+// import DgZigZagSections from "@/app/components/service-page-components/digital-marketing-components/dgzig-zag";
+// import AdOpsContactHero2 from "@/app/components/service-page-components/digital-marketing-components/digital-contact-hero";
+// import PrecisionSectionGray from "@/app/components/service-page-components/precesion-section-serv";
+
+// const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
+// export default function DigitalMarketingPage() {
+//   return (
+//     <>
+//       {/* ================= HERO VIDEO ================= */}
+//       <section
+//         className="
+//           relative
+//           w-screen
+//           h-[90vh]                /* 🖥 large desktop */
+//           max-[1280px]:h-[80vh]   /* 💻 laptop */
+//           max-[1024px]:h-[70vh]   /* 📱 tablet */
+//           max-[768px]:h-[55vh]    /* 📱 mobile */
+//           max-[480px]:h-[50vh]
+//           ml-[calc(50%-50vw)]
+//           overflow-hidden
+//           flex
+//           items-center
+//           justify-center
+//         "
+//       >
+//         {/* VIDEO */}
+//         <video
+//           className="absolute inset-0 h-full w-full object-cover z-[1]"
+//           src={`${basePath}/images/about-page-videos-images/dgmvd.mp4`}
+//           autoPlay
+//           muted
+//           loop
+//           playsInline
+//         />
+
+//         {/* ✅ SINGLE RESPONSIVE BLACK OVERLAY (NO GRADIENT) */}
+//         <div
+//           className="
+//             absolute inset-0 z-[3]
+//             bg-black
+//             opacity-40          /* 📱 mobile */
+//             sm:opacity-45       /* 📱 large mobile */
+//             md:opacity-50       /* 📱 tablet */
+//             lg:opacity-55       /* 💻 laptop */
+//             xl:opacity-60       /* 🖥 desktop */
+//           "
+//         />
+
+//         {/* HERO CONTENT */}
+//         <div className="relative z-[5] text-center px-4 sm:px-6 md:px-10">
+//           <h1
+//             className="
+//               font-black tracking-wide text-white
+
+//               text-[2rem]        /* 📱 small mobile */
+//               sm:text-[2.4rem]
+//               md:text-[3rem]
+//               lg:text-[3.5rem]
+//               xl:text-[4rem]     /* 🖥 desktop */
+//             "
+//           >
+//             DIGITAL MARKETING
+//           </h1>
+//         </div>
+//       </section>
+
+//       {/* ================= MAIN SECTION ================= */}
+//       <section
+//         className="
+//           relative
+//           w-screen
+//           ml-[calc(50%-50vw)]
+//           bg-white
+
+//           pt-[100px]
+//           max-[1024px]:pt-[80px]
+//           max-[768px]:pt-[60px]
+
+//           pb-[140px]
+//           max-[1024px]:pb-[110px]
+//           max-[768px]:pb-[90px]
+//         "
+//       >
+//         {/* Precision Section (overlap preserved) */}
+//         <div className="mt-[-10%] max-[768px]:mt-[-15%]">
+//           <PrecisionSectionGray />
+//         </div>
+
+//         {/* ZigZag Section */}
+//         <div
+//           className="
+//             mx-auto
+//             w-[85vw]
+//             max-[1280px]:w-[90vw]
+//             max-[768px]:w-[94vw]
+//           "
+//         >
+//           <DgZigZagSections />
+//         </div>
+
+//         {/* Spacer */}
+//         <div className="mt-[10%] max-[768px]:mt-[15%]" />
+
+//         {/* CTA Section (overlap bottom preserved) */}
+//         <div className="mt-[-1.8%] max-[768px]:mt-[-5%] mb-[-10.2%]">
+//           <AdOpsContactHero2 />
+//         </div>
+//       </section>
+//     </>
+//   );
+// }
 "use client";
 
 import DgZigZagSections from "@/app/components/service-page-components/digital-marketing-components/dgzig-zag";
@@ -201,11 +316,12 @@ export default function DigitalMarketingPage() {
         className="
           relative
           w-screen
-          h-[90vh]                /* 🖥 large desktop */
-          max-[1280px]:h-[80vh]   /* 💻 laptop */
-          max-[1024px]:h-[70vh]   /* 📱 tablet */
-          max-[768px]:h-[55vh]    /* 📱 mobile */
-          max-[480px]:h-[50vh]
+          min-h-[50vh]          /* 📱 mobile */
+          sm:min-h-[60vh]       /* 📱 large mobile */
+          md:min-h-[70vh]       /* 📱 tablet */
+          lg:min-h-[80vh]       /* 💻 laptop */
+          xl:min-h-[90vh]       /* 🖥 desktop */
+
           ml-[calc(50%-50vw)]
           overflow-hidden
           flex
@@ -223,16 +339,16 @@ export default function DigitalMarketingPage() {
           playsInline
         />
 
-        {/* ✅ SINGLE RESPONSIVE BLACK OVERLAY (NO GRADIENT) */}
+        {/* OVERLAY */}
         <div
           className="
             absolute inset-0 z-[3]
             bg-black
-            opacity-40          /* 📱 mobile */
-            sm:opacity-45       /* 📱 large mobile */
-            md:opacity-50       /* 📱 tablet */
-            lg:opacity-55       /* 💻 laptop */
-            xl:opacity-60       /* 🖥 desktop */
+            opacity-40
+            sm:opacity-45
+            md:opacity-50
+            lg:opacity-55
+            xl:opacity-60
           "
         />
 
@@ -240,13 +356,15 @@ export default function DigitalMarketingPage() {
         <div className="relative z-[5] text-center px-4 sm:px-6 md:px-10">
           <h1
             className="
-              font-black tracking-wide text-white
+              font-black
+              tracking-wide
+              text-white
 
-              text-[2rem]        /* 📱 small mobile */
+              text-[1.9rem]     /* 📱 mobile */
               sm:text-[2.4rem]
               md:text-[3rem]
               lg:text-[3.5rem]
-              xl:text-[4rem]     /* 🖥 desktop */
+              xl:text-[4rem]
             "
           >
             DIGITAL MARKETING
@@ -262,37 +380,32 @@ export default function DigitalMarketingPage() {
           ml-[calc(50%-50vw)]
           bg-white
 
-          pt-[100px]
-          max-[1024px]:pt-[80px]
-          max-[768px]:pt-[60px]
+          pt-16                /* 📱 mobile */
+          sm:pt-20
+          md:pt-24
+          lg:pt-28
 
-          pb-[140px]
-          max-[1024px]:pb-[110px]
-          max-[768px]:pb-[90px]
+          pb-24
+          sm:pb-28
+          md:pb-32
+          lg:pb-36
         "
       >
         {/* Precision Section (overlap preserved) */}
-        <div className="mt-[-10%] max-[768px]:mt-[-15%]">
+        <div className="mt-[-100px] sm:mt-[-100px] md:mt-[-147px]">
           <PrecisionSectionGray />
         </div>
 
         {/* ZigZag Section */}
-        <div
-          className="
-            mx-auto
-            w-[85vw]
-            max-[1280px]:w-[90vw]
-            max-[768px]:w-[94vw]
-          "
-        >
+        <div className="mx-auto w-[94vw] sm:w-[90vw] lg:w-[85vw]">
           <DgZigZagSections />
         </div>
 
         {/* Spacer */}
-        <div className="mt-[10%] max-[768px]:mt-[15%]" />
+        <div className="mt-[14%] sm:mt-[12%] md:mt-[10%]" />
 
         {/* CTA Section (overlap bottom preserved) */}
-        <div className="mt-[-1.8%] max-[768px]:mt-[-5%] mb-[-10.2%]">
+        <div className="mb-[-95px] sm:mb-[-100px] md:mb-[-147px]">
           <AdOpsContactHero2 />
         </div>
       </section>

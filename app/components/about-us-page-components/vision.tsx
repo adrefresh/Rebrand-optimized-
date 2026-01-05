@@ -68,7 +68,7 @@ export default function VisionMission() {
                 lg:text-[2.6rem]       /* 💻 desktop */
               "
             >
-              Vision
+              TRUST
             </h3>
             <p
               className="
@@ -79,9 +79,7 @@ export default function VisionMission() {
                 text-[#333]
               "
             >
-            To be a trusted leader in digital marketing empowering brands to grow with AI-driven technology, skilled talent, and data-backed strategies. 
-We envision a future where businesses of all sizes can scale effortlessly through intelligent automation, transparent processes, and measurable, high-impact results. 
-            </p>
+We build lasting partnerships through honest communication, clear processes, and complete visibility into performance, spend, and outcomes—ensuring accountability and confidence at every stage.             </p>
           </div>
 
           {/* BLOCK 2 */}
@@ -94,7 +92,8 @@ We envision a future where businesses of all sizes can scale effortlessly throug
                 lg:text-[2.6rem]
               "
             >
-              Mission
+              PRECESION 
+
             </h3>
             <p
               className="
@@ -105,7 +104,8 @@ We envision a future where businesses of all sizes can scale effortlessly throug
                 text-[#333]
               "
             >
-           Our mission is to deliver performance-driven digital marketing solutions using smart AI, automation, and expert execution. We focus on sustainable growth through tailored strategies, high-quality delivery, real-time support, and continuous improvement. 
+Every decision is guided by data, accuracy, and measurable impact, enabling us to optimize campaigns continuously and deliver consistent, performance-driven results aligned with business goals. 
+
             </p>
           </div>
 
@@ -119,7 +119,7 @@ We envision a future where businesses of all sizes can scale effortlessly throug
                 lg:text-[2.6rem]
               "
             >
-              Vision
+           EFFICIENCY
             </h3>
             <p
               className="
@@ -130,8 +130,8 @@ We envision a future where businesses of all sizes can scale effortlessly throug
                 text-[#333]
               "
             >
-           To be a trusted leader in digital marketing empowering brands to grow with AI-driven technology, skilled talent, and data-backed strategies. 
-We envision a future where businesses of all sizes can scale effortlessly through intelligent automation, transparent processes, and measurable, high-impact results. 
+              Efficiency - By leveraging intelligent automation, streamlined workflows, and experienced execution, we help brands scale faster and smarter while maintaining quality, speed, and operational excellence. 
+
             </p>
           </div>
 
@@ -145,7 +145,7 @@ We envision a future where businesses of all sizes can scale effortlessly throug
                 lg:text-[2.6rem]
               "
             >
-              Mission
+              INNOVATION
             </h3>
             <p
               className="
@@ -156,7 +156,7 @@ We envision a future where businesses of all sizes can scale effortlessly throug
                 text-[#333]
               "
             >
-                      Our mission is to deliver performance-driven digital marketing solutions using smart AI, automation, and expert execution. We focus on sustainable growth through tailored strategies, high-quality delivery, real-time support, and continuous improvement. 
+We embrace AI and emerging technologies with intent, applying innovation thoughtfully to solve real business challenges and create sustainable, long-term value for our clients. 
 
             </p>
           </div>

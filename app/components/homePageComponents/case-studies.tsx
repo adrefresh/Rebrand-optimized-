@@ -584,21 +584,21 @@ import { useRouter } from "next/navigation";
 export default function CaseStudies() {
   const router = useRouter();
 
-  const cases = [
-    {
-      slug: "impression-to-invoice",
-      title: "Increasing ROAS for a Global Retail Brand",
-      comment:
-        "The AdRefresh team delivered exceptional performance improvements. Their structured approach helped us scale effectively.",
-    },
-    {
-      slug: "transition-enablers",
-      title: "Scaling Paid Ads for an E-Commerce Startup",
-      comment:
-        "Brilliant execution and communication. They aligned perfectly with our workflow and accelerated growth.",
-    },
-   
-  ];
+const cases = [
+  {
+    slug: "impression-to-invoice",
+    title: "From Impression to Invoice — Streamlining Campaign Operations",
+    comment:
+      "Improved billing accuracy, reduced disputes, and enabled scalable operations across 300M+ programmatic impressions annually for a US-based ad network.",
+  },
+  {
+    slug: "transition-enablers",
+    title: "Transition Enablers in a Complex Organizational Shift",
+    comment:
+      "Supported a large enterprise during acquisition-led restructuring by acting as the backbone for platform knowledge and operational continuity.",
+  },
+];
+
 
   const [index, setIndex] = useState(0);
   const [animate, setAnimate] = useState(true);

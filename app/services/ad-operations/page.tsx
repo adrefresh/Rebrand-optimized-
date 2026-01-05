@@ -212,14 +212,8 @@ export default function AdOpsPageWithVideo() {
         style={{ marginLeft: "calc(50% - 50vw)" }}
       >
         {/* Precision Section */}
-        <div
-          className="
-            -mt-[9%]
-            max-[1024px]:-mt-[7%]
-            max-[768px]:-mt-[4%]
-            max-[480px]:mt-0
-          "
-        >
+           <div className="mt-[-100px] sm:mt-[-100px] md:mt-[-147px]">
+
           <PrecisionSectionGray/>
         </div>
 
@@ -237,14 +231,7 @@ export default function AdOpsPageWithVideo() {
         </div>
 
         {/* CTA Hero */}
-        <div
-          className="
-            -mb-[11.7%]
-            max-[1024px]:-mb-[6%]
-            max-[768px]:-mb-[3%]
-            max-[480px]:mb-0
-          "
-        >
+      <div className="mb-[-100px] sm:mb-[-100px] md:mb-[-161px]">
           <br />
           <AdOpsContactHero2 />
         </div>

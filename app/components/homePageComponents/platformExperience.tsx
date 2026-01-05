@@ -316,7 +316,7 @@ export default function Flexibility() {
   return (
     <section className="relative flex h-screen w-screen items-center justify-center overflow-hidden bg-white">
       {/* ================= LEFT ================= */}
-<div className="reveal relative flex h-full w-[40%] items-center justify-center lg:mr-[-50px]">
+<div className="reveal relative flex h-full w-[40%] items-center justify-center lg:mr-[-50px] ml-[-30px] sm:ml-0 stat">
         <h2 className="industry-title rotate-[-90deg] text-center leading-[0.9]">
           <span className="block text-[6rem] font-normal text-black">
             INDUSTRY
@@ -335,7 +335,7 @@ export default function Flexibility() {
       <div className="divider h-[85%] w-[3px] bg-black opacity-70 " />
 
       {/* ================= RIGHT ================= */}
-<div className="reveal flex h-full w-[40%] flex-col justify-center gap-8 pl-[60px] ml-[-40px] sm:ml-0 stats">
+<div className="reveal flex h-full w-[40%] flex-col justify-center gap-8 pl-[60px] ml-[-60px] sm:ml-0 stats">
         <div className="stat">
           <span className="block text-[70px] font-black text-black">10+</span>
           <p className="mt-[-10px] text-[20px] text-black">

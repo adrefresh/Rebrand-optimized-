@@ -311,3 +311,17 @@ html,
 body {
   overscroll-behavior-y: none;
 }
+.input {
+  @apply 
+    w-full
+    px-6            /* ⬅ horizontal padding */
+    py-5            /* ⬅ vertical padding (THIS fixes placeholder spacing) */
+    rounded-lg
+    border border-[#ddd]
+    text-[16px]
+    placeholder:text-[#999]
+    focus:outline-none
+    focus:ring-2
+    focus:ring-black;
+}
+

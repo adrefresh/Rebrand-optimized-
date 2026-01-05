@@ -146,6 +146,7 @@
 //     </section>
 //   );
 // }
+
 "use client";
 
 export default function AboutHero() {
