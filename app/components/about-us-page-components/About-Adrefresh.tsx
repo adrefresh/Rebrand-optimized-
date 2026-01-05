@@ -54,7 +54,7 @@ export default function AboutAdRefresh() {
       className="
         relative flex w-full items-center justify-center
         overflow-hidden
-        bg-[#dadada]
+bg-[#dadada] 
         text-center
 
         px-5 py-10               /* 📱 mobile */
@@ -74,7 +74,7 @@ backgroundImage: `url('${basePath}/images/service-page-images-videos/GrayOutline
           backgroundRepeat: "repeat",
           backgroundPosition: "0 0",
           backgroundSize: "auto",
-          opacity: 0.35,
+          opacity: 0.45,
         }}
       />
 

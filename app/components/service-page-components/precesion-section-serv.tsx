@@ -213,18 +213,25 @@ export default function PrecisionSectionGray() {
       "
     >
       {/* PATTERN — untouched */}
-      <div
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage:
-            "url('/images/service-page-images-videos/Gray-Dual.svg')",
-          backgroundRepeat: "repeat-x",
-          backgroundPosition: "top center",
-          backgroundSize: "auto 100%",
-          opacity: 1,
-        }}
-      />
+    <div
+  className="absolute inset-0 z-0"
+  style={{
+    backgroundImage:
+      "url('/images/service-page-images-videos/Gray-Dual.svg')",
+    backgroundRepeat: "repeat-x",
+    backgroundPosition: "top center",
+    backgroundSize: "800px 110%",
+  }}
+/>
 
+{/* DIRECTIONAL SHADE OVERLAY */}
+<div
+  className="absolute inset-0 z-[1]"
+  style={{
+    background:
+      "linear-gradient(to right, rgba(0,0,0,0.18), rgba(0,0,0,0.08))",
+  }}
+/>
       {/* LIGHT WASH */}
       <div className="absolute inset-0 z-[1] bg-white/10" />
 

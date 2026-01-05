@@ -560,7 +560,7 @@ export default async function ClientSuccessDetail({
       <section
         className="cs-hero"
         style={{
-          ["--hero-pattern" as any]: `url(${basePath}/images/service-page-images-videos/GrayOutline.svg)`,
+          ["--hero-pattern" as any]: `url(/images/service-page-images-videos/GrayOutline.svg)`,
         }}
       >
         <h1 className="cs-hero-title">{data.title}</h1>

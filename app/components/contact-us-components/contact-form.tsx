@@ -322,17 +322,179 @@
 //     </section>
 //   );
 // }
+
+// "use client";
+
+// import React, { useRef, useState } from "react";
+
+// export default function ContactForm() {
+//   const startTime = useRef(Date.now());
+//   const [submitted, setSubmitted] = useState(false);
+
+//   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+//     e.preventDefault();
+//     if (submitted) return;
+
+//     const form = e.currentTarget;
+//     const data = new FormData(form);
+
+//     /* 🛑 1. Honeypot */
+//     if (data.get("website_url")) return;
+
+//     /* 🛑 2. Time-based check (bots submit instantly) */
+//     const timeTaken = Date.now() - startTime.current;
+//     if (timeTaken < 3000) return; // < 3s = bot
+
+//     /* 🛑 3. Human checkbox */
+//     if (!data.get("human_check")) return;
+
+//     /* 🛑 4. Validate inputs */
+//     const name = String(data.get("name") || "").trim();
+//     const email = String(data.get("email") || "").trim();
+//     const phone = String(data.get("phone") || "").trim();
+//     const company = String(data.get("company") || "-").trim();
+//     const subject = String(data.get("subject") || "").trim();
+//     const message = String(data.get("message") || "").trim();
+
+//     if (name.length < 2) return;
+//     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return;
+//     if (phone.length < 6) return;
+//     if (subject.length < 5) return;
+//     if (message.length < 15) return;
+
+//     /* 🛑 5. Prevent re-submit */
+//     setSubmitted(true);
+
+//     const body = `
+// Name: ${name}
+// Email: ${email}
+// Phone: ${phone}
+// Company: ${company}
+
+// Message:
+// ${message}
+//     `.trim();
+
+//    const mailto =
+//   "mailto:revanthrevi131@gmail.com" +
+//   "?subject=" + encodeURIComponent(`[Contact]: ${subject}`) +
+//   "&body=" + encodeURIComponent(body);
+
+// window.location.href = mailto;
+
+//   };
+
+//   return (
+//     <section
+//       className="
+//         mx-auto
+//         w-[92vw] sm:w-[88vw] md:w-[80vw] lg:w-[70vw] xl:w-[65vw]
+//         mt-12 sm:mt-16 pb-24
+//       "
+//     >
+//       <h2
+//         className="
+//           text-center font-bold mb-10
+//           text-[2.2rem] sm:text-[2.6rem] md:text-[3rem]
+//           lg:text-[3.5rem] xl:text-[4rem]
+//         "
+//       >
+//         Drop Us a Message
+//       </h2>
+
+//       <form
+//         onSubmit={handleSubmit}
+//         className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6"
+//       >
+//         {/* Honeypot */}
+//         <input
+//           type="text"
+//           name="website_url"
+//           className="sr-only"
+//           tabIndex={-1}
+//           autoComplete="off"
+//         />
+
+//         <input
+//           name="name"
+//           required
+//           placeholder="Your Name*"
+//           className="px-4 py-3 rounded-lg border border-[#ddd]"
+//         />
+
+//         <input
+//           name="email"
+//           type="email"
+//           required
+//           placeholder="Email*"
+//           className="px-4 py-3 rounded-lg border border-[#ddd]"
+//         />
+
+//         <input
+//           name="phone"
+//           required
+//           placeholder="Phone*"
+//           className="px-4 py-3 rounded-lg border border-[#ddd]"
+//         />
+
+//         <input
+//           name="company"
+//           placeholder="Company"
+//           className="px-4 py-3 rounded-lg border border-[#ddd]"
+//         />
+
+//         <input
+//           name="subject"
+//           required
+//           placeholder="Subject*"
+//           className="sm:col-span-2 px-4 py-3 rounded-lg border border-[#ddd]"
+//         />
+
+//         <textarea
+//           name="message"
+//           required
+//           rows={6}
+//           placeholder="Message (min 15 chars)"
+//           className="sm:col-span-2 px-4 py-3 rounded-lg border border-[#ddd]"
+//         />
+
+//         {/* Human check */}
+//         <label className="sm:col-span-2 flex items-center gap-2 text-sm">
+//           <input type="checkbox" name="human_check" required />
+//           I am not a bot
+//         </label>
+
+//         <button
+//           type="submit"
+//           disabled={submitted}
+//           className="
+//             sm:col-span-2
+//             bg-black text-white py-4 rounded-md
+//             font-semibold transition hover:bg-[#222]
+//             disabled:opacity-60
+//           "
+//         >
+//           {submitted ? "Opening Mail App..." : "Send Message"}
+//         </button>
+//       </form>
+//     </section>
+//   );
+// }
 "use client";
 
 import React, { useRef, useState } from "react";
 
+const GETFORM_ENDPOINT = "https://getform.io/f/agdvjnob";
+
 export default function ContactForm() {
   const startTime = useRef(Date.now());
-  const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (submitted) return;
+    if (loading) return;
 
     const form = e.currentTarget;
     const data = new FormData(form);
@@ -340,45 +502,51 @@ export default function ContactForm() {
     /* 🛑 1. Honeypot */
     if (data.get("website_url")) return;
 
-    /* 🛑 2. Time-based check (bots submit instantly) */
-    const timeTaken = Date.now() - startTime.current;
-    if (timeTaken < 3000) return; // < 3s = bot
+    /* 🛑 2. Time-based bot protection */
+    if (Date.now() - startTime.current < 3000) return;
 
     /* 🛑 3. Human checkbox */
     if (!data.get("human_check")) return;
 
-    /* 🛑 4. Validate inputs */
+    /* 🛑 4. Validation */
     const name = String(data.get("name") || "").trim();
     const email = String(data.get("email") || "").trim();
     const phone = String(data.get("phone") || "").trim();
-    const company = String(data.get("company") || "-").trim();
     const subject = String(data.get("subject") || "").trim();
     const message = String(data.get("message") || "").trim();
 
-    if (name.length < 2) return;
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return;
-    if (phone.length < 6) return;
-    if (subject.length < 5) return;
-    if (message.length < 15) return;
+    if (
+      name.length < 2 ||
+      !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ||
+      phone.length < 6 ||
+      subject.length < 5 ||
+      message.length < 15
+    ) {
+      setError("Please fill all fields correctly.");
+      return;
+    }
 
-    /* 🛑 5. Prevent re-submit */
-    setSubmitted(true);
+    setLoading(true);
+    setError("");
 
-    const body = `
-Name: ${name}
-Email: ${email}
-Phone: ${phone}
-Company: ${company}
+    try {
+      const res = await fetch(GETFORM_ENDPOINT, {
+        method: "POST",
+        body: data,
+        headers: {
+          Accept: "application/json",
+        },
+      });
 
-Message:
-${message}
-    `.trim();
+      if (!res.ok) throw new Error("Submission failed");
 
-    const mailto = `revanthrevi131@gmail.com
-      ?subject=${encodeURIComponent(`[Contact] ${subject}`)}
-      &body=${encodeURIComponent(body)}`;
-
-    window.location.href = mailto;
+      setSuccess(true);
+      form.reset();
+    } catch (err) {
+      setError("Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -463,7 +631,7 @@ ${message}
 
         <button
           type="submit"
-          disabled={submitted}
+          disabled={loading}
           className="
             sm:col-span-2
             bg-black text-white py-4 rounded-md
@@ -471,8 +639,20 @@ ${message}
             disabled:opacity-60
           "
         >
-          {submitted ? "Opening Mail App..." : "Send Message"}
+          {loading ? "Sending..." : "Send Message"}
         </button>
+
+        {success && (
+          <p className="sm:col-span-2 text-green-600 text-sm text-center">
+            ✅ Message sent successfully. We’ll get back to you soon.
+          </p>
+        )}
+
+        {error && (
+          <p className="sm:col-span-2 text-red-600 text-sm text-center">
+            {error}
+          </p>
+        )}
       </form>
     </section>
   );
