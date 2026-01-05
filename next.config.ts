@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-   // Required: Generates the 'out' folder 
+    output: 'export',      // Required: Generates the 'out' folder 
 
   images: { 
 
