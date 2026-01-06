@@ -32,7 +32,7 @@ export default function AdOpsContactHero2() {
       <div
         className="
           absolute
-          top-[10px]
+          top-[-22px]
           left-[50px]
           w-[32vw]
           h-[78vh]
