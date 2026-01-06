@@ -10,7 +10,7 @@ export default function CaseStudies() {
 const cases = [
   {
     slug: "impression-to-invoice",
-    title: "From Impression to Invoice — Streamlining Campaign Operations",
+    title: "From Impression to Invoice Streamlining Campaign Ops",
     comment:
       "Improved billing accuracy, reduced disputes, and enabled scalable operations across 300M+ programmatic impressions annually for a US-based ad network.",
   },

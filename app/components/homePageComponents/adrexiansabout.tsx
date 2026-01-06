@@ -167,11 +167,11 @@ export default function About() {
       sm:text-[1.8rem]
       md:text-[2.2rem]
       ml-0
-      md:ml-[20%]
+      md:ml-[15%]
       cursor-pointer
     "
   >
-    Discover Now
+    Discover Our Team
     <span className="animated-arrow">➜</span>
   </div>
 </Link>

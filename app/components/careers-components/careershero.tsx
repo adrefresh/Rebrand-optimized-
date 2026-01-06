@@ -34,39 +34,19 @@ export default function CareersHero() {
             tracking-wide
             whitespace-nowrap
 
-           text-[3.4rem]
-            sm:text-[4.2rem]
-            md:text-[5rem]
-            lg:text-[6rem]
-            xl:text-[6.4rem]
+           text-[4rem]
+              max-[1280px]:text-[3.4rem]
+              max-[1024px]:text-[3rem]
+              max-[768px]:text-[2.5rem]
+              max-[480px]:text-[2.1rem]
           "
         >
           CAREERS
         </h1>
 
-        <span
-          className="
-            mx-auto my-4
-            block h-[2px] w-14
-            sm:my-5 sm:h-[3px] sm:w-16
-            lg:my-6 lg:w-20
-            bg-white
-          "
-        />
+      
 
-        <p
-          className="
-            uppercase opacity-90
-            tracking-[0.12em]
-            text-[0.85rem]
-
-            sm:text-[0.95rem] sm:tracking-[0.14em]
-            md:text-[1rem]
-            lg:text-[1.05rem]
-          "
-        >
-          Where Talent Meets Opportunity
-        </p>
+       
       </div>
     </section>
   );

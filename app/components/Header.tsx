@@ -430,7 +430,8 @@ export default function Header() {
       >
         <div className="mx-auto max-w-[1400px] px-4 sm:px-6 md:px-8 lg:px-[40px] flex items-center justify-between">
           {/* LOGO */}
-          <div className="w-[170px] h-[40px] flex items-center">
+          <Link href="/" aria-label="Go to Home">
+  <div className="w-[170px] h-[40px] flex items-center">
             <Image
               src={isWhiteNav ? colorLogo : WhiteLogo}
               alt="Logo"
@@ -439,6 +440,8 @@ export default function Header() {
               className="w-[120px] sm:w-[140px] md:w-[160px] lg:w-[170px] h-auto"
             />
           </div>
+</Link>
+        
 
           {/* HAMBURGER */}
           {!menuOpen && (
@@ -525,12 +528,12 @@ export default function Header() {
 <div
     className="
       relative
-      mt-[6px]
-      mr-[8px]
+      mt-[4px]
+      mr-[4px]
       flex
       flex-col
-      px-5
-      py-5
+      px-2
+      py-2
 
     
     "
@@ -540,14 +543,14 @@ export default function Header() {
                   href="/services/digital-marketing"
                   className="text-[1.5rem] sm:text-[1.25rem] md:text-[1.4rem] lg:text-[1.5rem] font-medium hover:text-[#813DFF]"
                 >
-                  Digital Marketing
+                  Digital-Marketing
                 </Link>
                 <Link
                   onClick={closeMenu}
                   href="/services/ad-operations"
                   className="text-[1.5rem] sm:text-[1.25rem] md:text-[1.4rem] lg:text-[1.5rem] font-medium hover:text-[#813DFF]"
                 >
-                  Ad Operations
+                  Advertising-Operations
                 </Link>
               </div>
             )}

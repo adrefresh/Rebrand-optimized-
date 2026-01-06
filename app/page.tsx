@@ -72,7 +72,7 @@ export default function HomePage() {
       <CustomizedWorkflow />
       <CaseHeader />
       <Services />
-     <div className="mb-[-162px] sm:mb-0">
+     <div className="mb-[-160px] sm:mb-[-2px]">
   <ListenPerform />
 </div>
 

@@ -70,7 +70,7 @@ export default function Hero() {
           flex-col
           items-start
           justify-start
-          px-6 sm:px-16
+          px-2 sm:px-4
           text-left
 
           pt-35
@@ -78,33 +78,28 @@ export default function Hero() {
           lg:pt-38
         "
       >
-       <h1 
+  <h1
   className="
     hero-title
     reveal
-    max-w-5xl
 
-    /* alignment */
-    text-center
+    w-full
+    text-left
 
-    /* font sizes */
-    text-[1.4rem]        /* 📱 mobile */
+    text-[1.4rem]
     sm:text-[2.6rem]
     md:text-[4rem]
     lg:text-[5rem]
     xl:text-[6rem]
 
-    /* spacing */
-  mt-[-50px]         /* mobile */
-sm:mt-4       /* tablet */
-
+    mt-[-50px]
+    sm:mt-4
 
     font-bold
     tracking-tight
     leading-tight
     text-white
 
-    /* animation positioning */
     translate-y-0
     xl:translate-y-8
   "
@@ -112,6 +107,7 @@ sm:mt-4       /* tablet */
   YOUR REMOTE TEAM <br />
   THAT FEELS ON SITE
 </h1>
+
 
       </main>
 
@@ -135,14 +131,14 @@ sm:mt-4       /* tablet */
         <FaAngleDoubleDown size={42} color="white" />
       </button>
       <style>{`
-  @media (max-width: 639px) {
-    .hero-title {
-      font-size: 1.4rem;
-      margin-top: -100px;
-      text-align: center;
-      margin-left:-20px;
-    }
+@media (max-width: 639px) {
+  .hero-title {
+    font-size: 1.4rem;
+    margin-top: -100px;
+    text-align: left; /* keep logo alignment */
   }
+}
+
 `}</style>
 
     </section>

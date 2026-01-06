@@ -57,21 +57,21 @@ export default function Flexibility() {
       {/* ================= RIGHT ================= */}
 <div className="reveal flex h-full w-[40%] flex-col justify-center gap-8 pl-[60px] ml-[-60px] sm:ml-0 stats">
         <div className="stat">
-          <span className="block text-[70px] font-black text-black">10+</span>
+          <span className="block text-[70px] font-black text-black">50+</span>
           <p className="mt-[-10px] text-[20px] text-black">
             Years of Experience
           </p>
         </div>
 
         <div className="stat">
-          <span className="block text-[70px] font-black text-black">50+</span>
+          <span className="block text-[70px] font-black text-black">150+</span>
           <p className="mt-[-10px] text-[20px] text-black">
             Happy Clients
           </p>
         </div>
 
         <div className="stat">
-          <span className="block text-[70px] font-black text-black">5K+</span>
+          <span className="block text-[70px] font-black text-black">500K+</span>
           <p className="mt-[-10px] text-[20px] text-black">
             Campaigns Executed
           </p>

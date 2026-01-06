@@ -28,9 +28,9 @@ export default function PrecisionSectionGray() {
   style={{
     backgroundImage:
       "url('/images/service-page-images-videos/Gray-Dual.svg')",
-    backgroundRepeat: "repeat-x",
-    backgroundPosition: "center center",
-    backgroundSize: "auto 100%",
+     backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+     backgroundSize: "99% auto",
   }}
 />
 

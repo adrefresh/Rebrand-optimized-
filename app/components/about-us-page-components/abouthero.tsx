@@ -53,15 +53,16 @@ export default function AboutHero() {
     leading-[1.05]
 
     /* font sizes */
-    text-[2.2rem]        /* 📱 mobile */
-    sm:text-[2.8rem]
-    md:text-[3.6rem]     /* 📱 tablet */
-    lg:text-[5rem]       /* 💻 laptop */
-    xl:text-[6.4rem]     /* 🖥 desktop */
+   text-[4rem]
+              max-[1280px]:text-[3.4rem]
+              max-[1024px]:text-[3rem]
+              max-[768px]:text-[2.5rem]
+              max-[480px]:text-[2.1rem]
 
     /* wrapping behavior */
     whitespace-normal
     lg:whitespace-nowrap
+
   "
 >
   WE&apos;RE ADREXIANS
@@ -77,7 +78,7 @@ export default function AboutHero() {
             lg:text-[1.25rem]
           "
         >
-          Built on experience. Driven by performance.
+         
         </p>
       </div>
     </section>

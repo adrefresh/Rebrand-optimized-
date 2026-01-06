@@ -706,11 +706,11 @@ export default function ClientSuccessPage() {
     leading-[1.05]
 
     /* font sizes */
-    text-[2.2rem]        /* 📱 mobile */
-    sm:text-[2.8rem]
-    md:text-[3.6rem]     /* 📱 tablet */
-    lg:text-[5.5rem]     /* 💻 laptop */
-    xl:text-[6rem]       /* 🖥 desktop */
+     text-[4rem]
+              max-[1280px]:text-[3.4rem]
+              max-[1024px]:text-[3rem]
+              max-[768px]:text-[2.5rem]
+              max-[480px]:text-[2.1rem]   /* 🖥 desktop */
 
     /* wrapping */
     whitespace-normal
@@ -721,7 +721,7 @@ export default function ClientSuccessPage() {
 </h1>
 
     <p className="mt-3 text-[clamp(1rem,2vw,1.25rem)] opacity-90">
-      Real-world outcomes powered by operational excellence
+      
     </p>
   </div>
 </section>

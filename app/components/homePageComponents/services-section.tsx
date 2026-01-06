@@ -2,7 +2,7 @@
 "use client";
 
 import { useEffect } from "react";
-import { HiArrowLongRight } from "react-icons/hi2";
+// import { HiArrowLongRight } from "react-icons/hi2";
 
 export default function Services() {
   const digitalMarketing = [
@@ -148,7 +148,16 @@ export default function Services() {
               "
             >
           
-<HiArrowLongRight className="transition-transform group-hover:translate-x-2" size={48} />
+  <span
+            className="
+              text-[66px] font-black text-white
+              transition-transform duration-200 ease-out
+              group-hover:translate-x-1
+              max-[768px]:text-[36px]
+            "
+          >
+            ➜
+          </span>
             </a>
           </div>
         </div>
@@ -197,7 +206,17 @@ export default function Services() {
               "
             >
             
-<HiArrowLongRight className="transition-transform group-hover:translate-x-2" size={48} />
+          
+  <span
+            className="
+              text-[66px] font-black text-white
+              transition-transform duration-200 ease-out
+              group-hover:translate-x-1
+              max-[768px]:text-[36px]
+            "
+          >
+            ➜
+          </span>
             </a>
           </div>
         </div>

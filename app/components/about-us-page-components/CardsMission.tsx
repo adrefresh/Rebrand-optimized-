@@ -65,9 +65,11 @@ function ExactCard({ title, desc, index, theme, icon }: CardProps) {
         </h3>
 
         {/* TEXT */}
-        <p className="text-center text-[13px] sm:text-[13.5px] md:text-[14px] leading-relaxed text-gray-500">
-          {desc}
-        </p>
+     <p className="word-justify text-[13px] sm:text-[13.5px] md:text-[14px] leading-relaxed text-gray-500">
+  {desc}
+</p>
+
+
       </div>
 
       {/* SIDE CURVES */}
@@ -110,24 +112,7 @@ function ExactCard({ title, desc, index, theme, icon }: CardProps) {
       />
 
       {/* NUMBER BADGE */}
-      <div
-        className={`
-          absolute
-          bottom-0
-          left-1/2
-          z-30
-          h-[32px] sm:h-[34px] md:h-[36px]
-          w-[56px] sm:w-[60px] md:w-[64px]
-          -translate-x-1/2
-          rounded-[12px]
-          ${colors[theme].plateDark}
-          flex items-center justify-center
-          text-[13px] sm:text-[14px]
-          font-bold text-black
-        `}
-      >
-        {index}
-      </div>
+     
     </div>
   );
 }

@@ -44,7 +44,7 @@ export default function Features() {
       const isMobile = window.innerWidth <= 768;
 
       nodes = Array.from(
-        { length: isMobile ? 22 : 55 },
+        { length: isMobile ? 22 : 63 },
         () => ({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,

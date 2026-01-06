@@ -6,7 +6,7 @@ export default function CareersClient() {
     <>
       {/* ================= HEADING ================= */}
       <div className="mt-16 px-4 text-center sm:mt-20">
-        <h1 className="font-extrabold text-[2.2rem] sm:text-[3rem] md:text-[4rem] lg:text-[5rem]">
+        <h1 className="font-extrabold text-[2.2rem] sm:text-[3rem] md:text-[4rem] lg:text-[3rem]">
           JOIN WITH US
         </h1>
 

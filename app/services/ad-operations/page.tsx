@@ -78,7 +78,7 @@ export default function AdOpsPageWithVideo() {
               max-[480px]:text-[2.1rem]
             "
           >
-            AD OPERATIONS
+            ADVERTSING-OPERATIONS
           </h1>
         </div>
       </section>

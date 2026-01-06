@@ -66,7 +66,7 @@ export default function DigitalMarketingPage() {
               xl:text-[4rem]
             "
           >
-            DIGITAL MARKETING
+            DIGITAL-MARKETING
           </h1>
         </div>
       </section>
@@ -96,9 +96,10 @@ export default function DigitalMarketingPage() {
         </div>
 
         {/* ZigZag Section */}
-        <div className="mx-auto w-[94vw] sm:w-[90vw] lg:w-[85vw]">
-          <DgZigZagSections />
-        </div>
+        <div className="mx-auto mb-[-50px] sm:mb-0 w-[94vw] sm:w-[90vw] lg:w-[85vw]  lg:mb-[-100px]    ">
+  <DgZigZagSections />
+</div>
+
 
         {/* Spacer */}
         <div className="mt-[14%] sm:mt-[12%] md:mt-[10%]" />

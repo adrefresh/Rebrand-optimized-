@@ -22,11 +22,12 @@
   content: "";
   position: absolute;
   inset: 0;
-
+background-position:center;
   background-image: var(--hero-pattern);
-  background-repeat: repeat;
-  background-size: auto;
-  background-position: center;
+  background-repeat: no-repeat;
+    background-size: 99% auto;
+    
+   
 
   opacity: 0.3;
   filter: brightness(0.8);

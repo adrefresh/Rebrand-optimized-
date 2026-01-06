@@ -36,11 +36,11 @@ export default function ContactHero() {
       <h1
         className="
           relative z-[5] font-black text-white text-center leading-tight
-   text-[3.4rem]
-            sm:text-[4.2rem]
-            md:text-[5rem]
-            lg:text-[6rem]
-            xl:text-[6.4rem]
+      text-[4rem]
+              max-[1280px]:text-[3.4rem]
+              max-[1024px]:text-[3rem]
+              max-[768px]:text-[2.5rem]
+              max-[480px]:text-[2.1rem]
            /* 🖥 large desktop */
         "
       >
