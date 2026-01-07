@@ -99,20 +99,219 @@
 //     </section>
 //   );
 // }
+
+// "use client";
+
+// export default function PrecisionSectionGray() {
+//   return (
+//     <section
+//       className="
+//         relative
+//         w-screen
+
+//         h-[70vh]           /* ✅ fixed 70vh for all devices */
+//         min-h-[60vh]
+
+//         flex
+//         items-center
+//         justify-center
+//         text-center
+//         overflow-hidden
+//         bg-[#F2F2F2]
+//         mt-9
+//       "
+//     >
+//       {/* PATTERN — FULL WIDTH & HEIGHT */}
+//       <div
+//         className="absolute inset-0 z-0 bg-center bg-no-repeat bg-cover"
+//         style={{
+//           backgroundImage:
+//             "url('/images/service-page-images-videos/Gray-Dual.svg')",
+//         }}
+//       />
+
+//       {/* DIRECTIONAL SHADE OVERLAY */}
+//       <div
+//         className="absolute inset-0 z-[1]"
+//         style={{
+//           background:
+//             "linear-gradient(to right, rgba(0,0,0,0.18), rgba(0,0,0,0.08))",
+//         }}
+//       />
+
+//       {/* LIGHT WASH */}
+//       <div className="absolute inset-0 z-[2] bg-white/10" />
+
+//       {/* CONTENT */}
+//       <div
+//         className="
+//           relative
+//           z-[10]
+//           max-w-[1100px]
+//           w-full
+
+//           px-1       /* 📱 mobile */
+//           sm:px-2     /* 📲 tablet */
+//           md:px-4     /* 💻 desktop */
+    
+//         "
+//       >
+//         <h1
+//           className="
+//              text-black
+//             font-black
+//             mb-5
+//             leading-tight
+
+//             break-words
+//             hyphens-auto
+
+//             text-[1.2rem]      /* 📱 mobile */
+//             sm:text-[1.9rem]
+//             md:text-[2rem]
+//             lg:text-[2.2rem]
+//             xl:text-[2.5rem]
+//           "
+//         >
+//           DATA-DRIVEN STRATEGIES FOR SCALABLE, MEASURABLE BUSINESS GROWTH
+//         </h1>
+
+//         <p
+//           className="
+//             text-black
+//             mx-auto
+//             leading-relaxed
+//             max-w-[900px]
+
+//             break-words
+
+//             text-[12px]        /* 📱 mobile */
+//             sm:text-[12px]
+//             md:text-[14px]
+//             lg:text-[16px]
+//             xl:text-[18px]
+//           "
+//         >
+//           We build strategy-driven digital campaigns using data, creativity, and
+//           modern tools to attract audiences, generate leads, and increase
+//           conversions.
+//         </p>
+//       </div>
+//     </section>
+//   );
+// }
+
+// "use client";
+
+// export default function PrecisionSectionMarketing() {
+//   return (
+//     <section
+//   className="
+//     relative
+//     w-screen
+
+//     py-16         /* controlled vertical spacing */
+//     sm:py-19
+//     md:py-23
+
+//     flex
+//     justify-center
+//     text-center
+//     overflow-hidden
+//     bg-[#F2F2F2]
+//     mt-9
+//   "
+// >
+
+//       {/* BACKGROUND */}
+//       <div
+//         className="absolute inset-0 z-0 bg-center bg-no-repeat bg-cover"
+//         style={{
+//           backgroundImage:
+//             "url('/images/service-page-images-videos/Gray-Dual.svg')",
+//         }}
+//       />
+
+//       {/* SHADE */}
+//       <div
+//         className="absolute inset-0 z-[1]"
+//         style={{
+//           background:
+//             "linear-gradient(to right, rgba(0,0,0,0.18), rgba(0,0,0,0.08))",
+//         }}
+//       />
+
+//       {/* LIGHT WASH */}
+//       <div className="absolute inset-0 z-[2] bg-white/10" />
+
+//       {/* CONTENT */}
+//       <div
+//         className="
+//           relative
+//           z-[10]
+//           max-w-[1100px]
+//           w-full
+
+//           px-[3px]
+//           sm:px-2
+//           md:px-3
+//         "
+//       >
+//         <h1
+//           className="
+//             text-black
+//             font-black
+//             mb-5
+//             leading-tight
+//             break-words
+//             hyphens-auto
+//             text-[1.2rem]
+//             sm:text-[1.9rem]
+//             md:text-[2rem]
+//             lg:text-[2.2rem]
+//             xl:text-[2.5rem]
+//           "
+//         >
+//           DATA-DRIVEN STRATEGIES FOR SCALABLE, MEASURABLE BUSINESS GROWTH
+//         </h1>
+
+//         <p
+//           className="
+//             text-black
+//             mx-auto
+//             leading-relaxed
+//             max-w-[900px]
+//             break-words
+//             text-[14px]
+//             sm:text-[15px]
+//             md:text-[16px]
+//             lg:text-[18px]
+//             xl:text-[20px]
+//           "
+//         >
+//           We build strategy-driven digital campaigns using data, creativity, and
+//           modern tools to attract audiences, generate leads, and increase
+//           conversions.
+//         </p>
+//       </div>
+//     </section>
+//   );
+// }
+
 "use client";
 
-export default function PrecisionSectionGray() {
+export default function PrecisionSectionAdOps() {
   return (
     <section
       className="
         relative
         w-screen
 
-        h-[70vh]           /* ✅ fixed 70vh for all devices */
-        min-h-[70vh]
+        py-16
+        sm:py-19
+        md:py-23
 
         flex
-        items-center
         justify-center
         text-center
         overflow-hidden
@@ -120,7 +319,7 @@ export default function PrecisionSectionGray() {
         mt-9
       "
     >
-      {/* PATTERN — FULL WIDTH & HEIGHT */}
+      {/* BACKGROUND */}
       <div
         className="absolute inset-0 z-0 bg-center bg-no-repeat bg-cover"
         style={{
@@ -129,7 +328,7 @@ export default function PrecisionSectionGray() {
         }}
       />
 
-      {/* DIRECTIONAL SHADE OVERLAY */}
+      {/* SHADE */}
       <div
         className="absolute inset-0 z-[1]"
         style={{
@@ -149,9 +348,9 @@ export default function PrecisionSectionGray() {
           max-w-[1100px]
           w-full
 
-          px-3        /* 📱 mobile */
-          sm:px-6     /* 📲 tablet */
-          md:px-8     /* 💻 desktop */
+          px-[3px]
+          sm:px-2
+          md:px-1
         "
       >
         <h1
@@ -160,18 +359,16 @@ export default function PrecisionSectionGray() {
             font-black
             mb-5
             leading-tight
-
             break-words
             hyphens-auto
-
-            text-[1.6rem]      /* 📱 mobile */
+            text-[2rem]
             sm:text-[1.9rem]
-            md:text-[2.2rem]
-            lg:text-[2.5rem]
-            xl:text-[2.8rem]
+            md:text-[2rem]
+            lg:text-[2.2rem]
+            xl:text-[2.5rem]
           "
         >
-          DATA-DRIVEN STRATEGIES FOR SCALABLE, MEASURABLE BUSINESS GROWTH
+          Data-Driven Strategies for Scalable, Measurable Business Growth
         </h1>
 
         <p
@@ -180,19 +377,17 @@ export default function PrecisionSectionGray() {
             mx-auto
             leading-relaxed
             max-w-[900px]
-
             break-words
-
-            text-[15px]        /* 📱 mobile */
-            sm:text-[16px]
-            md:text-[18px]
-            lg:text-[20px]
-            xl:text-[22px]
+            text-[18px]
+            sm:text-[18px]
+            md:text-[20px]
+            lg:text-[24px]
+            xl:text-[28px]
           "
         >
-          We build strategy-driven digital campaigns using data, creativity, and
-          modern tools to attract audiences, generate leads, and increase
-          conversions.
+           We build strategy-driven digital campaigns using data, creativity, and
+         modern tools to attract audiences, generate leads, and increase
+        conversions.
         </p>
       </div>
     </section>

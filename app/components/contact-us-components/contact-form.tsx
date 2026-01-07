@@ -833,6 +833,7 @@
 //     </section>
 //   );
 // }
+
 "use client";
 
 import React, { useRef, useState } from "react";
@@ -971,7 +972,7 @@ export default function ContactForm() {
           padding: 0.75rem 1rem;
           border-radius: 0.5rem;
           border: 1px solid #000;
-          background: transparent;
+          background: #ffffff;
           color: #000;
           outline: none;
           font-size: 0.95rem;

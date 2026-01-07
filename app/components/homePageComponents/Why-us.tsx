@@ -21,7 +21,7 @@ export default function WhyUsSection() {
       >
         {/* LEFT */}
         <div className="flex flex-col items-start text-left gap-[100px] pt-[20px] pr-[12px] ml-[40%]">
-          <div>
+          <div className="ml-10">
             <h2 className="text-[2rem] font-extrabold">A CORE OF</h2>
             <div className="relative inline-block mt-2">
               <span className="absolute inset-[-10px_-18px] bg-[var(--green-tint-30)] opacity-70 blur-[36px]" />
@@ -40,11 +40,11 @@ export default function WhyUsSection() {
               </span>
             </div>
           </div> */}
-          <div>
-  <h2 className="text-[2rem] font-extrabold">
+          <div className="ml-10">
+  <h2 className="text-[2rem] font-extrabold ">
     A LAYER OF
   </h2>
-<div className="relative inline-block mt-1 ml-[-60px]">
+<div className="relative inline-block mt-1 ml-[-20px]">
   <span
     className="
       absolute
@@ -56,6 +56,7 @@ export default function WhyUsSection() {
       opacity-80
       blur-[26px]
       rounded-full
+      
     
     "
   />
@@ -99,7 +100,7 @@ export default function WhyUsSection() {
 </div>
 
 
-          <div>
+          <div className="ml-5">
             <h2 className="text-[2rem] font-extrabold">A CULTURE OF</h2>
             <div className="relative inline-block mt-2">
               <span className="absolute inset-[-8px_0] bg-[var(--green-tint-30)] opacity-60 blur-[18px]" />

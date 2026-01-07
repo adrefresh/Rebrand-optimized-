@@ -734,7 +734,7 @@ export default function ClientSuccessPage() {
             zIndex:-3,
             backgroundImage:
               "url(/images/service-page-images-videos/GrayOutline.svg)",
-            backgroundSize: "700px",
+            backgroundSize: "750px",
             transform: "rotate(180deg)",
             maskImage:
               "linear-gradient(to bottom, transparent, black 40%, black 85%, transparent)",

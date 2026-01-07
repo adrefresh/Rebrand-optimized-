@@ -190,7 +190,25 @@ export default function DgZigZagSections() {
           line-height: 1.6;
           margin-top: 0%;
         }
+          .pattern-left::after,
+        .pattern-right::after {
+         
+          opacity: 0.95;
+         
+        }
+
+        .pattern-right::after {
+          right: -20%;
+          top: 10%;
+       
+        }
+          .pattern-left::after {
+          right: -20%;
+          top: 20%;
+       
+        }
            }
+        
          
       `}</style>
     </section>

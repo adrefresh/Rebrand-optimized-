@@ -58,7 +58,7 @@ export default function Hero() {
       </video>
 
       {/* DARK OVERLAY */}
-      <div className="absolute inset-0 bg-black/40" />
+      <div className="absolute inset-0" />
 
       {/* CONTENT */}
       <main

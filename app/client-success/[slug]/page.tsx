@@ -608,7 +608,7 @@ export default async function ClientSuccessDetail({
   className="
     mt-[5%]
     mb-[-10%]        /* 📱 mobile */
-    sm:mb-[-3.5%]   /* 💻 tablet & up */
+    sm:mb-[-3.7%]   /* 💻 tablet & up */
   "
 >
   <ListenPerform />

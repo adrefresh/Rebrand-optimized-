@@ -264,7 +264,7 @@ export default function Footer() {
         {/* ================= 2. LOCATIONS ================= */}
         <div className="flex flex-col gap-6 text-sm leading-relaxed">
           <div>
-            <h4 className="font-semibold mb-1">INDIA</h4>
+            <h1 className="font-bold mb-1">INDIA</h1>
             <p className="opacity-90">
               Hyderabad <br />
               1102D, Manjeera Trinity Corporate <br />
@@ -273,7 +273,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-1">USA</h4>
+            <h1 className="font-bold mb-1">USA</h1>
             <p className="opacity-90">
               Harvard <br />
               PO Box 142 <br />

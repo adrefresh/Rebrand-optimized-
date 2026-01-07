@@ -188,6 +188,33 @@ export default function ZigZagSections() {
           line-height: 1.6;
           margin-top: 0%;
         }
+           .pattern-left::after,
+        .pattern-right::after {
+         
+          opacity: 0.95;
+         
+        }
+
+       
+           .pattern-left::after,
+        .pattern-right::after {
+       
+          top: -14%;
+          width: 68vw;
+          height: 40vh;
+        
+        }
+           .pattern-right::after {
+          right:-10%;
+          top: 25%;
+       
+        }
+          .pattern-left::after {
+         left:-10%;
+          top:25%;
+       
+        }
+        
           }
       `}</style>
     </section>
