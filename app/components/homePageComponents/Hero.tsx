@@ -52,7 +52,7 @@ export default function Hero() {
         className="absolute inset-0 w-full h-full object-cover"
       >
         <source
-          src={`${basePath}/images/about-page-videos-images/officevd.mp4`}
+          src={`${basePath}/images/about-page-videos-images/officer1.mp4`}
           type="video/mp4"
         />
       </video>
