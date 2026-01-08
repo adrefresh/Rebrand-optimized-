@@ -648,14 +648,14 @@ const caseStudies = [
     title: "From Impression to Invoice Streamlining Campaign Operations",
     excerpt:
       "How a US-based genealogy-focused programmatic ad network improved billing accuracy, reduced disputes, and scaled operations across 300M+ impressions annually.",
-    image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7",
+    image: "/images/careers-images/1.jpg",
   },
   {
     slug: "transition-enablers",
     title: "Transition Enablers in a Complex Organizational Shift",
     excerpt:
       "Supporting a large enterprise through acquisition-led restructuring by becoming the backbone of platform knowledge and operational continuity.",
-    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c",
+    image: "/images/careers-images/4.jpg",
   },
 ];
 

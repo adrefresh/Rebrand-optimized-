@@ -126,11 +126,11 @@ export default function About() {
                 className="
                 text-left
                   reveal
-                                   text-[14px]
-                  sm:text-[17px]
-                  md:text-[14px]
-                  lg:text-[18px]
-                  leading-[1.6]
+                      text-[17px]
+                  sm:text-[19px]
+                  md:text-[16px]
+                  lg:text-[20px]
+                  leading-[1.7]
                   mb-8
                   ml-0
                   md:ml-[10%]
@@ -145,7 +145,7 @@ export default function About() {
                 className="
                   reveal
                   text-left
-                  text-[14px]
+                  text-[17px]
                   sm:text-[19px]
                   md:text-[16px]
                   lg:text-[20px]
