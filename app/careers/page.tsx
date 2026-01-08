@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 import CareersHero from "../components/careers-components/careershero";
 import PathSection from "../components/careers-components/Pathsection";
-import PatternBackground from "../components/careers-components/patternbg";
+// import PatternBackground from "../components/careers-components/patternbg";
 import CareersClient from "../components/careers-components/jobs";
 
 

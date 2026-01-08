@@ -1,7 +1,7 @@
 
 
 import type { Metadata } from "next";
-import ContactClient from "../components/contact-us-components/contact-maps";
+// import ContactClient from "../components/contact-us-components/contact-maps";
 import GlobalPresence from "../components/contact-us-components/Globalpresence";
 import ContactHero from "../components/contact-us-components/contact-hero";
 import ContactForm from "../components/contact-us-components/contact-form";
