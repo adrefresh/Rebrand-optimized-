@@ -66,7 +66,7 @@ export default function DigitalMarketingPage() {
               xl:text-[4rem]
             "
           >
-            DIGITAL-MARKETING
+            DIGITAL MARKETING
           </h1>
         </div>
       </section>

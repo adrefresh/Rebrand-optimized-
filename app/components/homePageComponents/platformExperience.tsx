@@ -57,7 +57,7 @@ export default function Flexibility() {
       {/* ================= RIGHT ================= */}
 <div className="reveal flex h-full w-[40%] flex-col justify-center gap-8 pl-[60px] ml-[-60px] sm:ml-0 stats">
         <div className="stat">
-          <span className="block text-[70px] font-black text-black">50+</span>
+          <span className="block text-[70px] font-black text-black">15+</span>
           <p className="mt-[-10px] text-[20px] text-black">
             Years of Experience
           </p>

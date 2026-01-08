@@ -368,13 +368,14 @@ export default function PrecisionSectionAdOps() {
             xl:text-[2.5rem]
           "
         >
-          Data-Driven Strategies for Scalable, Measurable Business Growth
+          Data Driven Strategies for Scalable, Measurable Business Growth
         </h1>
 
         <p
           className="
             text-black
             mx-auto
+             text-left
             leading-relaxed
             max-w-[900px]
             break-words

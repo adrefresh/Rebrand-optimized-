@@ -107,6 +107,7 @@ export default function ZigZagSections() {
           width: 70vw;
           line-height: 1.6;
           margin-top: 0%;
+          text-align:left;
         }
 
         .zz-line {

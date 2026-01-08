@@ -460,6 +460,7 @@ export default function PrecisionSectionAdOps() {
             md:text-[2rem]
             lg:text-[2.2rem]
             xl:text-[2.5rem]
+         
           "
         >
           Precision and Performance Through Transformative Advertising Operations
@@ -477,6 +478,7 @@ export default function PrecisionSectionAdOps() {
             md:text-[20px]
             lg:text-[24px]
             xl:text-[28px]
+            text-left
           "
         >
           We power advertising operations through structured execution, accurate

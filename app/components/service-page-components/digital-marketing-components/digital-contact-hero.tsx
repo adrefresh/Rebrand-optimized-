@@ -25,7 +25,7 @@ export default function AdOpsContactHero2() {
         className="
           pointer-events-none
           absolute
-          top-[8px]
+          top-[26px]
           left-[50px]
           z-[1]
           h-[70vh]
@@ -95,7 +95,8 @@ export default function AdOpsContactHero2() {
             max-[600px]:text-[28px]
           "
         >
-          Simplify Your Ad Operations <br /> with Expert Support
+              Let’s Build Smarter <br /> Digital Growth Together 
+
         </h1>
 
         <p
@@ -112,10 +113,8 @@ export default function AdOpsContactHero2() {
             max-[600px]:text-[15px]
           "
         >
-          Talk to our specialists to streamline execution,
-          <br />
-          improve accuracy, and ensure your advertising operations run smoothly
-          at scale.
+
+Connect with our experts to discuss your goals, challenges, and the <br />right digital strategies for measurable, scalable results. 
         </p>
 
         <Link

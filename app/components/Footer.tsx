@@ -215,6 +215,165 @@
 //     </footer>
 //   );
 // }
+
+// "use client";
+
+// import Image from "next/image";
+// import WhitePml from "@/public/images/FooterImages/whitePML.png";
+// import Soc from "@/public/images/FooterImages/SOC2.svg";
+// import iso from "@/public/images/FooterImages/iso2001.png";
+
+// import {
+//   Mail,
+//   Facebook,
+//   Twitter,
+//   Linkedin,
+//   Instagram,
+// } from "lucide-react";
+
+// export default function Footer() {
+//   return (
+//     <footer className="w-screen ml-[calc(50%-50vw)] bg-[linear-gradient(to_bottom,#565656_0%,#949494_100%)] text-white">
+//       {/* ================= GRID ================= */}
+//       <div
+//         className="
+//           relative mx-auto max-w-[1400px]
+//           px-[40px] py-[20px]
+//           grid grid-cols-4 gap-[40px]
+
+//           max-[1024px]:grid-cols-2
+//           max-[640px]:grid-cols-1
+//         "
+//       >
+//         {/* ================= 1. LOGO ================= */}
+//         <div className="flex flex-col gap-6 max-[640px]:items-center ">
+//           <Image
+//             src={WhitePml}
+//             alt="AdRefresh"
+//             width={110}
+//             height={90}
+//             className="w-[150px] object-contain ml-0 md:ml-10"
+          
+//           />
+
+//           <div className="flex gap-4">
+//             <Image src={iso} alt="ISO" width={120} height={60} />
+//             <Image src={Soc} alt="SOC" width={90} height={60} />
+//           </div>
+//         </div>
+
+//         {/* ================= 2. LOCATIONS ================= */}
+//         <div className="flex flex-col gap-6 text-sm leading-relaxed">
+//           <div>
+//             <h1 className="font-bold mb-1">INDIA</h1>
+//             <p className="opacity-90">
+//               Hyderabad <br />
+//               1102D, Manjeera Trinity Corporate <br />
+//               Kukatpally, HYD 500072
+//             </p>
+//           </div>
+
+//           <div>
+//             <h1 className="font-bold mb-1">USA</h1>
+//             <p className="opacity-90">
+//               Harvard <br />
+//               PO Box 142 <br />
+//               Harvard, MA 01451
+//             </p>
+//           </div>
+//         </div>
+
+//         {/* ================= 3. EMAIL ================= */}
+//         <div className="relative flex items-center">
+//           {/* vertical divider */}
+//           <div className="absolute -left-[20px] top-0 h-full w-[2px] bg-white/30 max-[640px]:hidden" />
+
+//           <div className="grid items-start gap-3">
+//             <Mail size={52} />
+//             <span className="text-sm tracking-wide">
+//               contact@adrefresh.com
+//             </span>
+//           </div>
+//         </div>
+
+//         {/* ================= 4. SOCIAL ================= */}
+//         <div className="flex items-center justify-start gap-4 max-[740px]:justify-center">
+//           <a className="social fb" href="#"><Facebook size={28} /></a>
+//         <a className="social x" href="#" aria-label="X">
+//   <svg
+//     xmlns="http://www.w3.org/2000/svg"
+//     viewBox="0 0 24 24"
+//     className="w-[18px] h-[18px] fill-current"
+//   >
+//     <path d="M18.244 2H21.78l-7.71 8.81L23 22h-7.08l-5.53-7.19L4.64 22H1.1l8.25-9.43L1 2h7.26l5 6.54L18.24 2z" />
+//   </svg>
+// </a>
+
+//           <a className="social in" href="#"><Linkedin size={28} /></a>
+//           <a className="social insta" href="#"><Instagram size={28} /></a>
+//         </div>
+//       </div>
+
+//       {/* ================= DIVIDER ================= */}
+//       <div className="mx-auto h-[2px] w-[90%] bg-white/30" />
+
+//       {/* ================= COPYRIGHT ================= */}
+//       <div className="py-4 text-center text-sm opacity-85">
+//         © {new Date().getFullYear()} AdRefresh. All Rights Reserved.
+//       </div>
+
+//       {/* ================= STYLES ================= */}
+//       <style>{`
+//         .social {
+//           width: 46px;
+//           height: 46px;
+//           border-radius: 9999px;
+//           background: white;
+//           color: black;
+//           display: flex;
+//           align-items: center;
+//           justify-content: center;
+//           transition: all 0.25s ease;
+//         }
+
+//         .social:hover {
+//           animation: bounce 0.5s ease;
+//           color: white;
+//         }
+
+//         .fb:hover {
+//           background: #1877f2;
+//         }
+
+//         .x:hover {
+//           background: #000;
+//         }
+
+//         .in:hover {
+//           background: #0a66c2;
+//         }
+
+//         .insta:hover {
+//           background: radial-gradient(
+//             circle at 30% 107%,
+//             #fdf497 0%,
+//             #fdf497 5%,
+//             #fd5949 45%,
+//             #d6249f 60%,
+//             #285aeb 90%
+//           );
+//         }
+
+//         @keyframes bounce {
+//           0% { transform: translateY(0); }
+//           30% { transform: translateY(-6px); }
+//           60% { transform: translateY(2px); }
+//           100% { transform: translateY(0); }
+//         }
+//       `}</style>
+//     </footer>
+//   );
+// }
 "use client";
 
 import Image from "next/image";
@@ -222,13 +381,7 @@ import WhitePml from "@/public/images/FooterImages/whitePML.png";
 import Soc from "@/public/images/FooterImages/SOC2.svg";
 import iso from "@/public/images/FooterImages/iso2001.png";
 
-import {
-  Mail,
-  Facebook,
-  Twitter,
-  Linkedin,
-  Instagram,
-} from "lucide-react";
+import { Mail, Facebook, Linkedin, Instagram } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -244,24 +397,40 @@ export default function Footer() {
           max-[640px]:grid-cols-1
         "
       >
-        {/* ================= 1. LOGO ================= */}
-        <div className="flex flex-col gap-6 max-[640px]:items-center ">
-          <Image
-            src={WhitePml}
-            alt="AdRefresh"
-            width={110}
-            height={90}
-            className="w-[150px] object-contain ml-0 md:ml-10"
-          
-          />
+        {/* ================= 1. LOGO ONLY ================= */}
+       {/* ================= 1. LOGO ONLY ================= */}
+<div className="relative flex items-center max-[640px]:justify-center">
+  <Image
+    src={WhitePml}
+    alt="AdRefresh"
+    width={150}
+    height={90}
+    className="object-contain md:ml-10"
+  />
 
-          <div className="flex gap-4">
-            <Image src={iso} alt="ISO" width={120} height={60} />
-            <Image src={Soc} alt="SOC" width={90} height={60} />
-          </div>
+  {/* VERTICAL LINE */}
+  <div
+    className="
+      absolute
+      right-[-20px]
+      top-1/2
+      -translate-y-1/2
+      h-[70%]
+      w-[2px]
+      bg-white/40
+      hidden
+      md:block
+    "
+  />
+</div>
+
+        {/* ================= 2. ISO CERTIFICATES ================= */}
+        <div className="flex items-center gap-6 max-[640px]:justify-center">
+          <Image src={iso} alt="ISO" width={120} height={60} />
+          <Image src={Soc} alt="SOC" width={90} height={60} />
         </div>
 
-        {/* ================= 2. LOCATIONS ================= */}
+        {/* ================= 3. LOCATIONS + EMAIL ================= */}
         <div className="flex flex-col gap-6 text-sm leading-relaxed">
           <div>
             <h1 className="font-bold mb-1">INDIA</h1>
@@ -280,33 +449,26 @@ export default function Footer() {
               Harvard, MA 01451
             </p>
           </div>
-        </div>
 
-        {/* ================= 3. EMAIL ================= */}
-        <div className="relative flex items-center">
-          {/* vertical divider */}
-          <div className="absolute -left-[20px] top-0 h-full w-[2px] bg-white/30 max-[640px]:hidden" />
-
-          <div className="grid items-start gap-3">
-            <Mail size={52} />
-            <span className="text-sm tracking-wide">
-              contact@adrefresh.com
-            </span>
+          <div className="flex items-center gap-3 pt-2">
+            <Mail size={24} />
+            <span className="tracking-wide">contact@adrefresh.com</span>
           </div>
         </div>
 
-        {/* ================= 4. SOCIAL ================= */}
-        <div className="flex items-center justify-start gap-4 max-[740px]:justify-center">
+        {/* ================= 4. SOCIAL ICONS ================= */}
+        <div className="flex items-center gap-4 max-[640px]:justify-center">
           <a className="social fb" href="#"><Facebook size={28} /></a>
-        <a className="social x" href="#" aria-label="X">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    className="w-[18px] h-[18px] fill-current"
-  >
-    <path d="M18.244 2H21.78l-7.71 8.81L23 22h-7.08l-5.53-7.19L4.64 22H1.1l8.25-9.43L1 2h7.26l5 6.54L18.24 2z" />
-  </svg>
-</a>
+
+          <a className="social x" href="#" aria-label="X">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              className="w-[18px] h-[18px] fill-current"
+            >
+              <path d="M18.244 2H21.78l-7.71 8.81L23 22h-7.08l-5.53-7.19L4.64 22H1.1l8.25-9.43L1 2h7.26l5 6.54L18.24 2z" />
+            </svg>
+          </a>
 
           <a className="social in" href="#"><Linkedin size={28} /></a>
           <a className="social insta" href="#"><Instagram size={28} /></a>
@@ -340,17 +502,9 @@ export default function Footer() {
           color: white;
         }
 
-        .fb:hover {
-          background: #1877f2;
-        }
-
-        .x:hover {
-          background: #000;
-        }
-
-        .in:hover {
-          background: #0a66c2;
-        }
+        .fb:hover { background: #1877f2; }
+        .x:hover { background: #000; }
+        .in:hover { background: #0a66c2; }
 
         .insta:hover {
           background: radial-gradient(

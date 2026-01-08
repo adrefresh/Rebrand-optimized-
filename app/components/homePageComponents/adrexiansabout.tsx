@@ -23,6 +23,7 @@ export default function About() {
   return (
     <section
       className="
+     
         relative
         w-screen
         bg-black
@@ -47,17 +48,17 @@ export default function About() {
       </div>
 
       {/* CONTENT WRAPPER */}
-      <div className="relative z-10 flex justify-center">
-        <div className="w-full max-w-[900px] px-4 sm:px-6 text-white">
+      <div className="relative z-10 flex justify-center mt-5 md:mt-[-12px]">
+        <div className="w-full max-w-[900px] px-4 sm:px-6 text-white mb-[-40px]">
           
           {/* TITLE ROW */}
-          <div className="flex items-center justify-center gap-3 sm:gap-4 mb-4">
+          <div className="flex items-center justify-center gap-3 sm:gap-4 mb-2">
             <h2
               className="
                 text-[#813DFF]
                 font-[900]
                 tracking-[-2px]
-                text-[2.4rem]
+                text-[2rem]
                 sm:text-[3.2rem]
                 md:text-[4rem]
                 lg:text-[5rem]
@@ -94,12 +95,16 @@ export default function About() {
   className="
     text-white
     font-[900]
-    tracking-[6px]
+    tracking-[1px]
+    md:tracking-[6px]   /* desktop unchanged */
 
     /* MOBILE */
     absolute top-[-50px] left-1/2 -translate-x-1/2
-    text-[2.4rem]
-
+    text-[2rem]
+   
+    m-0
+  
+    p-0
     /* DESKTOP (unchanged) */
     md:static
     md:flex
@@ -119,8 +124,9 @@ export default function About() {
             <div className="max-w-[600px] mx-auto">
               <p
                 className="
+                text-left
                   reveal
-                                   text-[12px]
+                                   text-[14px]
                   sm:text-[17px]
                   md:text-[14px]
                   lg:text-[18px]
@@ -138,6 +144,7 @@ export default function About() {
               <p
                 className="
                   reveal
+                  text-left
                   text-[14px]
                   sm:text-[19px]
                   md:text-[16px]

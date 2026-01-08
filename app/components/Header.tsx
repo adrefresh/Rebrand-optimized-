@@ -543,14 +543,14 @@ export default function Header() {
                   href="/services/digital-marketing"
                   className="text-[1.5rem] sm:text-[1.25rem] md:text-[1.4rem] lg:text-[1.5rem] font-medium hover:text-[#813DFF]"
                 >
-                  Digital-Marketing
+                  Digital Marketing
                 </Link>
                 <Link
                   onClick={closeMenu}
                   href="/services/ad-operations"
                   className="text-[1.5rem] sm:text-[1.25rem] md:text-[1.4rem] lg:text-[1.5rem] font-medium hover:text-[#813DFF]"
                 >
-                  Advertising-Operations
+                  Advertising Operations
                 </Link>
               </div>
             )}

@@ -86,7 +86,7 @@ export default function Hero() {
     w-full
     text-left
 
-    text-[1.4rem]
+    text-[2rem]
     sm:text-[2.6rem]
     md:text-[4rem]
     lg:text-[5rem]
@@ -133,7 +133,7 @@ export default function Hero() {
       <style>{`
 @media (max-width: 639px) {
   .hero-title {
-    font-size: 1.4rem;
+    font-size: 2rem;
     margin-top: -100px;
     text-align: left; /* keep logo alignment */
   }

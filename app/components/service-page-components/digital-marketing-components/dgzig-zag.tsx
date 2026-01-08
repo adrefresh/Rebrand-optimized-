@@ -105,9 +105,11 @@ export default function DgZigZagSections() {
         }
 
         .zz-desc {
+
           font-size: 28px;
           width: 70vw;
           line-height: 1.6;
+          text-align:left;
           margin-top: 0%;
         }
 

@@ -645,7 +645,7 @@ import "./clientpage.css";
 const caseStudies = [
   {
     slug: "impression-to-invoice",
-    title: "From Impression to Invoice — Streamlining Campaign Operations",
+    title: "From Impression to Invoice Streamlining Campaign Operations",
     excerpt:
       "How a US-based genealogy-focused programmatic ad network improved billing accuracy, reduced disputes, and scaled operations across 300M+ impressions annually.",
     image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7",
@@ -774,9 +774,20 @@ export default function ClientSuccessPage() {
                   i % 2 !== 0 ? "direction-ltr md:text-right" : ""
                 }`}
               >
-                <h3 className="text-[clamp(1.5rem,3vw,2rem)] font-extrabold mb-3">
-                  {cs.title}
-                </h3>
+               <h3  className="
+    text-left
+
+    text-[1.4rem]
+    sm:text-[1.6rem]
+    md:text-[1.8rem]
+    lg:text-[2rem]
+
+    font-extrabold
+    mb-3
+  ">
+  {cs.title}
+</h3>
+
                 <p className="text-[#444] text-[clamp(1rem,2vw,1.1rem)] leading-relaxed max-w-[480px]">
                   {cs.excerpt}
                 </p>
