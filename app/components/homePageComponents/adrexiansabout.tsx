@@ -175,6 +175,7 @@ export default function About() {
       md:text-[2.2rem]
       ml-0
       md:ml-[15%]
+      md:mb-[40px]
       cursor-pointer
     "
   >
