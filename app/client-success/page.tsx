@@ -657,7 +657,36 @@ const caseStudies = [
       "Supporting a large enterprise through acquisition-led restructuring by becoming the backbone of platform knowledge and operational continuity.",
     image: "/images/careers-images/4.jpg",
   },
+  {
+    slug: "audience-infrastructure-fmcg",
+    title: "Turning Data into Campaign Results",
+    excerpt:
+      "How behind-the-scenes audience infrastructure enabled a global FMCG brand to activate high-quality segments across 100+ websites and DSPs.",
+    image: "/images/careers-images/careers2.jpeg",
+  },
+  {
+    slug: "uae-media-execution",
+    title: "Driving Performance Across Sectors in the UAE",
+    excerpt:
+      "End-to-end paid media execution for corporate services and lifestyle retail brands, optimized for the UAE’s unique market dynamics.",
+    image: "/images/careers-images/careers3.jpeg",
+  },
+  {
+    slug: "luxury-retail-digital-strategy",
+    title: "Redefining Digital Strategy for a Luxury Appliance Retailer",
+    excerpt:
+      "How a premium kitchen appliance brand reduced acquisition costs, increased showroom visits, and attracted high-value customers.",
+    image: "/images/careers-images/5.jpg",
+  },
+  {
+    slug: "global-news-monetization",
+    title: "Scalable Monetization for a Global News Publisher",
+    excerpt:
+      "Precision programmatic operations driving higher eCPMs, improved fill rates, and accurate billing across a massive news publisher ecosystem.",
+    image: "/images/careers-images/1.jpg",
+  },
 ];
+
 
 /* ================= SEO ================= */
 export const metadata: Metadata = {

@@ -2,7 +2,7 @@
   "impression-to-invoice": {
     "title": "From Impression to Invoice Streamlining Campaign Operations",
     "subtitle": "How operational precision helped a genealogy-focused ad network scale revenue, trust, and efficiency",
-    "featureImage": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7",
+    "featureImage": "/images/careers-images/1.jpg",
     "sections": [
       {
         "heading": "Client",
@@ -23,7 +23,7 @@
       },
       {
         "heading": "Our Approach",
-        "body": "We embedded directly into the client’s ad operations workflow, introducing structured trafficking processes, automated delivery checks, and standardized reporting frameworks across all demand and supply partners."
+        "body": "We embedded directly into the client’s ad operations workflow, introducing structured trafficking processes, automated delivery checks, and standardized reporting frameworks."
       },
       {
         "heading": "Results Delivered",
@@ -44,40 +44,158 @@
   "transition-enablers": {
     "title": "Transition Enablers in a Complex Organizational Shift",
     "subtitle": "Supporting enterprise restructuring with operational continuity and platform stability",
-    "featureImage": "https://images.unsplash.com/photo-1522071820081-009f0129c71c",
+    "featureImage": "/images/careers-images/4.jpg",
     "sections": [
       {
         "heading": "Client",
-        "body": "A large enterprise undergoing acquisition-led restructuring, impacting internal teams, vendors, and operational workflows."
-      },
-      {
-        "heading": "The Business Context",
-        "body": "Following multiple acquisitions, the organization faced fragmented ownership of ad platforms, undocumented workflows, and increasing dependency on external vendors."
+        "body": "A large enterprise undergoing acquisition-led restructuring impacting internal teams, vendors, and ad operations."
       },
       {
         "heading": "Operational Challenges",
         "bullets": [
           "Loss of institutional platform knowledge",
           "Inconsistent campaign execution standards",
-          "High risk of operational downtime during transition",
+          "Risk of operational downtime",
           "Limited internal documentation"
         ]
       },
       {
         "heading": "Our Role",
-        "body": "We acted as the operational backbone—maintaining continuity across platforms, documenting workflows, and ensuring campaigns continued without disruption during internal restructuring."
+        "body": "We ensured platform continuity, documented workflows, and maintained campaign execution without disruption."
       },
       {
         "heading": "Outcomes",
         "bullets": [
-          "Zero campaign downtime during transition",
-          "Stabilized reporting and optimization cadence",
-          "Clear documentation enabling internal team handover"
+          "Zero campaign downtime",
+          "Stabilized reporting cadence",
+          "Successful internal team handover"
+        ]
+      }
+    ]
+  },
+
+  "audience-infrastructure-fmcg": {
+    "title": "Turning Data into Campaign Results",
+    "subtitle": "Behind-the-scenes audience infrastructure for a global FMCG brand",
+    "featureImage": "/images/careers-images/careers2.jpeg",
+    "sections": [
+      {
+        "heading": "Client Background",
+        "body": "A leading Data Management Platform supporting a global FMCG advertiser across 100+ brand websites."
+      },
+      {
+        "heading": "The Challenge",
+        "bullets": [
+          "Pixel misfires across 119+ websites",
+          "Generic audience segmentation",
+          "Manual QA and syndication workflows"
         ]
       },
       {
-        "heading": "Key Takeaway",
-        "body": "Strong operational stewardship preserves trust, performance, and continuity during periods of organizational change."
+        "heading": "Our Solution",
+        "bullets": [
+          "Pixel QA & implementation testing across all domains",
+          "Custom audience segmentation based on behavior",
+          "Syndication to Google DV360, The Trade Desk, and partner DSPs",
+          "Ongoing operational monitoring and support"
+        ]
+      },
+      {
+        "heading": "Impact",
+        "bullets": [
+          "99.8% data accuracy",
+          "2x faster campaign launches",
+          "80% reduction in manual errors",
+          "Increased trust in audience data quality"
+        ]
+      }
+    ]
+  },
+
+  "uae-media-execution": {
+    "title": "Driving Performance Across Sectors in the UAE",
+    "subtitle": "End-to-end paid media execution for service and retail brands",
+    "featureImage": "/images/careers-images/careers3.jpeg",
+    "sections": [
+      {
+        "heading": "Client",
+        "body": "A global search and social paid media agency supporting multiple UAE-based brands."
+      },
+      {
+        "heading": "Industries Supported",
+        "bullets": [
+          "Corporate taxation and business setup services",
+          "Sports and lifestyle retail brands"
+        ]
+      },
+      {
+        "heading": "Our Contribution",
+        "bullets": [
+          "Localized media planning",
+          "Multi-platform execution across Google, Meta, Snapchat",
+          "Continuous optimization and reporting"
+        ]
+      },
+      {
+        "heading": "Impact Delivered",
+        "bullets": [
+          "22% reduction in CPL for B2B clients",
+          "25% uplift in ROAS during peak retail seasons",
+          "Improved reporting turnaround and visibility"
+        ]
+      }
+    ]
+  },
+
+  "luxury-retail-digital-strategy": {
+    "title": "Redefining Digital Strategy for a Luxury Appliance Retailer",
+    "subtitle": "From generic reach to premium customer engagement",
+    "featureImage": "/images/careers-images/5.jpg",
+    "sections": [
+      {
+        "heading": "The Challenge",
+        "body": "High acquisition costs, low engagement, and lack of premium audience targeting."
+      },
+      {
+        "heading": "Strategic Shift",
+        "body": "Rebalanced spend across Meta, YouTube, and retargeting with luxury-focused creatives."
+      },
+      {
+        "heading": "Results",
+        "bullets": [
+          "Increase in showroom appointments",
+          "Lower cost per appointment",
+          "Higher lead quality and ROI"
+        ]
+      }
+    ]
+  },
+
+  "global-news-monetization": {
+    "title": "Scalable Monetization for a Global News Publisher",
+    "subtitle": "Precision programmatic operations at massive scale",
+    "featureImage": "/images/careers-images/1.jpg",
+    "sections": [
+      {
+        "heading": "Client",
+        "body": "A video ad agency with exclusive monetization rights for a global news network."
+      },
+      {
+        "heading": "Our Solution",
+        "bullets": [
+          "Inventory mapping and categorization",
+          "DSP onboarding and PMP setup",
+          "Yield optimization and financial reconciliation"
+        ]
+      },
+      {
+        "heading": "Impact",
+        "bullets": [
+          "22% eCPM growth in 90 days",
+          "35% increase in fill rates",
+          "99.8% billing accuracy",
+          "50% faster reporting cycles"
+        ]
       }
     ]
   }
