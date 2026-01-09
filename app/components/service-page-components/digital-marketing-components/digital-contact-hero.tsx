@@ -25,7 +25,7 @@ export default function AdOpsContactHero2() {
         className="
           pointer-events-none
           absolute
-          top-[16px]
+          top-[40px]
           left-[50px]
           z-[1]
           h-[70vh]
