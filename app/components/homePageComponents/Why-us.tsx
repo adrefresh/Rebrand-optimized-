@@ -120,14 +120,16 @@ export default function WhyUsSection() {
         </div>
 
         {/* RIGHT */}
-        <div className="flex flex-col gap-[100px] pt-[28px] pl-[100px]">
+        <div className="flex flex-col gap-[100px] pt-[28px] pl-[70px]">
           <p className="max-w-[520px] text-[1.15rem] leading-snug mt-[10px]">
                      We focus on quality-led execution, supported by structured processes, continuous monitoring, and proactive optimization to ensure every campaign delivers consistent performance and measurable results. 
 
           </p>
 
+
           <p className="max-w-[520px] text-[1.15rem] leading-snug mt-[10px]">
-                  We build teams customized to your workflows, platforms, and performance goals, ensuring seamless alignment with your processes and a working rhythm that supports consistent, efficient growth. 
+            With flexibility at the core, our teams adapt to your workflows, platforms, and performance goals to ensure seamless alignment with your processes and a working rhythm that supports consistent, efficient growth
+                  {/* We build teams customized to your workflows, platforms, and performance goals, ensuring seamless alignment with your processes and a working rhythm that supports consistent, efficient growth.  */}
 
           </p>
 

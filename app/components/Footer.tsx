@@ -403,8 +403,8 @@ export default function Footer() {
   <Image
     src={WhitePml}
     alt="AdRefresh"
-    width={150}
-    height={90}
+    width={190}
+    height={110}
     className="object-contain md:ml-10"
   />
 

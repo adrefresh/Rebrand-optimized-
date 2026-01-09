@@ -65,7 +65,7 @@ export default function AboutHero() {
 
   "
 >
-  WE&apos;RE ADREXIANS
+  WE ARE ADREXIANS
 </h1>
 
 

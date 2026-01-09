@@ -213,7 +213,7 @@ export default function Features() {
     {
       num: "01",
       title: "AI-Driven Precision for High-Velocity Growth",
-      text: "Our AI-enhanced AdOps engine delivers quicker decisions and outcomes engineered for accelerated growth.",
+      text: "Our AI-enhanced AdOps approach enables faster decision making and delivers outcomes designed to accelerate growth.",
     },
     {
       num: "02",
