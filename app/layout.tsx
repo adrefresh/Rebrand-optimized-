@@ -9,6 +9,12 @@ import Footer from "./components/Footer";
 export const metadata: Metadata = {
   title: "AdRefresh - Performance Marketing",
   description: "AI-Enhanced AdOps and Digital Performance Management",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
+  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({

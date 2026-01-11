@@ -86,8 +86,8 @@ export default function Hero() {
     w-full
     text-left
 
-    text-[2rem]
-    sm:text-[2.6rem]
+    text-[1.8rem]
+    sm:text-[2.2rem]
     md:text-[4rem]
     lg:text-[5rem]
     xl:text-[6rem]
