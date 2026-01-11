@@ -361,7 +361,7 @@ export default function PrecisionSectionAdOps() {
             leading-tight
             break-words
             hyphens-auto
-            text-[2rem]
+          text-[1.6rem]
             sm:text-[1.9rem]
             md:text-[2rem]
             lg:text-[2.2rem]
@@ -375,10 +375,11 @@ export default function PrecisionSectionAdOps() {
           className="
             text-black
             mx-auto
-             text-left
+            
             leading-relaxed
             max-w-[900px]
             break-words
+            text-[18px]
             text-[18px]
             sm:text-[18px]
             md:text-[20px]

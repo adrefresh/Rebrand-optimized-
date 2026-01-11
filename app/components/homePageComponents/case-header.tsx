@@ -74,7 +74,7 @@ bg-[radial-gradient(ellipse_700px_700px_at_top_left,#9b6bff_0%,#e9dcff_40%,trans
             lg:text-[4.4rem]
           "
         >
-          CASE STUDIES
+         SUCCESS STORIES
         </h1>
 
         <CaseStudies />

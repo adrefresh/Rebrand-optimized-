@@ -141,7 +141,9 @@ export default function DgZigZagSections() {
         .zz-block.right .zz-line {
           margin-left: auto;
         }
-
+.zz-block.right .zz-desc{
+text-align:right;
+}
         .pattern-left::after,
         .pattern-right::after {
           content: "";

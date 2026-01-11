@@ -98,8 +98,8 @@ export default function AboutAdRefresh() {
 
         px-5 py-10
         sm:px-8 sm:py-14
-        md:px-12 md:py-20
-        lg:px-20 lg:py-24
+        md:px-8 md:py-10
+        lg:px-10 lg:py-14
 
         bg-[#F2F2F2]
       "
@@ -124,7 +124,7 @@ export default function AboutAdRefresh() {
 
       {/* LIGHT WASH */}
       <div className="absolute inset-0 z-[2] bg-white/15" />
-
+ 
       {/* CONTENT */}
       <div className="relative z-[10] mx-auto max-w-[1000px]">
         <h2
@@ -134,10 +134,11 @@ export default function AboutAdRefresh() {
             leading-[1.2]
             text-black
 
-            text-[2.2rem]
-            sm:text-[2.8rem]
-            md:text-[3.2rem]
-            lg:text-[4rem]
+              text-[1.6rem]
+            sm:text-[1.9rem]
+            md:text-[2rem]
+            lg:text-[2.2rem]
+            xl:text-[2.5rem]
           "
         >
           ABOUT ADREFRESH
@@ -149,10 +150,11 @@ export default function AboutAdRefresh() {
             leading-[1.7]
             text-black
 
-            text-[1.05rem]
-            sm:text-[1.1rem]
-            md:text-[1.15rem]
-            lg:text-[1.25rem]
+           text-[18px]
+            sm:text-[18px]
+            md:text-[15px]
+            lg:text-[24px]
+            xl:text-[28px]
           "
         >
           Our clients describe us as connectors, innovators, and disruptors.
@@ -164,11 +166,11 @@ export default function AboutAdRefresh() {
           className="
             leading-[1.7]
             text-black
-
-            text-[1rem]
-            sm:text-[1.05rem]
-            md:text-[1.1rem]
-            lg:text-[1.25rem]
+ text-[18px]
+            sm:text-[18px]
+            md:text-[15px]
+            lg:text-[24px]
+            xl:text-[28px]
           "
         >
           AdRefresh delivers a complete range of ad operations for advertisers,

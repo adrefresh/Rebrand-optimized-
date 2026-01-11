@@ -746,7 +746,7 @@ export default function ClientSuccessPage() {
     lg:whitespace-nowrap
   "
 >
-  CLIENT SUCCESS
+ SUCCESS STORIES
 </h1>
 
     <p className="mt-3 text-[clamp(1rem,2vw,1.25rem)] opacity-90">
@@ -776,7 +776,7 @@ export default function ClientSuccessPage() {
       {/* ================= HEADER ================= */}
       <section className="max-w-[1200px] mx-auto text-center px-4 mt-[-1%] mb-16">
         <h2 className="font-black text-[clamp(2.4rem,5vw,4rem)] mb-4">
-          Case Studies
+        Success-stories
         </h2>
         <p className="text-[#555] text-[clamp(1rem,2vw,1.2rem)] max-w-[900px] mx-auto leading-relaxed">
           A closer look at how operational precision, platform expertise, and
@@ -800,7 +800,7 @@ export default function ClientSuccessPage() {
               {/* TEXT */}
               <div
                 className={`${
-                  i % 2 !== 0 ? "direction-ltr md:text-right" : ""
+                  i % 2 !== 0 ? "direction-ltr md:text-left" : ""
                 }`}
               >
                <h3  className="
@@ -817,7 +817,7 @@ export default function ClientSuccessPage() {
   {cs.title}
 </h3>
 
-                <p className="text-[#444] text-[clamp(1rem,2vw,1.1rem)] leading-relaxed max-w-[480px]">
+                <p className="text-[#444] text-[clamp(1rem,2vw,1.1rem)] max-w-[480px]">
                   {cs.excerpt}
                 </p>
               </div>

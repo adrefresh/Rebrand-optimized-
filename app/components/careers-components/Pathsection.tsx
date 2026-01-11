@@ -1635,6 +1635,7 @@
 //     </section>
 //   );
 // }
+
 "use client";
 
 import { useEffect, useRef } from "react";
@@ -1750,7 +1751,7 @@ export default function PathSection() {
       {/* HEADING */}
       <div className="relative py-16">
         <PatternBackground />
-        <h2 className="relative z-10 text-center text-[1.8rem] sm:text-[2rem] lg:text-[3rem] xl:text-[3.5rem] font-extrabold">
+        <h2 className="relative z-10 text-center text-[1.8rem] sm:text-[2rem] lg:text-[2rem] xl:text-[2.8rem] font-extrabold">
           The Path of an{" "}
           <span className="text-[var(--purple-30)]">ADREXIAN</span>
         </h2>
@@ -1782,7 +1783,7 @@ export default function PathSection() {
                   {step.title}
                 </h3>
 
-                <p className="text-[16px] text-gray-600 leading-relaxed mb-6">
+                <p className="text-[16px] text-gray-600 leading-relaxed mb-6 text-left">
                   {step.desc}
                 </p>
 
@@ -1794,14 +1795,17 @@ export default function PathSection() {
               </div>
 
               {/* DESKTOP LEFT */}
-              <div className="hidden lg:block pr-10 text-right">
+              <div className="hidden lg:block pr-10 text-left">
                 <h3 className="text-[30px] font-extrabold mb-3">
                   {step.title}
                 </h3>
-                <p className="text-[18px] text-gray-600 max-w-md ml-auto">
+                <div className="hidden lg:block pr-10 text-left">
+                 <p className="text-[18px] text-gray-600 max-w-md ml-auto">
                   {step.desc}
                 </p>
               </div>
+              </div>
+             
 
               {/* DESKTOP NUMBER */}
               <div className="hidden lg:flex justify-center">

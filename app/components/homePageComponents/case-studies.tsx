@@ -10,7 +10,7 @@ export default function CaseStudies() {
 const cases = [
   {
     slug: "impression-to-invoice",
-    title: "From Impression to Invoice Streamlining Campaign Ops",
+    title: "From Impression to Invoice Streamlining Campaign Operations",
     comment:
       "Improved billing accuracy, reduced disputes, and enabled scalable operations across 300M+ programmatic impressions annually for a US-based ad network.",
   },
@@ -19,6 +19,30 @@ const cases = [
     title: "Transition Enablers in a Complex Organizational Shift",
     comment:
       "Supported a large enterprise during acquisition-led restructuring by acting as the backbone for platform knowledge and operational continuity.",
+  },
+  {
+    slug: "audience-infrastructure-fmcg",
+    title: "Turning Data into Campaign Results",
+    comment:
+      "Built scalable audience infrastructure for a global FMCG brand, delivering 99.8% data accuracy and 2x faster campaign launches.",
+  },
+  {
+    slug: "uae-media-execution",
+    title: "Driving Performance Across Sectors in the UAE",
+    comment:
+      "Delivered end-to-end paid media execution for service and retail brands, improving ROAS and reducing CPL across multiple platforms.",
+  },
+  {
+    slug: "luxury-retail-digital-strategy",
+    title: "Redefining Digital Strategy for a Luxury Appliance Retailer",
+    comment:
+      "Shifted from generic reach to premium customer engagement, increasing showroom appointments and improving lead quality.",
+  },
+  {
+    slug: "global-news-monetization",
+    title: "Scalable Monetization for a Global News Publisher",
+    comment:
+      "Optimized global programmatic operations, driving eCPM growth, higher fill rates, and faster reporting cycles.",
   },
 ];
 

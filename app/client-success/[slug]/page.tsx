@@ -563,7 +563,7 @@ export default async function ClientSuccessDetail({
           ["--hero-pattern" as any]: `url(/images/service-page-images-videos/GrayOutline.svg)`,
         }}
       >
-        <h1 className="cs-hero-title">{data.title}</h1>
+        <h1 className="cs-hero-title" style={{color:"black"}}>{data.title}</h1>
       </section>
 
       <div className="cs-wrap">
@@ -575,7 +575,8 @@ export default async function ClientSuccessDetail({
 
         {data.sections.map((s, i) => (
           <section key={i} className="cs-section">
-            <h2>{s.heading}</h2>
+          
+            <h2 style={{marginTop:"4%"}}>{s.heading}</h2>
             {s.body && <p>{s.body}</p>}
             {s.bullets && (
               <ul>

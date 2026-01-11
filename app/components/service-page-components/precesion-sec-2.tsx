@@ -394,6 +394,101 @@
 //   );
 // }
 
+// "use client";
+
+// export default function PrecisionSectionAdOps() {
+//   return (
+//     <section
+//       className="
+//         relative
+//         w-screen
+//         h-[65vh]
+//         min-h-[60vh]
+//         flex
+//         items-center
+//         justify-center
+//         text-center
+//         overflow-hidden
+//         bg-[#F2F2F2]
+//         mt-9
+//       "
+//     >
+//       {/* BACKGROUND */}
+//       <div
+//         className="absolute inset-0 z-0 bg-center bg-no-repeat bg-cover"
+//         style={{
+//           backgroundImage:
+//             "url('/images/service-page-images-videos/Gray-Dual.svg')",
+//         }}
+//       />
+
+//       {/* SHADE */}
+//       <div
+//         className="absolute inset-0 z-[1]"
+//         style={{
+//           background:
+//             "linear-gradient(to right, rgba(0,0,0,0.18), rgba(0,0,0,0.08))",
+//         }}
+//       />
+
+//       {/* LIGHT WASH */}
+//       <div className="absolute inset-0 z-[2] bg-white/10" />
+
+//       {/* CONTENT */}
+//       <div
+//         className="
+//           relative
+//           z-[10]
+//           max-w-[1100px]
+//           w-full
+
+//           px-[2px]
+//           sm:px-2
+//           md:px-3
+//         "
+//       >
+//         <h1
+//           className="
+//             text-black
+//             font-black
+//             mb-5
+//             leading-tight
+//             break-words
+//             hyphens-auto
+//             text-[1.6rem]
+//             sm:text-[1.9rem]
+//             md:text-[2rem]
+//             lg:text-[2.2rem]
+//             xl:text-[2.5rem]
+         
+//           "
+//         >
+//           Precision and Performance Through Transformative Advertising Operations
+//         </h1>
+
+//         <p
+//           className="
+//             text-black
+//             mx-auto
+//             leading-relaxed
+//             max-w-[900px]
+//             break-words
+//             text-[18px]
+//             sm:text-[18px]
+//             md:text-[20px]
+//             lg:text-[24px]
+//             xl:text-[28px]
+            
+//           "
+//         >
+//           We power advertising operations through structured execution, accurate
+//           trafficking, advanced tracking, and continuous monitoring to ensure
+//           efficiency, compliance, and measurable performance.
+//         </p>
+//       </div>
+//     </section>
+//   );
+// }
 "use client";
 
 export default function PrecisionSectionAdOps() {
@@ -402,15 +497,16 @@ export default function PrecisionSectionAdOps() {
       className="
         relative
         w-screen
-        h-[65vh]
-        min-h-[60vh]
+        h-[75vh]
+        min-h-[70vh]
         flex
         items-center
         justify-center
         text-center
         overflow-hidden
         bg-[#F2F2F2]
-        mt-9
+        mt-14
+        py-12
       "
     >
       {/* BACKGROUND */}
@@ -441,26 +537,25 @@ export default function PrecisionSectionAdOps() {
           z-[10]
           max-w-[1100px]
           w-full
-
-          px-[2px]
-          sm:px-2
-          md:px-3
+          px-6
+          sm:px-10
+          md:px-14
+          lg:px-20
         "
       >
         <h1
           className="
             text-black
             font-black
-            mb-5
+            mb-8
             leading-tight
             break-words
             hyphens-auto
             text-[1.6rem]
             sm:text-[1.9rem]
-            md:text-[2rem]
-            lg:text-[2.2rem]
-            xl:text-[2.5rem]
-         
+            md:text-[2.1rem]
+            lg:text-[2.3rem]
+            xl:text-[2.6rem]
           "
         >
           Precision and Performance Through Transformative Advertising Operations
@@ -478,7 +573,7 @@ export default function PrecisionSectionAdOps() {
             md:text-[20px]
             lg:text-[24px]
             xl:text-[28px]
-            text-left
+            mt-4
           "
         >
           We power advertising operations through structured execution, accurate

@@ -168,7 +168,9 @@ export default function ZigZagSections() {
           -webkit-mask: var(--mask-url) no-repeat left center / 135% 120%;
           mask: var(--mask-url) no-repeat left center / 135% 120%;
         }
-
+.zz-block.right .zz-desc{
+text-align:right;
+}
         @media (max-width: 800px) {
           .zz-title { font-size: 2rem; }
           .zz-desc, .zz-line { width: 90vw; }
