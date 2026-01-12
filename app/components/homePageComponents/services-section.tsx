@@ -503,32 +503,39 @@ export default function Services() {
       className="
         relative
         w-full
+
         overflow-hidden
         bg-black
-        py-10
-        sm:py-14
+        py-5
+        sm:py-5
         md:w-screen
         md:ml-[calc(50%-50vw)]
+
       "
     >
       {/* TITLE */}
-      <h2
-        className="
-          reveal
-          text-left
-          md:text-center
-          font-[900]
-          text-white
-          text-[2rem]
-          sm:text-[2.6rem]
-          md:text-[3.8rem]
-          lg:text-[4.5rem]
-          mb-10
-          px-4
-        "
-      >
-        SERVICES
-      </h2>
+     <h2
+  className="
+    reveal
+    text-center
+    font-[900]
+    text-white
+    text-[3rem]
+    sm:text-[2.8rem]
+    md:text-[3.2rem]
+    lg:text-[4.5rem]
+
+    mt-[-50px]          // 👈 mobile top margin
+    sm:mt-[-40px]      // tablet
+    md:mt-[-10px]     // desktop
+
+    mb-10
+    px-4
+  "
+>
+  SERVICES
+</h2>
+
 
       <div
         className="

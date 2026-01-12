@@ -11,9 +11,9 @@ export default function ContactHero() {
 
         /* HEIGHTS */
         h-[55vh]              /* 📱 small mobile */
-        sm:h-[65vh]           /* 📱 large mobile */
-        md:h-[75vh]           /* 📱 tablet */
-        lg:h-[85vh]           /* 💻 laptop */
+        sm:h-[68vh]           /* 📱 large mobile */
+        md:h-[77vh]           /* 📱 tablet */
+        lg:h-[87vh]           /* 💻 laptop */
         xl:h-[90vh]           /* 🖥 desktop */
         2xl:h-[95vh]          /* 🖥 large desktop */
       "

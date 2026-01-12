@@ -683,6 +683,7 @@
 //     </footer>
 //   );
 // }
+
 "use client";
 
 import Image from "next/image";
@@ -739,27 +740,30 @@ export default function Footer() {
         </div>
 
         {/* ================= 3. LOCATIONS (ALWAYS 2x2) ================= */}
-        <div className="grid grid-cols-2 gap-8 text-base leading-relaxed">
-          <div className="flex items-center gap-4">
-            <MapPin className="w-[35px] h-[35px] shrink-0" />
-            <span>India</span>
-          </div>
+        {/* ================= 3. LOCATIONS (Responsive 2x2) ================= */}
+<div className="grid grid-cols-2 gap-4 sm:gap-6 md:gap-8 text-sm sm:text-base leading-relaxed">
 
-          <div className="flex items-center gap-4">
-            <MapPin className="w-[35px] h-[35px] shrink-0" />
-            <span>Australia</span>
-          </div>
+  <div className="flex items-center gap-2 sm:gap-3">
+    <MapPin className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-[35px] lg:h-[35px] shrink-0" />
+    <span>India</span>
+  </div>
 
-          <div className="flex items-center gap-4">
-            <MapPin className="w-[35px] h-[35px] shrink-0" />
-            <span>USA</span>
-          </div>
+  <div className="flex items-center gap-2 sm:gap-3">
+    <MapPin className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-[35px] lg:h-[35px] shrink-0" />
+    <span>Australia</span>
+  </div>
 
-          <div className="flex items-center gap-4">
-            <MapPin className="w-[35px] h-[35px] shrink-0" />
-            <span>Canada</span>
-          </div>
-        </div>
+  <div className="flex items-center gap-2 sm:gap-3">
+    <MapPin className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-[35px] lg:h-[35px] shrink-0" />
+    <span>USA</span>
+  </div>
+
+  <div className="flex items-center gap-2 sm:gap-3">
+    <MapPin className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-[35px] lg:h-[35px] shrink-0" />
+    <span>Canada</span>
+  </div>
+
+</div>
 
         {/* ================= 4. MAIL + SOCIAL ICONS ================= */}
         <div className="flex flex-col gap-6 max-[640px]:items-center">
@@ -772,7 +776,7 @@ export default function Footer() {
 
           {/* SOCIAL ICONS ROW */}
           <div className="flex items-center gap-6">
-            <a className="social fb" href="#"><Facebook size={28} /></a>
+            <a className="social fb" href="https://www.facebook.com/adrefreshmedia"><Facebook size={28} /></a>
 
             <a className="social x" href="#" aria-label="X">
               <svg
@@ -784,8 +788,8 @@ export default function Footer() {
               </svg>
             </a>
 
-            <a className="social in" href="#"><Linkedin size={28} /></a>
-            <a className="social insta" href="#"><Instagram size={28} /></a>
+            <a className="social in" href="https://www.linkedin.com/company/adrefreshmedia/"><Linkedin size={28} /></a>
+            <a className="social insta" href="https://www.instagram.com/adrefreshmedia/"><Instagram size={28} /></a>
           </div>
         </div>
       </div>

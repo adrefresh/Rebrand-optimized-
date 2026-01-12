@@ -758,7 +758,7 @@ export default function WhyUsSection() {
 
           {/* DOT */}
           <div className="relative flex justify-center">
-            <span className="absolute top-1/2 -translate-y-1/2 h-4 w-4 rounded-full border-2 border-white bg-[var(--green-20)] ml-4" />
+            <span className="absolute top-1/2 -translate-y-1/2 h-4 w-4 rounded-full border-2 border-white bg-[var(--green-20)] ml-3.5" />
           </div>
 
           {/* TEXT */}
@@ -817,7 +817,7 @@ export default function WhyUsSection() {
 
           {/* DOT */}
           <div className="relative flex justify-center">
-            <span className="absolute top-1/2 -translate-y-1/2 h-4 w-4 rounded-full border-2 border-white bg-[var(--green-20)] ml-4" />
+            <span className="absolute top-1/2 -translate-y-1/2 h-4 w-4 rounded-full border-2 border-white bg-[var(--green-20)] ml-3.5" />
           </div>
 
           {/* TEXT */}
@@ -843,7 +843,7 @@ export default function WhyUsSection() {
 
           {/* DOT */}
           <div className="relative flex justify-center">
-            <span className="absolute top-1/2 -translate-y-1/2 h-4 w-4 rounded-full border-2 border-white bg-[var(--green-20)] ml-4" />
+            <span className="absolute top-1/2 -translate-y-1/2 h-4 w-4 rounded-full border-2 border-white bg-[var(--green-20)] ml-3.5" />
           </div>
 
           {/* TEXT */}
