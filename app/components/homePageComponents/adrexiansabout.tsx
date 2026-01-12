@@ -52,7 +52,8 @@ export default function About() {
         <div className="w-full max-w-[900px] px-4 sm:px-6 text-white mb-[-40px]">
           
           {/* TITLE ROW */}
-          <div className="flex items-center justify-center gap-3 sm:gap-4 mb-2">
+         <div className="flex items-center justify-start md:justify-center gap-3 sm:gap-4 mb-2">
+
             <h2
               className="
                 text-[#813DFF]
@@ -64,6 +65,7 @@ export default function About() {
                 lg:text-[5rem]
                 md:mb-[-2%]
                 md:ml-[50px]
+                text-left
               "
             >
               ADREXIANS
@@ -96,15 +98,17 @@ export default function About() {
     text-white
     font-[900]
     tracking-[1px]
-    md:tracking-[6px]   /* desktop unchanged */
+    md:tracking-[6px]
 
-    /* MOBILE */
-    absolute top-[-50px] left-1/2 -translate-x-1/2
+    /* MOBILE — left aligned */
+    absolute
+    top-[-50px]
+    left-4
     text-[2rem]
-   
+    text-left
     m-0
-  
     p-0
+
     /* DESKTOP (unchanged) */
     md:static
     md:flex
@@ -113,12 +117,11 @@ export default function About() {
     md:[writing-mode:vertical-rl]
     md:rotate-180
     md:ml-[177%]
-     whitespace-nowrap 
+    whitespace-nowrap
   "
 >
   WE ARE
 </div>
-
 
             {/* TEXT CONTENT */}
             <div className="max-w-[600px] mx-auto">
@@ -173,8 +176,10 @@ export default function About() {
       text-[1.6rem]
       sm:text-[1.8rem]
       md:text-[2.2rem]
-      ml-0
+
+      ml-[-40px]        /* MOBILE only */
       md:ml-[15%]
+
       md:mb-[40px]
       cursor-pointer
     "
@@ -183,6 +188,7 @@ export default function About() {
     <span className="animated-arrow">➜</span>
   </div>
 </Link>
+
 
             </div>
           </div>

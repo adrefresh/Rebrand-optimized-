@@ -275,9 +275,9 @@ export const metadata: Metadata = {
      OPEN GRAPH (Facebook, LinkedIn, WhatsApp)
   ========================= */
   openGraph: {
-    title: "AdRefresh – Programmatic Advertising & Ad Operations",
+    title: "AdRefresh – Digital Marketing & Ad Operations",
     description:
-      "Programmatic advertising and ad operations services built to scale performance, efficiency, and measurable growth.",
+      "Digital Marketing and advertising operations services built to scale performance, efficiency, and measurable growth.",
     url: "https://adrefresh.com/",
     siteName: "AdRefresh",
     images: [

@@ -105,7 +105,7 @@ export default function DigitalMarketingPage() {
         <div className="mt-[14%] sm:mt-[12%] md:mt-[10%]" />
 
         {/* CTA Section (overlap bottom preserved) */}
-        <div className="mb-[-95px] sm:mb-[-100px] md:mb-[-147px]">
+        <div className="mb-[-98px] sm:mb-[-100px] md:mb-[-147px]">
           <AdOpsContactHero2 />
         </div>
       </section>

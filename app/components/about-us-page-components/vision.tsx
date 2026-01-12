@@ -23,10 +23,10 @@ export default function VisionMission() {
             <p
               className="
                 mx-auto max-w-[420px]
-                text-[1.50rem]
-                sm:text-sm
+              
                 leading-[1.7]
-                text-[#333]
+                text-[#333]\
+                text-[15px] sm:text-[15.5px] md:text-[16px]
               "
             >
 We build lasting partnerships through honest communication, clear processes, and complete visibility into performance, spend, and outcomes—ensuring accountability and confidence at every stage.             </p>
@@ -48,8 +48,7 @@ We build lasting partnerships through honest communication, clear processes, and
             <p
               className="
                 mx-auto max-w-[420px]
-                text-[1.50rem]
-                sm:text-sm
+               text-[15px] sm:text-[15.5px] md:text-[16px]
                 leading-[1.7]
                 text-[#333]
               "
@@ -74,9 +73,7 @@ Every decision is guided by data, accuracy, and measurable impact, enabling us t
             <p
               className="
                 mx-auto max-w-[420px]
-                text-[1.50rem]
-                sm:text-sm
-                leading-[1.7]
+              text-[15px] sm:text-[15.5px] md:text-[16px]
                 text-[#333]
               "
             >
@@ -100,8 +97,7 @@ Every decision is guided by data, accuracy, and measurable impact, enabling us t
             <p
               className="
                 mx-auto max-w-[420px]
-                text-[1.50rem]
-                sm:text-sm
+                text-[15px] sm:text-[15.5px] md:text-[16px]
                 leading-[1.7]
                 text-[#333]
               "

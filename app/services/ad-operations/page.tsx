@@ -105,7 +105,7 @@ export default function AdOpsPageWithVideo() {
         style={{ marginLeft: "calc(50% - 50vw)" }}
       >
         {/* Precision Section */}
-           <div className="mt-[-100px] sm:mt-[-100px] md:mt-[-147px]">
+           <div className="mt-[-112px] sm:mt-[-100px] md:mt-[-147px]">
 
           <PrecisionSectionGray/>
         </div>

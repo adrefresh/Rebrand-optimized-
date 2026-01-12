@@ -141,7 +141,7 @@ export default function AboutAdRefresh() {
             xl:text-[2.5rem]
           "
         >
-          ABOUT ADREFRESH
+        WE ARE ADREXIANS
         </h2>
 
         <p
