@@ -5,7 +5,6 @@ import Script from "next/script";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
-// import LetsTalk from "./components/AboutpageComps/letstalk";
 
 export const metadata: Metadata = {
   title: "AdRefresh - Digital Marketing and AdOps",
@@ -60,7 +59,6 @@ export default function RootLayout({
         </noscript>
     <Header/>
         {children}
-        {/* <LetsTalk/> */}
       <Footer/>
       </body>
     </html>
