@@ -20,8 +20,6 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 export default function AdOpsPageWithVideo() {
 
-  const dataHead="Let’s Build Smarter Digital Growth Together"
-  const dataDesc=" Connect with our experts to discuss your goals, challenges, and the right digital strategies for measurable, scalable results"
   return (
     <>
       {/* ============================================================

@@ -66,18 +66,9 @@ export default function CareersClient() {
       </div>
 
       {/* ================= KEKA JOBS ================= */}
-      <section
-        className="
-          relative
-          mx-auto
-          max-w-6xl
-          px-2
-          pb-4
-          sm:px-2
-          mt-4
-          overflow-x-hidden
-        "
-      >
+    
+        <div className="relative w-full h-[85vh] md:h-[90vh] rounded-lg overflow-hidden border">
+
         <iframe
           src="https://adrefresh.keka.com/careers/api/embedjobs/f67f9089-1c2c-4b65-be95-226a53932b93"
           title="AdRefresh Careers"
@@ -90,7 +81,8 @@ export default function CareersClient() {
             md:min-h-[560px]
           "
         />
-      </section>
+        </div>
+     
     </>
   );
 }

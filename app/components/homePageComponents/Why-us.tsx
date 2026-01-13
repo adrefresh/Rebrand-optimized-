@@ -880,8 +880,8 @@ export default function WhyUsSection() {
           <h2 className="text-[1.2rem] font-bold">A LAYER OF</h2>
           <div className="relative inline-block mt-1 ml-[-60px]">
             <div className="relative inline-block mt-1 ml-[0px]">
-              <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[150px] h-[40px] bg-[var(--green-tint-30)] opacity-50 blur-[8px] rounded-full" />
-              <svg width="260" height="90" viewBox="0 0 260 90" className="relative rotate-[-4deg]">
+              <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[150px] h-[40px] bg-[var(--green-tint-30)] opacity-50 blur-[12px] rounded-full" />
+              <svg width="260" height="90" viewBox="0 0 260 90" className="relative rotate-[-15deg]">
                 <defs>
                   <path id="curve-flex-small" d="M 20 80 Q 100 10 250 100" />
                 </defs>

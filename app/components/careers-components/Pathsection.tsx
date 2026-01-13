@@ -1800,7 +1800,7 @@ export default function PathSection() {
                   {step.title}
                 </h3>
                 <div className="hidden lg:block pr-10 text-left">
-                 <p className="text-[18px] text-gray-600 max-w-md ml-auto">
+                 <p className="text-[18px] text-gray-600 max-w-md ml-0">
                   {step.desc}
                 </p>
               </div>
