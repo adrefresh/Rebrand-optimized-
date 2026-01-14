@@ -198,5 +198,35 @@
         ]
       }
     ]
+  },
+
+  "transition-knowledge-continuity": {
+    "title": "Transition Enablers in a Complex Organizational Shift — Knowledge Continuity",
+    "subtitle": "How we became the knowledge backbone for a major enterprise during acquisition-led restructuring",
+    "featureImage": "/images/careers-images/4.jpg",
+    "sections": [
+      {
+        "heading": "Background",
+        "body": "A major enterprise undergoing acquisition-led restructuring faced uncertainty around platform usage, documentation, and operational continuity."
+      },
+      {
+        "heading": "Our Role",
+        "body": "We acted as the knowledge bridge, supporting newly onboarded teams while maintaining seamless operations across legacy systems."
+      },
+      {
+        "heading": "Impact Delivered",
+        "bullets": [
+          "Served as the de facto training team during restructuring",
+          "Delivered structured knowledge transfers (KTs)",
+          "Maintained operational consistency and platform best practices",
+          "Reduced downtime and eliminated onboarding friction",
+          "Strengthened trust with client leadership"
+        ]
+      },
+      {
+        "heading": "Conclusion",
+        "body": "By becoming the cornerstone of knowledge continuity, we helped the client navigate organizational change with confidence, efficiency, and momentum."
+      }
+    ]
   }
 }

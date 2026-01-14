@@ -896,7 +896,15 @@ const caseStudies = [
       "Precision programmatic operations driving higher eCPMs, improved fill rates, and accurate billing across a massive news publisher ecosystem.",
     image: "/images/careers-images/1.jpg",
   },
+  {
+    slug: "transition-knowledge-continuity",
+    title: "Transition Enablers in a Complex Organizational Shift — Knowledge Continuity",
+    excerpt:
+      "How we became the knowledge backbone for a major enterprise during acquisition-led restructuring, ensuring platform continuity, rapid onboarding, and zero operational downtime.",
+    image: "/images/careers-images/4.jpg",
+  },
 ];
+
 
 /* ================= SEO ================= */
 export const metadata: Metadata = {
