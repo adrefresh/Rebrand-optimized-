@@ -851,8 +851,8 @@
 
 import Image from "next/image";
 import WhitePml from "@/public/images/FooterImages/whitePML.png";
-import Soc from "@/public/images/FooterImages/socbroo.png";
-import iso from "@/public/images/FooterImages/isobro.png";
+import Soc from "@/public/images/FooterImages/soc.png";
+import iso from "@/public/images/FooterImages/iso.png";
 
 import { Mail, Facebook, Linkedin, Instagram, MapPin } from "lucide-react";
 
@@ -973,7 +973,7 @@ export default function Footer() {
       <div className="mx-auto h-[2px] w-[90%] bg-white/30" />
 
       {/* ================= COPYRIGHT ================= */}
-      <div className="py-6 text-center text-sm opacity-85">
+      <div className="py-6 text-center text-sm ">
         © {new Date().getFullYear()} AdRefresh. All Rights Reserved.
       </div>
 
