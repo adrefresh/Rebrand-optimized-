@@ -11,7 +11,7 @@ import MissionVisionSection from "../components/about-us-page-components/CardsMi
 export const metadata: Metadata = {
   title: "About Us | AdRefresh – Performance-Driven Ad Operations",
   description:
-    "Learn about AdRefresh, a performance-driven ad operations and programmatic advertising partner built on experience, precision, and measurable growth.",
+    "Learn about AdRefresh, a performance-driven advertising operations and Digital Marketing partner built on experience, precision, and measurable growth.",
 
   alternates: {
     canonical: "https://yourdomain.com/about-us",
@@ -21,11 +21,11 @@ export const metadata: Metadata = {
     title: "About AdRefresh – Built on Experience. Driven by Performance.",
     description:
       "Discover how AdRefresh helps brands scale through expert ad operations, programmatic strategy, and performance-focused execution.",
-    url: "https://yourdomain.com/about-us",
+    url: "https://adrefresh.com/about-us",
     siteName: "AdRefresh",
     images: [
       {
-        url: "https://yourdomain.com/og/about.png",
+        url: "https://adrefresh.com/og/about.png",
         width: 1200,
         height: 630,
         alt: "About AdRefresh",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     title: "About AdRefresh – Performance Marketing Experts",
     description:
       "Built on experience. Driven by performance. Learn more about the AdRefresh team and our approach.",
-    images: ["https://yourdomain.com/og/about.png"],
+    images: ["https://adrefresh/og/about.png"],
   },
 
   robots: {

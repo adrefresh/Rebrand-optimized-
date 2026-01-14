@@ -17,6 +17,52 @@ import PrecisionSectionGray from "@/app/components/service-page-components/prece
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
+export const metadata = {
+  title: "Advertising Operations Services | AdOps Management & Optimization",
+  description:
+    "Professional Advertising Operations (AdOps) services to manage, optimize, and scale your digital ad campaigns. We deliver performance-driven ad operations with transparency and flexibility.",
+
+  keywords: [
+    "Advertising Operations",
+    "AdOps Services",
+    "Ad Operations Management",
+    "Digital Advertising Operations",
+    "Campaign Optimization Services",
+    "Programmatic Ad Operations",
+    "Media Operations",
+    "Ad Tech Services"
+  ],
+
+  openGraph: {
+    title: "Advertising Operations Services | AdOps Management & Optimization",
+    description:
+      "End-to-end Advertising Operations services including campaign setup, optimization, reporting, and performance scaling.",
+    url: "https://adrefresh.com/services/ad-operations",
+    siteName: "AdRefresh",
+    images: [
+      {
+        url: "https://adrefresh.com/images/seo/adops-og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Advertising Operations Services",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Advertising Operations Services | AdOps Management & Optimization",
+    description:
+      "Scalable AdOps services for campaign execution, optimization, reporting, and performance growth.",
+    images: ["https://adrefresh.com/images/seo/adops-og.jpg"],
+  },
+
+  alternates: {
+    canonical: "https://adrefresh.com/services/ad-operations",
+  },
+};
 
 export default function AdOpsPageWithVideo() {
 

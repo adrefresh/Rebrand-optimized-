@@ -709,6 +709,7 @@
 //     </section>
 //   );
 // }
+
 "use client";
 
 export default function WhyUsSection() {
@@ -770,7 +771,7 @@ export default function WhyUsSection() {
 
           {/* ===== ROW 2 ===== */}
           <div className="flex justify-end pr-12">
-            <h2 className="text-[2.6rem] font-extrabold flex items-center gap-2">
+            <h2 className="text-[2.6rem] font-extrabold flex items-center gap-2 md:text-[2rem] lg:text-[2.3rem] ">
               A LAYER OF
               <span className="relative inline-block">
                 <span
@@ -801,7 +802,7 @@ export default function WhyUsSection() {
                   </defs>
                   <text
                     fill="currentColor"
-                    fontSize="38"
+                    fontSize="36"
                     fontWeight="800"
                     letterSpacing="1.2"
                     textAnchor="middle"
@@ -830,7 +831,7 @@ export default function WhyUsSection() {
 
           {/* ===== ROW 3 ===== */}
           <div className="flex justify-end pr-12">
-            <h2 className="text-[2.2rem] font-extrabold flex items-center gap-2">
+            <h2 className="text-[2.2rem] font-extrabold flex items-center gap-2 lg:text-[1.7rem]">
               A CULTURE OF
               <span className="relative inline-block">
                 <span className="absolute inset-[-8px_0] bg-[var(--green-tint-30)] opacity-60 blur-[18px]" />

@@ -269,7 +269,7 @@ export const metadata: Metadata = {
      CANONICAL
   ========================= */
   alternates: {
-    canonical: "https://yourdomain.com/",
+    canonical: "https://adrefresh.com/",
   },
 
   /* =========================
