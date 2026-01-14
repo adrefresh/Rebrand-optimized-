@@ -1182,6 +1182,7 @@ export default function ContactForm() {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState("");
+         const [honeypot, setHoneypot] = useState("");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -1206,8 +1207,9 @@ export default function ContactForm() {
       !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ||
       phone.length < 6 ||
       subject.length < 5 ||
-      message.length < 10
+      message.length < 50
     ) {
+     
       setError("Please fill all fields correctly.");
       return;
     }
@@ -1217,7 +1219,7 @@ export default function ContactForm() {
     setSuccess(false);
 
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch("/contact-form.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -1255,14 +1257,18 @@ export default function ContactForm() {
           className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 lg:gap-6"
         >
           {/* Honeypot field */}
-          <input
-            type="text"
-            name="website_url"
-            className="sr-only"
-            tabIndex={-1}
-            autoComplete="off"
-          />
 
+
+<div style={{ display: 'none' }} aria-hidden="true">
+  <input 
+    type="text" 
+    name="website_url" 
+    value={honeypot} 
+    onChange={(e) => setHoneypot(e.target.value)} 
+   tabIndex={-1}
+    autoComplete="off" 
+  />
+</div>
           <input name="name" required placeholder="Your Name*" className="input" />
           <input name="email" type="email" required placeholder="Email*" className="input" />
           <input name="phone" required placeholder="Phone*" className="input" />
@@ -1279,7 +1285,7 @@ export default function ContactForm() {
             name="message"
             required
             rows={5}
-            placeholder="Message (min 10 chars)"
+            placeholder="Message (min 50 chars)"
             className="sm:col-span-2 textarea"
           />
 
