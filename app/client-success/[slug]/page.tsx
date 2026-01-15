@@ -952,9 +952,6 @@ export default async function ClientSuccessDetail({
       </section>
 
       <div className="cs-wrap">
-        {/* <p className="cs-subtitle">{data.subtitle}</p> */}
-
-     {/* HERO IMAGE + FIRST SECTION */}
 
 
 <div className="cs-grid">
@@ -964,10 +961,10 @@ export default async function ClientSuccessDetail({
       <img src={data.featureImage} alt={data.title} />
     </div>
 
-    {/* Right Content (ONLY FIRST SECTION) */}
+  
   
   </div>
-{/* REMAINING SECTIONS (START FROM 2nd) */}
+
 {data.sections.slice(0).map((s, i) => (
   <section key={i} className="cs-section">
     <h2 style={{ marginTop: "4%" }}>{s.heading}</h2>
