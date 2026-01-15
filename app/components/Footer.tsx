@@ -977,10 +977,10 @@ export default function Footer() {
 <div className="py-4 text-center text-sm opacity-90 flex flex-col gap-2 items-center">
 
   <div className="flex gap-4 flex-wrap justify-center">
-    <a href="/privacy-policy" className="hover:underline">
+    {/* <a href="/privacy-policy" className="hover:underline">
       Privacy Policy
     </a>
-   
+    */}
   </div>
 
   <div className="opacity-80">
