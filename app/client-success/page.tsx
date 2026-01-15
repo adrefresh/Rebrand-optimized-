@@ -878,7 +878,7 @@ const caseStudies = [
     image: "/images/client-images/turningdata.JPG",
   },
   {
-    slug: "uae-media-execution",
+    slug: "UAE-media-execution",
     title: "Driving Performance Across Sectors in the UAE",
     excerpt:
       "Strategic paid media execution for corporate services and lifestyle retail brands across the UAE market.",
@@ -897,7 +897,7 @@ const caseStudies = [
     slug: "global-news-monetization",
     title: "Scalable Monetization & Operational Precision for a Global News Publisher",
     excerpt:
-      "End-to-end programmatic operations powering a worldwide news network with higher eCPMs and fill rates.",
+      "End-to-end Programmatic operations powering a worldwide news network with higher eCPMs and fill rates.",
           image: "/images/client-images/redefine.jpg",
 
   },
