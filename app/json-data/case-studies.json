@@ -1,6 +1,6 @@
 {
   "transition-enablers": {
-    "title": "Transition Enablers in a Complex Organizational Shift",
+    "title": "Transition Enablers: Powering a Complex Organizational Shift",
     "subtitle": "Supporting enterprise restructuring with operational continuity and platform stability",
     "featureImage": "/images/careers-images/4.jpg",
     "sections": [
@@ -83,7 +83,7 @@
   },
 
   "uae-media-execution": {
-    "title": "Driving Performance Across Sectors: End-to-End Media Execution for UAE Market",
+    "title": "Driving Performance Across Sectors: End-to-End Media Execution for the UAE Market",
     "subtitle": "Strategic paid media execution for service and retail brands across the UAE",
     "featureImage": "/images/careers-images/careers3.jpeg",
     "sections": [
@@ -282,8 +282,8 @@
   },
 
   "impression-to-invoice": {
-    "title": "From Impression to Invoice — Streamlining Campaign Operations in a High-Niche Programmatic Market",
-    "subtitle": "End-to-end operational excellence for a genealogy-focused programmatic ad network",
+    "title": "From Impression to Invoice",
+    "subtitle": "End-to-end operational excellence for a genealogy-focused programmatic ad network — Streamlining Campaign Operations in a High-Niche Programmatic Market",
     "featureImage": "/images/careers-images/1.jpg",
     "sections": [
       {
@@ -350,6 +350,40 @@
       {
         "heading": "Key Takeaway",
         "body": "In niche domains like genealogy, advertisers demand precision and accountability. Our full-cycle operational support—from securing inventory to sending final invoices—enabled the client to run an efficient, scalable ad business with trust on both supply and demand sides.\n\nWith us managing the backend complexity, the client could focus on growth and strategic partnerships, confident that every impression and dollar was accounted for."
+      }
+    ]
+  },
+
+  "transition-knowledge-continuity": {
+    "title": "Knowledge Continuity During Enterprise Transformation",
+    "subtitle": "Ensuring platform continuity, rapid onboarding, and zero operational downtime during restructuring",
+    "featureImage": "/images/careers-images/4.jpg",
+    "sections": [
+      {
+        "heading": "Background",
+        "body": "Our long-term client, a major enterprise in its domain, was undergoing a significant transformation following a corporate acquisition. As part of the integration process, they launched a large-scale organizational restructure, onboarding new teams and reconfiguring workflows. The scale of change introduced uncertainty, especially around the usage, documentation, and continuity of their proprietary platform — the core of their operations."
+      },
+      {
+        "heading": "The Challenge",
+        "body": "As part of the transition, several new team members were brought on board to support the evolving structure. However, with the legacy team deeply involved in high-priority strategic work and time-sensitive deliverables, they were unable to dedicate sufficient bandwidth to onboard and guide the incoming resources effectively. This created a gap in hands-on training and platform knowledge transfer — a gap that needed to be filled quickly to ensure continuity and maintain momentum during the organizational shift."
+      },
+      {
+        "heading": "Our Role",
+        "body": "Having worked closely with the client for years, our team had deep, operational familiarity with their proprietary platform. Recognizing the disruption the transition could cause, we proactively positioned ourselves as the continuity backbone for the client’s evolving organization. We didn’t just maintain operations — we stepped up to become the knowledge bridge. Our team played a dual role: guiding the newly onboarded teams while maintaining seamless operations with the legacy systems still in use."
+      },
+      {
+        "heading": "Impact Delivered",
+        "bullets": [
+          "Served as the de facto training team for all matters related to the proprietary platform during the restructuring phase",
+          "Organized structured knowledge transfers (KTs) to equip new team members with the platform know-how they needed to get started quickly",
+          "Created clarity and alignment between legacy staff and new hires, ensuring that processes were understood, responsibilities were clear, and objectives were aligned",
+          "Reduced operational downtime and eliminated guesswork by maintaining consistency in platform usage, best practices, and historical context",
+          "Solidified trust with client leadership by consistently stepping in as the go-to knowledge hub — reliable, responsive, and always on hand to guide teams through challenges"
+        ]
+      },
+      {
+        "heading": "Conclusion",
+        "body": "In a time of significant transition, our team didn’t just adapt — we enabled transformation. By becoming the cornerstone of knowledge continuity, we helped the client navigate change with confidence and efficiency, proving once again the value of long-term partnership and proactive engagement."
       }
     ]
   }

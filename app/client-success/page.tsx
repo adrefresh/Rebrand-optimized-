@@ -853,57 +853,57 @@ import ListenPerform from "../components/homePageComponents/we-listen";
 import "./clientpage.css";
 
 /* ================= DATA ================= */
+
+
 const caseStudies = [
   {
     slug: "impression-to-invoice",
-    title: "From Impression to Invoice Streamlining Campaign Operations",
+    title: "From Impression to Invoice",
     excerpt:
-      "How a US-based genealogy-focused programmatic ad network improved billing accuracy, reduced disputes, and scaled operations across 300M+ impressions annually.",
-    image: "/images/careers-images/1.jpg",
+      "End-to-end operational excellence for a genealogy-focused programmatic ad network — streamlining campaign operations in a high-niche market.",
+    image: "/images/client-images/1stone.jpg",
   },
   {
     slug: "transition-enablers",
-    title: "Transition Enablers in a Complex Organizational Shift",
+    title: "Transition Enablers: Powering a Complex Organizational Shift",
     excerpt:
-      "Supporting a large enterprise through acquisition-led restructuring by becoming the backbone of platform knowledge and operational continuity.",
-    image: "/images/careers-images/4.jpg",
+      "Supporting enterprise restructuring with operational continuity, platform stability, and execution confidence.",
+    image: "/images/client-images/driving.jpg",
   },
   {
     slug: "audience-infrastructure-fmcg",
     title: "Turning Data into Campaign Results",
     excerpt:
-      "How behind-the-scenes audience infrastructure enabled a global FMCG brand to activate high-quality segments across 100+ websites and DSPs.",
-    image: "/images/careers-images/careers2.jpeg",
+      "A behind-the-scenes look at audience infrastructure powering high-quality FMCG campaign activation across 100+ websites and DSPs.",
+    image: "/images/client-images/turningdata.JPG",
   },
   {
     slug: "uae-media-execution",
     title: "Driving Performance Across Sectors in the UAE",
     excerpt:
-      "End-to-end paid media execution for corporate services and lifestyle retail brands, optimized for the UAE’s unique market dynamics.",
-    image: "/images/careers-images/careers3.jpeg",
+      "Strategic paid media execution for corporate services and lifestyle retail brands across the UAE market.",
+          image: "/images/client-images/seamlewss.jpg",
+
   },
   {
-    slug: "luxury-retail-digital-strategy",
-    title: "Redefining Digital Strategy for a Luxury Appliance Retailer",
+    slug: "luxury-kitchen-appliance-digital-strategy",
+    title: "Redefining Digital Strategy for a Luxury Kitchen Appliance Retailer",
     excerpt:
-      "How a premium kitchen appliance brand reduced acquisition costs, increased showroom visits, and attracted high-value customers.",
-    image: "/images/careers-images/5.jpg",
+      "From generic reach to premium customer engagement — reducing acquisition costs and increasing showroom visits.",
+          image: "/images/client-images/scalable.jpg",
+
   },
   {
     slug: "global-news-monetization",
-    title: "Scalable Monetization for a Global News Publisher",
+    title: "Scalable Monetization & Operational Precision for a Global News Publisher",
     excerpt:
-      "Precision programmatic operations driving higher eCPMs, improved fill rates, and accurate billing across a massive news publisher ecosystem.",
-    image: "/images/careers-images/1.jpg",
+      "End-to-end programmatic operations powering a worldwide news network with higher eCPMs and fill rates.",
+          image: "/images/client-images/redefine.jpg",
+
   },
-  {
-    slug: "transition-knowledge-continuity",
-    title: "Transition Enablers in a Complex Organizational Shift — Knowledge Continuity",
-    excerpt:
-      "How we became the knowledge backbone for a major enterprise during acquisition-led restructuring, ensuring platform continuity, rapid onboarding, and zero operational downtime.",
-    image: "/images/careers-images/4.jpg",
-  },
+
 ];
+
 
 
 /* ================= SEO ================= */
