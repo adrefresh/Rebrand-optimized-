@@ -878,7 +878,7 @@ const caseStudies = [
     image: "/images/client-images/turningdata.JPG",
   },
   {
-    slug: "UAE-media-execution",
+    slug: "uae-media-execution",
     title: "Driving Performance Across Sectors in the UAE",
     excerpt:
       "Strategic paid media execution for corporate services and lifestyle retail brands across the UAE market.",

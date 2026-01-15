@@ -4,6 +4,7 @@ import "./globals.css";
 import Script from "next/script";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+// import CookieBanner from "./components/cookiebanner/cookiebanner";
 
 
 export const metadata: Metadata = {
@@ -45,9 +46,11 @@ export default function RootLayout({
               })(window,document,'script','dataLayer','GTM-MMMX5TGB');
             `,
           }}
+          
         />
       </head>
       <body className="layout-root">
+        {/* <CookieBanner/> */}
         {/* GTM noscript */}
         <noscript>
           <iframe
