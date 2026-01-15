@@ -239,20 +239,21 @@ export const metadata: Metadata = {
      BASIC SEO
   ========================= */
   title: {
-    default: "AdRefresh – Programmatic Advertising & Ad Operations",
+    default: "AdRefresh – Digital Marketing & Ad Operations",
     template: "%s | AdRefresh",
   },
 
   description:
-    "AdRefresh delivers programmatic advertising, ad operations, and scalable remote media teams to help brands grow efficiently with data-driven performance.",
+    "AdRefresh delivers Digital Marketing and advertising operations, and scalable remote media teams to help brands grow efficiently with data-driven performance.",
 
   keywords: [
     "AdRefresh",
-    "Programmatic Advertising",
+    "Digital Advertising",
+    
     "Ad Operations",
     "Media Buying",
     "Ad Tech",
-    "Digital Advertising",
+  "Programmatic Advertising",
     "Remote Media Teams",
     "Advertising Operations",
     "Performance Marketing",
@@ -268,16 +269,16 @@ export const metadata: Metadata = {
      CANONICAL
   ========================= */
   alternates: {
-    canonical: "https://yourdomain.com/",
+    canonical: "https://adrefresh.com/",
   },
 
   /* =========================
      OPEN GRAPH (Facebook, LinkedIn, WhatsApp)
   ========================= */
   openGraph: {
-    title: "AdRefresh – Programmatic Advertising & Ad Operations",
+    title: "AdRefresh – Digital Marketing & Ad Operations",
     description:
-      "Programmatic advertising and ad operations services built to scale performance, efficiency, and measurable growth.",
+      "Digital Marketing and advertising operations services built to scale performance, efficiency, and measurable growth.",
     url: "https://adrefresh.com/",
     siteName: "AdRefresh",
     images: [

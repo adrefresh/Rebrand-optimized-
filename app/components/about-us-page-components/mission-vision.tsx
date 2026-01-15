@@ -2,6 +2,8 @@
 "use client";
 
 import { ShieldCheck, Zap, Target, Lightbulb } from "lucide-react";
+import { LuBrain } from "react-icons/lu";
+import { LuMousePointerClick } from "react-icons/lu";
 
 export default function AboutVisionMission() {
   return (
@@ -38,7 +40,7 @@ export default function AboutVisionMission() {
 
           {/* ICON 3 */}
           <div className="flex flex-col items-center gap-3">
-            <Target className="h-[56px] w-[56px] sm:h-[70px] sm:w-[70px] lg:h-[90px] lg:w-[90px] stroke-white stroke-[2.4]" />
+            <LuMousePointerClick className="h-[56px] w-[56px] sm:h-[70px] sm:w-[70px] lg:h-[90px] lg:w-[90px] stroke-white stroke-[2.4]" />
             <span className="text-sm font-semibold sm:text-base">
               Precision
             </span>
@@ -46,7 +48,7 @@ export default function AboutVisionMission() {
 
           {/* ICON 4 */}
           <div className="flex flex-col items-center gap-3">
-            <Lightbulb className="h-[56px] w-[56px] sm:h-[70px] sm:w-[70px] lg:h-[90px] lg:w-[90px] stroke-white stroke-[2.4]" />
+            <LuBrain className="h-[56px] w-[56px] sm:h-[70px] sm:w-[70px] lg:h-[90px] lg:w-[90px] stroke-white stroke-[2.4]" />
             <span className="text-sm font-semibold sm:text-base">
               Innovation
             </span>

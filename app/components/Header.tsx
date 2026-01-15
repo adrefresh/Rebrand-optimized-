@@ -373,40 +373,49 @@ export default function Header() {
           </Link>
 
           {/* SERVICES */}
-          <div className="flex flex-col items-end">
-            <button
-              onClick={() => setServicesOpen(v => !v)}
-              className="flex items-center gap-2 text-[1.4rem] sm:text-[1.6rem] md:text-[2.2rem] lg:text-[2.6rem] font-bold hover:pointer"
-            >
-              Services
-              <span
-                className={`text-[1.4rem] sm:text-[1.6rem] transition-transform duration-300 ${
-                  servicesOpen ? "rotate-180" : ""
-                }`}
-              >
-                <IoIosArrowDown />
-              </span>
-            </button>
+          <div className="flex flex-col items-end group w-full">
+  {/* Services Button */}
+  <div className="flex items-center gap-2 text-[1.4rem] sm:text-[1.6rem] md:text-[2.2rem] lg:text-[2.6rem] font-bold cursor-pointer">
+    Services
+    <span className="text-[1.4rem] sm:text-[1.6rem] transition-transform duration-300 group-hover:rotate-180">
+      <IoIosArrowDown />
+    </span>
+  </div>
 
-            {servicesOpen && (
-              <div className="relative mt-[4px] mr-[4px] flex flex-col px-2 py-2">
-                <Link
-                  onClick={closeMenu}
-                  href="/services/digital-marketing"
-                  className="text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] lg:text-[1.5rem] font-medium hover:text-[#813DFF]"
-                >
-                  Digital Marketing
-                </Link>
-                <Link
-                  onClick={closeMenu}
-                  href="/services/ad-operations"
-                  className="text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] lg:text-[1.5rem] font-medium hover:text-[#813DFF]"
-                >
-                  Advertising Operations
-                </Link>
-              </div>
-            )}
-          </div>
+  {/* Dropdown (opens UNDER Services) */}
+  <div
+    className="
+      hidden
+      group-hover:flex
+      flex-col
+      mt-2
+ 
+      rounded-md
+     
+      px-4
+      py-3
+      text-right
+      w-fit
+    "
+  >
+    <Link
+      onClick={closeMenu}
+      href="/services/digital-marketing"
+      className="text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] lg:text-[1.5rem] font-medium hover:text-[#813DFF]"
+    >
+      Digital Marketing
+    </Link>
+
+    <Link
+      onClick={closeMenu}
+      href="/services/ad-operations"
+      className="mt-2 text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] lg:text-[1.5rem] font-medium hover:text-[#813DFF]"
+    >
+      Advertising Operations
+    </Link>
+  </div>
+</div>
+
 
           <Link
             onClick={closeMenu}

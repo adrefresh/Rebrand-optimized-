@@ -1,201 +1,389 @@
 {
-  "impression-to-invoice": {
-    "title": "From Impression to Invoice Streamlining Campaign Operations",
-    "subtitle": "How operational precision helped a genealogy-focused ad network scale revenue, trust, and efficiency",
-    "featureImage": "/images/careers-images/1.jpg",
-    "sections": [
-      {
-        "heading": "Client",
-        "body": "A US-based programmatic display ad network operating in the genealogy domain, managing campaigns across multiple DSPs and premium supply partners."
-      },
-      {
-        "heading": "The Business Context",
-        "body": "Operating in a high-intent vertical with over 300 million annual ad requests, the client faced increasing pressure to maintain billing accuracy, operational transparency, and advertiser trust while scaling revenue."
-      },
-      {
-        "heading": "Operational Challenges",
-        "bullets": [
-          "Discrepancies between planned and delivered impressions",
-          "Manual reconciliation of delivery and billing data",
-          "Delayed campaign pacing adjustments",
-          "Frequent invoice disputes with advertisers and DSPs"
-        ]
-      },
-      {
-        "heading": "Our Approach",
-        "body": "We embedded directly into the client’s ad operations workflow, introducing structured trafficking processes, automated delivery checks, and standardized reporting frameworks."
-      },
-      {
-        "heading": "Results Delivered",
-        "bullets": [
-          "Invoice accuracy improved to 99.8%",
-          "Billing disputes reduced by 92%",
-          "Faster campaign setup and optimization cycles",
-          "Improved advertiser confidence and retention"
-        ]
-      },
-      {
-        "heading": "Key Takeaway",
-        "body": "Operational discipline and transparent reporting can transform billing from a friction point into a competitive advantage."
-      }
-    ]
-  },
-
   "transition-enablers": {
-    "title": "Transition Enablers in a Complex Organizational Shift",
+    "title": "Transition Enablers: Powering a Complex Organizational Shift",
     "subtitle": "Supporting enterprise restructuring with operational continuity and platform stability",
     "featureImage": "/images/careers-images/4.jpg",
     "sections": [
       {
-        "heading": "Client",
-        "body": "A large enterprise undergoing acquisition-led restructuring impacting internal teams, vendors, and ad operations."
+        "heading": "Background",
+        "body": "Our long-term client, a major enterprise in its domain, was undergoing a significant transformation following a corporate acquisition. As part of the integration process, they launched a large-scale organizational restructure, onboarding new teams and reconfiguring workflows. The scale of change introduced uncertainty, especially around the usage, documentation, and continuity of their proprietary platform — the core of their operations."
       },
       {
-        "heading": "Operational Challenges",
-        "bullets": [
-          "Loss of institutional platform knowledge",
-          "Inconsistent campaign execution standards",
-          "Risk of operational downtime",
-          "Limited internal documentation"
-        ]
+        "heading": "The Challenge",
+        "body": "As part of the transition, several new team members were brought on board to support the evolving structure. However, with the legacy team deeply involved in high-priority strategic work and time-sensitive deliverables, they were unable to dedicate sufficient bandwidth to onboard and guide the incoming resources effectively. This created a gap in hands-on training and platform knowledge transfer — a gap that needed to be filled quickly to ensure continuity and maintain momentum during the organizational shift."
       },
       {
         "heading": "Our Role",
-        "body": "We ensured platform continuity, documented workflows, and maintained campaign execution without disruption."
+        "body": "Having worked closely with the client for years, our team had deep, operational familiarity with their proprietary platform. Recognizing the disruption the transition could cause, we proactively positioned ourselves as the continuity backbone for the client’s evolving organization. We didn’t just maintain operations — we stepped up to become the knowledge bridge. Our team played a dual role: guiding the newly onboarded teams while maintaining seamless operations with the legacy systems still in use."
       },
       {
-        "heading": "Outcomes",
+        "heading": "Impact Delivered",
         "bullets": [
-          "Zero campaign downtime",
-          "Stabilized reporting cadence",
-          "Successful internal team handover"
+          "Served as the de facto training team for all matters related to the proprietary platform during the restructuring phase",
+          "Organized structured knowledge transfers (KTs) to equip new team members with the platform know-how they needed to get started quickly",
+          "Created clarity and alignment between legacy staff and new hires, ensuring that processes were understood, responsibilities were clear, and objectives were aligned",
+          "Reduced operational downtime and eliminated guesswork by maintaining consistency in platform usage, best practices, and historical context",
+          "Solidified trust with client leadership by consistently stepping in as the go-to knowledge hub — reliable, responsive, and always on hand to guide teams through challenges"
         ]
+      },
+      {
+        "heading": "Conclusion",
+        "body": "In a time of significant transition, our team didn’t just adapt — we enabled transformation. By becoming the cornerstone of knowledge continuity, we helped the client navigate change with confidence and efficiency, proving once again the value of long-term partnership and proactive engagement."
       }
     ]
   },
 
   "audience-infrastructure-fmcg": {
     "title": "Turning Data into Campaign Results",
-    "subtitle": "Behind-the-scenes audience infrastructure for a global FMCG brand",
+    "subtitle": "A Behind-the-Scenes Look at Audience Infrastructure for a Global FMCG Brand",
     "featureImage": "/images/careers-images/careers2.jpeg",
     "sections": [
       {
         "heading": "Client Background",
-        "body": "A leading Data Management Platform supporting a global FMCG advertiser across 100+ brand websites."
+        "body": "Our client, a leading Data Management Platform (DMP), powers audience intelligence and activation for some of the world’s largest advertisers. Among its portfolio was a key data partner — a global FMCG giant — seeking to enhance its digital advertising efforts across multiple markets.\n\nTo reach the right audience with precision, the FMCG brand needed a scalable, reliable system that could:\n- Collect data accurately from 100+ brand websites\n- Translate user behavior into meaningful audience segments\n- Syndicate those segments to authorized Demand-Side Platforms (DSPs) for campaign activation\n\nOur role was to provide the operational muscle to make all of that happen — consistently, efficiently, and with quality."
       },
       {
         "heading": "The Challenge",
-        "bullets": [
-          "Pixel misfires across 119+ websites",
-          "Generic audience segmentation",
-          "Manual QA and syndication workflows"
-        ]
+        "body": "Behind the sleek creatives and media plans lies a complex infrastructure that powers targeting precision. For the FMCG brand, the scale of operations was enormous:\n\n- 119+ websites, each with its own tracking environment\n- Multiple regions and product categories with unique data needs\n- Tight campaign launch windows requiring real-time readiness\n\nYet with scale came friction:\n\n- Pixel misfires or faulty data collection could delay campaigns\n- Generic segmentation didn’t reflect actual consumer behavior\n- Manual processes for QA and syndication risked human error\n\nThey needed a dedicated operations partner to stitch it all together."
       },
       {
         "heading": "Our Solution",
+        "body": "We built a comprehensive operational support system that empowered the DMP to serve its FMCG partner effectively, across four key pillars."
+      },
+      {
+        "heading": "Pixel QA & Testing on 119 Websites",
+        "body": "Our team conducted detailed implementation testing on every domain:\n\n- Validated pixel load and firing accuracy across events such as page visits, clicks, and conversions\n- Ensured proper parameter passing and compliance with data schemas\n- Flagged and resolved discrepancies or faulty implementations with client development teams\n\nResult: 99.8% data accuracy across properties."
+      },
+      {
+        "heading": "Customized Segment Rule Creation",
+        "body": "Using the FMCG brand’s goals and taxonomy, we:\n\n- Defined audience segmentation rules based on user behavior such as product category visits, repeat visitors, and regional engagement\n- Built custom logic flows to reflect actual consumer journeys and intent\n- Ensured rules were adaptable for seasonal promotions and product launches\n\nThese segments powered high-performing retargeting and lookalike campaigns."
+      },
+      {
+        "heading": "Segment Syndication to DSPs",
+        "body": "We operationalized the process of pushing validated audience segments to:\n\n- Authorized DSPs such as Google DV360, The Trade Desk, and other partner platforms\n- Ensured data formatting and syndication integrity as per each DSP’s specification\n- Set up monitoring and escalation flows in case of sync failures or lags\n\nOutcome: Campaigns launched with zero latency in audience availability."
+      },
+      {
+        "heading": "Ongoing Operational Support",
+        "body": "We didn’t stop at setup. Our team continued to provide:\n\n- Daily health checks and issue resolution\n- Rapid support during campaign crunch periods\n- Regular feedback loops with the DMP and partner teams to improve processes and documentation"
+      },
+      {
+        "heading": "Impact & Results",
         "bullets": [
-          "Pixel QA & implementation testing across all domains",
-          "Custom audience segmentation based on behavior",
-          "Syndication to Google DV360, The Trade Desk, and partner DSPs",
-          "Ongoing operational monitoring and support"
+          "Faster Campaign Launches — Audience-specific campaigns launched 2x faster",
+          "80% Reduction in Manual Errors — Rigorous QA workflows minimized issues",
+          "Real-Time Personalization at Scale — Powered dynamic messaging and offers",
+          "Stronger Trust in Data — Increased confidence in segment quality and targeting"
         ]
       },
       {
-        "heading": "Impact",
-        "bullets": [
-          "99.8% data accuracy",
-          "2x faster campaign launches",
-          "80% reduction in manual errors",
-          "Increased trust in audience data quality"
-        ]
+        "heading": "Conclusion",
+        "body": "While strategy and creativity fuel campaigns, it’s operational excellence behind the scenes that ensures they take off. By providing a robust support layer — from pixel QA to audience syndication — we enabled a global FMCG brand to turn web behavior into measurable business results.\n\nLooking to scale your data operations or streamline audience delivery? Let’s talk."
       }
     ]
   },
 
   "uae-media-execution": {
-    "title": "Driving Performance Across Sectors in the UAE",
-    "subtitle": "End-to-end paid media execution for service and retail brands",
+    "title": "Driving Performance Across Sectors: End-to-End Media Execution for the UAE Market",
+    "subtitle": "Strategic paid media execution for service and retail brands across the UAE",
     "featureImage": "/images/careers-images/careers3.jpeg",
     "sections": [
       {
         "heading": "Client",
-        "body": "A global search and social paid media agency supporting multiple UAE-based brands."
+        "body": "A Global Search & Social Paid Media Agency"
       },
       {
         "heading": "Industries Supported",
         "bullets": [
-          "Corporate taxation and business setup services",
-          "Sports and lifestyle retail brands"
+          "Corporate Taxation & Business Setup Services",
+          "Sports & Lifestyle Retail and Brand Distribution"
+        ]
+      },
+      {
+        "heading": "Our Role",
+        "body": "Strategic Execution Partner for UAE Market Media Campaigns"
+      },
+      {
+        "heading": "Overview",
+        "body": "The UAE market presents a uniquely diverse media landscape — combining high-intent service demand with a thriving consumer retail economy. A global paid media agency partnered with our team to support their growing portfolio of clients in the region, spanning two contrasting verticals: corporate professional services and lifestyle retail brands.\n\nFrom legal advisory firms targeting entrepreneurs to global sportswear brands expanding their footprint across the Gulf, our team played a critical role in localizing campaign execution, optimizing performance, and maintaining cross-stakeholder visibility — all under a unified support model."
+      },
+      {
+        "heading": "Challenges Addressed",
+        "bullets": [
+          "Varying campaign objectives across sectors: lead generation for service providers vs. ROAS and engagement for lifestyle retail",
+          "Adapting media strategy to suit UAE-specific compliance, audience behavior, and promotional calendar",
+          "Ensuring consistent performance visibility and communication across multiple brands and stakeholder teams"
         ]
       },
       {
         "heading": "Our Contribution",
-        "bullets": [
-          "Localized media planning",
-          "Multi-platform execution across Google, Meta, Snapchat",
-          "Continuous optimization and reporting"
-        ]
+        "body": "Our execution framework was built around five key pillars designed to support performance, scalability, and visibility."
+      },
+      {
+        "heading": "Localized Media Planning",
+        "body": "Our engagement began with a deep dive into campaign goals, timelines, and cultural context for each brand category. For corporate services clients, we factored in regulatory milestones and tax-related deadlines. For retail brands, media plans were timed around key events like Ramadan, Dubai Shopping Festival, and product launch windows."
+      },
+      {
+        "heading": "Multi-Platform Execution & Monitoring",
+        "body": "We led campaign execution across Google Ads, Meta, Snapchat, and other platforms — tailoring approach per vertical:\n\n- For business setup and tax firms, our focus was on conversion-driven search and lead-generation campaigns.\n- For lifestyle brands, we leveraged a mix of video, catalog, and dynamic ads to boost awareness and drive eCommerce performance.\n\nDaily monitoring and refinements ensured budgets were well-utilized and campaign goals stayed on track."
+      },
+      {
+        "heading": "Optimization & Strategic Input",
+        "body": "Beyond execution, our team proactively:\n\n- Identified audience overlaps and fatigue to refresh creative and targeting.\n- Suggested changes in campaign structure — separating ad groups by service line or product category for improved control.\n- Tuned bidding strategies to focus on lead quality, not just volume, especially for high-value B2B clients."
+      },
+      {
+        "heading": "Consistent Reporting & Client Visibility",
+        "body": "We delivered structured weekly reports and performance decks for both verticals — aligning insights with client-side sales and brand teams. Our work extended to preparing monthly and quarterly review presentations, helping the agency maintain a strong consultative position with end clients."
+      },
+      {
+        "heading": "Continuous Improvement",
+        "body": "Regular feedback sessions with the agency allowed us to evolve processes, reporting formats, and cross-team coordination mechanisms — making the entire operation more agile and responsive to market needs."
       },
       {
         "heading": "Impact Delivered",
         "bullets": [
-          "22% reduction in CPL for B2B clients",
-          "25% uplift in ROAS during peak retail seasons",
-          "Improved reporting turnaround and visibility"
+          "22% reduction in Cost Per Lead (CPL) for business setup and taxation clients via improved audience segmentation and bidding strategies",
+          "25% uplift in ROAS during peak retail seasons through geo-targeted campaigns and offer-led creatives",
+          "Established trusted operations model enabling the agency to delegate campaign execution independently to our team",
+          "Improved turnaround time for reporting and performance actions, enhancing agency’s service experience for end clients"
         ]
+      },
+      {
+        "heading": "Conclusion",
+        "body": "Our collaboration with this global media agency is a prime example of how flexible, localized execution support can drive tangible results across industries — even with vastly different goals and consumer journeys. By combining data-driven discipline, on-ground market understanding, and consistent communication, we helped the client scale their UAE operations with confidence and precision."
       }
     ]
   },
 
-  "luxury-retail-digital-strategy": {
-    "title": "Redefining Digital Strategy for a Luxury Appliance Retailer",
+  "seamless-transitions-seamless-delivery": {
+    "title": "Seamless Transitions, Seamless Delivery",
+    "subtitle": "Ensuring uninterrupted campaign execution through multi-phase business transitions",
+    "featureImage": "/images/careers-images/careers2.jpeg",
+    "sections": [
+      {
+        "heading": "Overview",
+        "body": "Business transitions—be it mergers, acquisitions, or operational restructuring—often come with uncertainty, disruption, and risk to delivery continuity. This case study showcases how our media services team ensured uninterrupted campaign execution and stakeholder alignment throughout a multi-phase business transition, proving that strong process discipline and agile operations can turn complexity into opportunity."
+      },
+      {
+        "heading": "The Challenge",
+        "body": "In the first half of 2024, our team was operating under a steady campaign delivery model, managing a diverse media portfolio across digital channels. As the year progressed, a significant shift began: a transition of operational ownership and reporting lines due to a business acquisition and reorganization.\n\nThe shift required the team to navigate:\n\n- Changes in legal and service agreements\n- Revised workflows and new approval structures\n- Migration to a new tenant ecosystem with new tools and access protocols\n- Multiple pauses and resumptions of account-level support\n\nThe core challenge was how to maintain campaign velocity and accuracy while transitioning delivery models, tools, and stakeholder engagement simultaneously—all without missing performance targets."
+      },
+      {
+        "heading": "Our Response",
+        "body": "To meet the dual goals of operational continuity and transition readiness, the team followed a three-part strategy."
+      },
+      {
+        "heading": "Parallel Run Approach",
+        "body": "We maintained existing operations while simultaneously onboarding to new systems and processes. By running both old and new workflows in tandem for a period, we ensured:\n\n- No disruption in ongoing campaign timelines\n- Smoother stakeholder adaptation to new working models\n- Room for controlled knowledge transfer and access provisioning"
+      },
+      {
+        "heading": "Modular Processes Built for Change",
+        "body": "Core delivery processes were modularized—ticket handling, campaign setup, QA, and reporting—so they could be quickly reoriented to new platforms or expectations with minimal friction. This minimized retraining time and enabled faster integration into the new ecosystem."
+      },
+      {
+        "heading": "Proactive Communication Framework",
+        "body": "Recognizing that uncertainty can slow down collaboration, the team implemented a proactive communications cadence:\n\n- Frequent syncs across cross-functional teams\n- Dedicated transition point-of-contacts\n- Shared documentation to align on evolving SOWs, account changes, and access timelines\n\nThis helped manage expectations, build trust, and prevent misalignment during the period of change."
+      },
+      {
+        "heading": "Results & Impact",
+        "body": "Despite changes in business structure, platform access, and account pipelines, our team:\n\n- Ensured uninterrupted service across campaign execution, optimization, and reporting\n- Adapted to evolving stakeholder ecosystems and onboarded onto new delivery platforms without downtime\n- Resumed and scaled operations rapidly once access and new agreements were in place\n- Retained SLAs and ticket volume throughput, proving the strength of our transition planning and flexible resourcing\n\nThe success was not just in continuing delivery—it was in continuing with consistency, clarity, and confidence."
+      },
+      {
+        "heading": "Key Takeaway",
+        "body": "Our ability to anticipate, prepare, and pivot during an organization-wide shift ensured business-as-usual delivery in a time of non-usual operations. It’s a testament to the power of robust operational frameworks, proactive communication, and a team culture centered on adaptability.\n\nWhen partners are navigating change, we don’t just deliver—we deliver without pause."
+      }
+    ]
+  },
+
+  "luxury-kitchen-appliance-digital-strategy": {
+    "title": "Redefining Digital Strategy for a Luxury Kitchen Appliance Retailer",
     "subtitle": "From generic reach to premium customer engagement",
     "featureImage": "/images/careers-images/5.jpg",
     "sections": [
       {
+        "heading": "Introduction",
+        "body": "A premium kitchen appliance retailer sought to improve their digital marketing performance after experiencing limited results with their previous agency. They partnered with Our Team to reimagine their strategy, aiming to increase showroom visits, reduce acquisition costs, and better connect with high-value customers. This case study explores how Our Team’s approach delivered measurable improvements across every key metric."
+      },
+      {
         "heading": "The Challenge",
-        "body": "High acquisition costs, low engagement, and lack of premium audience targeting."
+        "body": "Under the previous agency, the retailer’s marketing efforts were heavily skewed toward search advertising, with minimal investment in social media and retargeting. The campaigns targeted broad audiences and lacked personalization, resulting in high customer acquisition costs and low engagement. Creative assets did not reflect the brand’s luxury positioning, and the strategy failed to attract premium buyers."
       },
       {
-        "heading": "Strategic Shift",
-        "body": "Rebalanced spend across Meta, YouTube, and retargeting with luxury-focused creatives."
+        "heading": "Our Team’s Strategic Shift",
+        "body": "When Our Team took over, the first step was to rebalance the budget across platforms. Greater emphasis was placed on Meta and retargeting to capture mid- and bottom-funnel users, while YouTube was used to build brand awareness among top-of-funnel audiences. Creatives were redesigned to reflect the brand’s premium identity, helping to establish a stronger emotional connection with affluent consumers."
       },
       {
-        "heading": "Results",
-        "bullets": [
-          "Increase in showroom appointments",
-          "Lower cost per appointment",
-          "Higher lead quality and ROI"
-        ]
+        "heading": "Smarter Targeting & Messaging",
+        "body": "Audience targeting was significantly refined. Our Team introduced segments focused on high-income households and leveraged affinity and custom intent audiences to reach users with a genuine interest in luxury appliances. Lookalike audiences were built on Meta to expand reach efficiently, and irrelevant segments were excluded to reduce wasted spend.\n\nKeyword strategy also underwent a transformation. Instead of generic search terms, the campaigns focused on premium and brand-specific keywords that aligned with the retailer’s upscale offerings. This shift led to higher engagement and better lead quality."
+      },
+      {
+        "heading": "Geographic Optimization",
+        "body": "To further improve efficiency, Our Team analyzed location performance and removed underperforming regions. This allowed the budget to be concentrated on areas with higher conversion potential, maximizing return on investment."
+      },
+      {
+        "heading": "Results & Impact",
+        "body": "The changes brought immediate and significant improvements. The retailer saw a substantial increase in showroom appointments, while the cost per appointment dropped dramatically. The refined targeting and luxury-focused creatives attracted more qualified leads, and the overall campaign ROI improved notably."
+      },
+      {
+        "heading": "Conclusion",
+        "body": "This transformation highlights the power of strategic reallocation, audience intelligence, and brand-aligned creative execution. By shifting focus from generic reach to premium engagement, Our Team helped the retailer achieve stronger results with a leaner budget."
+      },
+      {
+        "heading": "Let’s Build Your Success Story",
+        "body": "If you're ready to elevate your digital marketing and connect with high-value customers, Our Team is here to help. Let’s get started today."
       }
     ]
   },
 
   "global-news-monetization": {
-    "title": "Scalable Monetization for a Global News Publisher",
-    "subtitle": "Precision programmatic operations at massive scale",
+    "title": "Scalable Monetization & Operational Precision for a Global News Publisher",
+    "subtitle": "End-to-end programmatic operations powering a worldwide news network",
+    "featureImage": "/images/careers-images/1.jpg",
+    "sections": [
+      {
+        "heading": "Client Background",
+        "body": "Our client, a leading Video Ad Agency, secured an exclusive monetization partnership with the largest US-based Worldwide News Network and its vast network of affiliate sites. To support this high-stakes engagement, our team was brought in to manage the full spectrum of programmatic inventory operations. This included everything from curating relevant ad demand and configuring DSP seats, to ongoing yield optimization, financial reconciliation, and invoicing — effectively acting as the operational backbone behind the client’s monetization strategy."
+      },
+      {
+        "heading": "Overview",
+        "body": "When the client won exclusive rights to monetize one of the world’s largest news publishers — with an expansive network of affiliate websites — they partnered with us to build a robust, scalable, and fully operational programmatic system. We handled everything from DSP onboarding to yield strategy, daily optimization, and monthly billing.\n\nThis high-stakes partnership demanded not just technical capability, but also consistency, transparency, and scale — across hundreds of premium video placements."
+      },
+      {
+        "heading": "Our Solution",
+        "body": "We deployed a comprehensive, zero-touch programmatic management layer, purpose-built for news media inventory."
+      },
+      {
+        "heading": "Programmatic Operations Framework",
+        "bullets": [
+          "Inventory Mapping & Categorization across the publisher’s national and local affiliate network",
+          "DSP Strategy & Activation, including PMP setups, targeting schemas, and demand-side QA",
+          "Yield Monitoring & Optimization using performance-driven algorithms to improve fill rates and eCPMs",
+          "Financial Ops covering monthly reconciliation, buyer invoicing, and revenue tracking with 99.8% accuracy"
+        ]
+      },
+      {
+        "heading": "Impact Delivered",
+        "bullets": [
+          "22% eCPM Growth in 90 Days: By refining ad procurement strategies and optimizing demand flow, we helped boost effective CPMs significantly across the publisher and its affiliates",
+          "Rapid DSP Activation: We successfully onboarded six top-tier DSPs within just 10 days, enabling immediate monetization scale and diversified demand sources",
+          "High Data Accuracy: Our rigorous billing operations ensured 99.8% data accuracy in monthly revenue reconciliation and invoicing",
+          "Faster Reporting Cycles: We reduced the turnaround time for monthly reporting and financial reconciliation by 50%, providing the client with faster insights and payment visibility",
+          "Improved Fill Rates: Optimization strategies led to a 35% increase in fill rates across the affiliate network, resulting in greater monetization coverage and yield"
+        ]
+      },
+      {
+        "heading": "Key Takeaways",
+        "bullets": [
+          "A global-scale publisher ecosystem requires more than media buying — it needs precision ops and yield intelligence",
+          "Our team acted as the executional engine behind the agency's monetization promise to the publisher",
+          "We helped the client transform a high-profile deal into an operationally sound, revenue-generating success"
+        ]
+      }
+    ]
+  },
+
+  "impression-to-invoice": {
+    "title": "From Impression to Invoice",
+    "subtitle": "End-to-end operational excellence for a genealogy-focused programmatic ad network — Streamlining Campaign Operations in a High-Niche Programmatic Market",
     "featureImage": "/images/careers-images/1.jpg",
     "sections": [
       {
         "heading": "Client",
-        "body": "A video ad agency with exclusive monetization rights for a global news network."
+        "body": "A US-based Programmatic Display Ad Network specializing in the Genealogy domain—a highly niche yet steadily growing vertical that requires precise audience targeting and trusted content partnerships. The client runs campaigns for over 30 advertisers and DSPs across premium genealogy supply partners."
       },
       {
-        "heading": "Our Solution",
+        "heading": "The Business Context",
+        "body": "In a high-intent vertical like genealogy, every impression counts. The client's yearly inventory exceeds 300 million ad requests, with a total ad spend of USD 1.5 million annually and an average eCPM of $5.00. Campaigns needed to be flawlessly planned, launched, monitored, and billed across a fragmented yet valuable ecosystem of genealogy-focused websites.\n\nBut managing dozens of campaigns across different supply partners and DSPs came with operational pain points:\n\n- Discrepancies between planned and delivered media\n- Inefficiencies in campaign setup and pacing\n- Gaps in billing transparency and invoicing cycles\n- Limited bandwidth to monitor and optimize 30+ ongoing campaigns\n\nThat’s where we stepped in."
+      },
+      {
+        "heading": "Our Role",
+        "body": "Our engagement covered the entire operational value chain of campaign management, enabling the client to scale while ensuring quality, compliance, and accuracy at each step."
+      },
+      {
+        "heading": "Inventory Assurance",
         "bullets": [
-          "Inventory mapping and categorization",
-          "DSP onboarding and PMP setup",
-          "Yield optimization and financial reconciliation"
+          "Identified and secured inventory from top-tier genealogy supply partners",
+          "Vetted supply sources to ensure brand safety and alignment with advertiser KPIs"
         ]
       },
       {
-        "heading": "Impact",
+        "heading": "Media Planning",
         "bullets": [
-          "22% eCPM growth in 90 days",
-          "35% increase in fill rates",
-          "99.8% billing accuracy",
-          "50% faster reporting cycles"
+          "Translated advertiser briefs into detailed and goal-oriented media plans",
+          "Balanced supply and demand across seasonality, budgets, and pacing needs"
         ]
+      },
+      {
+        "heading": "Campaign Implementation",
+        "bullets": [
+          "Configured campaigns across platforms and DSPs based on approved plans",
+          "Applied targeting layers: geo, device, time-of-day, frequency, whitelist/blacklist",
+          "Ensured accurate campaign deployment and QA before launch"
+        ]
+      },
+      {
+        "heading": "Campaign Monitoring & Optimization",
+        "bullets": [
+          "Tracked KPIs daily (CTR, viewability, conversion, pacing)",
+          "Applied real-time optimizations to maximize ROI across channels",
+          "Flagged underperformance early and course-corrected in-flight"
+        ]
+      },
+      {
+        "heading": "Reporting & Analytics",
+        "bullets": [
+          "Delivered transparent, digestible campaign performance reports bi-weekly",
+          "Created actionable insights to inform future media strategy"
+        ]
+      },
+      {
+        "heading": "Billing & Invoicing",
+        "bullets": [
+          "Generated billing reports at campaign, advertiser, and partner levels",
+          "Reconciled impression data and eCPMs for accurate invoicing",
+          "Issued monthly invoices for both Advertisers and Supply Partners"
+        ]
+      },
+      {
+        "heading": "Results Delivered",
+        "body": "Metric | Before | After Our Engagement\n\nInvoice Accuracy | ~90% | 99.8%\n\nBilling Disputes | Frequent | Reduced by 92%\n\nBook Closure Time | 2–3 weeks | Within 5 business days\n\nCampaign Setup Time | 24–36 hours | < 6 hours\n\nAdvertiser Satisfaction | Inconsistent | Consistently Positive Feedback"
+      },
+      {
+        "heading": "Key Takeaway",
+        "body": "In niche domains like genealogy, advertisers demand precision and accountability. Our full-cycle operational support—from securing inventory to sending final invoices—enabled the client to run an efficient, scalable ad business with trust on both supply and demand sides.\n\nWith us managing the backend complexity, the client could focus on growth and strategic partnerships, confident that every impression and dollar was accounted for."
+      }
+    ]
+  },
+
+  "transition-knowledge-continuity": {
+    "title": "Knowledge Continuity During Enterprise Transformation",
+    "subtitle": "Ensuring platform continuity, rapid onboarding, and zero operational downtime during restructuring",
+    "featureImage": "/images/careers-images/4.jpg",
+    "sections": [
+      {
+        "heading": "Background",
+        "body": "Our long-term client, a major enterprise in its domain, was undergoing a significant transformation following a corporate acquisition. As part of the integration process, they launched a large-scale organizational restructure, onboarding new teams and reconfiguring workflows. The scale of change introduced uncertainty, especially around the usage, documentation, and continuity of their proprietary platform — the core of their operations."
+      },
+      {
+        "heading": "The Challenge",
+        "body": "As part of the transition, several new team members were brought on board to support the evolving structure. However, with the legacy team deeply involved in high-priority strategic work and time-sensitive deliverables, they were unable to dedicate sufficient bandwidth to onboard and guide the incoming resources effectively. This created a gap in hands-on training and platform knowledge transfer — a gap that needed to be filled quickly to ensure continuity and maintain momentum during the organizational shift."
+      },
+      {
+        "heading": "Our Role",
+        "body": "Having worked closely with the client for years, our team had deep, operational familiarity with their proprietary platform. Recognizing the disruption the transition could cause, we proactively positioned ourselves as the continuity backbone for the client’s evolving organization. We didn’t just maintain operations — we stepped up to become the knowledge bridge. Our team played a dual role: guiding the newly onboarded teams while maintaining seamless operations with the legacy systems still in use."
+      },
+      {
+        "heading": "Impact Delivered",
+        "bullets": [
+          "Served as the de facto training team for all matters related to the proprietary platform during the restructuring phase",
+          "Organized structured knowledge transfers (KTs) to equip new team members with the platform know-how they needed to get started quickly",
+          "Created clarity and alignment between legacy staff and new hires, ensuring that processes were understood, responsibilities were clear, and objectives were aligned",
+          "Reduced operational downtime and eliminated guesswork by maintaining consistency in platform usage, best practices, and historical context",
+          "Solidified trust with client leadership by consistently stepping in as the go-to knowledge hub — reliable, responsive, and always on hand to guide teams through challenges"
+        ]
+      },
+      {
+        "heading": "Conclusion",
+        "body": "In a time of significant transition, our team didn’t just adapt — we enabled transformation. By becoming the cornerstone of knowledge continuity, we helped the client navigate change with confidence and efficiency, proving once again the value of long-term partnership and proactive Engagement."
       }
     ]
   }

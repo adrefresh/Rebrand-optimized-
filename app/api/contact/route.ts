@@ -1,54 +1,35 @@
-export const runtime = "nodejs"; // 👈 REQUIRED for nodemailer
+import { Resend } from "resend";
 
-import { NextResponse } from "next/server";
-import * as nodemailer from "nodemailer";
+
 
 export async function POST(req: Request) {
+  const resend = new Resend(process.env.RESEND_API_KEY);
+  const body = await req.json();
+  const { name, email, phone, company, subject, message } = body;
+
+  // load multiple emails from env
+  const receivers = process.env.CONTACT_RECEIVER!;
+
   try {
-    const body = await req.json();
-    const { name, email, phone, company, subject, message } = body;
-
-    // ✅ Validation
-    if (!name || !email || !phone || !subject || !message) {
-      return NextResponse.json(
-        { error: "Missing required fields" },
-        { status: 400 }
-      );
-    }
-
-    // ✅ Create transporter (Node runtime only)
-    const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST,
-      port: 587,
-      secure: false, // true only for port 465
-      auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
-      },
-    });
-
-    // ✅ Send mail
-    await transporter.sendMail({
-      from: `"Website Contact" <${process.env.SMTP_USER}>`,
-      to: process.env.CONTACT_RECEIVER,
+    await resend.emails.send({
+      from: "Website <onboarding@resend.dev>",
+      to: receivers, // ✅ multiple emails from env
       replyTo: email,
-      subject: `Contact Form: ${subject}`,
-      html: `
-        <h3>New Contact Message</h3>
-        <p><b>Name:</b> ${name}</p>
-        <p><b>Email:</b> ${email}</p>
-        <p><b>Phone:</b> ${phone}</p>
-        <p><b>Company:</b> ${company || "-"}</p>
-        <p><b>Message:</b><br/>${message}</p>
+      subject: `[Contact] ${subject}`,
+      text: `
+Name: ${name}
+Email: ${email}
+Phone: ${phone}
+Company: ${company || "-"}
+
+Message:
+${message}
       `,
     });
 
-    return NextResponse.json({ success: true });
+    return Response.json({ success: true });
   } catch (error) {
-    console.error("Mail error:", error);
-    return NextResponse.json(
-      { error: "Failed to send message" },
-      { status: 500 }
-    );
+    console.error("Resend Error:", error);
+    return Response.json({ error: "Failed to send email" }, { status: 500 });
   }
 }

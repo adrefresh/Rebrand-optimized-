@@ -79,7 +79,7 @@ body {
   width: 100%;
   min-height: 100%;
   overflow-x: hidden;
-  overscroll-behavior-y: none;
+  /* overscroll-behavior-y: none; */
 
   background: var(--bg-white);
   color: var(--text-dark);
@@ -138,6 +138,10 @@ main {
 /* =========================================================
    TYPOGRAPHY TWEAKS
 ========================================================= */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
 
 h1, h2, h3, h4, h5, h6 {
   letter-spacing: -1px;

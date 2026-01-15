@@ -590,7 +590,7 @@ export default function Services() {
               href="/services/digital-marketing"
               className="text-white opacity-80 transition-all hover:opacity-100 hover:translate-x-1"
             >
-              <span className="text-[26px] sm:text-[32px] md:text-[48px] lg:text-[60px] font-black">
+              <span className="text-[4rem] sm:text-[32px] md:text-[48px] lg:text-[60px] font-black">
                 ➜
               </span>
             </a>
@@ -631,7 +631,7 @@ export default function Services() {
               href="/services/ad-operations"
               className="text-white opacity-80 transition-all hover:opacity-100 hover:translate-x-1"
             >
-              <span className="text-[26px] sm:text-[32px] md:text-[48px] lg:text-[60px] font-black">
+              <span className="text-[4rem] sm:text-[32px] md:text-[48px] lg:text-[60px] font-black">
                 ➜
               </span>
             </a>

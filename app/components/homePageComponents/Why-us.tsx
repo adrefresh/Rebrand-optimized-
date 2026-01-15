@@ -709,6 +709,7 @@
 //     </section>
 //   );
 // }
+
 "use client";
 
 export default function WhyUsSection() {
@@ -770,7 +771,7 @@ export default function WhyUsSection() {
 
           {/* ===== ROW 2 ===== */}
           <div className="flex justify-end pr-12">
-            <h2 className="text-[2.6rem] font-extrabold flex items-center gap-2">
+            <h2 className="text-[2.6rem] font-extrabold flex items-center gap-2 md:text-[2rem] lg:text-[2.3rem] ">
               A LAYER OF
               <span className="relative inline-block">
                 <span
@@ -801,7 +802,7 @@ export default function WhyUsSection() {
                   </defs>
                   <text
                     fill="currentColor"
-                    fontSize="38"
+                    fontSize="36"
                     fontWeight="800"
                     letterSpacing="1.2"
                     textAnchor="middle"
@@ -830,7 +831,7 @@ export default function WhyUsSection() {
 
           {/* ===== ROW 3 ===== */}
           <div className="flex justify-end pr-12">
-            <h2 className="text-[2.2rem] font-extrabold flex items-center gap-2">
+            <h2 className="text-[2.2rem] font-extrabold flex items-center gap-2 lg:text-[1.7rem]">
               A CULTURE OF
               <span className="relative inline-block">
                 <span className="absolute inset-[-8px_0] bg-[var(--green-tint-30)] opacity-60 blur-[18px]" />
@@ -880,8 +881,8 @@ export default function WhyUsSection() {
           <h2 className="text-[1.2rem] font-bold">A LAYER OF</h2>
           <div className="relative inline-block mt-1 ml-[-60px]">
             <div className="relative inline-block mt-1 ml-[0px]">
-              <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[150px] h-[40px] bg-[var(--green-tint-30)] opacity-50 blur-[8px] rounded-full" />
-              <svg width="260" height="90" viewBox="0 0 260 90" className="relative rotate-[-4deg]">
+              <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[150px] h-[40px] bg-[var(--green-tint-30)] opacity-50 blur-[12px] rounded-full" />
+              <svg width="260" height="90" viewBox="0 0 260 90" className="relative rotate-[-15deg]">
                 <defs>
                   <path id="curve-flex-small" d="M 20 80 Q 100 10 250 100" />
                 </defs>

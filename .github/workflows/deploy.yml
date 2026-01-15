@@ -1,3 +1,48 @@
+# # name: Build and Deploy to Hostgator
+
+# # on:
+# #   push:
+# #     branches:
+# #       - main
+
+# # jobs:
+# #   build-and-deploy:
+# #     runs-on: ubuntu-latest
+
+# #     steps:
+# #       - name: Checkout Code
+# #         uses: actions/checkout@v4
+
+# #       - name: Setup Node.js
+# #         uses: actions/setup-node@v4
+# #         with:
+# #           node-version: '20'
+# #           cache: 'npm'
+
+# #       - name: Install Dependencies
+# #         run: npm ci
+
+# #       - name: Build Next.js App
+# #         run: |
+# #           npm run build
+         
+
+# #       - name: Deploy to Hostgator via FTP
+# #         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+# #         with:
+# #           server: ${{ secrets.FTP_SERVER }}
+# #           username: ${{ secrets.FTP_USERNAME }}
+# #           password: ${{ secrets.FTP_PASSWORD }}
+# #           port: 21
+# #           protocol: ftp
+         
+         
+# #           local-dir: ./out/
+# #           server-dir: /public_html/
+# #           exclude: |
+# #             **/.git*
+# #             **/.github*
+# #             **/node_modules/**
 # name: Build and Deploy to Hostgator
 
 # on:
@@ -23,9 +68,7 @@
 #         run: npm ci
 
 #       - name: Build Next.js App
-#         run: |
-#           npm run build
-         
+#         run: npm run build
 
 #       - name: Deploy to Hostgator via FTP
 #         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
@@ -35,53 +78,75 @@
 #           password: ${{ secrets.FTP_PASSWORD }}
 #           port: 21
 #           protocol: ftp
-         
-         
+
 #           local-dir: ./out/
 #           server-dir: /public_html/
 #           exclude: |
 #             **/.git*
 #             **/.github*
 #             **/node_modules/**
-name: Build and Deploy to Hostgator
+name: Build and Deploy
 
 on:
   push:
-    branches:
-      - main
+    branches: [main, dev]
 
 jobs:
-  build-and-deploy:
+  build:
+    name: Build Next.js
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
+      - run: npm ci
+      - run: npm run build
+      - name: Upload Build Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: next-build
+          path: out/
 
-      - name: Install Dependencies
-        run: npm ci
-
-      - name: Build Next.js App
-        run: npm run build
-
-      - name: Deploy to Hostgator via FTP
+  deploy-test:
+    name: Deploy to Testing (amp2026)
+    needs: build
+    if: github.ref == 'refs/heads/dev'
+    runs-on: ubuntu-latest
+    environment: develop
+    steps:
+      - name: Download Build
+        uses: actions/download-artifact@v4
+        with:
+          name: next-build
+          path: ./out
+      - name: Sync to Hostgator (Test)
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          port: 21
-          protocol: ftp
-
           local-dir: ./out/
-          server-dir: /public_html/
-          exclude: |
-            **/.git*
-            **/.github*
-            **/node_modules/**
+          server-dir: ./ # Points to amp2026 via FTP account config
+
+  deploy-prod:
+    name: Deploy to Production (public_html)
+    needs: build
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    environment: prod # This triggers the manual approval gate
+    steps:
+      - name: Download Build
+        uses: actions/download-artifact@v4
+        with:
+          name: next-build
+          path: ./out
+      - name: Sync to Hostgator (Prod)
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./out/
+          server-dir: ./ # Points to public_html via FTP account config
