@@ -253,7 +253,7 @@ export default function Header() {
     setIsLogoHovered(false);
   };
 const mobileOpen=()=>{
-setOpen(!true)
+setOpen(!false)
 }
 
   useEffect(() => {
@@ -377,9 +377,9 @@ setOpen(!true)
           </Link>
 
           {/* SERVICES */}
-          <div className="flex flex-col items-end group w-full">
+          <div className="flex flex-col items-end group w-full" onClick={mobileOpen}>
   {/* Services Button */}
-  <div className="flex items-center gap-2 text-[1.4rem] sm:text-[1.6rem] md:text-[2.2rem] lg:text-[2.6rem] font-bold cursor-pointer" onClick={mobileOpen}>
+  <div className="flex items-center gap-2 text-[1.4rem] sm:text-[1.6rem] md:text-[2.2rem] lg:text-[2.6rem] font-bold cursor-pointer" >
     Services
     <span className="text-[1.4rem] sm:text-[1.6rem] transition-transform duration-300 group-hover:rotate-180">
       <IoIosArrowDown />
