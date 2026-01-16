@@ -951,21 +951,50 @@ export default function Footer() {
 
           {/* SOCIAL ICONS ROW */}
           <div className="flex items-center gap-6">
-            <a className="social fb" href="https://www.facebook.com/adrefreshmedia"><Facebook size={28} /></a>
+  <a
+    className="social fb"
+    href="https://www.facebook.com/adrefreshmedia"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <Facebook size={28} />
+  </a>
 
-            <a className="social x" href="https://x.com/AdRefresh" aria-label="X">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                className="w-[18px] h-[18px] fill-current"
-              >
-                <path d="M18.244 2H21.78l-7.71 8.81L23 22h-7.08l-5.53-7.19L4.64 22H1.1l8.25-9.43L1 2h7.26l5 6.54L18.24 2z" />
-              </svg>
-            </a>
+  <a
+    className="social x"
+    href="https://x.com/AdRefresh"
+    aria-label="X"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      className="w-[18px] h-[18px] fill-current"
+    >
+      <path d="M18.244 2H21.78l-7.71 8.81L23 22h-7.08l-5.53-7.19L4.64 22H1.1l8.25-9.43L1 2h7.26l5 6.54L18.24 2z" />
+    </svg>
+  </a>
 
-            <a className="social in" href="https://www.linkedin.com/company/adrefreshmedia/"><Linkedin size={28} /></a>
-            <a className="social insta" href="https://www.instagram.com/adrefreshmedia/"><Instagram size={28} /></a>
-          </div>
+  <a
+    className="social in"
+    href="https://www.linkedin.com/company/adrefreshmedia/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <Linkedin size={28} />
+  </a>
+
+  <a
+    className="social insta"
+    href="https://www.instagram.com/adrefreshmedia/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <Instagram size={28} />
+  </a>
+</div>
+
         </div>
       </div>
 
