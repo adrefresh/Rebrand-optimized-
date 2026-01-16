@@ -226,6 +226,7 @@
 //     </>
 //   );
 // }
+
 "use client";
 
 import { useEffect, useRef, useState } from "react";
@@ -253,7 +254,7 @@ export default function Header() {
     setIsLogoHovered(false);
   };
 const mobileOpen=()=>{
-setOpen(!false)
+setOpen(prev=>!prev)
 }
 
   useEffect(() => {
