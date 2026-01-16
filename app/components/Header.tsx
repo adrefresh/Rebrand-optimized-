@@ -243,6 +243,7 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isLogoHovered, setIsLogoHovered] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [open,setOpen]=useState(false)
 
   const ticking = useRef(false);
 
@@ -251,6 +252,9 @@ export default function Header() {
     setServicesOpen(false);
     setIsLogoHovered(false);
   };
+const mobileOpen=()=>{
+setOpen(!true)
+}
 
   useEffect(() => {
     if (menuOpen) return;
@@ -375,7 +379,7 @@ export default function Header() {
           {/* SERVICES */}
           <div className="flex flex-col items-end group w-full">
   {/* Services Button */}
-  <div className="flex items-center gap-2 text-[1.4rem] sm:text-[1.6rem] md:text-[2.2rem] lg:text-[2.6rem] font-bold cursor-pointer">
+  <div className="flex items-center gap-2 text-[1.4rem] sm:text-[1.6rem] md:text-[2.2rem] lg:text-[2.6rem] font-bold cursor-pointer" onClick={mobileOpen}>
     Services
     <span className="text-[1.4rem] sm:text-[1.6rem] transition-transform duration-300 group-hover:rotate-180">
       <IoIosArrowDown />

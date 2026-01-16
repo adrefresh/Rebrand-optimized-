@@ -953,7 +953,7 @@ export default function Footer() {
           <div className="flex items-center gap-6">
             <a className="social fb" href="https://www.facebook.com/adrefreshmedia"><Facebook size={28} /></a>
 
-            <a className="social x" href="#" aria-label="X">
+            <a className="social x" href="https://x.com/AdRefresh" aria-label="X">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
