@@ -625,19 +625,19 @@ export default function Header() {
             </div>
 
             <div
-              className={`
-                hidden
-                group-hover:flex
-                flex-col
-                mt-2
-                rounded-md
-                px-4
-                py-3
-                text-right
-                w-fit
-                ${open ? "flex" : ""}
-              `}
-            >
+  className={`
+    ${open ? "flex" : "hidden"}
+    group-hover:flex
+    flex-col
+    mt-2
+    rounded-md
+    px-4
+    py-3
+    text-right
+    w-fit
+  `}
+>
+
               <Link
                 onClick={closeMenu}
                 href="/services/digital-marketing"
