@@ -225,3 +225,63 @@ strong,
     focus:ring-2
     focus:ring-black;
 }
+/* =========================================================
+   KEKA EMBED — MATCH SITE FORM STYLE
+========================================================= */
+
+#khembedjobs {
+  font-family: "Manrope", system-ui, sans-serif !important;
+  color: var(--text-dark);
+  background: var(--bg-white);
+}
+
+/* Force all Keka elements to inherit your font */
+#khembedjobs,
+#khembedjobs * {
+  font-family: inherit !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Inputs */
+#khembedjobs input,
+#khembedjobs select,
+#khembedjobs textarea {
+  width: 100% !important;
+  padding: 20px 24px !important;
+  border-radius: 12px !important;
+  border: 1px solid #ddd !important;
+  font-size: 16px !important;
+  outline: none !important;
+  background: #fff !important;
+}
+
+/* Focus state */
+#khembedjobs input:focus,
+#khembedjobs select:focus,
+#khembedjobs textarea:focus {
+  border-color: #000 !important;
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.15) !important;
+}
+
+/* Buttons */
+#khembedjobs button {
+  padding: 14px 28px !important;
+  border-radius: 12px !important;
+  font-weight: 600 !important;
+  background: var(--brand-black) !important;
+  color: white !important;
+  transition: all 0.3s ease;
+}
+
+#khembedjobs button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* Labels */
+#khembedjobs label {
+  font-weight: 600 !important;
+  margin-bottom: 6px !important;
+  display: block;
+}
