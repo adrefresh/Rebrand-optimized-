@@ -49,7 +49,10 @@
 //     </>
 //   );
 // }
+
 "use client";
+
+import Script from "next/script";
 
 export default function CareersClient() {
   return (
@@ -66,23 +69,27 @@ export default function CareersClient() {
       </div>
 
       {/* ================= KEKA JOBS ================= */}
-    
-        <div className="relative w-full h-[85vh] md:h-[90vh] rounded-lg overflow-hidden border">
+      <div className="max-w-7xl mx-auto px-4 py-10">
+        {/* The target container for the Keka widget */}
+        <div id="khembedjobs" className="min-h-[500px]"></div>
+      </div>
 
-        <iframe
-          src="https://adrefresh.keka.com/careers/api/embedjobs/f67f9089-1c2c-4b65-be95-226a53932b93"
-          title="AdRefresh Careers"
-          loading="lazy"
-          className="
-            w-full
-            border-none
-            h-auto
-            min-h-[520px]
-            md:min-h-[560px]
-          "
-        />
-        </div>
-     
+      {/* 1. Define the Configuration globally */}
+      <Script id="keka-config" strategy="beforeInteractive">
+        {`
+          window.khConfig = {
+            identifier: 'f67f9089-1c2c-4b65-be95-226a53932b93',
+            domain: 'https://adrefresh.keka.com/careers/',
+            targetContainer: '#khembedjobs'
+          };
+        `}
+      </Script>
+
+      {/* 2. Load the external Keka script */}
+      <Script 
+        src="https://adrefresh.keka.com/careers/api/embedjobs/js/f67f9089-1c2c-4b65-be95-226a53932b93" 
+        strategy="afterInteractive" 
+      />
     </>
   );
 }

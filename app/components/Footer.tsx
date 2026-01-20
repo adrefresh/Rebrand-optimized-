@@ -851,7 +851,7 @@
 
 import Image from "next/image";
 import WhitePml from "@/public/images/FooterImages/whitePML.png";
-import Soc from "@/public/images/FooterImages/soc.webp";
+import Soc from "@/public/images/FooterImages/soc.png";
 import iso from "@/public/images/FooterImages/iso.webp";
 
 import { Mail, Facebook, Linkedin, Instagram, MapPin } from "lucide-react";

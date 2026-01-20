@@ -204,7 +204,7 @@ export default function ContactForm() {
       !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ||
       phone.length < 6 ||
       subject.length < 5 ||
-      message.length < 50
+      message.length > 1
     ) {
      
       setError("Please fill all fields correctly.");
@@ -282,7 +282,7 @@ export default function ContactForm() {
             name="message"
             required
             rows={5}
-            placeholder="Message (min 50 chars)"
+            placeholder="Write a message*"
             className="sm:col-span-2 textarea"
           />
 

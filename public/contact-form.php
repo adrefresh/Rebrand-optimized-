@@ -54,7 +54,7 @@ if (strlen($name) < 2) $errors[] = "Name too short";
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) $errors[] = "Invalid email";
 if (strlen($phone) < 6) $errors[] = "Invalid phone number";
 if (strlen($subject) < 5) $errors[] = "Subject too short";
-if (strlen($message) < 50) $errors[] = "Message too short";
+if (strlen($message) > 1) $errors[] = "Message too short";
 
 if (!empty($errors)) {
     http_response_code(400);
