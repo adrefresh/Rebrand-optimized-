@@ -6,7 +6,7 @@ import Image from "next/image";
               import Link from "next/link";
 
 import { useEffect } from "react";
-import conference from "@/public/images/HomePageImages/conference.jpg";
+import conference from "@/public/images/HomePageImages/conference.webp";
 import start from "@/public/images/HomePageImages/5stars.png";
 
 export default function About() {
