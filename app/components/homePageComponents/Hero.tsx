@@ -50,6 +50,7 @@ export default function Hero() {
         loop
         playsInline
         className="absolute inset-0 w-full h-full object-cover"
+        preload="metadata"
       >
         <source
           src={`${basePath}/images/about-page-videos-images/office-compressed.mp4`}

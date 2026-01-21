@@ -43,7 +43,7 @@ const nextConfig = {
 
   compress: true,           // Gzip / Brotli
   swcMinify: true,          // Smaller JS
-  reactStrictMode: true,    // Safer builds
+  reactStrictMode: false,    // Safer builds
 
   experimental: {
     optimizeCss: true,     // Smaller CSS

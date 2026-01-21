@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     title: "Careers at AdRefresh",
     description:
       "Build your future with AdRefresh. Explore open roles in marketing, development, and ad operations.",
-    images: ["https://www.adrefresh.com/og/careers.png"],
+    images: ["https://www.adrefresh.com/images/careers-images/1.jpg"],
   },
 
   robots: {
@@ -59,7 +59,10 @@ export default function CareersPage() {
       <PathSection />
 
       {/* CLIENT SIDE JOB LIST */}
+      <div>
      <CareersClient/>
+
+      </div>
     
     </main>
   );

@@ -229,11 +229,11 @@ strong,
    KEKA EMBED — MATCH SITE FORM STYLE
 ========================================================= */
 
-#khembedjobs {
+/* #khembedjobs {
   font-family: "Manrope", system-ui, sans-serif !important;
   color: var(--text-dark);
   background: var(--bg-white);
-}
+} */
 
 /* Force all Keka elements to inherit your font */
 #khembedjobs,
@@ -281,7 +281,23 @@ strong,
 
 /* Labels */
 #khembedjobs label {
-  font-weight: 600 !important;
+  font-weight: 400 !important;
   margin-bottom: 6px !important;
   display: block;
+}
+/* Hide Keka footer */
+#kh-main-container > div.kh-d-flex.kh-flex-column.kh-footer.kh-container-fluid.kh-justify-content-center.kh-position-absolute {
+    display: none !important;
+}
+/* Strong footer mask */
+#khembedjobs::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 160px;   /* increased */
+  background: white;
+  z-index: 999;
+  pointer-events: none;
 }
