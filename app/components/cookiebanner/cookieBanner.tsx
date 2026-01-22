@@ -182,7 +182,7 @@ export default function CookieBanner() {
       <div className="flex flex-col gap-2 text-sm text-center sm:text-left">
         <p>
           We use cookies to enhance your experience and analyse our traffic. Learn more in our{" "}
-          <a href="/privacy-policy" target="_blank"  className="underline text-[#813DFF]">
+          <a href="/privacy-policy" target="_blank"  className="underline text-[#813DFF] hover:underline">
             Privacy Policy
           </a>
           . By clicking{" "}
