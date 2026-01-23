@@ -72,6 +72,8 @@ import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import CookieBanner from "./components/cookiebanner/cookieBanner";
+import GoogleTagManagerContainer from "./components/cookiebanner/GoogleTagManager";
+
 
 export const metadata: Metadata = {
   title: "AdRefresh - Digital Marketing and AdOps",
@@ -98,7 +100,9 @@ export default function RootLayout({
         ["--base-path" as any]: basePath,
       }}
     >
-      <head />
+      <head>
+        <GoogleTagManagerContainer gtmId="GTM-MMMX5TGB" />
+      </head>
       <body className="layout-root">
         {/* Cookie Consent Banner */}
         <CookieBanner />
