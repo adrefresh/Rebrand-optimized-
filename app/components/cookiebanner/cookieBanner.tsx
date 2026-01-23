@@ -149,7 +149,6 @@ export default function CookieBanner() {
 
   const loadGTM = () => {
     if (window.gtmLoaded) return;
-    window.gtmLoaded = true;
 
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
@@ -160,6 +159,8 @@ export default function CookieBanner() {
     script.async = true;
     script.src = "https://www.googletagmanager.com/gtm.js?id=GTM-MMMX5TGB";
     document.head.appendChild(script);
+
+    window.gtmLoaded = true;
   };
 
   if (!show) return null;
@@ -173,7 +174,7 @@ export default function CookieBanner() {
         shadow-xl
         flex flex-col sm:flex-row items-center justify-between
         gap-6
-        z-[9999]
+        z-9999
         w-[80vw]
         border border-gray-300
       "
