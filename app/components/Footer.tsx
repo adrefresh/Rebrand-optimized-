@@ -1009,7 +1009,7 @@ export default function Footer() {
    
   </div>
 
-  <div className="opacity-80">  <a href="/privacy-policy">
+  <div className="opacity-80">  <a href="/privacy-policy" className="hover:underline">
       Privacy Policy
     </a> &nbsp;
    | &nbsp;

@@ -49,21 +49,18 @@ export const metadata: Metadata = {
 
 export default function CareersPage() {
   return (
-    <main className="bg-[#fafafa] text-[#111]">
-          
+    <main className="bg-[#fafafa] text-[#111] careers-manrope">
       <CareersHero />
-  
-   
-       {/* <PatternBackground /> */}
-      
+
+      {/* <PatternBackground /> */}
+
       <PathSection />
 
       {/* CLIENT SIDE JOB LIST */}
       <div>
-     <CareersClient/>
-
+        <CareersClient />
       </div>
-    
     </main>
   );
 }
+

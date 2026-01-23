@@ -46,9 +46,9 @@ export default function CareersClient() {
       </div>
 
       {/* ================= KEKA JOBS ================= */}
-      <div className="max-w-7xl mx-auto px-4 py-10">
+      <div className="max-w-7xl mx-auto px-4 py-2">
         {/* Target container MUST exist before script loads */}
-        <div id="khembedjobs" className="w-full"></div>
+        <div id="khembedjobs" className="w-full min-h-600px"></div>
       </div>
     </>
   );
