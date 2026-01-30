@@ -233,7 +233,7 @@
 // }
 import type { Metadata } from "next";
 import HomeClient from "./HomeClient";
-
+ const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 export const metadata: Metadata = {
   /* =========================
      BASIC SEO
@@ -283,7 +283,7 @@ export const metadata: Metadata = {
     siteName: "AdRefresh",
     images: [
       {
-        url: "/images/og/home-og-image.png",
+        url: `${basePath}/images/og/home-og-image.png`,
         width: 1200,
         height: 630,
         alt: "AdRefresh – Programmatic Advertising & Advertisement Operations",
