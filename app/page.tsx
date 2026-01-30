@@ -279,11 +279,11 @@ export const metadata: Metadata = {
     title: "AdRefresh – Digital Marketing & Ad Operations",
     description:
       "Digital Marketing and advertising operations services built to scale performance, efficiency, and measurable growth.",
-    url: "https://adrefresh.com/",
+    url: "https://www.adrefresh.com/",
     siteName: "AdRefresh",
     images: [
       {
-        url: "https://adrefresh.com/og/home-og-image.png",
+        url: "/og/home-og-image.png",
         width: 1200,
         height: 630,
         alt: "AdRefresh – Programmatic Advertising & Ad Operations",

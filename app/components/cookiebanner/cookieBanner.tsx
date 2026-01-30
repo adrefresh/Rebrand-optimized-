@@ -110,59 +110,122 @@
 //     </div>
 //   );
 // }
-"use client";
-import { useEffect, useState } from "react";
+// "use client";
+// import { useEffect, useState } from "react";
 
-/* Declare global window type */
+// /* Declare global window type */
+// declare global {
+//   interface Window {
+//     gtmLoaded?: boolean;
+//     dataLayer?: any[];
+//   }
+// }
+
+// export default function CookieBanner() {
+//   const [show, setShow] = useState(false);
+
+//   useEffect(() => {
+//     const consent = localStorage.getItem("cookiesAccepted");
+
+//     if (!consent) {
+//       setShow(true);
+//     }
+
+//     if (consent === "true") {
+//       loadGTM();
+//     }
+//   }, []);
+
+//   const acceptCookies = () => {
+//     localStorage.setItem("cookiesAccepted", "true");
+//     loadGTM();
+//     setShow(false);
+//   };
+
+//   const rejectCookies = () => {
+//     localStorage.setItem("cookiesAccepted", "false");
+//     setShow(false);
+//   };
+
+//   const loadGTM = () => {
+//     if (window.gtmLoaded) return;
+
+//     window.dataLayer = window.dataLayer || [];
+//     window.dataLayer.push({
+//       event: "consent_granted",
+//     });
+
+//     const script = document.createElement("script");
+//     script.async = true;
+//     script.src = "https://www.googletagmanager.com/gtm.js?id=GTM-MMMX5TGB";
+//     document.head.appendChild(script);
+
+//     window.gtmLoaded = true;
+//   };
+
+//   if (!show) return null;
+
+
+
+
+'use client';
+
+import { useState, useEffect } from 'react';
+
+/* 1. TypeScript Declarations for Window object */
 declare global {
   interface Window {
-    gtmLoaded?: boolean;
-    dataLayer?: any[];
+    dataLayer?: Object[];
+    gtag: (...args: any[]) => void;
   }
 }
 
 export default function CookieBanner() {
-  const [show, setShow] = useState(false);
+  const [showBanner, setShowBanner] = useState(false);
 
   useEffect(() => {
-    const consent = localStorage.getItem("cookiesAccepted");
+    // Check if user has already made a choice
+    const savedConsent = localStorage.getItem('consent_granted');
 
-    if (!consent) {
-      setShow(true);
-    }
-
-    if (consent === "true") {
-      loadGTM();
+    if (!savedConsent) {
+      setShowBanner(true);
+    } else {
+      // If they already accepted, re-apply the consent status to GTM
+      // and trigger the custom event so Clarity/GA4 fire immediately
+      applyConsent(savedConsent as 'granted' | 'denied');
     }
   }, []);
 
-  const acceptCookies = () => {
-    localStorage.setItem("cookiesAccepted", "true");
-    loadGTM();
-    setShow(false);
-  };
+  /**
+   * Helper function to update GTM/Google Consent Mode
+   */
+  const applyConsent = (status: 'granted' | 'denied') => {
+    if (typeof window.gtag === 'undefined') return;
 
-  const rejectCookies = () => {
-    localStorage.setItem("cookiesAccepted", "false");
-    setShow(false);
-  };
-
-  const loadGTM = () => {
-    if (window.gtmLoaded) return;
-    window.gtmLoaded = true;
-
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({
-      event: "consent_granted",
+    // A. Update Google's built-in Consent Mode
+    window.gtag('consent', 'update', {
+      'ad_storage': status,
+      'ad_user_data': status,
+      'ad_personalization': status,
+      'analytics_storage': status,
+      'personalization_storage': status,
     });
 
-    const script = document.createElement("script");
-    script.async = true;
-    script.src = "https://www.googletagmanager.com/gtm.js?id=GTM-MMMX5TGB";
-    document.head.appendChild(script);
+    // B. Push Custom Event to wake up MS Clarity & other 3rd party tags
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'consent_update_event',
+      consent_status: status,
+    });
   };
 
-  if (!show) return null;
+  const handleConsentUpdate = (status: 'granted' | 'denied') => {
+    localStorage.setItem('consent_granted', status);
+    applyConsent(status);
+    setShowBanner(false);
+  };
+
+  if (!showBanner) return null;
 
   return (
     <div
@@ -173,7 +236,7 @@ export default function CookieBanner() {
         shadow-xl
         flex flex-col sm:flex-row items-center justify-between
         gap-6
-        z-[9999]
+        z-9999
         w-[80vw]
         border border-gray-300
       "
@@ -193,7 +256,19 @@ export default function CookieBanner() {
 
       {/* Right Buttons */}
       <div className="flex gap-4">
-        <button
+        <button 
+            onClick={() => handleConsentUpdate('denied')} 
+            className="px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-800 transition-colors"
+          >
+            Decline
+          </button>
+          <button 
+            onClick={() => handleConsentUpdate('granted')} 
+            className="bg-[#813DFF] hover:bg-[#6b32d4] text-white px-6 py-2 rounded-lg text-sm font-semibold transition-all shadow-md active:scale-95"
+          >
+            Accept All
+          </button>
+          {/* <button
           onClick={rejectCookies}
           className="px-6 py-2 border border-black bg-transparent hover:bg-black hover:text-white transition"
         >
@@ -205,7 +280,7 @@ export default function CookieBanner() {
           className="px-6 py-2 border bg-[#813DFF] text-white border-[#813DFF] hover:opacity-90 transition"
         >
           Accept
-        </button>
+        </button> */}
       </div>
     </div>
   );
