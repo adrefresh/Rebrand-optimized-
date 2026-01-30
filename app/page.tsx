@@ -286,7 +286,7 @@ export const metadata: Metadata = {
         url: "/og/home-og-image.png",
         width: 1200,
         height: 630,
-        alt: "AdRefresh – Programmatic Advertising & Ad Operations",
+        alt: "AdRefresh – Programmatic Advertising & Advertisement Operations",
       },
     ],
     locale: "en_US",
