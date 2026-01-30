@@ -283,7 +283,7 @@ export const metadata: Metadata = {
     siteName: "AdRefresh",
     images: [
       {
-        url: "/og/home-og-image.png",
+        url: "/images/og/home-og-image.png",
         width: 1200,
         height: 630,
         alt: "AdRefresh – Programmatic Advertising & Advertisement Operations",
