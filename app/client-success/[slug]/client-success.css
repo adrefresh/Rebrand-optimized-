@@ -1,0 +1,236 @@
+/* /* ===============================
+   HERO
+================================ */
+
+.cs-hero {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  height: 50vh;
+  min-height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* PATTERN LAYER */
+.cs-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--hero-pattern);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 99% auto;
+  opacity: 0.3;
+  filter: brightness(0.8);
+  z-index: 0;
+}
+
+/* DARK OVERLAY */
+.cs-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.25),
+    rgba(0, 0, 0, 0.25)
+  );
+  z-index: 1;
+}
+
+/* TITLE */
+.cs-hero-title {
+  position: relative;
+  z-index: 2;
+  font-size: 2.8rem;
+  font-weight: 900;
+  max-width: 900px;
+  line-height: 1.15;
+  padding: 0 18px;
+  color: #fff;
+}
+
+
+/* ===============================
+   HERO GRID (IMAGE + CONTENT)
+================================ */
+
+.cs-grid {
+  width: 80vw;
+  margin: 80px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* Image */
+.cs-image {
+  width: 80vw;
+  height: 80vh;
+  border-radius: 22px;
+  overflow: hidden;
+}
+
+.cs-image img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  display: block;
+}
+
+/* Content */
+.cs-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cs-content h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #111;
+}
+
+.cs-content p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #444;
+  max-width: 540px;
+}
+
+
+/* ===============================
+   WRAPPER + SECTIONS
+================================ */
+
+.cs-wrap {
+  width: 80vw;
+  margin: 60px auto;
+}
+
+.cs-section {
+  margin-bottom: 36px;
+}
+
+.cs-section h2 {
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.cs-section p,
+.cs-section li {
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+
+/* ===============================
+   PAGINATION
+================================ */
+
+.cs-pagination {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cs-pagination a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #111;
+  border: 1px solid #ddd;
+  padding: 10px 20px;
+  border-radius: 30px;
+  transition: 0.3s ease;
+}
+
+.cs-pagination a:hover {
+  background: #111;
+  color: #fff;
+}
+
+.disabled {
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+
+/* ===============================
+   TABLET
+================================ */
+
+@media (max-width: 1024px) {
+  .cs-hero {
+    height: 45vh;
+  }
+
+  .cs-hero-title {
+    font-size: 2.4rem;
+  }
+
+  .cs-grid {
+    width: 88vw;
+  }
+
+  .cs-image {
+    height: 60vh;
+  }
+}
+
+
+/* ===============================
+   MOBILE
+================================ */
+
+@media (max-width: 900px) {
+  .cs-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .cs-image {
+    height: 50vh;
+  }
+
+  .cs-content h2 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cs-hero {
+    height: 40vh;
+  }
+
+  .cs-hero-title {
+    font-size: 2rem;
+  }
+
+  .cs-wrap {
+    width: 92vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .cs-hero {
+    height: 35vh;
+  }
+
+  .cs-hero-title {
+    font-size: 1.4rem;
+  }
+
+  .cs-image {
+    height: 40vh;
+  }
+
+  .cs-wrap {
+    width: 95vw;
+  }
+}

@@ -1,0 +1,300 @@
+@import "tailwindcss";
+
+/* =========================================================
+   ROOT VARIABLES
+========================================================= */
+:root {
+  --font-manrope: "Manrope", system-ui, sans-serif;
+}
+
+:root {
+  /* Base colors */
+  --background: #ffffff;
+  --foreground: #171717;
+
+  /* Brand */
+  --brand-purple: #813DFF;
+  --brand-green: #DFFA33;
+  --brand-black: #1C1C1C;
+  --brand-white: #FFFFFF;
+
+  /* Text + Background */
+  --text-dark: var(--brand-black);
+  --bg-white: var(--brand-white);
+
+  /* Purple shades */
+  --purple-10: #7D3BF6;
+  --purple-20: #6C33D3;
+  --purple-30: #5A2BB3;
+  --purple-40: #492391;
+  --purple-50: #381B6F;
+  --purple-2: #d4bcff;
+
+  /* Green shades */
+  --green-10: #D8F130;
+  --green-20: #B9CF29;
+  --green-30: #9BAD23;
+  --green-40: #7D8B1C;
+  --green-50: #5E6915;
+
+  /* Light tints */
+  --purple-tint-10: #EDE5FF;
+  --purple-tint-20: #D2BFFF;
+  --purple-tint-30: #B79AFF;
+  --purple-tint-40: #9C75FF;
+
+  --green-tint-10: #F9FED6;
+  --green-tint-20: #F2FDAD;
+  --green-tint-30: #ECFC85;
+  --green-tint-40: #E5FB5C;
+
+  /* Neutrals */
+  --gray-10: #DADADA;
+  --gray-20: #949494;
+  --gray-30: #565656;
+
+  /* Effects */
+  --shadow-purple: rgba(129, 61, 255, 0.25);
+  --shadow-green: rgba(223, 250, 51, 0.25);
+  --gradient-brand: linear-gradient(90deg, #813DFF, #DFFA33);
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+/* =========================================================
+   GLOBAL RESET & BASE
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  /* overscroll-behavior-y: none; */
+
+  background: var(--bg-white);
+  color: var(--text-dark);
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: "Manrope", system-ui, sans-serif;
+  position: relative;
+  z-index: 0;
+}
+
+main {
+  width: 100%;
+  display: block;
+}
+
+.site-root,
+.layout-root {
+  width: 100%;
+  min-height: 100svh;
+  display: block;
+  overflow-x: hidden;
+}
+
+/* =========================================================
+   MANROPE — OPTIMIZED WEB FONTS (WOFF2)
+========================================================= */
+
+@font-face {
+  font-family: "Manrope";
+  src: url("/fonts/Manrope-Files/manrope-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("/fonts/Manrope-Files/manrope-semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("/fonts/Manrope-Files/manrope-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* =========================================================
+   TYPOGRAPHY TWEAKS
+========================================================= */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -1px;
+}
+
+b,
+strong,
+.bold,
+[style*="font-weight:700"],
+[style*="font-weight:900"] {
+  letter-spacing: 1px;
+}
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+/* Reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Arrow */
+.animated-arrow {
+  display: inline-block;
+  animation: arrowSlide 1.8s infinite ease-in-out;
+}
+
+@keyframes arrowSlide {
+  0%   { transform: translateX(0); opacity: 0.8; }
+  50%  { transform: translateX(6px); opacity: 1; }
+  100% { transform: translateX(0); opacity: 0.8; }
+}
+
+/* Experience drop */
+.exp-drop {
+  opacity: 0;
+  transform: translateY(-120px);
+  transition: transform 0.7s ease-out, opacity 0.7s ease-out;
+}
+
+.exp-drop.drop-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.exp-drop.wobble {
+  animation: wobbleLoop 3s ease-in-out infinite;
+}
+
+@keyframes wobbleLoop {
+  0%   { transform: translateY(0) rotate(0deg); }
+  25%  { transform: translateY(-4px) rotate(1.5deg); }
+  50%  { transform: translateY(0) rotate(-1.5deg); }
+  75%  { transform: translateY(3px) rotate(1deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+/* =========================================================
+   FORMS (TAILWIND APPLY)
+========================================================= */
+
+.input {
+  @apply
+    w-full
+    px-6
+    py-5
+    rounded-lg
+    border
+    border-[#ddd]
+    text-[16px]
+    placeholder:text-[#999]
+    focus:outline-none
+    focus:ring-2
+    focus:ring-black;
+}
+/* =========================================================
+   KEKA EMBED — MATCH SITE FORM STYLE
+========================================================= */
+
+/* #khembedjobs {
+  font-family: "Manrope", system-ui, sans-serif !important;
+  color: var(--text-dark);
+  background: var(--bg-white);
+} */
+
+/* Force all Keka elements to inherit your font */
+#khembedjobs,
+#khembedjobs * {
+  font-family: inherit !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Inputs */
+#khembedjobs input,
+#khembedjobs select,
+#khembedjobs textarea {
+  width: 100% !important;
+  padding: 20px 24px !important;
+  border-radius: 12px !important;
+  border: 1px solid #ddd !important;
+  font-size: 16px !important;
+  outline: none !important;
+  background: #fff !important;
+}
+
+/* Focus state */
+#khembedjobs input:focus,
+#khembedjobs select:focus,
+#khembedjobs textarea:focus {
+  border-color: #000 !important;
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.15) !important;
+}
+
+/* Buttons */
+#khembedjobs button {
+  padding: 14px 28px !important;
+  border-radius: 12px !important;
+  font-weight: 600 !important;
+  background: var(--brand-black) !important;
+  color: white !important;
+  transition: all 0.3s ease;
+}
+
+#khembedjobs button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* Labels */
+#khembedjobs label {
+  font-weight: 400 !important;
+  margin-bottom: 6px !important;
+  display: block;
+}
+/* Hide Keka footer */
+#kh-main-container > div.kh-d-flex.kh-flex-column.kh-footer.kh-container-fluid.kh-justify-content-center.kh-position-absolute {
+    display: none !important;
+}
+
+
+.careers-manrope,
+.careers-manrope * {
+  font-family: "Manrope", system-ui, sans-serif !important;
+}

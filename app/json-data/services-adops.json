@@ -1,0 +1,46 @@
+{
+  "services": [
+    {
+      "id": 1,
+      "title": "PAID ADVERTISING",
+      "description": "Strategic, data-led paid campaigns across search and social channels, continuously optimized to maximize reach, engagement, conversions, and return on ad spend.",
+      "side": "left",
+      "pattern": "pattern-right"
+    },
+    {
+      "id": 2,
+      "title": "SOCIAL MEDIA MARKETING",
+      "description": "Engaging content, community building, and targeted engagement strategies designed to grow brand visibility and meaningful audience interaction across platforms.",
+      "side": "right",
+      "pattern": "pattern-left"
+    },
+    {
+      "id": 3,
+      "title": "SEARCH ENGINE OPTIMIZATION",
+      "description": "Search-led optimization strategies that improve visibility, rankings, and organic traffic — built to attract high-intent audiences and drive sustainable, long-term growth.",
+      "side": "left",
+      "pattern": "pattern-right"
+    },
+    {
+      "id": 4,
+      "title": "CREATIVES & BRANDING",
+      "description": "Insight-driven creative and brand storytelling designed to capture attention, strengthen brand recall, and turn engagement into meaningful action across channels.",
+      "side": "right",
+      "pattern": "pattern-left"
+    },
+    {
+      "id": 5,
+      "title": "WEBSITE DEVELOPMENT",
+      "description": "High-performance, conversion-focused websites built with scalable architecture, intuitive UX, and seamless integration to support marketing and business goals.",
+      "side": "left",
+      "pattern": "pattern-right"
+    },
+    {
+      "id": 6,
+      "title": "ANALYTICS & REPORTING",
+      "description": "Comprehensive analytics and transparent reporting that transform data into actionable insights, enabling smarter decisions, continuous optimization, and measurable outcomes.",
+      "side": "right",
+      "pattern": "pattern-left"
+    }
+  ]
+}
