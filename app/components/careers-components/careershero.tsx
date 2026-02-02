@@ -68,7 +68,7 @@ export default function CareersHero() {
       <video
         className="absolute inset-0 h-full w-full object-cover"
         src={`${basePath}/images/about-page-videos-images/careersvd.mp4`}
-        poster={`${basePath}/images/client-images/turningdata.JPG`}
+        poster={`${basePath}/images/client-images/careers-img.png`}
         autoPlay
         muted
         loop

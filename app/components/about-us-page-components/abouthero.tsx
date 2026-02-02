@@ -129,7 +129,7 @@ export default function AboutHero() {
           loop
           playsInline
           preload="none"
-          poster={`${basePath}/images/client-images/turningdata.JPG`}
+          poster={`${basePath}/images/client-images/about-img.png`}
           onCanPlayThrough={() => setVideoLoaded(true)}
           className="absolute inset-0 w-full h-full object-cover"
         >

@@ -73,7 +73,7 @@ export default function ContactHero() {
       <video
         className="absolute inset-0 w-full h-full object-cover z-[1]"
         src={`${basePath}/images/about-page-videos-images/contactvd.mp4`}
-        poster={`${basePath}/images/client-images/turningdata.jpg`}
+        poster={`${basePath}/images/client-images/contact-img.png`}
         autoPlay
         loop
         muted

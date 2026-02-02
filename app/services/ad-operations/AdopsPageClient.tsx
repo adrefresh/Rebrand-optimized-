@@ -45,7 +45,7 @@ export default function AdOpsPageClient() {
     z-[1]
   "
   src={`${basePath}/images/about-page-videos-images/adopsvd.mp4`}
-  poster={`${basePath}/images/client-images/turningdata.jpg`}
+  poster={`${basePath}/images/client-images/adops-img.png`}
   autoPlay
   muted
   loop

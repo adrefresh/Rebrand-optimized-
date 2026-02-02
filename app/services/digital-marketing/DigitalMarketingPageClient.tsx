@@ -31,7 +31,7 @@ export default function DigitalMarketingPage() {
    <video
   className="absolute inset-0 h-full w-full object-cover z-[1]"
   src={`${basePath}/images/about-page-videos-images/dgmvd.mp4`}
-  poster={`${basePath}/images/client-images/turningdata.jpg`}
+  poster={`${basePath}/images/client-images/dgm-img.png`}
   autoPlay
   muted
   loop
