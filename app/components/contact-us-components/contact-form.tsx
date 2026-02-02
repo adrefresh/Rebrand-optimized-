@@ -204,7 +204,7 @@ export default function ContactForm() {
       !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ||
       phone.length < 6 ||
       subject.length < 5 ||
-      message.length > 1
+      message.length < 1
     ) {
      
       setError("Please fill all fields correctly.");
