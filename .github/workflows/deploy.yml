@@ -102,7 +102,7 @@ jobs:
           node-version: '20'
           cache: 'npm'
       - run: npm ci
-      - run: npm run build && npm run export
+      - run: npm run build
       - name: Upload Build Artifact
         uses: actions/upload-artifact@v4
         with:
