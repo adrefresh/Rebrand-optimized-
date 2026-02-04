@@ -20,6 +20,23 @@ export const metadata = {
   alternates: {
     canonical: "https://adrefresh.com/services/ad-operations",
   },
+  openGraph: {
+    title: "AdRefresh –Ad Operations",
+    description:
+      " Advertising operations services built to scale performance, efficiency, and measurable growth.",
+    url: "https://www.adrefresh.com/",
+    siteName: "AdRefresh",
+    images: [
+      {
+        url: `https://alpha.adrefresh.com/images/og/adops-poster.png`,
+        width: 1200,
+        height: 630,
+        alt: "Advertisement Operations",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export default function Page() {
