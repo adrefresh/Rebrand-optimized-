@@ -28,14 +28,16 @@ export default function DigitalMarketingPage() {
         "
       >
         {/* VIDEO */}
-        <video
-          className="absolute inset-0 h-full w-full object-cover z-[1]"
-          src={`${basePath}/images/about-page-videos-images/dgmvd.mp4`}
-          autoPlay
-          muted
-          loop
-          playsInline
-        />
+   <video
+  className="absolute inset-0 h-full w-full object-cover z-[1]"
+  src={`${basePath}/images/about-page-videos-images/dgmvd.mp4`}
+  poster={`${basePath}/images/client-images/dgm-img.png`}
+  autoPlay
+  muted
+  loop
+  playsInline
+  preload="none"
+/>
 
         {/* OVERLAY */}
         <div

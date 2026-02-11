@@ -16,10 +16,12 @@ export default function CareersHero() {
       <video
         className="absolute inset-0 h-full w-full object-cover"
         src={`${basePath}/images/about-page-videos-images/careersvd.mp4`}
+        poster={`${basePath}/images/client-images/careers-img.png`}
         autoPlay
         muted
         loop
         playsInline
+        preload="none"
       />
 
       {/* OVERLAY */}
@@ -27,26 +29,34 @@ export default function CareersHero() {
 
       {/* CONTENT */}
       <div className="relative z-10 px-4 text-center text-white">
-       <h1
+        <h1
           className="
             mb-4
             font-extrabold
             tracking-wide
             whitespace-nowrap
 
-           text-[4rem]
-              max-[1280px]:text-[3.4rem]
-              max-[1024px]:text-[3rem]
-              max-[768px]:text-[2.5rem]
-              max-[480px]:text-[2.1rem]
+            text-[4rem]
+            max-[1280px]:text-[3.4rem]
+            max-[1024px]:text-[3rem]
+            max-[768px]:text-[2.5rem]
+            max-[480px]:text-[2.1rem]
           "
         >
           CAREERS
         </h1>
 
-      
-
-       
+        <p
+          className="
+            opacity-90
+            text-[1rem]
+            sm:text-[1.05rem]
+            md:text-[1.15rem]
+            lg:text-[1.25rem]
+          "
+        >
+         
+        </p>
       </div>
     </section>
   );

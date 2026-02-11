@@ -22,26 +22,26 @@ export default function ContactHero() {
       <video
         className="absolute inset-0 w-full h-full object-cover z-[1]"
         src={`${basePath}/images/about-page-videos-images/contactvd.mp4`}
+        poster={`${basePath}/images/client-images/contact-img.png`}
         autoPlay
         loop
         muted
         playsInline
+        preload="none"
       />
 
       {/* OVERLAY */}
-      <div className="absolute inset-0 z-[3] bg-black/50
-" />
+      <div className="absolute inset-0 z-[3] bg-black/50" />
 
       {/* TITLE */}
       <h1
         className="
           relative z-[5] font-black text-white text-center leading-tight
-      text-[4rem]
-              max-[1280px]:text-[3.4rem]
-              max-[1024px]:text-[3rem]
-              max-[768px]:text-[2.5rem]
-              max-[480px]:text-[2.1rem]
-           /* 🖥 large desktop */
+          text-[4rem]
+          max-[1280px]:text-[3.4rem]
+          max-[1024px]:text-[3rem]
+          max-[768px]:text-[2.5rem]
+          max-[480px]:text-[2.1rem]
         "
       >
         CONTACT US

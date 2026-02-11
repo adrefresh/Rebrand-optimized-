@@ -37,20 +37,21 @@ export default function AdOpsPageClient() {
         style={{ marginLeft: "calc(50% - 50vw)" }}
       >
         {/* VIDEO */}
-        <video
-          className="
-            absolute inset-0
-            w-full h-full
-            object-cover
-            z-[1]
-          "
-          src={`${basePath}/images/about-page-videos-images/adopsvd.mp4`}
-          autoPlay
-          muted
-          loop
-          playsInline
-        />
-
+       <video
+  className="
+    absolute inset-0
+    w-full h-full
+    object-cover
+    z-[1]
+  "
+  src={`${basePath}/images/about-page-videos-images/adopsvd.mp4`}
+  poster={`${basePath}/images/client-images/adops-img.png`}
+  autoPlay
+  muted
+  loop
+  playsInline
+  preload="none"
+/>
         {/* BLACK OVERLAY */}
         <div className="absolute inset-0 z-[2] bg-black/35" />
 
