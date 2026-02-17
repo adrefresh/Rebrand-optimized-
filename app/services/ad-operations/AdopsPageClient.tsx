@@ -73,7 +73,7 @@ export default function AdOpsPageClient() {
               max-[480px]:text-[2.1rem]
             "
           >
-            ADVERTSING OPERATIONS
+            ADVERTISING OPERATIONS
           </h1>
         </div>
       </section>
