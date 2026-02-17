@@ -69,7 +69,7 @@ export default function AdOpsPageClient() {
               text-[4rem]
               max-[1280px]:text-[3.4rem]
               max-[1024px]:text-[3rem]
-              max-[768px]:text-[2.5rem]
+              max-[768px]:text-[2.49rem]
               max-[480px]:text-[2.1rem]
             "
           >
