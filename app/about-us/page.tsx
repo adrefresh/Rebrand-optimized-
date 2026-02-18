@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     "Learn about AdRefresh, a performance-driven advertising operations and Digital Marketing partner built on experience, precision, and measurable growth.",
 
   alternates: {
-    canonical: "https://yourdomain.com/about-us",
+    canonical: "https://www.adrefresh.com/about-us",
   },
 
   openGraph: {
