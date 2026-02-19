@@ -44,7 +44,7 @@ export const metadata = {
   },
 
   alternates: {
-    canonical: "https://adrefresh.com/services/digital-marketing",
+    canonical: "https://www.adrefresh.com/services/digital-marketing",
   },
 };
 

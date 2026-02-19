@@ -18,7 +18,7 @@ export const metadata = {
   ],
 
   alternates: {
-    canonical: "https://adrefresh.com/services/ad-operations",
+    canonical: "https://www.adrefresh.com/services/ad-operations",
   },
   openGraph: {
     title: "AdRefresh –Ad Operations",
