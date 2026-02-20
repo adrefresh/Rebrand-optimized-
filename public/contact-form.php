@@ -63,7 +63,7 @@ if (!empty($errors)) {
 }
 
 // 4. EMAIL PREPARATION
-$to      = "contact@adrefresh.com,pniranjan@adrefresh.com";
+$to      = "contact@adrefresh.com,pniranjan@adrefresh.com,ramya.d@adrefresh.com,kavya.d@adrefresh.com";
 $headers = [
     "From" => "Website <no-reply@adrefresh.com>",
     "Reply-To" => $email,
