@@ -7,6 +7,7 @@ export const metadata = {
     "Professional Digital Marketing services by AdRefresh. We drive growth through SEO, PPC, social media marketing, content strategy, and performance-driven campaigns.",
 
   keywords: [
+    "Digital Marketing",
     "Digital Marketing Services",
     "Performance Marketing",
     "SEO Services",

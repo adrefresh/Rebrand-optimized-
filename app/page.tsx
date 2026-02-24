@@ -106,7 +106,7 @@ export const metadata: Metadata = {
   /* =========================
      THEME
   ========================= */
-  themeColor: "#000000",
+ 
 };
 
 export default function HomePage() {

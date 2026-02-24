@@ -25,13 +25,11 @@ export default function Footer() {
       >
         {/* ================= 1. LOGO ONLY ================= */}
         <div className="relative flex items-center max-[640px]:justify-center">
-          <Image
-            src={WhitePml}
-            alt="AdRefresh"
-            width={190}
-            height={110}
-            className="object-contain md:ml-10"
-          />
+     <Image
+  src={WhitePml}
+  alt="Logo"
+  className="w-[140px] h-auto object-contain"
+/>
 
           {/* VERTICAL LINE */}
           <div
@@ -52,19 +50,18 @@ export default function Footer() {
         {/* ================= 2. ISO CERTIFICATES ================= */}
         <div className="flex items-center gap-10 max-[640px]:justify-center">
   <Image
-    src={iso}
-    alt="ISO"
-    width={120}
-    height={60}
-    className="object-contain"
-  />
-  <Image
-    src={Soc}
-    alt="SOC"
-    width={80}
-    height={40}
-    className="object-contain"
-  />
+  src={iso}
+  alt="ISO"
+  className="w-[120px] h-auto object-contain"
+  priority={false}
+/>
+
+<Image
+  src={Soc}
+  alt="SOC"
+  className="w-[80px] h-auto object-contain"
+  priority={false}
+/>
 </div>
 
 

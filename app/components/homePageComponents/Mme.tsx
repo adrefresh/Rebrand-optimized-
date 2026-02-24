@@ -102,21 +102,21 @@ export default function Features() {
 
       {/* DECORATIVE LOGO */}
       <div className="pointer-events-none absolute right-0 top-1/2 -translate-y-1/2 z-[1]">
-        <Image
-          src={iconmark}
-          alt="Decorative Logo"
-          width={580}
-          height={1080}
-          className="
-            opacity-100
-            w-[280px]
-            sm:w-[360px]
-            md:w-[420px]
-            lg:w-[580px]
-            max-sm:opacity-20
-            ml-[-5%]
-          "
-        />
+       <Image
+  src={iconmark}
+  alt="Decorative Logo"
+  className="
+    opacity-100
+    w-[280px]
+    sm:w-[360px]
+    md:w-[420px]
+    lg:w-[580px]
+    h-auto
+    object-contain
+    max-sm:opacity-20
+    ml-[-5%]
+  "
+/>
       </div>
 
       {/* CONTENT */}

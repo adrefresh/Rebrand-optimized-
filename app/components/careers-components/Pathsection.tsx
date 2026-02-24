@@ -18,14 +18,14 @@ export default function PathSection() {
     {
       title: "Discover Your Strength",
       desc: "Explore your skills, interests, and working style to see where you thrive and create the most impact.",
-      colorImg: `${basePath}/images/careers-images/careers2.jpeg`,
-      bwImg: `${basePath}/images/careers-images/careers2.jpeg`,
+      colorImg: `${basePath}/images/careers-images/careers2.jpg`,
+      bwImg: `${basePath}/images/careers-images/careers2.jpg`,
     },
     {
       title: "Grow, Learn, and Build With Us",
       desc: "Work on real challenges, learn continuously, and evolve alongside a team that values learning and collaboration.",
-      colorImg: `${basePath}/images/careers-images/careers3.jpeg`,
-      bwImg: `${basePath}/images/careers-images/careers3.jpeg`,
+      colorImg: `${basePath}/images/careers-images/careers3.jpg`,
+      bwImg: `${basePath}/images/careers-images/careers3.jpg`,
     },
     {
       title: "Your impact starts here",
