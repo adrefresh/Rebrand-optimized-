@@ -37,7 +37,7 @@ export default function About() {
           src={conference}
           alt="AdRefresh Team"
           fill
-          priority
+        
           className="object-cover grayscale brightness-[0.25]"
             style={{
  

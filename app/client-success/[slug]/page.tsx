@@ -288,7 +288,7 @@ export default async function ClientSuccessDetail({
               alt={data.title}
               width={1200}
               height={700}
-              priority
+           
               style={{ width: "100%", height: "auto" }}
             />
           </div>

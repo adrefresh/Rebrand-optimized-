@@ -87,7 +87,7 @@ export default function Header() {
     src={isWhiteNav ? colorLogo : WhiteLogo}
     alt="Logo"
     fill
-    priority
+  
     className="object-contain"
   />
 </div>

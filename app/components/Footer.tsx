@@ -53,14 +53,14 @@ export default function Footer() {
   src={iso}
   alt="ISO"
   className="w-[120px] h-auto object-contain"
-  priority={false}
+
 />
 
 <Image
   src={Soc}
   alt="SOC"
   className="w-[80px] h-auto object-contain"
-  priority={false}
+  
 />
 </div>
 
