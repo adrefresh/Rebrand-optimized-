@@ -32,7 +32,7 @@ export default function AboutHero() {
               animate-pulse
             "
             style={{
-              backgroundImage: `url(${basePath}/images/about-page-videos-images/office-poster.jpg)`,
+              backgroundImage: `url(${basePath}/images/client-images/about-img.png)`,
             }}
           />
         )}
