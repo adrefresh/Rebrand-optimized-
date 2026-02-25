@@ -94,9 +94,10 @@ const cases = [
     focus:outline-none
     focus:ring-2
     focus:ring-black
+    rotate-180
   "
 >
-  ←
+ ➜
 </button>
 
       {/* CONTENT */}
@@ -229,7 +230,7 @@ const cases = [
     focus:ring-black
   "
 >
-  →
+ ➜
 </button>
     </div>
   );
