@@ -284,7 +284,7 @@ export default function AdOpsContactHero2() {
             max-[600px]:text-[16px]
           "
         >
-          Request a Consultation
+          Request A Consultation
         </Link>
       </div>
     </section>
