@@ -41,7 +41,7 @@ export default function CareersClient() {
         </h1>
 
         <p className="mt-2 text-gray-600 text-[0.95rem] sm:text-base">
-          Explore exciting opportunities to grow your career with AdRefreshs.
+          Explore exciting opportunities to grow your career with AdRefresh.
         </p>
       </div>
 
