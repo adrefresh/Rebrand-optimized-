@@ -32,21 +32,20 @@ export default function About() {
       "
     >
       {/* BACKGROUND */}
-      <div className="absolute inset-0">
-        <Image
-          src={conference}
-          alt="AdRefresh Team"
-          fill
-        
-          className="object-cover grayscale brightness-[0.25]"
-            style={{
- 
-    backgroundColor: "transparent",
-    backgroundBlendMode: "multiply",
-  }}
-        />
-      </div>
-
+<div className="absolute inset-0">
+  <Image
+    src={conference}
+    alt="AdRefresh Team"
+    fill
+    loading="lazy"  // 🔥 IMPORTANT
+    sizes="100vw"   // 🔥 improves responsive loading
+    className="object-cover grayscale brightness-[0.25]"
+    style={{
+      backgroundColor: "transparent",
+      backgroundBlendMode: "multiply",
+    }}
+  />
+</div>
       {/* CONTENT WRAPPER */}
       <div className="relative z-10 flex justify-center mt-5 md:mt-[-12px]">
         <div className="w-full max-w-[900px] px-4 sm:px-6 text-white mb-[-40px]">
