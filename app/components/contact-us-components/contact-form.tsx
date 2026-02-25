@@ -115,24 +115,31 @@ export default function ContactForm() {
             placeholder="Write a message*"
             className="sm:col-span-2 textarea"
           />
-
-          <button
-            type="submit"
-            disabled={loading}
-            className="
-              sm:col-span-2
-              w-full
-              bg-black text-white
-              py-3 sm:py-4
-              text-base sm:text-lg
-              rounded-md
-              font-semibold
-              transition hover:bg-[#222]
-              disabled:opacity-60
-            "
-          >
-            {loading ? "Sending..." : "Send Message"}
-          </button>
+<button
+  type="submit"
+  disabled={loading}
+  aria-busy={loading}
+  aria-live="polite"
+  className="
+    sm:col-span-2
+    w-full
+    bg-black text-white
+    py-3 sm:py-4
+    text-base sm:text-lg
+    rounded-md
+    font-semibold
+    transition-colors
+    hover:bg-[#222]
+    disabled:opacity-60
+    disabled:cursor-not-allowed
+    focus:outline-none
+    focus:ring-2
+    focus:ring-black
+    focus:ring-offset-2
+  "
+>
+  {loading ? "Sending..." : "Send Message"}
+</button>
 
           {success && (
             <p className="sm:col-span-2 text-green-600 text-sm sm:text-base text-center">

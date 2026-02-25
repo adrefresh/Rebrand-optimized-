@@ -1,6 +1,6 @@
 
 "use client";
-
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
@@ -78,22 +78,27 @@ const cases = [
     >
       {/* LEFT ARROW */}
       <button
-        onClick={() =>
-          setIndex((index - 1 + cases.length) % cases.length)
-        }
-        className="
-          font-[900]
-          text-black
-          opacity-80
-          transition
-          hover:opacity-100
-          text-[26px]
-          sm:text-[32px]
-          lg:text-[36px]
-        "
-      >
-        ←
-      </button>
+  onClick={() =>
+    setIndex((index - 1 + cases.length) % cases.length)
+  }
+  aria-label="Previous case study"
+  className="
+    font-[900]
+    text-black
+    opacity-80
+    transition-opacity
+    hover:opacity-100
+    text-[26px]
+    sm:text-[32px]
+    lg:text-[36px]
+    focus:outline-none
+    focus:ring-2
+    focus:ring-black
+    rotate-180
+  "
+>
+ ➜
+</button>
 
       {/* CONTENT */}
       <div className="max-w-[620px] text-center px-2 sm:px-0">
@@ -136,71 +141,97 @@ const cases = [
           </p>
 
           {/* READ MORE */}
-          <button
-            onClick={() =>
-              router.push(`/client-success/${current.slug}`)
-            }
-            className="
-              rounded
-              border
-              border-black
-              bg-[#e6ff3b]
-              px-4
-              py-2
-              font-[600]
-              text-black
-              text-[0.75rem]
-              sm:text-[0.8rem]
-              transition
-              hover:bg-[#dfff00]
-            "
-          >
-            Read More
-          </button>
+        
+
+<Link
+  href={`/client-success/${current.slug}`}
+  className="
+    inline-block
+    rounded
+    border
+    border-black
+    bg-[#e6ff3b]
+    px-4
+    py-2
+    font-[600]
+    text-black
+    text-[0.75rem]
+    sm:text-[0.8rem]
+    transition-colors
+    hover:bg-[#dfff00]
+    focus:outline-none
+    focus:ring-2
+    focus:ring-black
+  "
+>
+  Read More
+</Link>
         </div>
 
         {/* DOTS */}
-        <div className="mt-4 flex items-center justify-center gap-2 sm:gap-3">
-          {cases.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setIndex(i)}
-              className={`
-                h-[7px] w-[7px]
-                sm:h-[8px] sm:w-[8px]
-                rounded-full
-                transition-all
-                duration-300
-                ease-in-out
-                ${
-                  index === i
-                    ? "bg-black scale-[1.4]"
-                    : "bg-black/40 hover:bg-black/70"
-                }
-              `}
-            />
-          ))}
-        </div>
-      </div>
+       {/* DOTS */}
+<div
+  className="mt-4 flex items-center justify-center gap-2 sm:gap-3"
+  role="tablist"
+  aria-label="Case studies navigation"
+>
+  {cases.map((_, i) => (
+    <button
+      key={i}
+      type="button"
+      aria-label={`Go to case study ${i + 1}`}
+      aria-current={index === i}
+      onClick={() => setIndex(i)}
+      className="
+        flex items-center justify-center
+        w-[32px] h-[32px]
+        sm:w-[36px] sm:h-[36px]
+        focus:outline-none
+        focus:ring-2
+        focus:ring-black
+      "
+    >
+      <span
+        className={`
+          h-[7px] w-[7px]
+          sm:h-[8px] sm:w-[8px]
+          rounded-full
+          transition-transform transition-opacity duration-300 ease-in-out
+          ${
+            index === i
+              ? "bg-black scale-[1.4]"
+              : "bg-black/40 hover:bg-black/70"
+          }
+        `}
+      />
+    </button>
+  ))}
+</div>      </div>
 
       {/* RIGHT ARROW */}
-      <button
-        onClick={() =>
-          setIndex((index + 1) % cases.length)
-        }
-        className="
-          font-[900]
-          text-black
-          opacity-80
-          transition
-          hover:opacity-100
-          text-[26px]
-          sm:text-[32px]
-          lg:text-[36px]
-        "
-      >
-        →
-      </button>
+     <button
+  type="button"
+  title="Next"
+  aria-label="Next case study"
+  onClick={() =>
+    setIndex((index + 1) % cases.length)
+  }
+  className="
+    font-[900]
+    text-black
+    opacity-80
+    transition-opacity
+    hover:opacity-100
+    text-[26px]
+    sm:text-[32px]
+    lg:text-[36px]
+    focus:outline-none
+    focus:ring-2
+    focus:ring-black
+  "
+>
+ ➜
+</button>
     </div>
   );
 }

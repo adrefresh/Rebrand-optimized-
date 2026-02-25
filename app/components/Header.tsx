@@ -82,14 +82,15 @@ export default function Header() {
           {/* LOGO */}
           <Link href="/" aria-label="Go to Home" prefetch>
             <div className="w-[170px] h-[40px] flex items-center">
-              <Image
-                src={isWhiteNav ? colorLogo : WhiteLogo}
-                alt="Logo"
-                width={170}
-                height={40}
-                priority
-                className="w-[120px] sm:w-[140px] md:w-[160px] lg:w-[170px] h-auto"
-              />
+              <div className="relative w-[120px] sm:w-[140px] md:w-[160px] lg:w-[170px] h-[40px]">
+  <Image
+    src={isWhiteNav ? colorLogo : WhiteLogo}
+    alt="Logo"
+    fill
+  
+    className="object-contain"
+  />
+</div>
             </div>
           </Link>
 

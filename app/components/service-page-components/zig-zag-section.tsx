@@ -1,5 +1,5 @@
 
-"use client";
+// "use client";
 
 import { useEffect } from "react";
 import data from "@/app/json-data/services-digital-marketing.json";

@@ -1,51 +1,148 @@
 
+// "use client";
+
+// import { useState } from "react";
+
+// export default function AboutHero() {
+//   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+//   const [videoLoaded, setVideoLoaded] = useState(false);
+
+//   return (
+//     <section
+//       className="
+//         relative
+//         flex
+//         h-[60vh]              /* 📱 mobile */
+//         sm:h-[90vh]           /* 💻 tablet & above */
+//         w-full
+//         items-center
+//         justify-center
+//         overflow-hidden
+//       "
+//     >
+//       {/* ================= VIDEO + SKELETON ================= */}
+//       <div className="absolute inset-0 z-0 bg-black">
+//         {/* ✅ DARK SKELETON (NO WHITE FLASH) */}
+//         {!videoLoaded && (
+//           <div
+//             className="
+//               absolute inset-0
+//               bg-black
+//               bg-cover bg-center
+//               animate-pulse
+//             "
+//             style={{
+//               backgroundImage: `url(${basePath}/images/client-images/about-img.png)`,
+//             }}
+//           />
+//         )}
+
+//         {/* 🎥 VIDEO */}
+//         <video
+//           autoPlay
+//           muted
+//           loop
+//           playsInline
+//           preload="none"
+//           poster={`${basePath}/images/client-images/about-img.png`}
+//           onCanPlayThrough={() => setVideoLoaded(true)}
+//           className="absolute inset-0 w-full h-full object-cover"
+//         >
+//           <source
+//             src={`${basePath}/images/about-page-videos-images/aboutvd.mp4`}
+//             type="video/mp4"
+//           />
+//         </video>
+//       </div>
+
+//       {/* DARK OVERLAY */}
+//       <div className="absolute inset-0 bg-black/65" />
+
+//       {/* CONTENT */}
+//       <div
+//         className="
+//           relative
+//           z-10
+//           flex
+//           flex-col
+//           items-center
+//           text-center
+//           max-w-[900px]
+//           px-5
+//           text-white
+//         "
+//       >
+//         <h1
+//           className="
+//             mb-4
+//             font-extrabold
+//             tracking-wide
+//             text-center
+//             leading-[1.05]
+
+//             text-[4rem]
+//             max-[1280px]:text-[3.4rem]
+//             max-[1024px]:text-[3rem]
+//             max-[768px]:text-[2.5rem]
+//             max-[480px]:text-[2.1rem]
+
+//             whitespace-normal
+//             lg:whitespace-nowrap
+//           "
+//         >
+//           ABOUT ADREFRESH
+//         </h1>
+
+ 
+//       </div>
+//     </section>
+//   );
+// }
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function AboutHero() {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
-  const [videoLoaded, setVideoLoaded] = useState(false);
+  const [showVideo, setShowVideo] = useState(false);
+
+  /* 🔥 Delay video loading */
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowVideo(true);
+    }, 1800);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <section
       className="
         relative
         flex
-        h-[60vh]              /* 📱 mobile */
-        sm:h-[90vh]           /* 💻 tablet & above */
+        h-[60vh]
+        sm:h-[90vh]
         w-full
         items-center
         justify-center
         overflow-hidden
       "
     >
-      {/* ================= VIDEO + SKELETON ================= */}
-      <div className="absolute inset-0 z-0 bg-black">
-        {/* ✅ DARK SKELETON (NO WHITE FLASH) */}
-        {!videoLoaded && (
-          <div
-            className="
-              absolute inset-0
-              bg-black
-              bg-cover bg-center
-              animate-pulse
-            "
-            style={{
-              backgroundImage: `url(${basePath}/images/about-page-videos-images/office-poster.jpg)`,
-            }}
-          />
-        )}
+      {/* FAST HERO IMAGE (LCP) */}
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{
+          backgroundImage: `url(${basePath}/images/client-images/about-img.png)`,
+        }}
+      />
 
-        {/* 🎥 VIDEO */}
+      {/* VIDEO loads AFTER first paint */}
+      {showVideo && (
         <video
           autoPlay
           muted
           loop
           playsInline
-          preload="none"
-          poster={`${basePath}/images/client-images/about-img.png`}
-          onCanPlayThrough={() => setVideoLoaded(true)}
           className="absolute inset-0 w-full h-full object-cover"
         >
           <source
@@ -53,7 +150,7 @@ export default function AboutHero() {
             type="video/mp4"
           />
         </video>
-      </div>
+      )}
 
       {/* DARK OVERLAY */}
       <div className="absolute inset-0 bg-black/65" />
@@ -79,21 +176,17 @@ export default function AboutHero() {
             tracking-wide
             text-center
             leading-[1.05]
-
             text-[4rem]
             max-[1280px]:text-[3.4rem]
             max-[1024px]:text-[3rem]
             max-[768px]:text-[2.5rem]
             max-[480px]:text-[2.1rem]
-
             whitespace-normal
             lg:whitespace-nowrap
           "
         >
           ABOUT ADREFRESH
         </h1>
-
- 
       </div>
     </section>
   );

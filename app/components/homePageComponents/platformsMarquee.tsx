@@ -1,7 +1,7 @@
 
 
 "use client";
-
+import Image from "next/image";
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 export default function Section7() {
@@ -113,20 +113,20 @@ function Marquee({
                   max-[768px]:h-[44px]
                 "
               >
-                <img
-                  src={p.img}
-                  alt={p.name}
-                  className="
-                    max-w-full max-h-full
-                    object-contain
-
-                    grayscale
-                    opacity-[0.6]
-
-                    transition duration-300
-                    hover:opacity-100
-                  "
-                />
+                <div className="relative w-[120px] h-[60px]">
+  <Image
+    src={p.img}
+    alt={p.name}
+    fill
+    className="
+      object-contain
+      grayscale
+      opacity-[0.6]
+      transition-opacity duration-300
+      hover:opacity-100
+    "
+  />
+</div>
               </div>
             ))}
           </div>

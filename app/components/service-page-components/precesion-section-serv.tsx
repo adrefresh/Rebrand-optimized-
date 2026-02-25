@@ -298,7 +298,7 @@
 //   );
 // }
 
-"use client";
+// "use client";
 
 export default function PrecisionSectionAdOps() {
   return (

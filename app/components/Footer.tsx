@@ -25,13 +25,11 @@ export default function Footer() {
       >
         {/* ================= 1. LOGO ONLY ================= */}
         <div className="relative flex items-center max-[640px]:justify-center">
-          <Image
-            src={WhitePml}
-            alt="AdRefresh"
-            width={190}
-            height={110}
-            className="object-contain md:ml-10"
-          />
+     <Image
+  src={WhitePml}
+  alt="Logo"
+  className="w-[240px] h-auto object-contain"
+/>
 
           {/* VERTICAL LINE */}
           <div
@@ -52,19 +50,18 @@ export default function Footer() {
         {/* ================= 2. ISO CERTIFICATES ================= */}
         <div className="flex items-center gap-10 max-[640px]:justify-center">
   <Image
-    src={iso}
-    alt="ISO"
-    width={120}
-    height={60}
-    className="object-contain"
-  />
-  <Image
-    src={Soc}
-    alt="SOC"
-    width={80}
-    height={40}
-    className="object-contain"
-  />
+  src={iso}
+  alt="ISO"
+  className="w-[120px] h-auto object-contain"
+
+/>
+
+<Image
+  src={Soc}
+  alt="SOC"
+  className="w-[80px] h-auto object-contain"
+  
+/>
 </div>
 
 
@@ -103,23 +100,31 @@ export default function Footer() {
           </div>
 
           {/* SOCIAL ICONS ROW */}
-          <div className="flex items-center gap-6">
+     <div className="flex items-center gap-6">
+
+  {/* FACEBOOK */}
   <a
-    className="social fb"
+    className="social fb focus:outline-none focus:ring-2 focus:ring-white"
     href="https://www.facebook.com/adrefreshmedia"
     target="_blank"
     rel="noopener noreferrer"
+    aria-label="AdRefresh Facebook page"
+    title="Facebook"
   >
+    <span className="sr-only">Facebook</span>
     <Facebook size={28} />
   </a>
 
+  {/* X (TWITTER) */}
   <a
-    className="social x"
+    className="social x focus:outline-none focus:ring-2 focus:ring-white"
     href="https://x.com/AdRefresh"
-    aria-label="X"
     target="_blank"
     rel="noopener noreferrer"
+    aria-label="AdRefresh X profile"
+    title="X"
   >
+    <span className="sr-only">X</span>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
@@ -129,23 +134,32 @@ export default function Footer() {
     </svg>
   </a>
 
+  {/* LINKEDIN */}
   <a
-    className="social in"
+    className="social in focus:outline-none focus:ring-2 focus:ring-white"
     href="https://www.linkedin.com/company/adrefreshmedia/"
     target="_blank"
     rel="noopener noreferrer"
+    aria-label="AdRefresh LinkedIn profile"
+    title="LinkedIn"
   >
+    <span className="sr-only">LinkedIn</span>
     <Linkedin size={28} />
   </a>
 
+  {/* INSTAGRAM */}
   <a
-    className="social insta"
+    className="social insta focus:outline-none focus:ring-2 focus:ring-white"
     href="https://www.instagram.com/adrefreshmedia/"
     target="_blank"
     rel="noopener noreferrer"
+    aria-label="AdRefresh Instagram page"
+    title="Instagram"
   >
+    <span className="sr-only">Instagram</span>
     <Instagram size={28} />
   </a>
+
 </div>
 
         </div>
