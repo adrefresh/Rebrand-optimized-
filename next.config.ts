@@ -1,52 +1,37 @@
+
 // /** @type {import('next').NextConfig} */
 // const nextConfig = {
-//     output: 'export',      // Required: Generates the 'out' folder 
+//   output: "export",          // Static export
+//   trailingSlash: true,
 
-//   images: { 
+//   images: {
+//     unoptimized: true,      // Required for static hosting
+//   },
 
-//     unoptimized: true,   // Required for static hosting 
+//   compress: true,           // Gzip / Brotli
+//   // swcMinify: true,          // Smaller JS
+//   reactStrictMode: false,    // Safer builds
 
-//   }, 
-
-//   trailingSlash: true, 
+//   experimental: {
+//     optimizeCss: true,     // Smaller CSS
+//   },
 // };
 
 // module.exports = nextConfig;
-
-
-
- 
-
-
-
- 
-
-// // export default nextConfig; 
-// // import type { NextConfig } from "next";
-
-// // const nextConfig: NextConfig = {
-// //   output: "export",
-// //   images: {
-// //     unoptimized: true,
-// //   },
-// // };
-
-// // export default nextConfig;
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",          // Static export
+  output: "export",
   trailingSlash: true,
 
   images: {
-    unoptimized: true,      // Required for static hosting
+    unoptimized: true,
   },
 
-  compress: true,           // Gzip / Brotli
-  // swcMinify: true,          // Smaller JS
-  reactStrictMode: false,    // Safer builds
+  compress: true,
+  reactStrictMode: false,
 
   experimental: {
-    optimizeCss: true,     // Smaller CSS
+    optimizeCss: false, // 🔥 IMPORTANT
   },
 };
 
