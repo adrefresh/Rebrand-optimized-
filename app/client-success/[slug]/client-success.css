@@ -1,18 +1,18 @@
-/* ===============================
+/* /* ===============================
    HERO
 ================================ */
 
 .cs-hero {
-  width: 100%;
-  min-height: 340px;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
   height: 50vh;
+  min-height: 340px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   position: relative;
   overflow: hidden;
-  padding: 0 20px;
 }
 
 /* PATTERN LAYER */
@@ -23,8 +23,9 @@
   background-image: var(--hero-pattern);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 95% auto;
-  opacity: 0.25;
+  background-size: 99% auto;
+  opacity: 0.3;
+  filter: brightness(0.8);
   z-index: 0;
 }
 
@@ -48,7 +49,8 @@
   font-weight: 900;
   max-width: 900px;
   line-height: 1.15;
-  color: #000;
+  padding: 0 18px;
+  color: #fff;
 }
 
 
@@ -57,32 +59,30 @@
 ================================ */
 
 .cs-grid {
-  width: 100%;
-  max-width: 1200px;
+  width: 80vw;
   margin: 80px auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
   align-items: center;
-  padding: 0 20px;
 }
 
-/* IMAGE */
+/* Image */
 .cs-image {
-  width: 100%;
-  border-radius: 5px;
+  width: 80vw;
+  height: 80vh;
+  border-radius: 22px;
   overflow: hidden;
-  aspect-ratio: 16 / 9;
 }
 
 .cs-image img {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   object-fit: cover;
   display: block;
 }
 
-/* CONTENT */
+/* Content */
 .cs-content {
   display: flex;
   flex-direction: column;
@@ -109,10 +109,8 @@
 ================================ */
 
 .cs-wrap {
-  width: 100%;
-  max-width: 1200px;
+  width: 80vw;
   margin: 60px auto;
-  padding: 0 20px;
 }
 
 .cs-section {
@@ -129,7 +127,6 @@
 .cs-section li {
   font-size: 17px;
   line-height: 1.7;
-  color: #444;
 }
 
 
@@ -141,8 +138,6 @@
   margin-top: 60px;
   display: flex;
   justify-content: space-between;
-  gap: 20px;
-  flex-wrap: wrap;
 }
 
 .cs-pagination a {
@@ -180,7 +175,11 @@
   }
 
   .cs-grid {
-    gap: 40px;
+    width: 88vw;
+  }
+
+  .cs-image {
+    height: 60vh;
   }
 }
 
@@ -192,10 +191,11 @@
 @media (max-width: 900px) {
   .cs-grid {
     grid-template-columns: 1fr;
+    gap: 40px;
   }
 
   .cs-image {
-    aspect-ratio: 16 / 10;
+    height: 50vh;
   }
 
   .cs-content h2 {
@@ -211,6 +211,10 @@
   .cs-hero-title {
     font-size: 2rem;
   }
+
+  .cs-wrap {
+    width: 92vw;
+  }
 }
 
 @media (max-width: 480px) {
@@ -222,18 +226,28 @@
     font-size: 1.4rem;
   }
 
-  .cs-wrap {
-    padding: 0 16px;
+  .cs-image {
+    height: 40vh;
   }
 
-  .cs-pagination {
-    flex-direction: column;
-    align-items: flex-start;
+  .cs-wrap {
+    width: 95vw;
   }
 }
-@media (max-width: 768px) {
-  .cs-hero::before {
-    background-repeat: repeat;
-    background-size: 160px auto;
+/* ===============================
+   MOBILE IMAGE RESPONSIVE FIX
+================================ */
+@media (max-width: 900px) {
+
+  .cs-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
   }
+
+  .cs-image img {
+    width: 100%;
+    height: auto;
+  }
+
 }

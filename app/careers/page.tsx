@@ -122,6 +122,7 @@
 //     </main>
 //   );
 // }
+
 import type { Metadata } from "next";
 
 import CareersHero from "../components/careers-components/careershero";
