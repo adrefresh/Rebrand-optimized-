@@ -1,5 +1,5 @@
 
-"use client";
+// "use client";
 
 import CaseStudies from "./case-studies";
 
