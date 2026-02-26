@@ -284,3 +284,7 @@ strong,
 .careers-manrope * {
   font-family: "Manrope", system-ui, sans-serif !important;
 }
+body {
+  --font-family: "Manrope" !important;
+  font-family: "Manrope", system-ui, sans-serif !important;
+}
