@@ -28,7 +28,7 @@ export default function Footer() {
      <Image
   src={WhitePml}
   alt="Logo"
-  className="w-[240px] h-auto object-contain"
+  className="w-[180px] h-auto object-contain"
 />
 
           {/* VERTICAL LINE */}
