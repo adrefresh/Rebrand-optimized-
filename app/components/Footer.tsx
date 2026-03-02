@@ -27,7 +27,7 @@ export default function Footer() {
         <div className="relative flex items-center max-[640px]:justify-center">
      <Image
   src={WhitePml}
-  alt="Logos"
+  alt="LogoS"
   className="w-[180px] h-auto object-contain"
 />
 
