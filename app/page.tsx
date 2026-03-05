@@ -1,7 +1,7 @@
 
 import type { Metadata } from "next";
 import HomeClient from "./HomeClient";
- const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+//  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 export const metadata: Metadata = {
   /* =========================
      BASIC SEO
