@@ -5,9 +5,7 @@
 ========================================================= */
 :root {
   --font-manrope: "Manrope", sans-serif;
-}
 
-:root {
   /* Base colors */
   --background: #ffffff;
   --foreground: #171717;
@@ -57,6 +55,33 @@
   --shadow-purple: rgba(129, 61, 255, 0.25);
   --shadow-green: rgba(223, 250, 51, 0.25);
   --gradient-brand: linear-gradient(90deg, #813DFF, #DFFA33);
+
+  /* =====================================================
+     FLUID TYPOGRAPHY SCALE
+     clamp(min, preferred, max) — scales smoothly between
+     375px and 1440px viewport without any breakpoints.
+  ===================================================== */
+  --text-xs:   clamp(0.75rem,  0.7rem + 0.2vw,  0.875rem);   /* 12–14px */
+  --text-sm:   clamp(0.875rem, 0.8rem + 0.3vw,  1rem);        /* 14–16px */
+  --text-base: clamp(1rem,     0.95rem + 0.3vw, 1.125rem);    /* 16–18px */
+  --text-lg:   clamp(1.125rem, 1rem + 0.5vw,   1.375rem);    /* 18–22px */
+  --text-xl:   clamp(1.25rem,  1.1rem + 0.7vw,  1.75rem);     /* 20–28px */
+  --text-2xl:  clamp(1.5rem,   1.2rem + 1.2vw,  2.25rem);     /* 24–36px */
+  --text-3xl:  clamp(1.875rem, 1.4rem + 1.8vw,  3rem);        /* 30–48px */
+  --text-4xl:  clamp(2.25rem,  1.6rem + 2.5vw,  4rem);        /* 36–64px */
+  --text-5xl:  clamp(2.5rem,   1.8rem + 3vw,    5rem);        /* 40–80px */
+  --text-hero: clamp(2.75rem,  2rem + 3.5vw,    6rem);        /* 44–96px */
+
+  /* =====================================================
+     SECTION SPACING SCALE
+     Replaces the scattered negative margin hacks.
+     Use these as: padding-top: var(--section-gap-md)
+  ===================================================== */
+  --section-gap-xs:  clamp(2rem,   3vw,  3rem);    /* 32–48px */
+  --section-gap-sm:  clamp(3rem,   5vw,  5rem);    /* 48–80px */
+  --section-gap-md:  clamp(4rem,   7vw,  7rem);    /* 64–112px */
+  --section-gap-lg:  clamp(5rem,   9vw,  10rem);   /* 80–160px */
+  --section-gap-xl:  clamp(6rem,   12vw, 14rem);   /* 96–224px */
 }
 
 /* Dark mode */
@@ -82,7 +107,6 @@ body {
   width: 100%;
   min-height: 100%;
   overflow-x: hidden;
-  /* overscroll-behavior-y: none; */
 
   background: var(--bg-white);
   color: var(--text-dark);
@@ -139,12 +163,8 @@ main {
 }
 
 /* =========================================================
-   TYPOGRAPHY TWEAKS
+   TYPOGRAPHY
 ========================================================= */
-html, body {
-  overflow-x: hidden;
-  width: 100%;
-}
 
 h1, h2, h3, h4, h5, h6 {
   letter-spacing: -1px;
@@ -162,7 +182,7 @@ strong,
    ANIMATIONS
 ========================================================= */
 
-/* Reveal */
+/* --- Scroll reveal --- */
 .reveal {
   opacity: 0;
   transform: translateY(40px);
@@ -174,19 +194,19 @@ strong,
   transform: translateY(0);
 }
 
-/* Arrow */
+/* --- Arrow pulse --- */
 .animated-arrow {
   display: inline-block;
   animation: arrowSlide 1.8s infinite ease-in-out;
 }
 
 @keyframes arrowSlide {
-  0%   { transform: translateX(0); opacity: 0.8; }
-  50%  { transform: translateX(6px); opacity: 1; }
-  100% { transform: translateX(0); opacity: 0.8; }
+  0%   { transform: translateX(0);   opacity: 0.8; }
+  50%  { transform: translateX(6px); opacity: 1;   }
+  100% { transform: translateX(0);   opacity: 0.8; }
 }
 
-/* Experience drop */
+/* --- Experience drop-in + wobble --- */
 .exp-drop {
   opacity: 0;
   transform: translateY(-120px);
@@ -203,28 +223,68 @@ strong,
 }
 
 @keyframes wobbleLoop {
-  0%   { transform: translateY(0) rotate(0deg); }
-  25%  { transform: translateY(-4px) rotate(1.5deg); }
-  50%  { transform: translateY(0) rotate(-1.5deg); }
-  75%  { transform: translateY(3px) rotate(1deg); }
-  100% { transform: translateY(0) rotate(0deg); }
+  0%   { transform: translateY(0)    rotate(0deg);    }
+  25%  { transform: translateY(-4px) rotate(1.5deg);  }
+  50%  { transform: translateY(0)    rotate(-1.5deg); }
+  75%  { transform: translateY(3px)  rotate(1deg);    }
+  100% { transform: translateY(0)    rotate(0deg);    }
 }
 
 /* =========================================================
-   FORMS (TAILWIND APPLY)
+   FOOTER SOCIAL ICONS
+   Moved here from Footer.tsx <style> tag so the Footer
+   can be a pure RSC (no "use client" needed).
 ========================================================= */
+
+.footer-social {
+  width: 52px;
+  height: 52px;
+  border-radius: 9999px;
+  background: white;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+  text-decoration: none;
+}
+
+.footer-social:hover {
+  animation: socialBounce 0.5s ease;
+  color: white;
+}
+
+.footer-social:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 2px;
+}
+
+.footer-social.fb:hover  { background: #1877f2; }
+.footer-social.x:hover   { background: #000000; }
+.footer-social.in:hover  { background: #0a66c2; }
+
+.footer-social.insta:hover {
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+}
+
+@keyframes socialBounce {
+  0%   { transform: translateY(0);   }
+  30%  { transform: translateY(-6px);}
+  60%  { transform: translateY(2px); }
+  100% { transform: translateY(0);   }
+}
 
 /* =========================================================
-   KEKA EMBED — MATCH SITE FORM STYLE
+   KEKA CAREERS EMBED
 ========================================================= */
 
-/* #khembedjobs {
-  font-family: "Manrope", system-ui, sans-serif !important;
-  color: var(--text-dark);
-  background: var(--bg-white);
-} */
-
-/* Force all Keka elements to inherit your font */
 #khembedjobs,
 #khembedjobs * {
   font-family: inherit !important;
@@ -232,7 +292,6 @@ strong,
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Inputs */
 #khembedjobs input,
 #khembedjobs select,
 #khembedjobs textarea {
@@ -245,15 +304,13 @@ strong,
   background: #fff !important;
 }
 
-/* Focus state */
 #khembedjobs input:focus,
 #khembedjobs select:focus,
 #khembedjobs textarea:focus {
   border-color: #000 !important;
-  box-shadow: 0 0 0 2px rgba(0,0,0,0.15) !important;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.15) !important;
 }
 
-/* Buttons */
 #khembedjobs button {
   padding: 14px 28px !important;
   border-radius: 12px !important;
@@ -265,35 +322,28 @@ strong,
 
 #khembedjobs button:hover {
   transform: translateY(-1px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
-/* Labels */
 #khembedjobs label {
   font-weight: 400 !important;
   margin-bottom: 6px !important;
   display: block;
 }
-/* Hide Keka footer */
+
+/* Hide Keka branding footer */
 #kh-main-container > div.kh-d-flex.kh-flex-column.kh-footer.kh-container-fluid.kh-justify-content-center.kh-position-absolute {
-    display: none !important;
+  display: none !important;
 }
 
-
-.careers-manrope,
-.careers-manrope * {
-  font-family: "Manrope", system-ui, sans-serif !important;
-}
-
-/* ===== HARD LOCK SITE FONT ===== */
+/* =========================================================
+   FONT LOCK
+   Single declaration — avoids cascading !important fights.
+========================================================= */
 
 html,
 body,
-#__next {
-  font-family: "Manrope", system-ui, sans-serif !important;
-}
-
-/* Force whole site except Keka container */
+#__next,
 body *:not(#khembedjobs):not(#khembedjobs *) {
   font-family: "Manrope", system-ui, sans-serif !important;
 }
