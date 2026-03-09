@@ -1,5 +1,130 @@
 
 
+// // // import type { Metadata } from "next";
+// // // import "./globals.css";
+// // // import Header from "./components/Header";
+// // // import Footer from "./components/Footer";
+// // // import CookieBanner from "./components/cookiebanner/cookieBanner";
+// // // import GoogleTagManagerContainer from "./components/cookiebanner/GoogleTagManager";
+// // // import { Manrope } from "next/font/google";
+// // // import organizationSchema from "@/libraries/schema/organizationSchema";
+
+// // // const manrope = Manrope({
+// // //   subsets: ["latin"],
+// // //   display: "swap",
+// // // });
+
+// // // export const metadata: Metadata = {
+// // //   title: "AdRefresh - Digital Marketing and AdOps",
+// // //   description: "AI-Enhanced Digital Marketing and Advertising Operations",
+// // // };
+
+// // // export default function RootLayout({
+// // //   children,
+// // // }: {
+// // //   children: React.ReactNode;
+// // // }) {
+// // //   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
+// // //   return (
+// // //     <html
+// // //       lang="en"
+// // //       className={manrope.className}
+// // //       style={{
+// // //         ["--base-path" as any]: basePath,
+// // //       }}
+// // //     >
+// // //       <head>
+// // //         <GoogleTagManagerContainer gtmId="GTM-MMMX5TGB" />
+
+// // //         <script
+// // //           type="application/ld+json"
+// // //           dangerouslySetInnerHTML={{
+// // //             __html: JSON.stringify(organizationSchema),
+// // //           }}
+// // //         />
+// // //       </head>
+
+// // //       <body className="layout-root">
+// // //         <CookieBanner />
+// // //         <Header />
+// // //         {children}
+// // //         <Footer />
+// // //       </body>
+// // //     </html>
+// // //   );
+// // // }
+// // import type { Metadata } from "next";
+// // import "./globals.css";
+// // import Header from "./components/Header";
+// // import Footer from "./components/Footer";
+// // import CookieBanner from "./components/cookiebanner/cookieBanner";
+// // import GoogleTagManagerContainer from "./components/cookiebanner/GoogleTagManager";
+// // import { Manrope } from "next/font/google";
+// // import organizationSchema from "@/libraries/schema/organizationSchema";
+
+// // // ✅ FIXED: Single font source — removed duplicate @font-face from globals.css
+// // // next/font handles preloading, self-hosting, and display:swap automatically
+// // const manrope = Manrope({
+// //   subsets: ["latin"],
+// //   display: "swap",
+// //   // ✅ ADDED: Only load weights you actually use (check your CSS — 400, 600, 700)
+// //   weight: ["600", "600", "800"],
+// //   // ✅ ADDED: Preload the font to fix LCP
+// //   preload: true,
+// // });
+
+// // export const metadata: Metadata = {
+// //   title: "AdRefresh - Digital Marketing and AdOps",
+// //   description: "AI-Enhanced Digital Marketing and Advertising Operations",
+// //   // ✅ ADDED: Helps LCP by hinting browser about critical resources
+// //   other: {
+// //     "theme-color": "#000000",
+// //   },
+// // };
+
+// // export default function RootLayout({
+// //   children,
+// // }: {
+// //   children: React.ReactNode;
+// // }) {
+// //   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
+// //   return (
+// //     <html
+// //       lang="en"
+// //       className={manrope.className}
+// //       style={{
+// //         ["--base-path" as any]: basePath,
+// //       }}
+// //     >
+// //       <head>
+// //         {/* ✅ FIXED: GTM moved to use next/script with afterInteractive strategy */}
+// //         {/* GoogleTagManagerContainer should internally use next/script strategy="afterInteractive" */}
+// //         {/* If it doesn't, replace with the Script tag below */}
+// //         <GoogleTagManagerContainer gtmId="GTM-MMMX5TGB" />
+
+// //         {/* ✅ ADDED: Preconnect to speed up any external requests */}
+// //         <link rel="preconnect" href="https://fonts.googleapis.com" />
+// //         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+
+// //         <script
+// //           type="application/ld+json"
+// //           dangerouslySetInnerHTML={{
+// //             __html: JSON.stringify(organizationSchema),
+// //           }}
+// //         />
+// //       </head>
+
+// //       <body className="layout-root">
+// //         <CookieBanner />
+// //         <Header />
+// //         {children}
+// //         <Footer />
+// //       </body>
+// //     </html>
+// //   );
+// // }
 // import type { Metadata } from "next";
 // import "./globals.css";
 // import Header from "./components/Header";
@@ -12,11 +137,16 @@
 // const manrope = Manrope({
 //   subsets: ["latin"],
 //   display: "swap",
+//   weight: ["400", "600", "800"],
+//   preload: true,
 // });
 
 // export const metadata: Metadata = {
 //   title: "AdRefresh - Digital Marketing and AdOps",
 //   description: "AI-Enhanced Digital Marketing and Advertising Operations",
+//   other: {
+//     "theme-color": "#000000",
+//   },
 // };
 
 // export default function RootLayout({
@@ -24,18 +154,20 @@
 // }: {
 //   children: React.ReactNode;
 // }) {
-//   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+//   // ✅ FIX: Read basePath at build time only — never causes SSR/client mismatch
+//   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 //   return (
+//     // ✅ FIX: suppressHydrationWarning on <html> prevents mismatch crash
+//     // caused by browser extensions or GTM injecting attributes
 //     <html
 //       lang="en"
 //       className={manrope.className}
-//       style={{
-//         ["--base-path" as any]: basePath,
-//       }}
+//       suppressHydrationWarning
 //     >
 //       <head>
-//         <GoogleTagManagerContainer gtmId="GTM-MMMX5TGB" />
+//         <link rel="preconnect" href="https://fonts.googleapis.com" />
+//         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
 
 //         <script
 //           type="application/ld+json"
@@ -45,7 +177,10 @@
 //         />
 //       </head>
 
-//       <body className="layout-root">
+//       {/* ✅ FIX: suppressHydrationWarning on <body> too — GTM/extensions modify it */}
+//       <body className="layout-root" suppressHydrationWarning>
+//         {/* ✅ FIX: GTM moved outside <head> — renders after body, avoids head hydration mismatch */}
+//         <GoogleTagManagerContainer gtmId="GTM-MMMX5TGB" />
 //         <CookieBanner />
 //         <Header />
 //         {children}
@@ -63,21 +198,16 @@ import GoogleTagManagerContainer from "./components/cookiebanner/GoogleTagManage
 import { Manrope } from "next/font/google";
 import organizationSchema from "@/libraries/schema/organizationSchema";
 
-// ✅ FIXED: Single font source — removed duplicate @font-face from globals.css
-// next/font handles preloading, self-hosting, and display:swap automatically
 const manrope = Manrope({
   subsets: ["latin"],
   display: "swap",
-  // ✅ ADDED: Only load weights you actually use (check your CSS — 400, 600, 700)
-  weight: ["600", "600", "800"],
-  // ✅ ADDED: Preload the font to fix LCP
+  weight: ["800", "600", "800"],
   preload: true,
 });
 
 export const metadata: Metadata = {
   title: "AdRefresh - Digital Marketing and AdOps",
   description: "AI-Enhanced Digital Marketing and Advertising Operations",
-  // ✅ ADDED: Helps LCP by hinting browser about critical resources
   other: {
     "theme-color": "#000000",
   },
@@ -88,35 +218,21 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
-
   return (
-    <html
-      lang="en"
-      className={manrope.className}
-      style={{
-        ["--base-path" as any]: basePath,
-      }}
-    >
+    // ✅ suppressHydrationWarning on html+body only — covers GTM/extension attribute injection
+    // Does NOT suppress errors inside your components
+    <html lang="en" className={manrope.className} suppressHydrationWarning>
       <head>
-        {/* ✅ FIXED: GTM moved to use next/script with afterInteractive strategy */}
-        {/* GoogleTagManagerContainer should internally use next/script strategy="afterInteractive" */}
-        {/* If it doesn't, replace with the Script tag below */}
-        <GoogleTagManagerContainer gtmId="GTM-MMMX5TGB" />
-
-        {/* ✅ ADDED: Preconnect to speed up any external requests */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(organizationSchema),
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
       </head>
-
-      <body className="layout-root">
+      <body className="layout-root" suppressHydrationWarning>
+        {/* GTM in body avoids head hydration conflicts */}
+        <GoogleTagManagerContainer gtmId="GTM-MMMX5TGB" />
         <CookieBanner />
         <Header />
         {children}
