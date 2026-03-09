@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { FaAngleDoubleDown } from "react-icons/fa";
 
 export default function Hero() {
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+  // const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
   const [videoLoaded, setVideoLoaded] = useState(false);
 
   const scrollToNext = () => {
@@ -53,7 +53,7 @@ export default function Hero() {
               animate-pulse
             "
             style={{
-              backgroundImage: `url(${basePath}/images/client-images/hero-img.png)`,
+              backgroundImage: `url(/images/client-images/hero-img.png)`,
             }}
           />
         )}
@@ -65,12 +65,12 @@ export default function Hero() {
           loop
           playsInline
           preload="none"
-          poster={`${basePath}/images/client-images/hero-img.png`}
+          poster={`/images/client-images/hero-img.png`}
           onCanPlayThrough={() => setVideoLoaded(true)}
           className="absolute inset-0 w-full h-full object-cover"
         >
           <source
-            src={`${basePath}/images/about-page-videos-images/office-compressed.mp4`}
+            src={`/images/about-page-videos-images/office-compressed.mp4`}
             type="video/mp4"
           />
         </video>
