@@ -5,86 +5,56 @@
 ========================================================= */
 :root {
   --font-manrope: "Manrope", sans-serif;
-
-  /* Base colors */
   --background: #ffffff;
   --foreground: #171717;
-
-  /* Brand */
   --brand-purple: #813DFF;
   --brand-green: #DFFA33;
   --brand-black: #1C1C1C;
   --brand-white: #FFFFFF;
-
-  /* Text + Background */
   --text-dark: var(--brand-black);
   --bg-white: var(--brand-white);
-
-  /* Purple shades */
   --purple-10: #7D3BF6;
   --purple-20: #6C33D3;
   --purple-30: #5A2BB3;
   --purple-40: #492391;
   --purple-50: #381B6F;
   --purple-2: #d4bcff;
-
-  /* Green shades */
   --green-10: #D8F130;
   --green-20: #B9CF29;
   --green-30: #9BAD23;
   --green-40: #7D8B1C;
   --green-50: #5E6915;
-
-  /* Light tints */
   --purple-tint-10: #EDE5FF;
   --purple-tint-20: #D2BFFF;
   --purple-tint-30: #B79AFF;
   --purple-tint-40: #9C75FF;
-
   --green-tint-10: #F9FED6;
   --green-tint-20: #F2FDAD;
   --green-tint-30: #ECFC85;
   --green-tint-40: #E5FB5C;
-
-  /* Neutrals */
   --gray-10: #DADADA;
   --gray-20: #949494;
   --gray-30: #565656;
-
-  /* Effects */
   --shadow-purple: rgba(129, 61, 255, 0.25);
   --shadow-green: rgba(223, 250, 51, 0.25);
   --gradient-brand: linear-gradient(90deg, #813DFF, #DFFA33);
-
-  /* =====================================================
-     FLUID TYPOGRAPHY SCALE
-     clamp(min, preferred, max) — scales smoothly between
-     375px and 1440px viewport without any breakpoints.
-  ===================================================== */
-  --text-xs:   clamp(0.75rem,  0.7rem + 0.2vw,  0.875rem);   /* 12–14px */
-  --text-sm:   clamp(0.875rem, 0.8rem + 0.3vw,  1rem);        /* 14–16px */
-  --text-base: clamp(1rem,     0.95rem + 0.3vw, 1.125rem);    /* 16–18px */
-  --text-lg:   clamp(1.125rem, 1rem + 0.5vw,   1.375rem);    /* 18–22px */
-  --text-xl:   clamp(1.25rem,  1.1rem + 0.7vw,  1.75rem);     /* 20–28px */
-  --text-2xl:  clamp(1.5rem,   1.2rem + 1.2vw,  2.25rem);     /* 24–36px */
-  --text-3xl:  clamp(1.875rem, 1.4rem + 1.8vw,  3rem);        /* 30–48px */
-  --text-4xl:  clamp(2.25rem,  1.6rem + 2.5vw,  4rem);        /* 36–64px */
-  --text-5xl:  clamp(2.5rem,   1.8rem + 3vw,    5rem);        /* 40–80px */
-  --text-hero: clamp(2.75rem,  2rem + 3.5vw,    6rem);        /* 44–96px */
-
-  /* =====================================================
-     SECTION SPACING SCALE
-     Replaces the scattered negative margin hacks.
-     Use these as: padding-top: var(--section-gap-md)
-  ===================================================== */
-  --section-gap-xs:  clamp(2rem,   3vw,  3rem);    /* 32–48px */
-  --section-gap-sm:  clamp(3rem,   5vw,  5rem);    /* 48–80px */
-  --section-gap-md:  clamp(4rem,   7vw,  7rem);    /* 64–112px */
-  --section-gap-lg:  clamp(5rem,   9vw,  10rem);   /* 80–160px */
-  --section-gap-xl:  clamp(6rem,   12vw, 14rem);   /* 96–224px */
+  --text-xs:   clamp(0.75rem,  0.7rem + 0.2vw,  0.875rem);
+  --text-sm:   clamp(0.875rem, 0.8rem + 0.3vw,  1rem);
+  --text-base: clamp(1rem,     0.95rem + 0.3vw, 1.125rem);
+  --text-lg:   clamp(1.125rem, 1rem + 0.5vw,   1.375rem);
+  --text-xl:   clamp(1.25rem,  1.1rem + 0.7vw,  1.75rem);
+  --text-2xl:  clamp(1.5rem,   1.2rem + 1.2vw,  2.25rem);
+  --text-3xl:  clamp(1.875rem, 1.4rem + 1.8vw,  3rem);
+  --text-4xl:  clamp(2.25rem,  1.6rem + 2.5vw,  4rem);
+  --text-5xl:  clamp(2.5rem,   1.8rem + 3vw,    5rem);
+  --text-hero: clamp(2.75rem,  2rem + 3.5vw,    6rem);
+  --section-gap-xs:  clamp(2rem,   3vw,  3rem);
+  --section-gap-sm:  clamp(3rem,   5vw,  5rem);
+  --section-gap-md:  clamp(4rem,   7vw,  7rem);
+  --section-gap-lg:  clamp(5rem,   9vw,  10rem);
+  --section-gap-xl:  clamp(6rem,   12vw, 14rem);
 }
 
-/* Dark mode */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -95,22 +65,16 @@
 /* =========================================================
    GLOBAL RESET & BASE
 ========================================================= */
+* { box-sizing: border-box; }
 
-* {
-  box-sizing: border-box;
-}
-
-html,
-body {
+html, body {
   margin: 0;
   padding: 0;
   width: 100%;
   min-height: 100%;
   overflow-x: hidden;
-
   background: var(--bg-white);
   color: var(--text-dark);
-
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -121,13 +85,9 @@ body {
   z-index: 0;
 }
 
-main {
-  width: 100%;
-  display: block;
-}
+main { width: 100%; display: block; }
 
-.site-root,
-.layout-root {
+.site-root, .layout-root {
   width: 100%;
   min-height: 100svh;
   display: block;
@@ -135,66 +95,34 @@ main {
 }
 
 /* =========================================================
-   MANROPE — OPTIMIZED WEB FONTS (WOFF2)
+   MANROPE FONTS
+   ✅ REMOVED @font-face blocks — next/font/google in layout.tsx
+   already self-hosts, preloads, and injects these with font-display:swap.
+   Having both caused: double download + CLS from two font swap events.
 ========================================================= */
-
-@font-face {
-  font-family: "Manrope";
-  src: url("/fonts/Manrope-Files/manrope-regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Manrope";
-  src: url("/fonts/Manrope-Files/manrope-semibold.woff2") format("woff2");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Manrope";
-  src: url("/fonts/Manrope-Files/manrope-bold.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
 
 /* =========================================================
    TYPOGRAPHY
 ========================================================= */
+h1, h2, h3, h4, h5, h6 { letter-spacing: -1px; }
 
-h1, h2, h3, h4, h5, h6 {
-  letter-spacing: -1px;
-}
-
-b,
-strong,
-.bold,
+b, strong, .bold,
 [style*="font-weight:700"],
-[style*="font-weight:900"] {
-  letter-spacing: 1px;
-}
+[style*="font-weight:900"] { letter-spacing: 1px; }
 
 /* =========================================================
    ANIMATIONS
 ========================================================= */
-
-/* --- Scroll reveal --- */
 .reveal {
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
-
 .reveal.active {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* --- Arrow pulse --- */
 .animated-arrow {
   display: inline-block;
   animation: arrowSlide 1.8s infinite ease-in-out;
@@ -206,21 +134,13 @@ strong,
   100% { transform: translateX(0);   opacity: 0.8; }
 }
 
-/* --- Experience drop-in + wobble --- */
 .exp-drop {
   opacity: 0;
   transform: translateY(-120px);
   transition: transform 0.7s ease-out, opacity 0.7s ease-out;
 }
-
-.exp-drop.drop-in {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.exp-drop.wobble {
-  animation: wobbleLoop 3s ease-in-out infinite;
-}
+.exp-drop.drop-in { opacity: 1; transform: translateY(0); }
+.exp-drop.wobble  { animation: wobbleLoop 3s ease-in-out infinite; }
 
 @keyframes wobbleLoop {
   0%   { transform: translateY(0)    rotate(0deg);    }
@@ -232,10 +152,7 @@ strong,
 
 /* =========================================================
    FOOTER SOCIAL ICONS
-   Moved here from Footer.tsx <style> tag so the Footer
-   can be a pure RSC (no "use client" needed).
 ========================================================= */
-
 .footer-social {
   width: 52px;
   height: 52px;
@@ -248,50 +165,30 @@ strong,
   transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
   text-decoration: none;
 }
-
-.footer-social:hover {
-  animation: socialBounce 0.5s ease;
-  color: white;
-}
-
-.footer-social:focus-visible {
-  outline: 2px solid white;
-  outline-offset: 2px;
-}
-
-.footer-social.fb:hover  { background: #1877f2; }
-.footer-social.x:hover   { background: #000000; }
-.footer-social.in:hover  { background: #0a66c2; }
-
+.footer-social:hover { animation: socialBounce 0.5s ease; color: white; }
+.footer-social:focus-visible { outline: 2px solid white; outline-offset: 2px; }
+.footer-social.fb:hover    { background: #1877f2; }
+.footer-social.x:hover     { background: #000000; }
+.footer-social.in:hover    { background: #0a66c2; }
 .footer-social.insta:hover {
-  background: radial-gradient(
-    circle at 30% 107%,
-    #fdf497 0%,
-    #fdf497 5%,
-    #fd5949 45%,
-    #d6249f 60%,
-    #285aeb 90%
-  );
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
 }
 
 @keyframes socialBounce {
-  0%   { transform: translateY(0);   }
-  30%  { transform: translateY(-6px);}
-  60%  { transform: translateY(2px); }
-  100% { transform: translateY(0);   }
+  0%   { transform: translateY(0);    }
+  30%  { transform: translateY(-6px); }
+  60%  { transform: translateY(2px);  }
+  100% { transform: translateY(0);    }
 }
 
 /* =========================================================
    KEKA CAREERS EMBED
 ========================================================= */
-
-#khembedjobs,
-#khembedjobs * {
+#khembedjobs, #khembedjobs * {
   font-family: inherit !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 #khembedjobs input,
 #khembedjobs select,
 #khembedjobs textarea {
@@ -303,14 +200,12 @@ strong,
   outline: none !important;
   background: #fff !important;
 }
-
 #khembedjobs input:focus,
 #khembedjobs select:focus,
 #khembedjobs textarea:focus {
   border-color: #000 !important;
-  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.15) !important;
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.15) !important;
 }
-
 #khembedjobs button {
   padding: 14px 28px !important;
   border-radius: 12px !important;
@@ -319,31 +214,23 @@ strong,
   color: white !important;
   transition: all 0.3s ease;
 }
-
 #khembedjobs button:hover {
   transform: translateY(-1px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
-
 #khembedjobs label {
   font-weight: 400 !important;
   margin-bottom: 6px !important;
   display: block;
 }
-
-/* Hide Keka branding footer */
 #kh-main-container > div.kh-d-flex.kh-flex-column.kh-footer.kh-container-fluid.kh-justify-content-center.kh-position-absolute {
   display: none !important;
 }
 
 /* =========================================================
    FONT LOCK
-   Single declaration — avoids cascading !important fights.
 ========================================================= */
-
-html,
-body,
-#__next,
+html, body, #__next,
 body *:not(#khembedjobs):not(#khembedjobs *) {
   font-family: "Manrope", system-ui, sans-serif !important;
 }
