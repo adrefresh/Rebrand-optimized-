@@ -136,7 +136,7 @@ export default function Features() {
             BUILT FOR MODERN
           </h2>
           <span className="block text-[var(--purple-30)] font-[900] mt-2 text-[2rem] sm:text-[2.6rem] md:text-[3.2rem] lg:text-[3.6rem]">
-            Marketing Excellence.
+            Marketing Excellence
           </span>
         </div>
 
