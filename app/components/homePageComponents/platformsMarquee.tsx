@@ -24,7 +24,7 @@ const platforms = [
   { name: "logo13", img: `${BASE_PATH}/images/platform-experience-images/logo13.png` },
   { name: "logo14", img: `${BASE_PATH}/images/platform-experience-images/logo14.png` },
 
-  { name: "logo15", img: `${BASE_PATH}/images/platform-experience-images/logo15.png` },
+  { name: "logo15.", img: `${BASE_PATH}/images/platform-experience-images/logo15.png` },
   { name: "logo16", img: `${BASE_PATH}/images/platform-experience-images/logo16.png` },
   { name: "logo17", img: `${BASE_PATH}/images/platform-experience-images/logo17.png` },
   { name: "logo18", img: `${BASE_PATH}/images/platform-experience-images/logo18.png` },
