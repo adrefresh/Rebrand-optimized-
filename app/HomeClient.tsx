@@ -198,7 +198,10 @@ export default function HomeClient() {
       <CaseHeader />
       <Services />
       {/* ✅ Removed mb-[-160px] — fix padding inside ListenPerform instead */}
-      <ListenPerform />
+      <div className="mb-[-160px]">
+              <ListenPerform />
+
+      </div>
       <section id="prev-section" className="h-[1px] w-full" />
     </main>
   );
