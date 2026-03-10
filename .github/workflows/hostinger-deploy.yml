@@ -1,85 +1,3 @@
-# name: Hostinger Build and Deploy
-
-# on:
-#   push:
-#     branches: [main, dev]
-
-# jobs:
-#   build:
-#     name: Build Next.js
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: Checkout
-#         uses: actions/checkout@v4
-
-#       - name: Setup Node
-#         uses: actions/setup-node@v4
-#         with:
-#           node-version: '20'
-#           cache: 'npm'
-
-#       - name: Install dependencies
-#         run: npm ci
-
-#       - name: Build Next.js
-#         run: npm run build # Ensure next.config.js has 'output: export'
-
-#       - name: Upload Build Artifact
-#         uses: actions/upload-artifact@v4
-#         with:
-#           name: next-build
-#           path: out/
-
-#   deploy-test:
-#     name: Deploy to Hostinger Dev (public_html/dev)
-#     needs: build
-#     if: github.ref == 'refs/heads/dev'
-#     runs-on: ubuntu-latest
-#     environment: develop
-#     steps:
-#       - name: Download Build
-#         uses: actions/download-artifact@v4
-#         with:
-#           name: next-build
-#           path: ./out
-
-#       - name: Sync to Hostinger via SSH
-#         uses: easingthemes/ssh-deploy@main
-#         env:
-#           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-#           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
-#           REMOTE_USER: ${{ secrets.REMOTE_USER }}
-#           REMOTE_PORT: "65002"
-#           SOURCE: "out/"
-#           # Replace 'useraccount' with your actual Hostinger SSH username
-#           TARGET: "/home/u179427984/domains/adrefresh.com/public_html/dev"
-#           ARGS: "-rlgoDzvc -i --delete"
-
-#   deploy-prod:
-#     name: Deploy to Hostinger Prod (public_html)
-#     needs: build
-#     if: github.ref == 'refs/heads/main'
-#     runs-on: ubuntu-latest
-#     environment: prod
-#     steps:
-#       - name: Download Build
-#         uses: actions/download-artifact@v4
-#         with:
-#           name: next-build
-#           path: ./out
-
-#       - name: Sync to Hostinger via SSH
-#         uses: easingthemes/ssh-deploy@main
-#         env:
-#           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-#           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
-#           REMOTE_USER: ${{ secrets.REMOTE_USER }}
-#           REMOTE_PORT: "65002"
-#           SOURCE: "out/"
-#           # Replace 'useraccount' with your actual Hostinger SSH username
-#           TARGET: "/home/u179427984/domains/adrefresh.com/public_html"
-#           # The --exclude='dev/' is CRITICAL here so Prod doesn't delete the Dev folder
-#           ARGS: "-rlgoDzvc -i --delete --exclude='dev/'"
 name: Hostinger Build and Deploy
 
 on:
@@ -105,9 +23,6 @@ jobs:
 
       - name: Build Next.js
         run: npm run build # Ensure next.config.js has 'output: export'
-
-      - name: Generate llms.txt
-        run: npx tsx scripts/generate-llms.ts
 
       - name: Upload Build Artifact
         uses: actions/upload-artifact@v4
@@ -136,6 +51,7 @@ jobs:
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           REMOTE_PORT: "65002"
           SOURCE: "out/"
+          # Replace 'useraccount' with your actual Hostinger SSH username
           TARGET: "/home/u179427984/domains/adrefresh.com/public_html/dev"
           ARGS: "-rlgoDzvc -i --delete"
 
@@ -160,5 +76,7 @@ jobs:
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           REMOTE_PORT: "65002"
           SOURCE: "out/"
+          # Replace 'useraccount' with your actual Hostinger SSH username
           TARGET: "/home/u179427984/domains/adrefresh.com/public_html"
+          # The --exclude='dev/' is CRITICAL here so Prod doesn't delete the Dev folder
           ARGS: "-rlgoDzvc -i --delete --exclude='dev/'"
