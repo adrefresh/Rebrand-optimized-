@@ -73,7 +73,7 @@ const cases = [
         justify-center
         gap-6
         sm:gap-10
-        lg:gap-[60px]
+        lg:gap-15
       "
     >
       {/* LEFT ARROW */}
@@ -83,7 +83,7 @@ const cases = [
   }
   aria-label="Previous case study"
   className="
-    font-[900]
+    font-black
     text-black
     opacity-80
     transition-opacity
@@ -101,7 +101,7 @@ const cases = [
 </button>
 
       {/* CONTENT */}
-      <div className="max-w-[620px] text-center px-2 sm:px-0">
+      <div className="max-w-155 text-center px-2 sm:px-0">
         <div
           className={`
             transition-all
@@ -110,14 +110,14 @@ const cases = [
             ${
               animate
                 ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-[8px]"
+                : "opacity-0 translate-y-2"
             }
           `}
         >
           <h2
             className="
               mb-3
-              font-[900]
+              font-black
               text-black
               text-[1.1rem]
               sm:text-[1.25rem]
@@ -153,7 +153,7 @@ const cases = [
     bg-[#e6ff3b]
     px-4
     py-2
-    font-[600]
+    font-semibold
     text-black
     text-[0.75rem]
     sm:text-[0.8rem]
@@ -184,8 +184,8 @@ const cases = [
       onClick={() => setIndex(i)}
       className="
         flex items-center justify-center
-        w-[32px] h-[32px]
-        sm:w-[36px] sm:h-[36px]
+        w-8 h-8
+        sm:w-9 sm:h-9
         focus:outline-none
         focus:ring-2
         focus:ring-black
@@ -193,8 +193,8 @@ const cases = [
     >
       <span
         className={`
-          h-[7px] w-[7px]
-          sm:h-[8px] sm:w-[8px]
+          h-1.75 w-1.75
+          sm:h-2 sm:w-2
           rounded-full
           transition-transform transition-opacity duration-300 ease-in-out
           ${
@@ -217,7 +217,7 @@ const cases = [
     setIndex((index + 1) % cases.length)
   }
   className="
-    font-[900]
+    font-black
     text-black
     opacity-80
     transition-opacity
