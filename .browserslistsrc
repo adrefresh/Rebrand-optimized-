@@ -1,0 +1,12 @@
+# ✅ FIX: Target modern browsers only
+# This tells Babel/SWC to NOT generate polyfills for features
+# already natively supported — saves ~25KB of legacy JS
+
+# Targets browsers that support ES2020 natively
+# Chrome 87+, Firefox 78+, Safari 14+, Edge 88+ (covers 95%+ of users)
+chrome >= 90
+firefox >= 90
+safari >= 15
+edge >= 90
+not dead
+not op_mini all

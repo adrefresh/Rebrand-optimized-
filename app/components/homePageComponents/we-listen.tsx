@@ -298,6 +298,12 @@ export default function ListenPerform() {
         max-[768px]:px-5
       "
     >
+      {/* ✅ CANVAS — neural animation background */}
+      <canvas
+        ref={canvasRef}
+        className="absolute inset-0 z-0 pointer-events-none"
+      />
+
       {/* CANVAS */}
 <div className="relative z-10 
 w-[55%] max-[1024px]:w-full 
