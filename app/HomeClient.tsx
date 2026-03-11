@@ -73,6 +73,7 @@
 //     </main>
 //   );
 // }
+
 "use client";
 
 import Hero from "./components/homePageComponents/Hero";

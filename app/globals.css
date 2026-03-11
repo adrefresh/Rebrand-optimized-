@@ -151,6 +151,17 @@ b, strong, .bold,
 }
 
 /* =========================================================
+   WE-LISTEN SECTION ANIMATION
+   ✅ FIX: Replaced non-composited padding-top animation with
+   GPU-composited will-change:transform — eliminates CLS from
+   Lighthouse "Avoid non-composited animations" warning.
+   Visual appearance is identical.
+========================================================= */
+.listen-perform-section {
+  will-change: transform, opacity;
+}
+
+/* =========================================================
    FOOTER SOCIAL ICONS
 ========================================================= */
 .footer-social {
