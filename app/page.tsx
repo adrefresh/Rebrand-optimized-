@@ -81,6 +81,7 @@
 // export default function HomePage() {
 //   return <HomeClient />;
 // }
+
 import type { Metadata } from "next";
 import HomeClient from "./HomeClient";
 

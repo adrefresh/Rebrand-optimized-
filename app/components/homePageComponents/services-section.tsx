@@ -89,7 +89,7 @@ export default function Services() {
         "
       >
         {/* SPLASHES (UNCHANGED) */}
-        <div className="absolute left-[8%] top-[6%] z-[1] h-[140px] w-[140px] rounded-full bg-[radial-gradient(circle,#ecfc85,#c9ff4c)] opacity-60 blur-[50px] sm:h-[220px] sm:w-[220px] sm:blur-[60px] lg:h-[350px] lg:w-[350px] lg:blur-[90px]" />
+        <div className="absolute left-[8%] top-[6%] z-[1] h-35 w-[140px] rounded-full bg-[radial-gradient(circle,#ecfc85,#c9ff4c)] opacity-60 blur-[50px] sm:h-[220px] sm:w-[220px] sm:blur-[60px] lg:h-[350px] lg:w-[350px] lg:blur-[90px]" />
         <div className="absolute bottom-[5%] right-[8%] z-[1] h-[140px] w-[140px] rounded-full bg-[radial-gradient(circle,#5a2bb3,#9c75ff)] opacity-60 blur-[50px] sm:h-[220px] sm:w-[220px] sm:blur-[60px] lg:h-[350px] lg:w-[350px] lg:blur-[90px]" />
 
         {/* COLUMN 1 */}

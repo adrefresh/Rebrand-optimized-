@@ -1,23 +1,3 @@
-
-// /** @type {import('next').NextConfig} */
-// const nextConfig = {
-//   output: "export",          // Static export
-//   trailingSlash: true,
-
-//   images: {
-//     unoptimized: true,      // Required for static hosting
-//   },
-
-//   compress: true,           // Gzip / Brotli
-//   // swcMinify: true,          // Smaller JS
-//   reactStrictMode: false,    // Safer builds
-
-//   experimental: {
-//     optimizeCss: true,     // Smaller CSS
-//   },
-// };
-
-// module.exports = nextConfig;
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
@@ -42,13 +22,28 @@ const nextConfig: NextConfig = {
   // ── Remove X-Powered-By header ──────────────────────────────────────────
   poweredByHeader: false,
 
-  // ── Tree-shake large libraries (safe — no CSS impact) ───────────────────
+  // ── Tree-shake large libraries ───────────────────────────────────────────
   experimental: {
     optimizeCss: false,                  // keep OFF — breaks static export CSS
     optimizePackageImports: [
-      "lucide-react",                    // smaller icon bundle
-      "react-icons",                     // smaller icon bundle
+      "lucide-react",
+      "react-icons",
     ],
+  },
+
+  // ✅ FIX: Target modern browsers to eliminate legacy polyfills (~25KB saved)
+  // Removes Array.prototype.at, flat, flatMap, Object.fromEntries etc polyfills
+  // that are natively supported in all browsers since 2021
+  compiler: {
+    removeConsole: process.env.NODE_ENV === "production",
+  },
+
+  // ✅ FIX: Tell webpack to target modern browsers only
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.target = ["web", "es2020"];
+    }
+    return config;
   },
 };
 

@@ -101,19 +101,19 @@ function Marquee({
     <div className={`w-full overflow-hidden ${top}`}>
       <div className={`flex w-max ${animation}`}>
         {[0, 1].map((copy) => (
-          <div key={copy} className="flex gap-[70px] pr-[70px]">
+          <div key={copy} className="flex gap-17.5 pr-17.5">
             {items.map((p, i) => (
               <div
                 key={`${copy}-${i}`}
                 className="
                   flex items-center justify-center
-                  w-[140px] h-[56px]
-                  md:w-[130px] md:h-[52px]
-                  max-[768px]:w-[110px]
-                  max-[768px]:h-[44px]
+                  w-35 h-14
+                  md:w-32.5 md:h-13
+                  max-[768px]:w-27.5
+                  max-[768px]:h-11
                 "
               >
-                <div className="relative w-[120px] h-[60px]">
+                <div className="relative w-30 h-15">
   <Image
     src={p.img}
     alt={p.name}
