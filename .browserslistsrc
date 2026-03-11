@@ -1,4 +1,4 @@
-# ✅ FIX: Target modern browsers only
+# ✅ FIX: Target modern browsers onlyy
 # This tells Babel/SWC to NOT generate polyfills for features
 # already natively supported — saves ~25KB of legacy JS
 
