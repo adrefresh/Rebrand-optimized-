@@ -72,18 +72,18 @@ export default function Header() {
         onMouseEnter={() => setIsLogoHovered(true)}
         onMouseLeave={() => setIsLogoHovered(false)}
         className={`
-          fixed top-0 left-0 w-screen px-[10px] py-[16px] sm:py-[20px]
-          z-[999999]
+          fixed top-0 left-0 w-screen px-2.5 py-4 sm:py-5
+          z-999999
           transition-[background,transform] duration-300
           ${showNav ? "translate-y-0" : "-translate-y-[110%]"}
           ${isWhiteNav ? "bg-white backdrop-blur-[14px]" : "bg-transparent"}
         `}
       >
-        <div className="mx-auto max-w-[1400px] px-4 sm:px-6 md:px-8 lg:px-[40px] flex items-center justify-between">
+        <div className="mx-auto max-w-350 px-4 sm:px-6 md:px-8 lg:px-10 flex items-center justify-between">
           {/* LOGO */}
           <Link href="/" aria-label="Go to Home" prefetch>
-            <div className="w-[170px] h-[40px] flex items-center">
-              <div className="relative w-[120px] sm:w-[140px] md:w-[160px] lg:w-[170px] h-[40px]">
+            <div className="w-42.5 h-10 flex items-center">
+              <div className="relative w-30 sm:w-35 md:w-40 lg:w-42.5 h-10">
   <Image
     src={isWhiteNav ? colorLogo : WhiteLogo}
     alt="Logo"
@@ -99,20 +99,20 @@ export default function Header() {
           {!menuOpen && (
             <div
               onClick={() => setMenuOpen(true)}
-              className="flex flex-col gap-[6px] cursor-pointer z-[999999]"
+              className="flex flex-col gap-1.5 cursor-pointer z-999999"
             >
               <span
-                className={`w-[26px] sm:w-[28px] h-[3px] transition-all duration-300 ${
+                className={`w-6.5 sm:w-7 h-0.75 transition-all duration-300 ${
                   isWhiteNav ? "bg-black" : "bg-white"
                 }`}
               />
               <span
-                className={`w-[26px] sm:w-[28px] h-[3px] transition-all duration-300 ${
+                className={`w-6.5 sm:w-7 h-0.75transition-all duration-300 ${
                   isWhiteNav ? "bg-black" : "bg-white"
                 }`}
               />
               <span
-                className={`w-[26px] sm:w-[28px] h-[3px] transition-all duration-300 ${
+                className={`w-6.5 sm:w-7 h-0.75 transition-all duration-300 ${
                   isWhiteNav ? "bg-black" : "bg-white"
                 }`}
               />
@@ -125,7 +125,7 @@ export default function Header() {
       <div
         onClick={closeMenu}
         className={`
-          fixed inset-0 z-[999998] transition-all duration-[350ms] 
+          fixed inset-0 z-999998ransition-all duration-350 
           ${
             menuOpen
               ? "backdrop-blur-[5px] bg-black/25 pointer-events-auto"
@@ -139,23 +139,23 @@ export default function Header() {
         className={`
           fixed top-0 right-0 h-screen
           w-[90vw] sm:w-[80vw] md:w-[60vw] lg:w-[40vw] xl:w-[30vw]
-          bg-white/80 backdrop-blur-[12px]
-          z-[1000000]
-          transition-transform duration-[350ms]
+          bg-white/80 backdrop-blur-md
+          z-1000000
+          transition-transform duration-350
           ${menuOpen ? "translate-x-0" : "translate-x-full"}
         `}
       >
         {/* CLOSE */}
         <button
           onClick={closeMenu}
-          className="absolute top-[24px] sm:top-[35px] right-[24px] sm:right-[35px] w-[32px] h-[32px] cursor-pointer"
+          className="absolute top-6 sm:top-8.75 right-6 sm:right-8.75 w-8 h-8 cursor-pointer"
         >
-          <span className="absolute top-[5px] w-[32px] h-[3px] bg-black rotate-45 rounded" />
-          <span className="absolute top-[5px] w-[32px] h-[3px] bg-black -rotate-45 rounded" />
+          <span className="absolute top-1.25 w-8 h-0.75 bg-black rotate-45 rounded" />
+          <span className="absolute top-1.25 w-8 h-0.75 bg-black -rotate-45 rounded" />
         </button>
 
         {/* LINKS */}
-        <nav className="mt-[90px] sm:mt-[110px] pr-4 sm:pr-[20px] flex flex-col gap-3 sm:gap-[15px] text-right">
+        <nav className="mt-22.5 sm:mt-27.5 pr-4 sm:pr-5 flex flex-col gap-3 sm:gap-3.75 text-right">
           <Link
             onClick={() => navigate("/")}
             href="/"

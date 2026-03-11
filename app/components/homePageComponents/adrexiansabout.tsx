@@ -6,19 +6,26 @@ import Image from "next/image";
               import Link from "next/link";
 
 import { useEffect } from "react";
-import conference from "@/public/images/HomePageImages/conference.webp";
+import conference from "@/public/images/HomePageImages/conference-40kb.webp";
 import start from "@/public/images/HomePageImages/5stars.png";
 
 export default function About() {
-  useEffect(() => {
-    const els = document.querySelectorAll(".reveal");
-    const obs = new IntersectionObserver((entries) => {
-      entries.forEach(
-        (e) => e.isIntersecting && e.target.classList.add("active")
-      );
+useEffect(() => {
+  const els = document.querySelectorAll(".reveal");
+
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) {
+        e.target.classList.add("active");
+        obs.unobserve(e.target);
+      }
     });
-    els.forEach((el) => obs.observe(el));
-  }, []);
+  });
+
+  els.forEach((el) => obs.observe(el));
+
+  return () => obs.disconnect();
+}, []);
 
   return (
     <section
@@ -33,21 +40,18 @@ export default function About() {
     >
       {/* BACKGROUND */}
 <div className="absolute inset-0">
-  <Image
-    src={conference}
-    alt="AdRefresh Team"
-    fill
-    loading="lazy"  // 🔥 IMPORTANT
-    sizes="100vw"   // 🔥 improves responsive loading
-    className="object-cover grayscale brightness-[0.25]"
-    style={{
-      backgroundColor: "transparent",
-      backgroundBlendMode: "multiply",
-    }}
-  />
+<Image
+  src={conference}
+  alt="AdRefresh Team"
+  fill
+  loading="lazy"
+  sizes="100vw"
+  quality={60}
+  className="object-cover grayscale brightness-[0.35]"
+/>
 </div>
       {/* CONTENT WRAPPER */}
-      <div className="relative z-10 flex justify-center mt-5 md:mt-[-12px]">
+      <div className="relative z-10 flex justify-center mt-5md:-mt-[12px]">
         <div className="w-full max-w-[900px] px-4 sm:px-6 text-white mb-[-40px]">
           
           {/* TITLE ROW */}
@@ -69,14 +73,14 @@ export default function About() {
             >
               ADREXIANS
             </h2>
-
-            <Image
-              src={start}
-              alt="stars"
-              width={100}
-              height={100}
-              className="w-[50px] sm:w-[60px] md:w-[120px] md:h-[80px]"
-            />
+<Image
+  src={start}
+  alt="stars"
+  width={120}
+  height={80}
+  loading="lazy"
+  className="w-[50px] sm:w-[60px] md:w-[120px] md:h-[80px]"
+/>
           </div>
 
           {/* WE ARE + CONTENT */}
@@ -179,7 +183,7 @@ export default function About() {
       ml-[-40px]        /* MOBILE only */
       md:ml-[15%]
 
-      md:mb-[40px]
+     mb-[40px]
       cursor-pointer
     "
   >

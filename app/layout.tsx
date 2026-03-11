@@ -114,25 +114,19 @@ export default function RootLayout({
         />
 
       </head>
+<body className="min-h-screen flex flex-col">
+  <GoogleTagManagerContainer gtmId="GTM-MMMX5TGB" />
 
-      <body className="layout-root">
+  <CookieBanner />
 
-        {/* Google Tag Manager */}
-        <GoogleTagManagerContainer gtmId="GTM-MMMX5TGB" />
+  <Header />
 
-        {/* Cookie Consent Banner */}
-        <CookieBanner />
+  <main className="flex-1">
+    {children}
+  </main>
 
-        {/* Site Navigation */}
-        <Header />
-
-        {/* Main Page Content */}
-        {children}
-
-        {/* Footer */}
-        <Footer />
-
-      </body>
+  <Footer />
+</body>
     </html>
   );
 }

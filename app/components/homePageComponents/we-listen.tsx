@@ -122,25 +122,30 @@ export default function ListenPerform() {
       "
     >
       {/* CANVAS */}
-      <canvas ref={canvasRef} className="absolute inset-0 z-0" />
+<div className="relative z-10 
+w-[55%] max-[1024px]:w-full 
+mx-auto text-center 
+ml-2 md:ml-10 lg:ml-20 2xl:ml-32">
+  <div className="max-w-225 mx-auto text-left">
+  <h1 className="font-black leading-[1.03] text-[4.6rem] max-[1024px]:text-[3.6rem] max-[768px]:text-[2.6rem]">
+    <div>
+      <span className="text-white">WE </span>
+      <span className="text-black">LISTEN</span>
+    </div>
 
-      {/* LEFT */}
-      <div className="relative z-10 w-[55%] max-[1024px]:w-full">
-        <h1 className="font-black leading-[1.03] text-[4.6rem] max-[1024px]:text-[3.6rem] max-[768px]:text-[2.6rem]">
-          <span className="text-white">WE </span>
-          <span className="text-black">LISTEN</span>
-          <br />
-          <span className="text-black">WE </span>
-          <span ref={performRef} className="text-white perform">
-            PERFORM
-          </span>
-        </h1>
+    <div>
+      <span className="text-black">WE </span>
+      <span ref={performRef} className="text-white perform">
+        PERFORM
+      </span>
+    </div>
+  </h1>
 
-        <p className="mt-5 max-w-[420px] text-[22px] leading-[1.45] text-black/85 max-[1024px]:mx-auto max-[1024px]:text-[18px] max-[768px]:text-[15px]">
-       We take the time to listen and understand your brand, mission, challenges, and goals - then execute with precision and creativity to deliver meaningful impact
-        </p>
-      </div>
-
+  <p className="mt-5 text-[22px] leading-[1.45] text-black/85 max-[1024px]:text-[18px] max-[768px]:text-[15px]">
+    We take the time to listen and understand your brand, mission, challenges, and goals – then execute with precision and creativity to deliver meaningful impact
+  </p>
+</div>
+</div>
       {/* CTA */}
       <div className="relative z-10 w-[45%] flex justify-center items-center max-[1024px]:w-full max-[1024px]:mt-7">
         <Link
@@ -148,14 +153,13 @@ export default function ListenPerform() {
           aria-label="Go to contact page"
           className="
             group
-            w-[120px] h-[120px]
+            w-30 h-30
             rounded-full border-4 border-black
             flex items-center justify-center
             transition-transform duration-200 ease-out
-            hover:scale-[1.06]
-            focus-visible:outline focus-visible:outline-4 focus-visible:outline-black focus-visible:outline-offset-4
+            hover:scale-[1.06] focus-visible:outline-4 focus-visible:outline-black focus-visible:outline-offset-4
 
-            max-[768px]:w-[92px] max-[768px]:h-[92px]
+            max-[768px]:w-23 max-[768px]:h-23
           "
         >
           <span

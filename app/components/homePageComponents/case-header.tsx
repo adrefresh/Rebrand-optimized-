@@ -19,11 +19,11 @@ export default function CaseHeader() {
 bg-[radial-gradient(ellipse_700px_700px_at_top_left,#9b6bff_0%,#e9dcff_40%,transparent_70%),radial-gradient(ellipse_700px_700px_at_bottom_right,#9b6bff_0%,#e9dcff_40%,transparent_70%)]
       "
     >
-      <div className="w-full max-w-[900px] px-3 text-center">
+      <div className="w-full max-w-225 px-3 text-center">
         <h1
           className="
             mb-4
-            font-[900]
+            font-black
             leading-none
             tracking-[-2px]
             text-black
