@@ -408,6 +408,8 @@ import Link from "next/link";
 
 import { useEffect } from "react";
 import start from "@/public/images/HomePageImages/5stars.png";
+import conference from "@/public/images/HomePageImages/conference-40kb.webp";
+
 
 export default function About() {
 useEffect(() => {
@@ -443,11 +445,12 @@ useEffect(() => {
 {/* ✅ FIX CLS: Native img with fetchpriority=high + explicit fill styles
     Next.js <Image priority> is ignored when unoptimized:true is set in next.config
     This forces the browser to load this as high priority AND reserves layout space */}
-<img
-  src="/_next/static/media/conference-40kb.e71a8e5d.webp"
+import Image from "next/image";
+
+<Image
+  src={conference}
   alt="AdRefresh Team"
-  fetchPriority="high"
-  decoding="async"
+  priority
   width={2000}
   height={1200}
   style={{
