@@ -401,6 +401,7 @@
 //     </section>
 //   );
 // }
+
 "use client"
 
 import Image from "next/image";
@@ -445,7 +446,7 @@ useEffect(() => {
 {/* ✅ FIX CLS: Native img with fetchpriority=high + explicit fill styles
     Next.js <Image priority> is ignored when unoptimized:true is set in next.config
     This forces the browser to load this as high priority AND reserves layout space */}
-import Image from "next/image";
+{/* import Image from "next/image"; */}
 
 <Image
   src={conference}
