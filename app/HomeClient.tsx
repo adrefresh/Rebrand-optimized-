@@ -1,78 +1,3 @@
-// "use client";
-
-// import Hero from "./components/homePageComponents/Hero";
-// import ListenPerform from "./components/homePageComponents/we-listen";
-// import dynamic from "next/dynamic";
-
-// /* =========================
-//    LAZY LOADED SECTIONS
-// ========================= */
-
-// const About = dynamic(
-//   () => import("./components/homePageComponents/adrexiansabout"),
-//   { ssr: false }
-// );
-
-// const Features = dynamic(
-//   () => import("./components/homePageComponents/Mme"),
-//   { ssr: false }
-// );
-
-// const Flexibility = dynamic(
-//   () => import("./components/homePageComponents/platformExperience"),
-//   { ssr: false }
-// );
-
-// const Section7 = dynamic(
-//   () => import("./components/homePageComponents/platformsMarquee"),
-//   { ssr: false }
-// );
-
-// const CustomizedWorkflow = dynamic(
-//   () => import("./components/homePageComponents/Why-us"),
-//   { ssr: false }
-// );
-
-// const CaseHeader = dynamic(
-//   () => import("./components/homePageComponents/case-header"),
-//   { ssr: false }
-// );
-
-// const Services = dynamic(
-//   () => import("./components/homePageComponents/services-section"),
-//   { ssr: false }
-// );
-
-// /* =========================
-//    COMPONENT
-// ========================= */
-
-// export default function HomeClient() {
-//   return (
-//     <main className="relative w-full overflow-x-hidden">
-
-//       {/* HERO FIRST FOR LCP */}
-//       <Hero />
-
-//       {/* BELOW THE FOLD SECTIONS */}
-//       <About />
-//       <Features />
-//       <Flexibility />
-//       <Section7 />
-//       <CustomizedWorkflow />
-//       <CaseHeader />
-//       <Services />
-
-//       {/* LISTEN & PERFORM */}
-//    <div className="mb-[-162] md:mb-[-2]">
-//   <ListenPerform />
-// </div>
-//       {/* SCROLL TARGET */}
-//       <section id="prev-section" className="h-px w-full" />
-
-//     </main>
-//   );
-// }
 
 "use client";
 
@@ -80,32 +5,50 @@ import Hero from "./components/homePageComponents/Hero";
 import ListenPerform from "./components/homePageComponents/we-listen";
 import dynamic from "next/dynamic";
 
-const About = dynamic(() =>
-  import("./components/homePageComponents/adrexiansabout")
+// ✅ PERF FIX: Added { ssr: false } to all below-the-fold dynamic imports.
+// Without ssr:false, Next.js server-renders ALL these components into the initial
+// HTML, sending a large HTML payload to mobile — even though the user can't see
+// them yet. With ssr:false, they are skipped on the server and lazy-loaded on the
+// client only when needed, reducing Time To First Byte (TTFB) and parse time on
+// mobile significantly.
+//
+// Hero and ListenPerform are kept as direct imports (no dynamic) because:
+// - Hero is the LCP element — must be in initial HTML
+// - ListenPerform is already lightweight (no images)
+
+const About = dynamic(
+  () => import("./components/homePageComponents/adrexiansabout"),
+  { ssr: false }
 );
 
-const Features = dynamic(() =>
-  import("./components/homePageComponents/Mme")
+const Features = dynamic(
+  () => import("./components/homePageComponents/Mme"),
+  { ssr: false }
 );
 
-const Flexibility = dynamic(() =>
-  import("./components/homePageComponents/platformExperience")
+const Flexibility = dynamic(
+  () => import("./components/homePageComponents/platformExperience"),
+  { ssr: false }
 );
 
-const Section7 = dynamic(() =>
-  import("./components/homePageComponents/platformsMarquee")
+const Section7 = dynamic(
+  () => import("./components/homePageComponents/platformsMarquee"),
+  { ssr: false }
 );
 
-const CustomizedWorkflow = dynamic(() =>
-  import("./components/homePageComponents/Why-us")
+const CustomizedWorkflow = dynamic(
+  () => import("./components/homePageComponents/Why-us"),
+  { ssr: false }
 );
 
-const CaseHeader = dynamic(() =>
-  import("./components/homePageComponents/case-header")
+const CaseHeader = dynamic(
+  () => import("./components/homePageComponents/case-header"),
+  { ssr: false }
 );
 
-const Services = dynamic(() =>
-  import("./components/homePageComponents/services-section")
+const Services = dynamic(
+  () => import("./components/homePageComponents/services-section"),
+  { ssr: false }
 );
 
 export default function HomeClient() {
@@ -125,8 +68,6 @@ export default function HomeClient() {
       <Services />
 
       <ListenPerform />
-
-      {/* <section id="prev-section" className="h-px w-full" /> */}
 
     </main>
   );

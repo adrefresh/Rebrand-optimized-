@@ -1,106 +1,66 @@
-// // 'use client';
-
-// // import Script from 'next/script';
-// // import { GoogleTagManager as GTM } from '@next/third-parties/google';
-
-// // export default function GoogleTagManagerContainer({ gtmId }: { gtmId: string }) {
-// //   return (
-// //     <>
-// //       {/* 1. Set Default Consent (must run BEFORE GTM) */}
-// //       <Script id="google-consent-mode" strategy="afterInteractive">
-// //         {`
-// //           window.dataLayer = window.dataLayer || [];
-// //           function gtag(){dataLayer.push(arguments);}
-          
-// //           gtag('consent', 'default', {
-// //             'ad_storage': 'denied',
-// //             'ad_user_data': 'denied',
-// //             'ad_personalization': 'denied',
-// //             'analytics_storage': 'denied',
-// //             'wait_for_update': 500
-// //           });
-// //         `}
-// //       </Script>
-
-// //       {/* 2. Load GTM */}
-// //       <GTM gtmId={gtmId} />
-// //     </>
-// //   );
-// // }
-
-// 'use client';
-
-// import Script from 'next/script';
-// import { GoogleTagManager as GTM } from '@next/third-parties/google';
-
-// export default function GoogleTagManagerContainer({ gtmId }: { gtmId: string }) {
-//   return (
-//     <>
-//       {/* =========================
-//           GOOGLE CONSENT MODE
-//           Must run BEFORE GTM
-//       ========================== */}
-//       <Script id="google-consent-mode" strategy="beforeInteractive">
-//         {`
-//           window.dataLayer = window.dataLayer || [];
-
-//           function gtag(){dataLayer.push(arguments);}
-//           window.gtag = gtag;
-
-//           gtag('consent', 'default', {
-//             ad_storage: 'denied',
-//             ad_user_data: 'denied',
-//             ad_personalization: 'denied',
-//             analytics_storage: 'denied',
-//             wait_for_update: 500
-//           });
-//         `}
-//       </Script>
-
-//       {/* =========================
-//           GOOGLE TAG MANAGER
-//       ========================== */}
-//       <GTM gtmId={gtmId} />
-
-//     </>
-//   );
-// }
 
 'use client';
 
-import Script from 'next/script';
-import { GoogleTagManager as GTM } from '@next/third-parties/google';
+import { useEffect } from 'react';
+
+type WindowWithGTM = Window & {
+  dataLayer: unknown[];
+  gtag: (...args: unknown[]) => void;
+};
 
 export default function GoogleTagManagerContainer({ gtmId }: { gtmId: string }) {
-  return (
-    <>
-      {/* =========================
-          GOOGLE CONSENT MODE
-          ✅ FIX: Changed from "beforeInteractive" to "afterInteractive"
-          beforeInteractive was blocking first paint and hurting LCP/FCP
-      ========================== */}
-      <Script id="google-consent-mode" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
+  useEffect(() => {
+    let loaded = false;
 
-          function gtag(){dataLayer.push(arguments);}
-          window.gtag = gtag;
+    const loadGTM = () => {
+      if (loaded) return;
+      loaded = true;
 
-          gtag('consent', 'default', {
-            ad_storage: 'denied',
-            ad_user_data: 'denied',
-            ad_personalization: 'denied',
-            analytics_storage: 'denied',
-            wait_for_update: 500
-          });
-        `}
-      </Script>
+      const win = window as unknown as WindowWithGTM;
 
-      {/* =========================
-          GOOGLE TAG MANAGER
-      ========================== */}
-      <GTM gtmId={gtmId} />
+      win.dataLayer = win.dataLayer || [];
 
-    </>
-  );
+      const gtag = (...args: unknown[]) => {
+        win.dataLayer.push(args);
+      };
+      win.gtag = gtag;
+
+      gtag('consent', 'default', {
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        analytics_storage: 'denied',
+        wait_for_update: 500,
+      });
+
+      const script = document.createElement('script');
+      script.src = `https://www.googletagmanager.com/gtm.js?id=${gtmId}`;
+      script.async = true;
+      document.head.appendChild(script);
+
+      const noscript = document.createElement('noscript');
+      const iframe = document.createElement('iframe');
+      iframe.src = `https://www.googletagmanager.com/ns.html?id=${gtmId}`;
+      iframe.height = '0';
+      iframe.width = '0';
+      iframe.style.display = 'none';
+      iframe.style.visibility = 'hidden';
+      noscript.appendChild(iframe);
+      if (document.body.firstChild) {
+        document.body.insertBefore(noscript, document.body.firstChild);
+      }
+    };
+
+    const events = ['mousemove', 'touchstart', 'scroll', 'keydown'];
+    events.forEach(e => window.addEventListener(e, loadGTM, { once: true, passive: true }));
+
+    const timer = setTimeout(loadGTM, 5000);
+
+    return () => {
+      clearTimeout(timer);
+      events.forEach(e => window.removeEventListener(e, loadGTM));
+    };
+  }, [gtmId]);
+
+  return null;
 }
