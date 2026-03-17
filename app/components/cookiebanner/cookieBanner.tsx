@@ -193,7 +193,7 @@ export default function CookieBanner() {
     rel="noopener noreferrer"
     className="underline text-[#8ab4f8] hover:text-gray-500 transition-colors sm:text-[13px] text-[11px]"
   >
-    Privacy Policyyy
+    Privacy Policyyy hello
   </a>
   . */}
 </p>
