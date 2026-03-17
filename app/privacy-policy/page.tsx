@@ -4,7 +4,7 @@ export default function PrivacyPolicyPage() {
     <section className="relative bg-white">
 
       {/* 70vh Grey Pattern Background Layer */}
-      <div className="absolute top-[-140px] left-0 w-full h-[75vh] z-0 overflow-hidden bg-[#cfcfcf]">
+      <div className="absolute -top-35 left-0 w-full h-[75vh] z-0 overflow-hidden bg-[#cfcfcf]">
         <div
           className="absolute inset-0 opacity-300"
           style={{

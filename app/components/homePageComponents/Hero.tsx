@@ -39,8 +39,8 @@ export default function Hero() {
       {/* ===== CONTENT ===== */}
       {/* ✅ BUG FIX: was "sm:px-24text-left" (missing space) — broke both classes on mobile */}
 <div className="relative z-10 flex h-full max-w-7xl mx-auto flex-col items-start justify-start px-2 sm:px-24 text-left pt-35 md:pt-18 lg:pt-38 lg:-ml-10">
-        <h1 className="w-full text-left text-[1.8rem] sm:text-[2.2rem] md:text-[4rem] lg:text-[5rem] xl:text-[6rem] -mt-25 sm:mt-4 font-bold tracking-tight leading-tight text-white xl:translate-y-8">
-          YOUR REMOTE TEAM <br />
+        <h1 className="w-full text-left text-[2rem] sm:text-[2.2rem] md:text-[4rem] lg:text-[5rem] xl:text-[6rem] -mt-25 sm:mt-4 font-bold sm:tracking-tight leading-tight text-white xl:translate-y-8">
+          YOUR REMOTE TEAM<br />
           THAT FEELS ON SITE
         </h1>
       </div>

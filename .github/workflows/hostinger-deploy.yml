@@ -4,6 +4,9 @@ on:
   push:
     branches: [main, dev]
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   build:
     name: Build Next.js
@@ -15,7 +18,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
           cache: 'npm'
 
       - name: Install dependencies
@@ -29,6 +32,7 @@ jobs:
         with:
           name: next-build
           path: out/
+          retention-days: 7 #reducing artifacts storage to 7 fro default 90
 
   deploy-test:
     name: Deploy to Hostinger Dev (public_html/dev)
