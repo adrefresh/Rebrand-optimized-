@@ -178,7 +178,7 @@ export default function CookieBanner() {
     px-2 py-1
     flex flex-col sm:flex-row items-center justify-center
     gap-2 sm:gap-4
-    z-[9999]
+    z-9999
     w-full sm:w-[60vw]
  border-t border-[#6c1cff]
     sm:rounded-t-xl
