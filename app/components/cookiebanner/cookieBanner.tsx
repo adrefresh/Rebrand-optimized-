@@ -180,15 +180,16 @@ export default function CookieBanner() {
     gap-2 sm:gap-4
     z-[9999]
     w-full sm:w-[60vw]
+    border-t-border-[#6c1cff]
 
-    sm:border sm:border-gray-300
+    sm:border-t sm:border-[#6c1cff]
     sm:rounded-t-xl
   "
 >
       {/* Message */}
-    <p className="text-center sm:text-left sm:text-[13px] text-[11px] leading-snug">
-  We use cookies for analytics and social media tracking per our{' '}
-  <a
+    <p className="text-center sm:text-left sm:text-[13px] text-[13px] leading-snug">
+  We use cookies for analytics and social media tracking per our Privacy policy
+  {/* <a
     href="/privacy-policy"
     target="_blank"
     rel="noopener noreferrer"
@@ -196,7 +197,7 @@ export default function CookieBanner() {
   >
     Privacy Policy
   </a>
-  .
+  . */}
 </p>
       {/* Buttons */}
       <div className="flex items-center gap-3 shrink-0">
