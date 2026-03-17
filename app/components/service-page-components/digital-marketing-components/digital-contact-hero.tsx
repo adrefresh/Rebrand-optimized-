@@ -118,7 +118,7 @@ export default function AdOpsContactHero2() {
         </p>
 
         <Link
-          href="/contact-us"
+          href="/contact-us#form"
           className="
             inline-flex items-center justify-center
             rounded-full

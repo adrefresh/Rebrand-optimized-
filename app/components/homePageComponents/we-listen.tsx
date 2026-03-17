@@ -187,7 +187,7 @@ export default function ListenPerform() {
       {/* CTA */}
       <div className="relative z-10 w-[45%] flex justify-center items-center max-[1024px]:w-full max-[1024px]:mt-7">
         <Link
-          href="/contact-us"
+          href="/contact-us#form"
           aria-label="Go to contact page"
           className="
             group
