@@ -180,9 +180,7 @@ export default function CookieBanner() {
     gap-2 sm:gap-4
     z-[9999]
     w-full sm:w-[60vw]
-    border-t-border-[#6c1cff]
-
-    sm:border-t sm:border-[#6c1cff]
+ border-t border-[#6c1cff]
     sm:rounded-t-xl
   "
 >
@@ -203,7 +201,7 @@ export default function CookieBanner() {
       <div className="flex items-center gap-3 shrink-0">
          <button 
              onClick={() => handleConsentUpdate('denied')} 
-             className="px-2 py-1 text-[10px] sm:text-[13px] font-medium text-gray-500 hover:text-gray-800 transition-colors cursor-pointer"
+             className="px-2 py-1 text-[10px] sm:text-[13px] font-medium text-black hover:text-gray-800 transition-colors cursor-pointer border rounded-sm"
            > 
              Decline
            </button>
