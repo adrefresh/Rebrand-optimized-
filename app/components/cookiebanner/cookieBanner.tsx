@@ -170,17 +170,21 @@ export default function CookieBanner() {
   if (!showBanner) return null;
 
   return (
-    <div
-      className="
-        fixed bottom-0 left-0 right-0
-        bg-[#ffffff] text-black
-        sm:px-6 sm:py-4
-        px-2 py-1
-        flex flex-col sm:flex-row items-center justify-center
-        gap-2 sm:gap-4
-        z-[9999]
-        w-full"
-    >
+<div
+  className="
+    fixed bottom-0 left-1/2 -translate-x-1/2
+    bg-[#ffffff] text-black
+    sm:px-2 sm:py-4
+    px-2 py-1
+    flex flex-col sm:flex-row items-center justify-center
+    gap-2 sm:gap-4
+    z-[9999]
+    w-full sm:w-[60vw]
+
+    sm:border sm:border-gray-300
+    sm:rounded-t-xl
+  "
+>
       {/* Message */}
     <p className="text-center sm:text-left sm:text-[13px] text-[11px] leading-snug">
   We use cookies for analytics and social media tracking per our{' '}
@@ -188,7 +192,7 @@ export default function CookieBanner() {
     href="/privacy-policy"
     target="_blank"
     rel="noopener noreferrer"
-    className="underline text-[#8ab4f8] hover:text-white transition-colors sm:text-[13px] text-[11px]"
+    className="underline text-[#8ab4f8] hover:text-gray-500 transition-colors sm:text-[13px] text-[11px]"
   >
     Privacy Policy
   </a>
@@ -199,7 +203,7 @@ export default function CookieBanner() {
          <button 
              onClick={() => handleConsentUpdate('denied')} 
              className="px-2 py-1 text-[10px] sm:text-[13px] font-medium text-gray-500 hover:text-gray-800 transition-colors cursor-pointer"
-           >
+           > 
              Decline
            </button>
            <button 
