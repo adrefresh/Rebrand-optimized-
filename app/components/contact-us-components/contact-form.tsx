@@ -73,7 +73,7 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="w-screen bg-gray-200 py-8 sm:py-10 lg:py-15 mt-[-40px] md:mt-[-60px]">
+    <section id="form" className="w-screen bg-gray-200 py-8 sm:py-10 lg:py-15 mt-[-40px] md:mt-[-60px]">
       <div className="mx-auto w-[92vw] sm:w-[88vw] md:w-[78vw] lg:w-[68vw] xl:w-[60vw] 2xl:w-[52vw]">
         <h2 className="text-center font-bold mb-8 text-[1.9rem] sm:text-[2.4rem] md:text-[2.8rem] lg:text-[3.2rem] xl:text-[3.6rem]">
           Drop Us a Message

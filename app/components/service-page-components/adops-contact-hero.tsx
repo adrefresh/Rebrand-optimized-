@@ -126,7 +126,7 @@ export default function AdOpsContactHero2() {
         </p>
 
         <button
-          onClick={() => router.push("/contact-us")}
+          onClick={() => router.push("/contact-us#form")}
           className="
             inline-flex items-center justify-center
             rounded-full
