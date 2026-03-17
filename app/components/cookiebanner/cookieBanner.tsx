@@ -186,7 +186,7 @@ export default function CookieBanner() {
 >
       {/* Message */}
     <p className="text-center sm:text-left sm:text-[13px] text-[13px] leading-snug">
-  We use cookies for analytics and social media tracking per our Privacy policy
+  We use cookies for analytics and social media tracking per our privacy policy
   {/* <a
     href="/privacy-policy"
     target="_blank"
