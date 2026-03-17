@@ -173,22 +173,22 @@ export default function CookieBanner() {
     <div
       className="
         fixed bottom-0 left-0 right-0
-        bg-[#000000] text-white
-        px-6 py-4
+        bg-[#ffffff] text-black
+        sm:px-6 sm:py-4
+        px-2 py-1
         flex flex-col sm:flex-row items-center justify-center
         gap-2 sm:gap-4
         z-[9999]
-        w-full
-      "
+        w-full"
     >
       {/* Message */}
-    <p className="text-center sm:text-left text-[13px] leading-snug">
+    <p className="text-center sm:text-left sm:text-[13px] text-[11px] leading-snug">
   We use cookies for analytics and social media tracking per our{' '}
   <a
     href="/privacy-policy"
     target="_blank"
     rel="noopener noreferrer"
-    className="underline text-[#8ab4f8] hover:text-white transition-colors"
+    className="underline text-[#8ab4f8] hover:text-white transition-colors sm:text-[13px] text-[11px]"
   >
     Privacy Policy
   </a>
@@ -196,18 +196,30 @@ export default function CookieBanner() {
 </p>
       {/* Buttons */}
       <div className="flex items-center gap-3 shrink-0">
+         <button 
+             onClick={() => handleConsentUpdate('denied')} 
+             className="px-2 py-1 text-[10px] sm:text-[13px] font-medium text-gray-500 hover:text-gray-800 transition-colors cursor-pointer"
+           >
+             Decline
+           </button>
+           <button 
+             onClick={() => handleConsentUpdate('granted')} 
+             className="bg-[#813DFF] hover:bg-[#6c1cff] text-white px-2 py-1 rounded-sm cursor-pointer  text-[10px] sm:text-[13px] font-semibold transition-all shadow-md active:scale-95"
+           >
+             Accept
+           </button>
         {/* <button
           onClick={() => handleConsentUpdate('denied')}
-          className="text-[13px] font-medium text-gray-300 hover:text-white transition-colors underline underline-offset-2 cursor-pointer"
+          className="text-[13px] font-medium text-[#8ab4f8] hover:text-white transition-colors underline-offset-2 cursor-pointer"
         >
           Decline
-        </button> */}
+        </button>
         <button
           onClick={() => handleConsentUpdate('granted')}
           className="text-[13px] font-semibold text-[#8ab4f8] hover:text-white transition-colors cursor-pointer"
         >
           Ok, Got it.
-        </button>
+        </button> */}
       </div>
     </div>
   );
