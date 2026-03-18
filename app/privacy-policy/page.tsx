@@ -1,3 +1,12 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'Privacy Policy | AdRefresh',
+  robots: { index: false, follow: true },
+  alternates: {
+    canonical: 'https://www.adrefresh.com/privacy-policy',
+  }
+}
 
 export default function PrivacyPolicyPage() {
   return (

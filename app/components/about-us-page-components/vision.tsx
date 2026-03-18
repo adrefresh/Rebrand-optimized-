@@ -42,7 +42,7 @@ We build lasting partnerships through honest communication, clear processes, and
                 lg:text-[2.6rem]
               "
             >
-              PRECESION 
+              PRECISION 
 
             </h3>
             <p

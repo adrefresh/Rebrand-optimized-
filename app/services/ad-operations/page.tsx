@@ -1,11 +1,15 @@
-
+import { generateWebPageSchema } from "@/libraries/schema/webPageSchema";
+import { generateServiceSchema } from "@/libraries/schema/serviceSchema";
 import AdOpsPageClient from "./AdopsPageClient";
 
-export const metadata = {
-  title: "Advertising Operations Services | AdOps Management & Optimization",
-  description:
-    "Professional Advertising Operations (AdOps) services to manage, optimize, and scale your digital ad campaigns. We deliver performance-driven ad operations with transparency and flexibility.",
+const PAGE_TITLE = "Advertising Operations Services | AdOps Management & Optimization";
+const PAGE_DESCRIPTION =
+  "Professional Advertising Operations (AdOps) services to manage, optimize, and scale your digital ad campaigns. We deliver performance-driven ad operations with transparency and flexibility.";
+const PAGE_URL = "https://www.adrefresh.com/services/ad-operations/";
 
+export const metadata = {
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
   keywords: [
     "Advertising Operations",
     "AdOps Services",
@@ -18,13 +22,12 @@ export const metadata = {
   ],
 
   alternates: {
-    canonical: "https://www.adrefresh.com/services/ad-operations",
+    canonical: PAGE_URL,
   },
   openGraph: {
-    title: "AdRefresh –Ad Operations",
-    description:
-      " Advertising operations services built to scale performance, efficiency, and measurable growth.",
-    url: "https://www.adrefresh.com/",
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    url: PAGE_URL,
     siteName: "AdRefresh",
     images: [
       {
@@ -37,8 +40,46 @@ export const metadata = {
     locale: "en_US",
     type: "website",
   },
+    twitter: {
+    card: "summary_large_image",
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    images: ["https://adrefresh.com/images/og/adops-poster.png"],
+  },
+
 };
 
 export default function Page() {
-  return <AdOpsPageClient />;
+  const webPageSchema = generateWebPageSchema({
+    url: PAGE_URL,
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+  });
+  
+  const serviceSchema = generateServiceSchema({
+    name: "Advertising Operations",
+    url: PAGE_URL,
+    description: PAGE_DESCRIPTION,
+    serviceType: "Ad Operations Services",
+    subServices: ["Campaign Setup & Management",
+      "Ad Trafficking & Tag Implementation",
+      "Pixel, Tracking & Measurement Setup",
+      "Campaign Monitoring & Pacing",
+      "Reporting, Dashboards & Insights",
+      "Ad Tech & Platform Administration"],
+  });
+
+  return (
+    <>
+    <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+    <AdOpsPageClient />
+    </>
+  );
 }
