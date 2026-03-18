@@ -75,6 +75,7 @@ jobs:
       - name: Sync to Hostinger via SSH
         uses: easingthemes/ssh-deploy@main
         env:
+          NEXT_PUBLIC_ENABLE_GTM: "true"
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}

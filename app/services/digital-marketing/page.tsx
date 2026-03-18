@@ -1,11 +1,16 @@
-
+import { generateWebPageSchema } from "@/libraries/schema/webPageSchema";
+import { generateServiceSchema } from "@/libraries/schema/serviceSchema";
 import DigitalMarketingPageClient from "./DigitalMarketingPageClient";
 
-export const metadata = {
-  title: "Digital Marketing Services | Performance Marketing & Growth Solutions",
-  description:
-    "Professional Digital Marketing services by AdRefresh. We drive growth through SEO, PPC, social media marketing, content strategy, and performance-driven campaigns.",
+const PAGE_TITLE = "Digital Marketing Services | Performance Marketing & Growth Solutions";
+const PAGE_DESCRIPTION =
+  "Professional Digital Marketing services by AdRefresh. We drive growth through SEO, PPC, social media marketing, content strategy, and performance-driven campaigns.";
+const PAGE_URL = "https://www.adrefresh.com/services/digital-marketing";
 
+export const metadata = {
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
+  
   keywords: [
     "Digital Marketing",
     "Digital Marketing Services",
@@ -19,10 +24,9 @@ export const metadata = {
   ],
 
   openGraph: {
-    title: "Digital Marketing Services | Performance Marketing & Growth Solutions",
-    description:
-      "Scale your business with AdRefresh Digital Marketing services. SEO, PPC, social media, and data-driven growth strategies.",
-    url: "https://adrefresh.com/services/digital-marketing",
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    url: PAGE_URL,
     siteName: "AdRefresh",
     images: [
       {
@@ -38,17 +42,49 @@ export const metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Digital Marketing Services | Performance Marketing & Growth Solutions",
-    description:
-      "End-to-end Digital Marketing services including SEO, PPC, social media, and growth marketing.",
-    images: ["https://adrefresh.com/images/seo/digital-marketing-og.jpg"],
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    images: ["https://adrefresh.com/images/og/DM-poster.png"],
   },
 
   alternates: {
-    canonical: "https://www.adrefresh.com/services/digital-marketing",
+    canonical: PAGE_URL,
   },
 };
 
 export default function Page() {
-  return <DigitalMarketingPageClient />;
+  const webPageSchema = generateWebPageSchema({
+    url: PAGE_URL,
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+  });
+  
+  const serviceSchema = generateServiceSchema({
+    name: "Digital Marketing",
+    url: PAGE_URL,
+    description: PAGE_DESCRIPTION,
+    serviceType: "Digital Marketing Services",
+    subServices: [
+      "Paid Advertising",
+      "Social Media Marketing",
+      "Search Engine Optimization",
+      "Creative & Branding",
+      "Website Development",
+      "Analytics & Reporting"
+    ],
+  });
+  
+  return (
+    <>
+    <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+    <DigitalMarketingPageClient />
+    </>
+  );
 }

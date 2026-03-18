@@ -9,7 +9,7 @@ import MissionVisionSection from "../components/about-us-page-components/CardsMi
  // adjust path if needed
 
 export const metadata: Metadata = {
-  title: "About Us | AdRefresh – Performance-Driven Ad Operations",
+  title: "About Us | AdRefresh - Performance-Driven Ad Operations",
   description:
     "Learn about AdRefresh, a performance-driven advertising operations and Digital Marketing partner built on experience, precision, and measurable growth.",
 
@@ -18,14 +18,14 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "About AdRefresh – Built on Experience. Driven by Performance.",
+    title: "About AdRefresh - Built on Experience. Driven by Performance.",
     description:
       "Discover how AdRefresh helps brands scale through expert ad operations, programmatic strategy, and performance-focused execution.",
-    url: "https://adrefresh.com/about-us",
+    url: "https://www.adrefresh.com/about-us",
     siteName: "AdRefresh",
     images: [
       {
-        url: "https://adrefresh.com/og/about.png",
+        url: "https://www.adrefresh.com/og/about.png",
         width: 1200,
         height: 630,
         alt: "About AdRefresh",
@@ -37,10 +37,10 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "About AdRefresh – Performance Marketing Experts",
+    title: "About AdRefresh - Performance Marketing Experts",
     description:
       "Built on experience. Driven by performance. Learn more about the AdRefresh team and our approach.",
-    images: ["https://adrefresh/og/about.png"],
+    images: ["https://www.adrefresh.com/og/about.png"],
   },
 
   robots: {
@@ -53,21 +53,12 @@ export default function AboutUsPage() {
   return (
     <main className="relative">
       {/* HERO */}
-
-
-
-
-
-
-<AboutHero/>
-
-<AboutAdRefresh/>
-
-<AboutVisionMission/>
-
-<VisionMission/>
-<MissionVisionSection/>
-<ListenPerform/>
+      <AboutHero/>
+      <AboutAdRefresh/>
+      <AboutVisionMission/>
+      <VisionMission/>
+      <MissionVisionSection/>
+      <ListenPerform/>
       {/* Add more sections below when ready */}
       {/* <WhyUsSection /> */}
       {/* <TeamSection /> */}

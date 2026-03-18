@@ -88,7 +88,9 @@ export default function RootLayout({
 
       </head>
       <body className="min-h-screen flex flex-col">
-        {/* <GoogleTagManagerContainer gtmId="GTM-MMMX5TGB" /> */}
+        {process.env.NEXT_PUBLIC_ENABLE_GTM === "true" && (
+          <GoogleTagManagerContainer gtmId="GTM-MMMX5TGB" />
+        )}
 
         <CookieBanner />
 
