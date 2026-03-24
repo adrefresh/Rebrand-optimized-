@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import Hero from "./components/homePageComponents/Hero";
 import ListenPerform from "./components/homePageComponents/we-listen";
 import CaseStudies from "./components/homePageComponents/case-studies";
+import CaseHeader from "./components/homePageComponents/case-header";
 
 // ================= SEO METADATA =================
 
@@ -144,7 +145,8 @@ export default function HomePage() {
 
       {/* CaseStudies now includes the SUCCESS STORIES H2
           and section wrapper (case-header.tsx merged in) */}
-      <CaseStudies />
+      <CaseHeader/>
+
 
       <Services />
 
