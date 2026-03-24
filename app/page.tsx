@@ -1,11 +1,11 @@
 
-
+import dynamic from "next/dynamic";
 import type { Metadata } from "next";
-import HomeClient from "./HomeClient";
+import Hero from "./components/homePageComponents/Hero";
+import ListenPerform from "./components/homePageComponents/we-listen";
+import CaseStudies from "./components/homePageComponents/case-studies";
 
-/* =========================
-   SEO METADATA
-========================= */
+// ================= SEO METADATA =================
 
 export const metadata: Metadata = {
   title: {
@@ -90,10 +90,67 @@ export const metadata: Metadata = {
   },
 };
 
-/* =========================
-   PAGE
-========================= */
+// ================= DYNAMIC IMPORTS =================
+
+// Below-fold components — code-split for JS performance,
+// but pre-rendered in static HTML at build time for SEO.
+// { loading: () => null } = no visible skeleton, identical visual
+// behaviour to the old { ssr: false } but content IS in the HTML.
+const About = dynamic(
+  () => import("./components/homePageComponents/adrexiansabout"),
+  { loading: () => null }
+);
+
+const Features = dynamic(
+  () => import("./components/homePageComponents/Mme"),
+  { loading: () => null }
+);
+
+const Flexibility = dynamic(
+  () => import("./components/homePageComponents/platformExperience"),
+  { loading: () => null }
+);
+
+const PlatformsMarquee = dynamic(
+  () => import("./components/homePageComponents/platformsMarquee"),
+  { loading: () => null }
+);
+
+const WhyUs = dynamic(
+  () => import("./components/homePageComponents/Why-us"),
+  { loading: () => null }
+);
+
+const Services = dynamic(
+  () => import("./components/homePageComponents/services-section"),
+  { loading: () => null }
+);
+
+// ================= PAGE COMPONENT =================
 
 export default function HomePage() {
-  return <HomeClient />;
+  return (
+    <main className="relative w-full overflow-x-hidden">
+
+      {/* LCP element — direct import, never lazy */}
+      <Hero />
+
+      {/* Below-fold — pre-rendered HTML, lazy JS */}
+      <About />
+      <Features />
+      <Flexibility />
+      <PlatformsMarquee />
+      <WhyUs />
+
+      {/* CaseStudies now includes the SUCCESS STORIES H2
+          and section wrapper (case-header.tsx merged in) */}
+      <CaseStudies />
+
+      <Services />
+
+      {/* Direct import — lightweight footer CTA */}
+      <ListenPerform />
+
+    </main>
+  );
 }

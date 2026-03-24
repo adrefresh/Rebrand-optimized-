@@ -1,8 +1,10 @@
-{
-  "transition-enablers": {
+[
+  {
+    "slug": "transition-enablers",
     "title": "Transition Enablers: Powering a Complex Organizational Shift",
     "subtitle": "Supporting enterprise restructuring with operational continuity and platform stability",
     "featureImage": "/images/client-images/driving.webp",
+    "lastModified": "2026-01-11",
     "sections": [
       {
         "heading": "Background",
@@ -14,7 +16,7 @@
       },
       {
         "heading": "Our Role",
-        "body": "Having worked closely with the client for years. our team had deep, operational familiarity with their proprietary platform. Recognizing the disruption the transition could cause, we proactively positioned ourselves as the continuity backbone for the client’s evolving organization. We didn’t just maintain operations — we stepped up to become the knowledge bridge. Our team played a dual role: guiding the newly onboarded teams while maintaining seamless operations with the legacy systems still in use."
+        "body": "Having worked closely with the client for years. our team had deep, operational familiarity with their proprietary platform. Recognizing the disruption the transition could cause, we proactively positioned ourselves as the continuity backbone for the client's evolving organization. We didn't just maintain operations — we stepped up to become the knowledge bridge. Our team played a dual role: guiding the newly onboarded teams while maintaining seamless operations with the legacy systems still in use."
       },
       {
         "heading": "Impact Delivered",
@@ -28,23 +30,24 @@
       },
       {
         "heading": "Conclusion",
-        "body": "In a time of significant transition, our team didn’t just adapt — we enabled transformation. By becoming the cornerstone of knowledge continuity, we helped the client navigate change with confidence and efficiency, proving once again the value of long-term partnership and proactive engagement."
+        "body": "In a time of significant transition, our team didn't just adapt — we enabled transformation. By becoming the cornerstone of knowledge continuity, we helped the client navigate change with confidence and efficiency, proving once again the value of long-term partnership and proactive engagement."
       }
     ]
   },
-
-  "audience-infrastructure-fmcg": {
+  {
+    "slug": "audience-infrastructure-fmcg",
     "title": "Turning Data into Campaign Results",
     "subtitle": "A Behind-the-Scenes Look at Audience Infrastructure for a Global FMCG Brand",
     "featureImage": "/images/client-images/turningdata.webp",
+    "lastModified": "2026-01-11",
     "sections": [
       {
         "heading": "Client Background",
-        "body": "Our client, a leading Data Management Platform (DMP), powers audience intelligence and activation for some of the world’s largest advertisers. Among its portfolio was a key data partner — a global FMCG giant — seeking to enhance its digital advertising efforts across multiple markets.\n\nTo reach the right audience with precision, the FMCG brand needed a scalable, reliable system that could:\n- Collect data accurately from 100+ brand websites\n- Translate user behavior into meaningful audience segments\n- Syndicate those segments to authorized Demand-Side Platforms (DSPs) for campaign activation\n\nOur role was to provide the operational muscle to make all of that happen — consistently, efficiently, and with quality."
+        "body": "Our client, a leading Data Management Platform (DMP), powers audience intelligence and activation for some of the world's largest advertisers. Among its portfolio was a key data partner — a global FMCG giant — seeking to enhance its digital advertising efforts across multiple markets.\n\nTo reach the right audience with precision, the FMCG brand needed a scalable, reliable system that could:\n- Collect data accurately from 100+ brand websites\n- Translate user behavior into meaningful audience segments\n- Syndicate those segments to authorized Demand-Side Platforms (DSPs) for campaign activation\n\nOur role was to provide the operational muscle to make all of that happen — consistently, efficiently, and with quality."
       },
       {
         "heading": "The Challenge",
-        "body": "Behind the sleek creatives and media plans lies a complex infrastructure that powers targeting precision. For the FMCG brand, the scale of operations was enormous:\n\n- 119+ websites, each with its own tracking environment\n- Multiple regions and product categories with unique data needs\n- Tight campaign launch windows requiring real-time readiness\n\nYet with scale came friction:\n\n- Pixel misfires or faulty data collection could delay campaigns\n- Generic segmentation didn’t reflect actual consumer behavior\n- Manual processes for QA and syndication risked human error\n\nThey needed a dedicated operations partner to stitch it all together."
+        "body": "Behind the sleek creatives and media plans lies a complex infrastructure that powers targeting precision. For the FMCG brand, the scale of operations was enormous:\n\n- 119+ websites, each with its own tracking environment\n- Multiple regions and product categories with unique data needs\n- Tight campaign launch windows requiring real-time readiness\n\nYet with scale came friction:\n\n- Pixel misfires or faulty data collection could delay campaigns\n- Generic segmentation didn't reflect actual consumer behavior\n- Manual processes for QA and syndication risked human error\n\nThey needed a dedicated operations partner to stitch it all together."
       },
       {
         "heading": "Our Solution",
@@ -56,15 +59,15 @@
       },
       {
         "heading": "Customized Segment Rule Creation",
-        "body": "Using the FMCG brand’s goals and taxonomy, we:\n\n- Defined audience segmentation rules based on user behavior such as product category visits, repeat visitors, and regional engagement\n- Built custom logic flows to reflect actual consumer journeys and intent\n- Ensured rules were adaptable for seasonal promotions and product launches\n\nThese segments powered high-performing retargeting and lookalike campaigns."
+        "body": "Using the FMCG brand's goals and taxonomy, we:\n\n- Defined audience segmentation rules based on user behavior such as product category visits, repeat visitors, and regional engagement\n- Built custom logic flows to reflect actual consumer journeys and intent\n- Ensured rules were adaptable for seasonal promotions and product launches\n\nThese segments powered high-performing retargeting and lookalike campaigns."
       },
       {
         "heading": "Segment Syndication to DSPs",
-        "body": "We operationalized the process of pushing validated audience segments to:\n\n- Authorized DSPs such as Google DV360, The Trade Desk, and other partner platforms\n- Ensured data formatting and syndication integrity as per each DSP’s specification\n- Set up monitoring and escalation flows in case of sync failures or lags\n\nOutcome: Campaigns launched with zero latency in audience availability."
+        "body": "We operationalized the process of pushing validated audience segments to:\n\n- Authorized DSPs such as Google DV360, The Trade Desk, and other partner platforms\n- Ensured data formatting and syndication integrity as per each DSP's specification\n- Set up monitoring and escalation flows in case of sync failures or lags\n\nOutcome: Campaigns launched with zero latency in audience availability."
       },
       {
         "heading": "Ongoing Operational Support",
-        "body": "We didn’t stop at setup. Our team continued to provide:\n\n- Daily health checks and issue resolution\n- Rapid support during campaign crunch periods\n- Regular feedback loops with the DMP and partner teams to improve processes and documentation"
+        "body": "We didn't stop at setup. Our team continued to provide:\n\n- Daily health checks and issue resolution\n- Rapid support during campaign crunch periods\n- Regular feedback loops with the DMP and partner teams to improve processes and documentation"
       },
       {
         "heading": "Impact & Results",
@@ -77,15 +80,16 @@
       },
       {
         "heading": "Conclusion",
-        "body": "While strategy and creativity fuel campaigns, it’s operational excellence behind the scenes that ensures they take off. By providing a robust support layer — from pixel QA to audience syndication — we enabled a global FMCG brand to turn web behavior into measurable business results.\n\nLooking to scale your data operations or streamline audience delivery? Let’s talk."
+        "body": "While strategy and creativity fuel campaigns, it's operational excellence behind the scenes that ensures they take off. By providing a robust support layer — from pixel QA to audience syndication — we enabled a global FMCG brand to turn web behavior into measurable business results.\n\nLooking to scale your data operations or streamline audience delivery? Let's talk."
       }
     ]
   },
-
-  "uae-media-execution": {
+  {
+    "slug": "uae-media-execution",
     "title": "Driving Performance Across Sectors: End-to-End Media Execution for the UAE Market",
     "subtitle": "Strategic paid media execution for service and retail brands across the UAE",
     "featureImage": "/images/client-images/seamlewss.webp",
+    "lastModified": "2026-01-11",
     "sections": [
       {
         "heading": "Client",
@@ -144,7 +148,7 @@
           "22% reduction in Cost Per Lead (CPL) for business setup and taxation clients via improved audience segmentation and bidding strategies",
           "25% uplift in ROAS during peak retail seasons through geo-targeted campaigns and offer-led creatives",
           "Established trusted operations model enabling the agency to delegate campaign execution independently to our team",
-          "Improved turnaround time for reporting and performance actions, enhancing agency’s service experience for end clients"
+          "Improved turnaround time for reporting and performance actions, enhancing agency's service experience for end clients"
         ]
       },
       {
@@ -153,28 +157,28 @@
       }
     ]
   },
-
-  
-  "luxury-kitchen-appliance-digital-strategy": {
+  {
+    "slug": "luxury-kitchen-appliance-digital-strategy",
     "title": "Redefining Digital Strategy for a Luxury Kitchen Appliance Retailer",
     "subtitle": "From generic reach to premium customer engagement",
     "featureImage": "/images/client-images/scalable.webp",
+    "lastModified": "2026-01-11",
     "sections": [
       {
         "heading": "Introduction",
-        "body": "A premium kitchen appliance retailer sought to improve their digital marketing performance after experiencing limited results with their previous agency. They partnered with Our Team to reimagine their strategy, aiming to increase showroom visits, reduce acquisition costs, and better connect with high-value customers. This case study explores how Our Team’s approach delivered measurable improvements across every key metric."
+        "body": "A premium kitchen appliance retailer sought to improve their digital marketing performance after experiencing limited results with their previous agency. They partnered with Our Team to reimagine their strategy, aiming to increase showroom visits, reduce acquisition costs, and better connect with high-value customers. This case study explores how Our Team's approach delivered measurable improvements across every key metric."
       },
       {
         "heading": "The Challenge",
-        "body": "Under the previous agency, the retailer’s marketing efforts were heavily skewed toward search advertising, with minimal investment in social media and retargeting. The campaigns targeted broad audiences and lacked personalization, resulting in high customer acquisition costs and low engagement. Creative assets did not reflect the brand’s luxury positioning, and the strategy failed to attract premium buyers."
+        "body": "Under the previous agency, the retailer's marketing efforts were heavily skewed toward search advertising, with minimal investment in social media and retargeting. The campaigns targeted broad audiences and lacked personalization, resulting in high customer acquisition costs and low engagement. Creative assets did not reflect the brand's luxury positioning, and the strategy failed to attract premium buyers."
       },
       {
-        "heading": "Our Team’s Strategic Shift",
-        "body": "When Our Team took over, the first step was to rebalance the budget across platforms. Greater emphasis was placed on Meta and retargeting to capture mid- and bottom-funnel users, while YouTube was used to build brand awareness among top-of-funnel audiences. Creatives were redesigned to reflect the brand’s premium identity, helping to establish a stronger emotional connection with affluent consumers."
+        "heading": "Our Team's Strategic Shift",
+        "body": "When Our Team took over, the first step was to rebalance the budget across platforms. Greater emphasis was placed on Meta and retargeting to capture mid- and bottom-funnel users, while YouTube was used to build brand awareness among top-of-funnel audiences. Creatives were redesigned to reflect the brand's premium identity, helping to establish a stronger emotional connection with affluent consumers."
       },
       {
         "heading": "Smarter Targeting & Messaging",
-        "body": "Audience targeting was significantly refined. Our Team introduced segments focused on high-income households and leveraged affinity and custom intent audiences to reach users with a genuine interest in luxury appliances. Lookalike audiences were built on Meta to expand reach efficiently, and irrelevant segments were excluded to reduce wasted spend.\n\nKeyword strategy also underwent a transformation. Instead of generic search terms, the campaigns focused on premium and brand-specific keywords that aligned with the retailer’s upscale offerings. This shift led to higher engagement and better lead quality."
+        "body": "Audience targeting was significantly refined. Our Team introduced segments focused on high-income households and leveraged affinity and custom intent audiences to reach users with a genuine interest in luxury appliances. Lookalike audiences were built on Meta to expand reach efficiently, and irrelevant segments were excluded to reduce wasted spend.\n\nKeyword strategy also underwent a transformation. Instead of generic search terms, the campaigns focused on premium and brand-specific keywords that aligned with the retailer's upscale offerings. This shift led to higher engagement and better lead quality."
       },
       {
         "heading": "Geographic Optimization",
@@ -189,24 +193,25 @@
         "body": "This transformation highlights the power of strategic reallocation, audience intelligence, and brand-aligned creative execution. By shifting focus from generic reach to premium engagement, Our Team helped the retailer achieve stronger results with a leaner budget."
       },
       {
-        "heading": "Let’s Build Your Success Story",
-        "body": "If you're ready to elevate your digital marketing and connect with high-value customers, Our Team is here to help. Let’s get started today."
+        "heading": "Let's Build Your Success Story",
+        "body": "If you're ready to elevate your digital marketing and connect with high-value customers, Our Team is here to help. Let's get started today."
       }
     ]
   },
-
-  "global-news-monetization": {
+  {
+    "slug": "global-news-monetization",
     "title": "Scalable Monetization & Operational Precision for a Global News Publisher",
     "subtitle": "End-to-end programmatic operations powering a worldwide news network",
     "featureImage": "/images/client-images/redefine.webp",
+    "lastModified": "2026-01-11",
     "sections": [
       {
         "heading": "Client Background",
-        "body": "Our client, a leading Video Ad Agency, secured an exclusive monetization partnership with the largest US-based Worldwide News Network and its vast network of affiliate sites. To support this high-stakes engagement, our team was brought in to manage the full spectrum of programmatic inventory operations. This included everything from curating relevant ad demand and configuring DSP seats, to ongoing yield optimization, financial reconciliation, and invoicing — effectively acting as the operational backbone behind the client’s monetization strategy."
+        "body": "Our client, a leading Video Ad Agency, secured an exclusive monetization partnership with the largest US-based Worldwide News Network and its vast network of affiliate sites. To support this high-stakes engagement, our team was brought in to manage the full spectrum of programmatic inventory operations. This included everything from curating relevant ad demand and configuring DSP seats, to ongoing yield optimization, financial reconciliation, and invoicing — effectively acting as the operational backbone behind the client's monetization strategy."
       },
       {
         "heading": "Overview",
-        "body": "When the client won exclusive rights to monetize one of the world’s largest news publishers — with an expansive network of affiliate websites — they partnered with us to build a robust, scalable, and fully operational programmatic system. We handled everything from DSP onboarding to yield strategy, daily optimization, and monthly billing.\n\nThis high-stakes partnership demanded not just technical capability, but also consistency, transparency, and scale — across hundreds of premium video placements."
+        "body": "When the client won exclusive rights to monetize one of the world's largest news publishers — with an expansive network of affiliate websites — they partnered with us to build a robust, scalable, and fully operational programmatic system. We handled everything from DSP onboarding to yield strategy, daily optimization, and monthly billing.\n\nThis high-stakes partnership demanded not just technical capability, but also consistency, transparency, and scale — across hundreds of premium video placements."
       },
       {
         "heading": "Our Solution",
@@ -215,7 +220,7 @@
       {
         "heading": "Programmatic Operations Framework",
         "bullets": [
-          "Inventory Mapping & Categorization across the publisher’s national and local affiliate network",
+          "Inventory Mapping & Categorization across the publisher's national and local affiliate network",
           "DSP Strategy & Activation, including PMP setups, targeting schemas, and demand-side QA",
           "Yield Monitoring & Optimization using performance-driven algorithms to improve fill rates and eCPMs",
           "Financial Ops covering monthly reconciliation, buyer invoicing, and revenue tracking with 99.8% accuracy"
@@ -241,11 +246,12 @@
       }
     ]
   },
-
-  "impression-to-invoice": {
+  {
+    "slug": "impression-to-invoice",
     "title": "From Impression to Invoice",
     "subtitle": "End-to-end operational excellence for a genealogy-focused programmatic ad network — Streamlining Campaign Operations in a High-Niche Programmatic Market",
     "featureImage": "/images/client-images/1stone.webp",
+    "lastModified": "2026-01-11",
     "sections": [
       {
         "heading": "Client",
@@ -253,7 +259,7 @@
       },
       {
         "heading": "The Business Context",
-        "body": "In a high-intent vertical like genealogy, every impression counts. The client's yearly inventory exceeds 300 million ad requests, with a total ad spend of USD 1.5 million annually and an average eCPM of $5.00. Campaigns needed to be flawlessly planned, launched, monitored, and billed across a fragmented yet valuable ecosystem of genealogy-focused websites.\n\nBut managing dozens of campaigns across different supply partners and DSPs came with operational pain points:\n\n- Discrepancies between planned and delivered media\n- Inefficiencies in campaign setup and pacing\n- Gaps in billing transparency and invoicing cycles\n- Limited bandwidth to monitor and optimize 30+ ongoing campaigns\n\nThat’s where we stepped in."
+        "body": "In a high-intent vertical like genealogy, every impression counts. The client's yearly inventory exceeds 300 million ad requests, with a total ad spend of USD 1.5 million annually and an average eCPM of $5.00. Campaigns needed to be flawlessly planned, launched, monitored, and billed across a fragmented yet valuable ecosystem of genealogy-focused websites.\n\nBut managing dozens of campaigns across different supply partners and DSPs came with operational pain points:\n\n- Discrepancies between planned and delivered media\n- Inefficiencies in campaign setup and pacing\n- Gaps in billing transparency and invoicing cycles\n- Limited bandwidth to monitor and optimize 30+ ongoing campaigns\n\nThat's where we stepped in."
       },
       {
         "heading": "Our Role",
@@ -314,5 +320,4 @@
       }
     ]
   }
-
-  }
+]
