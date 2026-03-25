@@ -156,7 +156,7 @@ export default function Header() {
             onClick={() => navigate("/")}
             href="/"
             prefetch
-            className="text-[2.4rem] font-semibold hover:text-[#813DFF]"
+            className="text-[3rem] font-semibold hover:text-[#813DFF]"
           >
             Home
           </Link>
@@ -165,10 +165,10 @@ export default function Header() {
           <div className="flex flex-col items-end group w-full">
             <div
               onClick={mobileOpen}
-              className="flex items-center gap-1 text-[2.4rem] font-semibold cursor-pointer"
+              className="flex items-center gap-1 text-[3rem] font-semibold cursor-pointer"
             >
               Services
-              <span className="text-[0.9rem] transition-transform duration-300 group-hover:rotate-180">
+              <span className="text-[2rem] transition-transform duration-300 group-hover:rotate-180">
                 <IoIosArrowDown />
               </span>
             </div>
@@ -190,7 +190,7 @@ export default function Header() {
                 onClick={() => navigate("/services/digital-marketing")}
                 href="/services/digital-marketing"
                 prefetch
-                className="text-[1.2rem] font-medium hover:text-[#813DFF]"
+                className="text-[1.8rem] font-medium hover:text-[#813DFF]"
               >
                 Digital Marketing
               </Link>
@@ -199,7 +199,7 @@ export default function Header() {
                 onClick={() => navigate("/services/ad-operations")}
                 href="/services/ad-operations"
                 prefetch
-                className="mt-1 text-[1.2rem] font-medium hover:text-[#813DFF]"
+                className="mt-1 text-[1.8rem] font-medium hover:text-[#813DFF]"
               >
                 Advertising Operations
               </Link>
@@ -210,7 +210,7 @@ export default function Header() {
             onClick={() => navigate("/client-success")}
             href="/client-success"
             prefetch
-            className="text-[2.4rem] font-semibold hover:text-[#813DFF]"
+            className="text-[3rem] font-semibold hover:text-[#813DFF]"
           >
             Client Success
           </Link>
@@ -219,29 +219,19 @@ export default function Header() {
             onClick={() => navigate("/about-us")}
             href="/about-us"
             prefetch
-            className="text-[2.4rem] font-semibold hover:text-[#813DFF]"
+            className="text-[3rem] font-semibold hover:text-[#813DFF]"
           >
             About Us
           </Link>
 
           {/* BLOGS */}
-          <Link
-            onClick={() => navigate("/blogs")}
-            href="/blogs"
-            prefetch
-            className="text-[2.4rem] font-semibold hover:text-[#813DFF] flex items-center justify-end gap-1"
-          >
-            Blogs
-            <span className="inline-flex items-center justify-center bg-[#813DFF] text-white text-[0.45rem] font-black tracking-widest uppercase px-1.5 py-0.5 rounded-full leading-none">
-              NEW
-            </span>
-          </Link>
+      
 
           <Link
             onClick={() => navigate("/contact-us")}
             href="/contact-us"
             prefetch
-            className="text-[2.4rem] font-semibold hover:text-[#813DFF]"
+            className="text-[3rem] font-semibold hover:text-[#813DFF]"
           >
             Contact
           </Link>
@@ -250,7 +240,7 @@ export default function Header() {
             onClick={() => navigate("/careers")}
             href="/careers"
             prefetch
-            className="text-[2.4rem] font-semibold hover:text-[#813DFF]"
+            className="text-[3rem] font-semibold hover:text-[#813DFF]"
           >
             Careers
           </Link>
@@ -259,3 +249,16 @@ export default function Header() {
     </>
   );
 }
+
+
+   //    <Link
+          //   onClick={() => navigate("/blogs")}
+          //   href="/blogs"
+          //   prefetch
+          //   className="text-[2.4rem] font-semibold hover:text-[#813DFF] flex items-center justify-end gap-1"
+          // >
+          //   Blogs
+          //   <span className="inline-flex items-center justify-center bg-[#813DFF] text-white text-[0.45rem] font-black tracking-widest uppercase px-1.5 py-0.5 rounded-full leading-none">
+          //     NEW
+          //   </span>
+          // </Link>
