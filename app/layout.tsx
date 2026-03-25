@@ -24,12 +24,13 @@ const manrope = Manrope({
 /* =========================
    METADATA
 ========================= */
-
 export const metadata: Metadata = {
-  title: "AdRefresh - Digital Marketing and AdOps",
+  title: {
+    default: "AdRefresh - Digital Marketing and AdOps",
+    template: "%s | AdRefresh",
+  },
   description: "AI-Enhanced Digital Marketing and Advertising Operations",
 };
-
 /* =========================
    ROOT LAYOUT
 ========================= */
