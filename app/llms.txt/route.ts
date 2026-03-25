@@ -1,30 +1,46 @@
+
 import { NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 
 export const dynamic = 'force-static';
 
-const APP_DIR  = path.join(process.cwd(), 'app');
+const APP_DIR = path.join(process.cwd(), 'app');
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.adrefresh.com';
 
 // Extracts a named metadata field (title or description) from a page.tsx.
 // Handles:
+//   PAGE_TITLE / PAGE_DESCRIPTION constants
+//   generateMetadata() function with return statement
+//   title: { default: "..." }
 //   field: "single-line string"
 //   field:\n    "multi-line string"
-//   field: { default: "string", ... }   (title only)
-//   field: data.meta.field              → resolved from the page's JSON file
+//   field: data.meta.field → resolved from the page's JSON file
 function extractField(src: string, field: 'title' | 'description', pagePath: string): string {
+  // Look for PAGE_TITLE or PAGE_DESCRIPTION constants
+  const constName = field === 'title' ? 'PAGE_TITLE' : 'PAGE_DESCRIPTION';
+  const constMatch = src.match(new RegExp(`const\\s+${constName}\\s*=\\s*["'\`]([^"'\`]+)["'\`]`));
+  if (constMatch) return constMatch[1];
+  
+  // Look for generateMetadata function with return statement
+  const generateMetadataRegex = new RegExp(
+    `generateMetadata\\s*\\([^)]*\\)\\s*\\{[\\s\\S]*?return\\s*\\{[\\s\\S]*?${field}\\s*:\\s*["'\`]([^"'\`]+)["'\`]`,
+    's'
+  );
+  const generateMatch = src.match(generateMetadataRegex);
+  if (generateMatch) return generateMatch[1];
+  
   // title: { default: "..." }
   if (field === 'title') {
     const defaultMatch = src.match(/title\s*:\s*\{\s*default\s*:\s*["']([^"']+)["']/);
     if (defaultMatch) return defaultMatch[1];
   }
 
-  // field: "..." or field:\n    "..."  (handles template literals and line breaks)
+  // field: "..." or field:\n    "..."
   const direct = src.match(new RegExp(`${field}\\s*:\\s*[\\n\\s]*["'\`]([^"'\`]+)["'\`]`));
   if (direct) return direct[1].trim();
 
-  // field: data.meta.field  → resolve from JSON
+  // field: data.meta.field → resolve from JSON
   if (src.includes(`data.meta.${field}`)) {
     const jsonImport = src.match(/from\s+["'](@\/app\/json-data\/[^"']+)["']/);
     if (jsonImport) {
