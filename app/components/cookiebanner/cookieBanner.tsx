@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -13,39 +12,35 @@ declare global {
 export default function CookieBanner() {
   const [showBanner, setShowBanner] = useState(false);
 
-  useEffect(() => {
-    // 1. Initialize dataLayer if it doesn't exist
+  // 1. Define the gtag helper function so it can be used anywhere
+  // It MUST use the 'function' keyword to capture 'arguments' correctly
+  const gtag: Function = function() {
     window.dataLayer = window.dataLayer || [];
-    
-    // 2. Helper function to handle gtag commands safely
-    function gtag() {
-      window.dataLayer.push(arguments);
-    }
+    window.dataLayer.push(arguments);
+  };
 
+  useEffect(() => {
     const savedConsent = localStorage.getItem('consent_granted');
 
     if (!savedConsent) {
-      // 3. Set DEFAULT state to denied for new users
-      window.dataLayer.push('consent', 'default', {
+      // 2. Set DEFAULT state using gtag()
+      gtag('consent', 'default', {
         ad_storage: 'denied',
         ad_user_data: 'denied',
         ad_personalization: 'denied',
         analytics_storage: 'denied',
         personalization_storage: 'denied',
-        wait_for_update: 500 // Optional: gives GTM time to react
+        // wait_for_update: 500 
       });
       setShowBanner(true);
     } else {
-      // 4. Apply saved consent immediately
       applyConsent(savedConsent as 'granted' | 'denied');
     }
   }, []);
 
   const applyConsent = (status: 'granted' | 'denied') => {
-    // Using dataLayer.push(arguments) style for maximum compatibility
-    window.dataLayer = window.dataLayer || [];
-    
-    window.dataLayer.push('consent', 'update', {
+    // 3. Apply UPDATE state using gtag()
+    gtag('consent', 'update', {
       ad_storage: status,
       ad_user_data: status,
       ad_personalization: status,
@@ -53,6 +48,8 @@ export default function CookieBanner() {
       personalization_storage: status,
     });
 
+    // 4. This standard event push is fine as-is!
+    window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
       event: 'consent_update_event',
       consent_status: status,
