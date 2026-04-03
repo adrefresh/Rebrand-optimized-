@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next";
 import AboutHero from "../components/about-us-page-components/abouthero";
 import AboutAdRefresh from "../components/about-us-page-components/About-Adrefresh";
@@ -6,29 +7,54 @@ import VisionMission from "../components/about-us-page-components/vision";
 import ListenPerform from "../components/homePageComponents/we-listen";
 import MissionVisionSection from "../components/about-us-page-components/CardsMission";
 
- // adjust path if needed
+// ============================================
+// SEO VARIABLES - UPDATE ONLY THESE VALUES
+// ============================================
+
+// Variable 1: Page Title (Used for both regular SEO, OG, and Twitter)
+const SEO_TITLE = "About Us | AdRefresh - Performance-Driven Ad Operations";
+
+// Variable 2: Meta Description (Used for both regular SEO, OG, and Twitter)
+const SEO_DESCRIPTION = "Learn about AdRefresh, a performance-driven advertising operations and Digital Marketing partner built on experience, precision, and measurable growth.";
+
+// Variable 3: Canonical URL
+const SEO_CANONICAL_URL = "https://www.adrefresh.com/about-us";
+
+// Variable 4: Site Name
+
+
+// Variable 5: Open Graph Image URL (Optional - only modify if you have a custom image)
+const SEO_OG_IMAGE_URL = "https://www.adrefresh.com/og/about.png";
+
+// Variable 6: Robots Index (true/false)
+const SEO_ROBOTS_INDEX = true;
+
+// Variable 7: Robots Follow (true/false)
+const SEO_ROBOTS_FOLLOW = true;
+
+// ============================================
+// METADATA GENERATION - DO NOT MODIFY BELOW
+// ============================================
 
 export const metadata: Metadata = {
-  title: "About Us | AdRefresh - Performance-Driven Ad Operations",
-  description:
-    "Learn about AdRefresh, a performance-driven advertising operations and Digital Marketing partner built on experience, precision, and measurable growth.",
+  title: SEO_TITLE,
+  description: SEO_DESCRIPTION,
 
   alternates: {
-    canonical: "https://www.adrefresh.com/about-us",
+    canonical: SEO_CANONICAL_URL,
   },
 
   openGraph: {
-    title: "About AdRefresh - Built on Experience. Driven by Performance.",
-    description:
-      "Discover how AdRefresh helps brands scale through expert ad operations, programmatic strategy, and performance-focused execution.",
-    url: "https://www.adrefresh.com/about-us",
-    siteName: "AdRefresh",
+    title: SEO_TITLE, // Reuses main title
+    description: SEO_DESCRIPTION, // Reuses main description
+    url: SEO_CANONICAL_URL,
+    siteName: "Adrefresh",
     images: [
       {
-        url: "https://www.adrefresh.com/og/about.png",
+        url: SEO_OG_IMAGE_URL,
         width: 1200,
         height: 630,
-        alt: "About AdRefresh",
+        alt: `About Adrefresh`,
       },
     ],
     locale: "en_US",
@@ -37,15 +63,14 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "About AdRefresh - Performance Marketing Experts",
-    description:
-      "Built on experience. Driven by performance. Learn more about the AdRefresh team and our approach.",
-    images: ["https://www.adrefresh.com/og/about.png"],
+    title: SEO_TITLE, // Reuses main title
+    description: SEO_DESCRIPTION, // Reuses main description
+    images: [SEO_OG_IMAGE_URL],
   },
 
   robots: {
-    index: true,
-    follow: true,
+    index: SEO_ROBOTS_INDEX,
+    follow: SEO_ROBOTS_FOLLOW,
   },
 };
 

@@ -40,7 +40,7 @@ export default function PrecisionSection() {
 
       {/* CONTENT */}
       <div className="relative z-10 max-w-[1100px] mx-auto flex flex-col justify-center py-4">
-        <h1
+        <h2
           className="
             text-black
             font-black
@@ -54,7 +54,7 @@ export default function PrecisionSection() {
           "
         >
           Get in Touch With Our Experts
-        </h1>
+        </h2>
 
         <p
           className="

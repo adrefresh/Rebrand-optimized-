@@ -47,9 +47,9 @@ export default function CareersClient() {
   return (
     <>
       <div className="mt-16 px-4 text-center sm:mt-20 overflow-x-hidden">
-        <h1 className="font-extrabold text-[2.2rem] sm:text-[3rem] md:text-[4rem] lg:text-[3rem]">
+        <h2 className="font-extrabold text-[2.2rem] sm:text-[3rem] md:text-[4rem] lg:text-[3rem]">
           JOIN WITH US
-        </h1>
+        </h2>
 
         <p className="mt-2 text-gray-600 text-[0.95rem] sm:text-base">
           Explore exciting opportunities to grow your career with AdRefresh.

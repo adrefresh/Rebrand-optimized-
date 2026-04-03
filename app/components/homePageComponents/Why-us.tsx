@@ -5,7 +5,7 @@ export default function WhyUsSection() {
   return (
     <section className="relative w-screen bg-[#0d0d0d] text-white overflow-hidden">
       {/* TITLE */}
-   <h1
+   <h2
   className="
     py-3
     text-center
@@ -21,7 +21,7 @@ export default function WhyUsSection() {
   "
 >
   WHY US
-</h1>
+</h2>
 
 
 

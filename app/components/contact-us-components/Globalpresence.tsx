@@ -63,9 +63,9 @@ export default function GlobalPresence() {
     <section className="relative py-20">
       <div className="mx-auto max-w-[1400px] px-6">
         {/* TITLE */}
-        <h1 className="mb-16 text-center text-[2.4rem] sm:text-[2.8rem] lg:text-[3.2rem] font-black text-black">
+        <h2 className="mb-16 text-center text-[2.4rem] sm:text-[2.8rem] lg:text-[3.2rem] font-black text-black">
           Our Global Presence
-        </h1>
+        </h2>
 
         {/* GRID */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-16 gap-x-10">

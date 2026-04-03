@@ -143,9 +143,9 @@ export default function ContactClient() {
 
   <div className="absolute inset-0 z-[3] bg-gradient-to-b from-black/10 via-black/40 to-black/50" />
 
-  <h1 className="relative z-[5] text-[5rem] font-black text-white max-[768px]:text-[3rem]">
+  <h2 className="relative z-[5] text-[5rem] font-black text-white max-[768px]:text-[3rem]">
     CONTACT US
-  </h1>
+  </h2>
 </section>
 
 

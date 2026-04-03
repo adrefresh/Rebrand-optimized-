@@ -1,12 +1,68 @@
 import type { Metadata } from "next";
 
+// ============================================
+// SEO VARIABLES - UPDATE ONLY THESE VALUES
+// ============================================
+
+// Variable 1: Page Title (Used for regular SEO, OG, and Twitter)
+const SEO_TITLE = "Privacy Policy | AdRefresh";
+
+// Variable 2: Meta Description
+const SEO_DESCRIPTION = "Read AdRefresh's privacy policy to understand how we collect, use, and protect your personal information when using our website and services.";
+
+// Variable 3: Canonical URL
+const SEO_CANONICAL_URL = "https://www.adrefresh.com/privacy-policy";
+
+// Variable 4: Open Graph Image URL (Optional - only modify if you need a custom image)
+const SEO_OG_IMAGE_URL = "https://www.adrefresh.com/og/privacy-policy.png";
+
+// Variable 5: Robots Index (true/false)
+const SEO_ROBOTS_INDEX = false;
+
+// Variable 6: Robots Follow (true/false)
+const SEO_ROBOTS_FOLLOW = true;
+
+// ============================================
+// METADATA GENERATION - DO NOT MODIFY BELOW
+// ============================================
+
 export const metadata: Metadata = {
-  title: 'Privacy Policy | AdRefresh',
-  robots: { index: false, follow: true },
+  title: SEO_TITLE,
+  description: SEO_DESCRIPTION,
+
   alternates: {
-    canonical: 'https://www.adrefresh.com/privacy-policy',
-  }
-}
+    canonical: SEO_CANONICAL_URL,
+  },
+
+  openGraph: {
+    title: SEO_TITLE,
+    description: SEO_DESCRIPTION,
+    url: SEO_CANONICAL_URL,
+    siteName: "AdRefresh",
+    images: [
+      {
+        url: SEO_OG_IMAGE_URL,
+        width: 1200,
+        height: 630,
+        alt: "Privacy Policy | AdRefresh",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: SEO_TITLE,
+    description: SEO_DESCRIPTION,
+    images: [SEO_OG_IMAGE_URL],
+  },
+
+  robots: {
+    index: SEO_ROBOTS_INDEX,
+    follow: SEO_ROBOTS_FOLLOW,
+  },
+};
 
 export default function PrivacyPolicyPage() {
   return (
@@ -31,9 +87,9 @@ export default function PrivacyPolicyPage() {
         {/* Hero Area */}
         <div className="h-[50vh] flex items-center justify-center">
           <div className="text-center px-6 mt-10">
-            <h1 className="text-4xl md:text-5xl font-extrabold text-black mb-4">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-black mb-4">
               Privacy Policy
-            </h1>
+            </h2>
             {/* <p className="text-black/80 text-lg max-w-3xl mx-auto">
               Welcome to AdRefresh. We are dedicated to protecting your privacy and ensuring
               that our services are both personalized and valuable to you.
