@@ -7,10 +7,10 @@ import AdOpsPageClient from "./AdopsPageClient";
 // ============================================
 
 // Variable 1: Page Title (Used for regular SEO, OG, and Twitter)
-const SEO_PAGE_TITLE = "Advertising Operations Services | AdOps Management & Optimization";
+const PAGE_TITLE = "Advertising Operations Services | AdOps Management & Optimization";
 
 // Variable 2: Page Description (Used for regular SEO, OG, and Twitter)
-const SEO_PAGE_DESCRIPTION = "Professional Advertising Operations (AdOps) services to manage, optimize, and scale your digital ad campaigns. We deliver performance-driven ad operations with transparency and flexibility.";
+const PAGE_DESCRIPTION = "Professional Advertising Operations (AdOps) services to manage, optimize, and scale your digital ad campaigns. We deliver performance-driven ad operations with transparency and flexibility.";
 
 // Variable 3: Page URL (Canonical)
 const SEO_PAGE_URL = "https://www.adrefresh.com/services/ad-operations";
@@ -52,15 +52,15 @@ const SEO_KEYWORDS = [
 
 export function generateMetadata() {
   return {
-    title: SEO_PAGE_TITLE,
-    description: SEO_PAGE_DESCRIPTION,
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
     keywords: SEO_KEYWORDS,
     alternates: {
       canonical: SEO_PAGE_URL,
     },
     openGraph: {
-      title: SEO_PAGE_TITLE,
-      description: SEO_PAGE_DESCRIPTION,
+      title: PAGE_TITLE,
+      description: PAGE_DESCRIPTION,
       url: SEO_PAGE_URL,
       siteName: "AdRefresh",
       images: [
@@ -76,8 +76,8 @@ export function generateMetadata() {
     },
     twitter: {
       card: "summary_large_image",
-      title: SEO_PAGE_TITLE,
-      description: SEO_PAGE_DESCRIPTION,
+      title: PAGE_TITLE,
+      description: PAGE_DESCRIPTION,
       images: [SEO_OG_IMAGE_URL],
     },
   };
@@ -86,14 +86,14 @@ export function generateMetadata() {
 export default function Page() {
   const webPageSchema = generateWebPageSchema({
     url: SEO_PAGE_URL,
-    title: SEO_PAGE_TITLE,
-    description: SEO_PAGE_DESCRIPTION,
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
   });
   
   const serviceSchema = generateServiceSchema({
     name: SEO_SERVICE_NAME,
     url: SEO_PAGE_URL,
-    description: SEO_PAGE_DESCRIPTION,
+    description: PAGE_DESCRIPTION,
     serviceType: SEO_SERVICE_TYPE,
     subServices: SEO_SERVICE_SUB_SERVICES,
   });

@@ -11,19 +11,13 @@ import DATA from "../../json-data/case-studies.json";
 // ============================================
 
 // Variable 1: Default Title (when no data found)
-const SEO_DEFAULT_TITLE = "Client Success | AdRefresh";
+const PAGE_TITLE = "Client Success | AdRefresh";
 
 // Variable 2: Default Description (when no data found)
-const SEO_DEFAULT_DESCRIPTION = "Explore how AdRefresh delivers operational excellence across programmatic advertising and ad operations.";
+const PAGE_DESCRIPTION = "Explore how AdRefresh delivers operational excellence across programmatic advertising and ad operations.";
 
 // Variable 3: Base URL
 const SEO_BASE_URL = "https://www.adrefresh.com";
-
-// Variable 4: Robots Default Index
-const SEO_ROBOTS_INDEX = true;
-
-// Variable 5: Robots Default Follow
-const SEO_ROBOTS_FOLLOW = true;
 
 // ============================================
 // TYPES
@@ -57,9 +51,9 @@ export async function generateMetadata({
 
   if (!data) {
     return {
-      title: SEO_DEFAULT_TITLE,
-      description: SEO_DEFAULT_DESCRIPTION,
-      robots: { index: SEO_ROBOTS_INDEX, follow: SEO_ROBOTS_FOLLOW },
+      title: PAGE_TITLE,
+      description: PAGE_DESCRIPTION,
+      robots: { index: true, follow: true },
     };
   }
 
@@ -92,8 +86,8 @@ export async function generateMetadata({
       images: [data.featureImage],
     },
     robots: {
-      index: SEO_ROBOTS_INDEX,
-      follow: SEO_ROBOTS_FOLLOW,
+      index: true,
+      follow: true,
     },
   };
 }
@@ -171,7 +165,7 @@ export default async function ClientSuccessDetail({
         <div
           className="
     mt-[5%]
-    md:mb-[-60px]
+    md:-mb-15
     
     mb-[20%]        /* 📱 mobile */
     sm:mb-[-3.7%]   /* 💻 tablet & up */

@@ -12,10 +12,10 @@ import DATA from "../json-data/case-studies.json";
 // ============================================
 
 // Variable 1: Page Title (Used for regular SEO, OG, and Twitter)
-const SEO_TITLE = "Client Success Stories | AdRefresh Case Studies & Results";
+const PAGE_TITLE = "Client Success Stories | AdRefresh Case Studies & Results";
 
 // Variable 2: Meta Description (Used for regular SEO, OG, and Twitter)
-const SEO_DESCRIPTION = "Explore real client success stories from AdRefresh. See how our ad operations, programmatic strategy, and digital marketing expertise drive measurable business growth.";
+const PAGE_DESCRIPTION = "Explore real client success stories from AdRefresh. See how our ad operations, programmatic strategy, and digital marketing expertise drive measurable business growth.";
 
 // Variable 3: Canonical URL
 const SEO_CANONICAL_URL = "https://www.adrefresh.com/client-success";
@@ -23,27 +23,21 @@ const SEO_CANONICAL_URL = "https://www.adrefresh.com/client-success";
 // Variable 4: Open Graph Image URL (Optional - only modify if you need a custom image)
 const SEO_OG_IMAGE_URL = "https://www.adrefresh.com/og/client-success.png";
 
-// Variable 5: Robots Index (true/false)
-const SEO_ROBOTS_INDEX = true;
-
-// Variable 6: Robots Follow (true/false)
-const SEO_ROBOTS_FOLLOW = true;
-
 // ============================================
 // METADATA EXPORT (for Next.js)
 // ============================================
 
 export const metadata: Metadata = {
-  title: SEO_TITLE,
-  description: SEO_DESCRIPTION,
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
 
   alternates: {
     canonical: SEO_CANONICAL_URL,
   },
 
   openGraph: {
-    title: SEO_TITLE, // Reuses main title
-    description: SEO_DESCRIPTION, // Reuses main description
+    title: PAGE_TITLE, // Reuses main title
+    description: PAGE_DESCRIPTION, // Reuses main description
     url: SEO_CANONICAL_URL,
     siteName: "AdRefresh", // Hardcoded - no variable
     images: [
@@ -60,14 +54,14 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: SEO_TITLE, // Reuses main title
-    description: SEO_DESCRIPTION, // Reuses main description
+    title: PAGE_TITLE, // Reuses main title
+    description: PAGE_DESCRIPTION, // Reuses main description
     images: [SEO_OG_IMAGE_URL],
   },
 
   robots: {
-    index: SEO_ROBOTS_INDEX,
-    follow: SEO_ROBOTS_FOLLOW,
+    index: true,
+    follow: true,
   },
 };
 
@@ -179,11 +173,11 @@ export default function ClientSuccessPage() {
       </div>
 
       {/* ================= HEADER ================= */}
-      <section className="max-w-[1200px] mx-auto text-center px-4 mt-[-1%] mb-16">
+      <section className="max-w-300 mx-auto text-center px-4 mt-[-1%] mb-16">
         <h2 className="font-black text-[clamp(2.4rem,5vw,4rem)] mb-4">
           Success stories
         </h2>
-        <p className="text-[#555] text-[clamp(1rem,2vw,1.2rem)] max-w-[900px] mx-auto leading-relaxed">
+        <p className="text-[#555] text-[clamp(1rem,2vw,1.2rem)] max-w-225 mx-auto leading-relaxed">
           A closer look at how operational precision, platform expertise, and
           execution excellence translate into measurable business impact.
         </p>
@@ -199,7 +193,7 @@ export default function ClientSuccessPage() {
               py-20
             `}
           >
-            <div className="max-w-[1200px] mx-auto px-4">
+            <div className="max-w-300 mx-auto px-4">
               <Link
                 href={`/client-success/${cs.slug}`}
                 className={`
@@ -225,13 +219,13 @@ export default function ClientSuccessPage() {
                     {cs.title}
                   </h3>
 
-                  <p className="text-[#444] text-[clamp(1rem,2vw,1.1rem)] max-w-[480px]">
+                  <p className="text-[#444] text-[clamp(1rem,2vw,1.1rem)] max-w-120">
                     {cs.excerpt}
                   </p>
                 </div>
 
                 {/* IMAGE */}
-                <div className="rounded-[18px] overflow-hidden max-w-full relative h-[260px] md:h-[300px]">
+                <div className="rounded-[18px] overflow-hidden max-w-full relative h-65 md:h-75">
                   <Image
                     src={cs.image}
                     alt={cs.title}
@@ -250,7 +244,7 @@ export default function ClientSuccessPage() {
       </section>
 
       {/* ================= FOOTER ================= */}
-      <div className="mt-[-60px]">
+      <div className="-mt-15">
         <ListenPerform />
       </div>
     </>

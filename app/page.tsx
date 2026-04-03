@@ -10,13 +10,13 @@ import CaseHeader from "./components/homePageComponents/case-header";
 // ============================================
 
 // Variable 1: Default Title
-const SEO_DEFAULT_TITLE = "AdRefresh – Digital Marketing & Ad Operations";
+const PAGE_TITLE = "AdRefresh - Digital Marketing & Ad Operations";
 
 // Variable 2: Title Template
 const SEO_TITLE_TEMPLATE = "%s | AdRefresh";
 
 // Variable 3: Meta Description (Used for regular SEO, OG, and Twitter)
-const SEO_DESCRIPTION = "AdRefresh delivers Digital Marketing and advertising operations, and scalable remote media teams to help brands grow efficiently with data-driven performance.";
+const PAGE_DESCRIPTION = "AdRefresh delivers Digital Marketing and advertising operations, and scalable remote media teams to help brands grow efficiently with data-driven performance.";
 
 // Variable 4: Canonical URL
 const SEO_CANONICAL_URL = "https://www.adrefresh.com/";
@@ -40,23 +40,17 @@ const SEO_KEYWORDS = [
   "Performance Marketing",
 ];
 
-// Variable 8: Robots Index (true/false)
-const SEO_ROBOTS_INDEX = true;
-
-// Variable 9: Robots Follow (true/false)
-const SEO_ROBOTS_FOLLOW = true;
-
 // ============================================
 // SEO METADATA GENERATION - DO NOT MODIFY BELOW
 // ============================================
 
 export const metadata: Metadata = {
   title: {
-    default: SEO_DEFAULT_TITLE,
+    default: PAGE_TITLE,
     template: SEO_TITLE_TEMPLATE,
   },
 
-  description: SEO_DESCRIPTION,
+  description: PAGE_DESCRIPTION,
 
   keywords: SEO_KEYWORDS,
 
@@ -70,8 +64,8 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: SEO_DEFAULT_TITLE,
-    description: SEO_DESCRIPTION,
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
     url: SEO_CANONICAL_URL,
     siteName: "AdRefresh",
     images: [
@@ -79,7 +73,7 @@ export const metadata: Metadata = {
         url: SEO_OG_IMAGE_URL,
         width: 1200,
         height: 630,
-        alt: "AdRefresh – Programmatic Advertising & Advertisement Operations",
+        alt: PAGE_TITLE,
       },
     ],
     locale: "en_US",
@@ -88,18 +82,18 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: SEO_DEFAULT_TITLE,
-    description: SEO_DESCRIPTION,
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
     images: [SEO_OG_IMAGE_URL],
     creator: SEO_TWITTER_CREATOR,
   },
 
   robots: {
-    index: SEO_ROBOTS_INDEX,
-    follow: SEO_ROBOTS_FOLLOW,
+    index: true,
+    follow: true,
     googleBot: {
-      index: SEO_ROBOTS_INDEX,
-      follow: SEO_ROBOTS_FOLLOW,
+      index: true,
+      follow: true,
       "max-image-preview": "large",
       "max-snippet": -1,
       "max-video-preview": -1,

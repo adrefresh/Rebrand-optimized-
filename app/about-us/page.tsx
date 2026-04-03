@@ -12,10 +12,10 @@ import MissionVisionSection from "../components/about-us-page-components/CardsMi
 // ============================================
 
 // Variable 1: Page Title (Used for both regular SEO, OG, and Twitter)
-const SEO_TITLE = "About Us | AdRefresh - Performance-Driven Ad Operations";
+const PAGE_TITLE = "About Us | AdRefresh - Performance-Driven Ad Operations";
 
 // Variable 2: Meta Description (Used for both regular SEO, OG, and Twitter)
-const SEO_DESCRIPTION = "Learn about AdRefresh, a performance-driven advertising operations and Digital Marketing partner built on experience, precision, and measurable growth.";
+const PAGE_DESCRIPTION = "Learn about AdRefresh, a performance-driven advertising operations and Digital Marketing partner built on experience, precision, and measurable growth.";
 
 // Variable 3: Canonical URL
 const SEO_CANONICAL_URL = "https://www.adrefresh.com/about-us";
@@ -26,27 +26,21 @@ const SEO_CANONICAL_URL = "https://www.adrefresh.com/about-us";
 // Variable 5: Open Graph Image URL (Optional - only modify if you have a custom image)
 const SEO_OG_IMAGE_URL = "https://www.adrefresh.com/og/about.png";
 
-// Variable 6: Robots Index (true/false)
-const SEO_ROBOTS_INDEX = true;
-
-// Variable 7: Robots Follow (true/false)
-const SEO_ROBOTS_FOLLOW = true;
-
 // ============================================
 // METADATA GENERATION - DO NOT MODIFY BELOW
 // ============================================
 
 export const metadata: Metadata = {
-  title: SEO_TITLE,
-  description: SEO_DESCRIPTION,
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
 
   alternates: {
     canonical: SEO_CANONICAL_URL,
   },
 
   openGraph: {
-    title: SEO_TITLE, // Reuses main title
-    description: SEO_DESCRIPTION, // Reuses main description
+    title: PAGE_TITLE, // Reuses main title
+    description: PAGE_DESCRIPTION, // Reuses main description
     url: SEO_CANONICAL_URL,
     siteName: "Adrefresh",
     images: [
@@ -63,14 +57,14 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: SEO_TITLE, // Reuses main title
-    description: SEO_DESCRIPTION, // Reuses main description
+    title: PAGE_TITLE, // Reuses main title
+    description: PAGE_DESCRIPTION, // Reuses main description
     images: [SEO_OG_IMAGE_URL],
   },
 
   robots: {
-    index: SEO_ROBOTS_INDEX,
-    follow: SEO_ROBOTS_FOLLOW,
+    index: true,
+    follow: true,
   },
 };
 
