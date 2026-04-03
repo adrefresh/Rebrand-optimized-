@@ -1,19 +1,32 @@
-
 import type { Metadata } from "next";
 import "./globals.css";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
+import { GoogleTagManager } from '@next/third-parties/google';
 import CookieBanner from "./components/cookiebanner/cookieBanner";
-import GoogleTagManagerContainer from "./components/cookiebanner/GoogleTagManager";
+// import GoogleTagManagerContainer from "./components/cookiebanner/GoogleTagManager";
 
 import { Manrope } from "next/font/google";
 import organizationSchema from "@/libraries/schema/organizationSchema";
 
-/* =========================
-   FONT CONFIG
-========================= */
+// ============================================
+// SEO VARIABLES - UPDATE ONLY THESE VALUES
+// ============================================
+
+// Variable 1: Default Title
+const PAGE_TITLE = "AdRefresh - Digital Marketing and AdOps";
+
+// Variable 2: Title Template
+const SEO_TITLE_TEMPLATE = "%s | AdRefresh";
+
+// Variable 3: Meta Description
+const PAGE_DESCRIPTION = "AI-Enhanced Digital Marketing and Advertising Operations";
+
+// ============================================
+// FONT CONFIG
+// ============================================
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -26,11 +39,25 @@ const manrope = Manrope({
 ========================= */
 export const metadata: Metadata = {
   title: {
-    default: "AdRefresh - Digital Marketing and AdOps",
+    default: PAGE_TITLE,
     template: "%s | AdRefresh",
   },
-  description: "AI-Enhanced Digital Marketing and Advertising Operations",
+  description: PAGE_DESCRIPTION,
+  // Adding robots for root layout (good practice)
+  robots: {
+    index: true,
+    follow: true,
+  },
+  // Adding openGraph for root layout (used as fallback)
+  openGraph: {
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    siteName: "AdRefresh",
+    locale: "en_US",
+    type: "website",
+  },
 };
+
 /* =========================
    ROOT LAYOUT
 ========================= */
@@ -41,7 +68,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
 
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "https://www.adrefresh.com";
 
   return (
     <html
@@ -50,26 +77,39 @@ export default function RootLayout({
       style={{ ["--base-path" as any]: basePath }}
     >
       <head>
+        {/* 1. CRITICAL: Initialize dataLayer and Default Consent BEFORE GTM loads */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('consent', 'default', {
+                'ad_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied',
+                'analytics_storage': 'denied',
+                'personalization_storage': 'denied',
+                'wait_for_update': 500
+              });
+            `,
+          }}
+        />
 
-        {/* ✅ PERF FIX: Preload hero poster using stable public path (not hashed _next path
-            which breaks on every deploy). Tells browser to fetch this immediately. */}
+        {/* ✅ PERF FIX: Preload hero poster using stable public path */}
         <link
           rel="preload"
           as="image"
           href="/images/client-images/hero-img.png"
         />
 
-        {/* ✅ PERF FIX: Preload conference background using stable public path.
-            Removed the old hashed /_next/static/media/... path — it was stale and
-            broke on every new build. The native img fetchPriority in adrexiansabout.tsx
-            handles priority loading; this preload gives an extra head start. */}
+        {/* ✅ PERF FIX: Preload conference background */}
         <link
           rel="preload"
           as="image"
           href="/images/HomePageImages/conference-40kb.webp"
         />
 
-        {/* ✅ PERF FIX: Preconnect to third-party origins — unchanged, these are correct */}
+        {/* ✅ PERF FIX: Preconnect to third-party origins */}
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://connect.facebook.net" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://snap.licdn.com" crossOrigin="anonymous" />
@@ -81,16 +121,10 @@ export default function RootLayout({
             __html: JSON.stringify(organizationSchema),
           }}
         />
-
-        {/* ✅ PERF FIX: REMOVED the CSS-deferral script that was here.
-            It was setting all stylesheets to media="print" which caused a flash
-            of unstyled content (FOUC) on mobile and was the main cause of
-            Speed Index 6.5s. Next.js handles CSS splitting efficiently on its own. */}
-
       </head>
       <body className="min-h-screen flex flex-col">
         {process.env.NEXT_PUBLIC_ENABLE_GTM === "true" && (
-          <GoogleTagManagerContainer gtmId="GTM-MMMX5TGB" />
+          <GoogleTagManager gtmId="GTM-MMMX5TGB" />
         )}
 
         <CookieBanner />

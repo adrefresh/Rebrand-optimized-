@@ -164,7 +164,7 @@ export default function ListenPerform() {
         mx-auto text-center
         ml-2 md:ml-10 lg:ml-20 2xl:ml-32">
         <div className="max-w-225 mx-auto text-left">
-          <h1 className="font-black leading-[1.03] text-[4.6rem] max-[1024px]:text-[3.6rem] max-[768px]:text-[2.6rem]">
+          <h2 className="font-black leading-[1.03] text-[4.6rem] max-[1024px]:text-[3.6rem] max-[768px]:text-[2.6rem]">
             <div>
               <span className="text-white">WE </span>
               <span className="text-black">LISTEN</span>
@@ -176,7 +176,7 @@ export default function ListenPerform() {
                 PERFORM
               </span>
             </div>
-          </h1>
+          </h2>
 
           <p className="mt-5 text-[22px] leading-[1.45] text-black/85 max-[1024px]:text-[18px] max-[768px]:text-[15px]">
             We take the time to listen and understand your brand, mission, challenges, and goals – then execute with precision and creativity to deliver meaningful impact

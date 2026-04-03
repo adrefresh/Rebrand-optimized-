@@ -81,7 +81,7 @@ export default function AdOpsContactHero2() {
 
       {/* CONTENT */}
       <div className="relative z-[5] mx-auto max-w-[940px]">
-        <h1
+        <h2
           className="
             mb-[18px]
             text-[44px]
@@ -97,7 +97,7 @@ export default function AdOpsContactHero2() {
           "
         >
           Let’s Build Smarter <br /> Digital Growth Together
-        </h1>
+        </h2>
 
         <p
           className="

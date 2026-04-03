@@ -87,10 +87,10 @@ export default function AdOpsContactHero2() {
 
       {/* CONTENT */}
       <div className="relative z-[5] mx-auto max-w-[940px]">
-        <h1
-          className="
+        <h2 className="text-[44px]
+         
             mb-[18px]
-            text-[44px]
+           
             font-black
             text-white
             mr-[-50%]
@@ -103,7 +103,7 @@ export default function AdOpsContactHero2() {
           "
         >
           Simplify Your Ad Operations <br /> with Expert Support
-        </h1>
+        </h2>
 
         <p
           className="

@@ -20,7 +20,7 @@ bg-[radial-gradient(ellipse_700px_700px_at_top_left,#9b6bff_0%,#e9dcff_40%,trans
       "
     >
       <div className="w-full max-w-225 px-3 text-center">
-        <h1
+        <h2
           className="
             mb-4
             font-black
@@ -34,7 +34,7 @@ bg-[radial-gradient(ellipse_700px_700px_at_top_left,#9b6bff_0%,#e9dcff_40%,trans
           "
         >
          SUCCESS STORIES
-        </h1>
+        </h2>
 
         <CaseStudies />
       </div>

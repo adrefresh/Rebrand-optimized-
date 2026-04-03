@@ -1,33 +1,58 @@
-
 import dynamic from "next/dynamic";
 import type { Metadata } from "next";
 import Hero from "./components/homePageComponents/Hero";
 import ListenPerform from "./components/homePageComponents/we-listen";
-import CaseStudies from "./components/homePageComponents/case-studies";
+// import CaseStudies from "./components/homePageComponents/case-studies";
 import CaseHeader from "./components/homePageComponents/case-header";
 
-// ================= SEO METADATA =================
+// ============================================
+// SEO VARIABLES - UPDATE ONLY THESE VALUES
+// ============================================
+
+// Variable 1: Default Title
+const PAGE_TITLE = "AdRefresh - Digital Marketing & Ad Operations";
+
+// Variable 2: Title Template
+const SEO_TITLE_TEMPLATE = "%s | AdRefresh";
+
+// Variable 3: Meta Description (Used for regular SEO, OG, and Twitter)
+const PAGE_DESCRIPTION = "AdRefresh delivers Digital Marketing and advertising operations, and scalable remote media teams to help brands grow efficiently with data-driven performance.";
+
+// Variable 4: Canonical URL
+const SEO_CANONICAL_URL = "https://www.adrefresh.com/";
+
+// Variable 5: Open Graph Image URL
+const SEO_OG_IMAGE_URL = "https://adrefresh.com/images/og/home-og-image.png";
+
+// Variable 6: Twitter Creator
+const SEO_TWITTER_CREATOR = "@adrefresh";
+
+// Variable 7: Keywords Array (update as needed)
+const SEO_KEYWORDS = [
+  "AdRefresh",
+  "Digital Advertising",
+  "Ad Operations",
+  "Media Buying",
+  "Ad Tech",
+  "Programmatic Advertising",
+  "Remote Media Teams",
+  "Advertising Operations",
+  "Performance Marketing",
+];
+
+// ============================================
+// SEO METADATA GENERATION - DO NOT MODIFY BELOW
+// ============================================
 
 export const metadata: Metadata = {
   title: {
-    default: "AdRefresh – Digital Marketing & Ad Operations",
-    template: "%s | AdRefresh",
+    default: PAGE_TITLE,
+    template: SEO_TITLE_TEMPLATE,
   },
 
-  description:
-    "AdRefresh delivers Digital Marketing and advertising operations, and scalable remote media teams to help brands grow efficiently with data-driven performance.",
+  description: PAGE_DESCRIPTION,
 
-  keywords: [
-    "AdRefresh",
-    "Digital Advertising",
-    "Ad Operations",
-    "Media Buying",
-    "Ad Tech",
-    "Programmatic Advertising",
-    "Remote Media Teams",
-    "Advertising Operations",
-    "Performance Marketing",
-  ],
+  keywords: SEO_KEYWORDS,
 
   authors: [{ name: "AdRefresh" }],
   creator: "AdRefresh",
@@ -35,42 +60,37 @@ export const metadata: Metadata = {
   category: "Advertising & Marketing",
 
   alternates: {
-    canonical: "https://www.adrefresh.com/",
+    canonical: SEO_CANONICAL_URL,
   },
 
   openGraph: {
-    title: "AdRefresh – Digital Marketing & Ad Operations",
-    description:
-      "Digital Marketing and advertising operations services built to scale performance, efficiency, and measurable growth.",
-    url: "https://www.adrefresh.com/",
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    url: SEO_CANONICAL_URL,
     siteName: "AdRefresh",
-
     images: [
       {
-        url: "https://adrefresh.com/images/og/home-og-image.png",
+        url: SEO_OG_IMAGE_URL,
         width: 1200,
         height: 630,
-        alt: "AdRefresh – Programmatic Advertising & Advertisement Operations",
+        alt: PAGE_TITLE,
       },
     ],
-
     locale: "en_US",
     type: "website",
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "AdRefresh – Programmatic Advertising & Ad Operations",
-    description:
-      "Scale advertising performance with programmatic advertising and expert ad operations from AdRefresh.",
-    images: ["https://adrefresh.com/images/og/home-og-image.png"],
-    creator: "@adrefresh",
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    images: [SEO_OG_IMAGE_URL],
+    creator: SEO_TWITTER_CREATOR,
   },
 
   robots: {
     index: true,
     follow: true,
-
     googleBot: {
       index: true,
       follow: true,
@@ -81,7 +101,6 @@ export const metadata: Metadata = {
   },
 
   applicationName: "AdRefresh",
-
   referrer: "origin-when-cross-origin",
 
   icons: {
@@ -146,7 +165,6 @@ export default function HomePage() {
       {/* CaseStudies now includes the SUCCESS STORIES H2
           and section wrapper (case-header.tsx merged in) */}
       <CaseHeader/>
-
 
       <Services />
 

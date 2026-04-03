@@ -64,3 +64,51 @@ export default function GoogleTagManagerContainer({ gtmId }: { gtmId: string }) 
 
   return null;
 }
+
+
+
+// 'use client';
+
+// import { useEffect } from 'react';
+
+// type WindowWithGTM = Window & {
+//   dataLayer: unknown[];
+//   gtag: (...args: unknown[]) => void;
+// };
+
+// export default function GoogleTagManagerContainer({ gtmId }: { gtmId: string }) {
+//   useEffect(() => {
+//     const win = window as unknown as WindowWithGTM;
+
+//     // Initialize dataLayer
+//     win.dataLayer = win.dataLayer || [];
+
+//     // Define gtag function
+//     const gtag = (...args: unknown[]) => {
+//       win.dataLayer.push(args);
+//     };
+//     win.gtag = gtag;
+
+//     // Load GTM script immediately - no delay
+//     const script = document.createElement('script');
+//     script.src = `https://www.googletagmanager.com/gtm.js?id=${gtmId}`;
+//     script.async = true;
+//     document.head.appendChild(script);
+
+//     // Add noscript fallback
+//     const noscript = document.createElement('noscript');
+//     const iframe = document.createElement('iframe');
+//     iframe.src = `https://www.googletagmanager.com/ns.html?id=${gtmId}`;
+//     iframe.height = '0';
+//     iframe.width = '0';
+//     iframe.style.display = 'none';
+//     iframe.style.visibility = 'hidden';
+//     noscript.appendChild(iframe);
+    
+//     if (document.body && document.body.firstChild) {
+//       document.body.insertBefore(noscript, document.body.firstChild);
+//     }
+//   }, [gtmId]);
+
+//   return null;
+// }

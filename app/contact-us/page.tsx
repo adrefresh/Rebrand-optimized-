@@ -1,5 +1,3 @@
-
-
 import type { Metadata } from "next";
 // import ContactClient from "../components/contact-us-components/contact-maps";
 import GlobalPresence from "../components/contact-us-components/Globalpresence";
@@ -7,12 +5,61 @@ import ContactHero from "../components/contact-us-components/contact-hero";
 import ContactForm from "../components/contact-us-components/contact-form";
 import PrecisionSection from "../components/contact-us-components/Precesion-section";
 
+// ============================================
+// SEO VARIABLES - UPDATE ONLY THESE VALUES
+// ============================================
+
+// Variable 1: Page Title (Used for regular SEO, OG, and Twitter)
+const PAGE_TITLE = "Contact AdRefresh | Get in Touch With Our Global Team";
+
+// Variable 2: Meta Description (Used for regular SEO, OG, and Twitter)
+const PAGE_DESCRIPTION = "Contact AdRefresh to discuss programmatic advertising, ad operations, and digital marketing solutions.";
+
+// Variable 3: Canonical URL
+const SEO_CANONICAL_URL = "https://www.adrefresh.com/contact-us";
+
+// Variable 4: Open Graph Image URL (Optional - only modify if you need a custom image)
+const SEO_OG_IMAGE_URL = "https://www.adrefresh.com/og/contact.png";
+
+// ============================================
+// METADATA GENERATION - DO NOT MODIFY BELOW
+// ============================================
+
 export const metadata: Metadata = {
-  title: "Contact AdRefresh | Get in Touch With Our Global Team",
-  description:
-    "Contact AdRefresh to discuss programmatic advertising, ad operations, and digital marketing solutions.",
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
+
   alternates: {
-    canonical: "https://www.adrefresh.com/contact-us",
+    canonical: SEO_CANONICAL_URL,
+  },
+
+  openGraph: {
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    url: SEO_CANONICAL_URL,
+    siteName: "AdRefresh",
+    images: [
+      {
+        url: SEO_OG_IMAGE_URL,
+        width: 1200,
+        height: 630,
+        alt: "Contact AdRefresh",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    images: [SEO_OG_IMAGE_URL],
+  },
+
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

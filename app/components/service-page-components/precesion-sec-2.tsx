@@ -58,7 +58,7 @@ export default function PrecisionSectionAdOps() {
           lg:px-20
         "
       >
-        <h1
+        <h2
           className="
             text-black
             font-black
@@ -74,7 +74,7 @@ export default function PrecisionSectionAdOps() {
           "
         >
           Precision and Performance Through Transformative Advertising Operations
-        </h1>
+        </h2>
 
         <p
           className="
