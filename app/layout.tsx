@@ -4,8 +4,9 @@ import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
+import { GoogleTagManager } from '@next/third-parties/google';
 import CookieBanner from "./components/cookiebanner/cookieBanner";
-import GoogleTagManagerContainer from "./components/cookiebanner/GoogleTagManager";
+// import GoogleTagManagerContainer from "./components/cookiebanner/GoogleTagManager";
 
 import { Manrope } from "next/font/google";
 import organizationSchema from "@/libraries/schema/organizationSchema";
@@ -15,16 +16,13 @@ import organizationSchema from "@/libraries/schema/organizationSchema";
 // ============================================
 
 // Variable 1: Default Title
-const SEO_DEFAULT_TITLE = "AdRefresh - Digital Marketing and AdOps";
+const PAGE_TITLE = "AdRefresh - Digital Marketing and AdOps";
 
 // Variable 2: Title Template
 const SEO_TITLE_TEMPLATE = "%s | AdRefresh";
 
 // Variable 3: Meta Description
-const SEO_DESCRIPTION = "AI-Enhanced Digital Marketing and Advertising Operations";
-
-// Variable 4: Google Tag Manager ID (for GTM)
-const SEO_GTM_ID = "GTM-MMMX5TGB";
+const PAGE_DESCRIPTION = "AI-Enhanced Digital Marketing and Advertising Operations";
 
 // ============================================
 // FONT CONFIG
@@ -41,10 +39,10 @@ const manrope = Manrope({
 ========================= */
 export const metadata: Metadata = {
   title: {
-    default: SEO_DEFAULT_TITLE,
-    template: SEO_TITLE_TEMPLATE,
+    default: PAGE_TITLE,
+    template: "%s | AdRefresh",
   },
-  description: SEO_DESCRIPTION,
+  description: PAGE_DESCRIPTION,
   // Adding robots for root layout (good practice)
   robots: {
     index: true,
@@ -52,8 +50,8 @@ export const metadata: Metadata = {
   },
   // Adding openGraph for root layout (used as fallback)
   openGraph: {
-    title: SEO_DEFAULT_TITLE,
-    description: SEO_DESCRIPTION,
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
     siteName: "AdRefresh",
     locale: "en_US",
     type: "website",
@@ -70,7 +68,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
 
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "https://www.adrefresh.com";
 
   return (
     <html
@@ -79,6 +77,24 @@ export default function RootLayout({
       style={{ ["--base-path" as any]: basePath }}
     >
       <head>
+        {/* 1. CRITICAL: Initialize dataLayer and Default Consent BEFORE GTM loads */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('consent', 'default', {
+                'ad_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied',
+                'analytics_storage': 'denied',
+                'personalization_storage': 'denied',
+                'wait_for_update': 500
+              });
+            `,
+          }}
+        />
+
         {/* ✅ PERF FIX: Preload hero poster using stable public path */}
         <link
           rel="preload"
@@ -108,7 +124,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen flex flex-col">
         {process.env.NEXT_PUBLIC_ENABLE_GTM === "true" && (
-          <GoogleTagManagerContainer gtmId={SEO_GTM_ID} />
+          <GoogleTagManager gtmId="GTM-MMMX5TGB" />
         )}
 
         <CookieBanner />
