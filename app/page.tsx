@@ -168,7 +168,7 @@ export default function HomePage() {
 
       <Services />
 
-      {/* Direct import — lightweight footer CTA */}
+      {/* Direct import — lightweight footer CTA. */}
       <ListenPerform />
 
     </main>
