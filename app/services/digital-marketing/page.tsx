@@ -7,10 +7,10 @@ import DigitalMarketingPageClient from "./DigitalMarketingPageClient";
 // ============================================
 
 // Variable 1: Page Title (Used for regular SEO, OG, and Twitter)
-const PAGE_TITLE = "Digital Marketing Services | Performance Marketing & Growth Solutions";
+const PAGE_TITLE = "Digital Marketing Services | AdRefresh ";
 
 // Variable 2: Page Description (Used for regular SEO, OG, and Twitter)
-const PAGE_DESCRIPTION = "Professional Digital Marketing services by AdRefresh. We drive growth through SEO, PPC, social media marketing, content strategy, and performance-driven campaigns.";
+const PAGE_DESCRIPTION = "Accelerate growth with a strong digital presence across website development, SEO, social media marketing, and branding";
 
 // Variable 3: Page URL (Canonical)
 const SEO_PAGE_URL = "https://www.adrefresh.com/services/digital-marketing";

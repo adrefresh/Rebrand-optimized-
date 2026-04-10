@@ -12,10 +12,10 @@ import MissionVisionSection from "../components/about-us-page-components/CardsMi
 // ============================================
 
 // Variable 1: Page Title (Used for both regular SEO, OG, and Twitter)
-const PAGE_TITLE = "About Us | AdRefresh - Performance-Driven Ad Operations";
+const PAGE_TITLE = "About Your Partner in Digital Growth | AdRefresh";
 
 // Variable 2: Meta Description (Used for both regular SEO, OG, and Twitter)
-const PAGE_DESCRIPTION = "Learn about AdRefresh, a performance-driven advertising operations and Digital Marketing partner built on experience, precision, and measurable growth.";
+const PAGE_DESCRIPTION = "We focus on results-driven strategies and conversions, powered by a passionate team of experienced digital experts.";
 
 // Variable 3: Canonical URL
 const SEO_CANONICAL_URL = "https://www.adrefresh.com/about-us";
