@@ -8,12 +8,11 @@ import PrecisionSection from "../components/contact-us-components/Precesion-sect
 // ============================================
 // SEO VARIABLES - UPDATE ONLY THESE VALUES
 // ============================================
-
 // Variable 1: Page Title (Used for regular SEO, OG, and Twitter)
-const PAGE_TITLE = "Contact AdRefresh | Get in Touch With Our Global Team";
+const PAGE_TITLE = "Connect with AdRefresh | Scale Your Brand";
 
 // Variable 2: Meta Description (Used for regular SEO, OG, and Twitter)
-const PAGE_DESCRIPTION = "Contact AdRefresh to discuss programmatic advertising, ad operations, and digital marketing solutions.";
+const PAGE_DESCRIPTION = "Partner with AdRefresh to scale faster, maximize ROI, and support your long-term growth and success.";
 
 // Variable 3: Canonical URL
 const SEO_CANONICAL_URL = "https://www.adrefresh.com/contact-us";

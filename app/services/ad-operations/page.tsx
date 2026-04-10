@@ -7,10 +7,10 @@ import AdOpsPageClient from "./AdopsPageClient";
 // ============================================
 
 // Variable 1: Page Title (Used for regular SEO, OG, and Twitter)
-const PAGE_TITLE = "Advertising Operations Services | AdOps Management & Optimization";
+const PAGE_TITLE = "Advertising Operations & Campaign Management";
 
 // Variable 2: Page Description (Used for regular SEO, OG, and Twitter)
-const PAGE_DESCRIPTION = "Professional Advertising Operations (AdOps) services to manage, optimize, and scale your digital ad campaigns. We deliver performance-driven ad operations with transparency and flexibility.";
+const PAGE_DESCRIPTION = "End-to-end AdOps services including trafficking and platform execution across DSP/SSP to scale your business";
 
 // Variable 3: Page URL (Canonical)
 const SEO_PAGE_URL = "https://www.adrefresh.com/services/ad-operations";

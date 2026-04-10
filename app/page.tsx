@@ -10,13 +10,13 @@ import CaseHeader from "./components/homePageComponents/case-header";
 // ============================================
 
 // Variable 1: Default Title
-const PAGE_TITLE = "AdRefresh - Digital Marketing & Ad Operations";
+const PAGE_TITLE = "AdRefresh | Digital Marketing & Advertising Operations";
 
 // Variable 2: Title Template
 const SEO_TITLE_TEMPLATE = "%s | AdRefresh";
 
 // Variable 3: Meta Description (Used for regular SEO, OG, and Twitter)
-const PAGE_DESCRIPTION = "AdRefresh delivers Digital Marketing and advertising operations, and scalable remote media teams to help brands grow efficiently with data-driven performance.";
+const PAGE_DESCRIPTION = "Scale your brand’s digital presence with our digital marketing and advertising operations services across all channels.";
 
 // Variable 4: Canonical URL
 const SEO_CANONICAL_URL = "https://www.adrefresh.com/";

@@ -6,12 +6,11 @@ import CareersClient from "../components/careers-components/jobs";
 // ============================================
 // SEO VARIABLES - UPDATE ONLY THESE VALUES
 // ============================================
-
 // Variable 1: Page Title (Used for regular SEO, OG, and Twitter)
-const PAGE_TITLE = "Careers at AdRefresh | Join Our Digital Marketing & Ad Ops Team";
+const PAGE_TITLE = "Embark on Your Career Journey | Join AdRefresh";
 
 // Variable 2: Meta Description (Used for regular SEO, OG, and Twitter)
-const PAGE_DESCRIPTION = "Explore exciting career opportunities at AdRefresh. Join our digital marketing, ad operations, and development teams in Hyderabad.";
+const PAGE_DESCRIPTION = "Learn, grow, and build your career with us. Work with global brands, fast-paced teams, and growth-focused opportunities.";
 
 // Variable 3: Canonical URL
 const SEO_CANONICAL_URL = "https://www.adrefresh.com/careers";
