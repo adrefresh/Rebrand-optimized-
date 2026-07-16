@@ -6,6 +6,7 @@ import Image from "next/image";
 import ListenPerform from "../components/homePageComponents/we-listen";
 import "./clientpage.css";
 import DATA from "../json-data/case-studies.json";
+import { generateWebPageSchema } from "@/libraries/schema/webPageSchema";
 
 // ============================================
 // SEO VARIABLES - UPDATE ONLY THESE VALUES
@@ -106,8 +107,19 @@ const caseStudies: CaseStudy[] = (DATA as CaseStudyData[]).map((item) => ({
 export default function ClientSuccessPage() {
   const basePath: string = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
+  const webPageSchema = generateWebPageSchema({
+    url: SEO_CANONICAL_URL,
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+  });
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
+
       {/* ================= HERO ================= */}
       <section
         className="

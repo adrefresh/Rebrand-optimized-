@@ -1,6 +1,7 @@
 
 import { MetadataRoute } from 'next'
 import caseStudies from './json-data/case-studies.json'
+import blogs from './json-data/blogs.json'
 
 const BASE_URL = 'https://www.adrefresh.com'
 
@@ -30,6 +31,10 @@ const staticPages: MetadataRoute.Sitemap = [
     lastModified: new Date('2026-01-11'),
   },
   {
+    url: `${BASE_URL}/blogs/`,
+    lastModified: new Date('2026-01-11'),
+  },
+  {
     url: `${BASE_URL}/about-us/`,
     lastModified: new Date('2026-01-11'),
   },
@@ -54,8 +59,18 @@ const caseStudyPages: MetadataRoute.Sitemap = caseStudies.map((study) => ({
   lastModified: new Date(study.lastModified),
 }))
 
+/**
+ * Dynamic blog post pages — auto-generated from blogs.json.
+ * Each entry must have a `slug` and `date` (ISO date string: "YYYY-MM-DD").
+ * Adding a new post to the JSON automatically adds it here on next build.
+ */
+const blogPages: MetadataRoute.Sitemap = blogs.map((blog) => ({
+  url: `${BASE_URL}/blogs/${blog.slug}/`,
+  lastModified: new Date(blog.date),
+}))
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [...staticPages, ...caseStudyPages]
+  return [...staticPages, ...caseStudyPages, ...blogPages]
 }
 
 

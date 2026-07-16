@@ -3,6 +3,7 @@ import ListenPerform from "@/app/components/homePageComponents/we-listen";
 import "./client-success.css";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { generateWebPageSchema } from "@/libraries/schema/webPageSchema";
 
 import DATA from "../../json-data/case-studies.json";
 
@@ -112,8 +113,19 @@ export default async function ClientSuccessDetail({
   const slugs = (DATA as CaseStudy[]).map((item) => item.slug);
   const index = slugs.indexOf(slug);
 
+  const webPageSchema = generateWebPageSchema({
+    url: `${SEO_BASE_URL}/client-success/${slug}`,
+    title: data.title,
+    description: data.subtitle,
+  });
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
+
       <section
         className="cs-hero"
         style={{
@@ -166,7 +178,7 @@ export default async function ClientSuccessDetail({
           className="
     mt-[5%]
     md:-mb-15
-    
+
     mb-[20%]        /* 📱 mobile */
     sm:mb-[-3.7%]   /* 💻 tablet & up */
   "
