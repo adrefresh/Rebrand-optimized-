@@ -71,7 +71,7 @@ function BlogCard({ blog }: { blog: Blog }) {
             />
             <span className="text-xs text-[#565656] font-medium">{blog.author.name}</span>
           </div>
-          {/* <span className="text-xs text-[#949494]">{formatDate(blog.date)}</span> */}
+          {/* <span className="text-xs text-[#949494]">{formatDate(blog.date)}</span> hgfyc*/}
         </div>
       </div>
     </Link>
