@@ -37,7 +37,7 @@ export default function Flexibility() {
     <section className="relative flex h-screen w-screen items-center justify-center overflow-hidden bg-white">
       {/* ================= LEFT ================= */}
 <div className="reveal relative flex h-full w-[40%] items-center justify-center lg:mr-[-50px] ml-[-30px] sm:ml-0 stat">
-        <h2 className="industry-title rotate-[-90deg] text-center leading-[0.9]">
+        <h2 className="industry-title rotate-0 lg:rotate-[-90deg] text-center leading-[0.9]">
           <span className="block text-[6rem] font-normal text-black">
             INDUSTRY
           </span>
@@ -98,7 +98,7 @@ export default function Flexibility() {
         }
 
         /* ================= TABLET ================= */
-        @media (max-width: 900px) {
+        @media (max-width: 1023px) {
           section {
             flex-direction: column;
             padding: 80px 20px;
@@ -107,6 +107,21 @@ export default function Flexibility() {
           .w-\\[40%\\] {
             width: 100%;
             text-align: center;
+          }
+
+          /* The base rotate-[-90deg] Tailwind utility on .industry-title was
+             winning the cascade over the (max-width:1100px) unrotate rule
+             above, since both have equal specificity and source order isn't
+             guaranteed against Tailwind's utility layer. That left the title
+             still vertical while the section had already switched to a
+             stacked column layout, so it visually ran into the "15+" stat
+             beneath it. Forcing it off with !important here (scoped only to
+             this tablet stacking range) fixes that without touching the
+             640px mobile rule below (which still wins there via source
+             order) or the >1023px desktop styling above.*/
+          .industry-title {
+            transform: rotate(0deg) !important;
+            margin-bottom: 24px;
           }
 
           .divider {

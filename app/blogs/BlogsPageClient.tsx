@@ -71,7 +71,7 @@ function BlogCard({ blog }: { blog: Blog }) {
             />
             <span className="text-xs text-[#565656] font-medium">{blog.author.name}</span>
           </div>
-          {/* <span className="text-xs text-[#949494]">{formatDate(blog.date)}</span> hgfyc*/}
+          {/* <span className="text-xs text-[#949494]">{formatDate(blog.date)}</span> */}
         </div>
       </div>
     </Link>
@@ -122,21 +122,40 @@ export default function BlogsPageClient() {
       {/* ── Filter Tabs + Grid ── */}
       <section className="max-w-7xl mx-auto px-5 md:px-10 lg:px-16 py-14">
 
-        {/* Category filters */}
-        <div className="flex flex-wrap gap-2 mb-10">
-          {CATEGORIES.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setActiveCategory(cat)}
-              className={`px-4 py-2 rounded-full text-sm font-bold transition-all duration-200 border ${
-                activeCategory === cat
-                  ? "bg-[#813DFF] text-white border-[#813DFF]"
-                  : "bg-white text-[#1C1C1C] border-[#DADADA] hover:border-[#813DFF] hover:text-[#813DFF]"
-              }`}
+        {/* Category filters — dropdown on mobile only, pill row from sm: up (unchanged) */}
+        <div className="mb-10">
+          {/* Mobile: dropdown select */}
+          <div className="sm:hidden">
+            <select
+              value={activeCategory}
+              onChange={(e) => setActiveCategory(e.target.value)}
+              aria-label="Filter by category"
+              className="w-full px-4 py-3 rounded-full text-sm font-bold bg-white text-[#1C1C1C] border border-[#DADADA] focus:outline-none focus:border-[#813DFF] appearance-none bg-[url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23813DFF%22 stroke-width=%222%22><path d=%22M6 9l6 6 6-6%22/></svg>')] bg-no-repeat bg-[right_1rem_center] bg-[length:16px]"
             >
-              {cat}
-            </button>
-          ))}
+              {CATEGORIES.map((cat) => (
+                <option key={cat} value={cat}>
+                  {cat}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          {/* Tablet / Desktop: pill row (unchanged) */}
+          <div className="hidden sm:flex flex-wrap gap-2">
+            {CATEGORIES.map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setActiveCategory(cat)}
+                className={`px-4 py-2 rounded-full text-sm font-bold transition-all duration-200 border ${
+                  activeCategory === cat
+                    ? "bg-[#813DFF] text-white border-[#813DFF]"
+                    : "bg-white text-[#1C1C1C] border-[#DADADA] hover:border-[#813DFF] hover:text-[#813DFF]"
+                }`}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
         </div>
 
         {/* Grid — always 3 cols on desktop */}
