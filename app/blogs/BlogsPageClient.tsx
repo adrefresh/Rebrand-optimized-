@@ -47,7 +47,7 @@ function BlogCard({ blog }: { blog: Blog }) {
           className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
         />
         {/* <span className="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase bg-[#813DFF] text-white">
-          {blog.category}
+          {blog.category}dfsdf
         </span> */}
       </div>
 
