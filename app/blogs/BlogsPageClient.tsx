@@ -3,25 +3,13 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import blogsData from "../json-data/blogs.json";
+import type { BlogFrontmatter } from "@/libraries/blogs";
 import ListenPerform from "../components/homePageComponents/we-listen";
 
 // ─── Types ────────────────────────────────────────────────
-type Blog = {
-  slug: string;
-  title: string;
-  excerpt: string;
-  category: string;
-  date: string;
-  readTime: string;
-  author: { name: string; role: string; avatar: string };
-  coverImage: string;
-  tags: string[];
-};
+type Blog = BlogFrontmatter;
 
 // ─── Helpers ──────────────────────────────────────────────
-const CATEGORIES = ["All", ...Array.from(new Set((blogsData as Blog[]).map((b) => b.category)))];
-
 function formatDate(d: string) {
   return new Date(d).toLocaleDateString("en-IN", {
     day: "numeric",
@@ -79,8 +67,8 @@ function BlogCard({ blog }: { blog: Blog }) {
 }
 
 // ─── Main Page ────────────────────────────────────────────
-export default function BlogsPageClient() {
-  const blogs = blogsData as Blog[];
+export default function BlogsPageClient({ blogs }: { blogs: Blog[] }) {
+  const CATEGORIES = ["All", ...Array.from(new Set(blogs.map((b) => b.category)))];
   const [activeCategory, setActiveCategory] = useState("All");
 
   const filtered =

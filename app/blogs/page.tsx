@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { generateWebPageSchema } from "@/libraries/schema/webPageSchema";
+import { getAllBlogsMeta } from "@/libraries/blogs";
 import BlogsPageClient from "./BlogsPageClient";
 
 const PAGE_TITLE = "Blogs | AdRefresh";
@@ -19,13 +20,15 @@ export default function BlogsPage() {
     description: PAGE_DESCRIPTION,
   });
 
+  const blogs = getAllBlogsMeta();
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
       />
-      <BlogsPageClient />
+      <BlogsPageClient blogs={blogs} />
     </>
   );
 }

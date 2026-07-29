@@ -1,40 +1,18 @@
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import blogsData from "../../json-data/blogs.json";
+import {
+  getBlogSlugs,
+  getBlogBySlug,
+  getAllBlogsMeta,
+  type BlogFrontmatter,
+} from "@/libraries/blogs";
 import ListenPerform from "@/app/components/homePageComponents/we-listen";
 import { generateWebPageSchema } from "@/libraries/schema/webPageSchema";
 
-// ─── Types ────────────────────────────────────────────────
-type ContentBlock =
-  | { type: "paragraph"; text: string }
-  | { type: "heading"; text: string }
-  | { type: "callout"; text: string }
-  | { type: "list"; items: string[] }
-  | { type: "table"; headers: string[]; rows: string[][] };
-
-// A content-array entry that carries a dynamic sidebar CTA instead of article copy
-type CTABlock = {
-  cta: string;
-  text: string;
-};
-
-type Blog = {
-  slug: string;
-  title: string;
-  excerpt: string;
-  category: string;
-  date: string;
-  readTime: string;
-  author: { name: string; role: string; avatar: string };
-  coverImage: string;
-  tags: string[];
-  content: (ContentBlock | CTABlock)[];
-};
-
 // ─── Static Params ────────────────────────────────────────
 export function generateStaticParams() {
-  return (blogsData as Blog[]).map((blog) => ({ slug: blog.slug }));
+  return getBlogSlugs().map((slug) => ({ slug }));
 }
 
 // ─── SEO Metadata ─────────────────────────────────────────
@@ -44,7 +22,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const blog = (blogsData as Blog[]).find((b) => b.slug === slug);
+  const blog = await getBlogBySlug(slug);
   if (!blog) return {};
   return {
     title: `${blog.title} | AdRefresh Blog`,
@@ -66,104 +44,8 @@ function formatDate(d: string) {
   });
 }
 
-// Detects a { cta, text } entry inside a blog's content array
-function isCTABlock(block: ContentBlock | CTABlock): block is CTABlock {
-  return "cta" in block;
-}
-
-// ─── Content Renderer ─────────────────────────────────────
-function RenderContent({ blocks }: { blocks: ContentBlock[] }) {
-  return (
-    <div>
-      {blocks.map((block, i) => {
-        if (block.type === "heading") {
-          return (
-            <h2
-              key={i}
-              className="text-[#1C1C1C] font-black text-2xl md:text-[1.75rem] mt-10 mb-4 leading-snug"
-            >
-              {block.text}
-            </h2>
-          );
-        }
-
-        if (block.type === "callout") {
-          return (
-            <div key={i} className="my-8 relative pl-6 pr-5 py-5">
-              {/* left accent bar */}
-              <span className="absolute left-0 top-0 bottom-0 w-1 rounded-full bg-gradient-to-b from-[#813DFF] to-[#DFFA33]" />
-              <p className="text-[#1C1C1C] font-semibold text-base md:text-lg leading-relaxed italic">
-                "{block.text}"
-              </p>
-            </div>
-          );
-        }
-
-        if (block.type === "list") {
-          return (
-            <ul key={i} className="list-disc list-outside pl-6 mb-6 space-y-2 marker:text-[#813DFF]">
-              {block.items.map((item, idx) => (
-                <li
-                  key={idx}
-                  className="text-[#565656] text-base md:text-[1.05rem] leading-relaxed"
-                >
-                  {item}
-                </li>
-              ))}
-            </ul>
-          );
-        }
-
-        if (block.type === "table") {
-          return (
-            <div
-              key={i}
-              className="my-8 overflow-x-auto rounded-2xl border border-[#EBEBEB] bg-white"
-            >
-              <table className="w-full border-collapse text-sm md:text-[0.95rem]">
-                <thead>
-                  <tr className="bg-[#F3EEFF]">
-                    {block.headers.map((h, hi) => (
-                      <th
-                        key={hi}
-                        className="text-left font-black text-[#1C1C1C] px-4 py-3 border-b border-[#EBEBEB] whitespace-nowrap"
-                      >
-                        {h}
-                      </th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody>
-                  {block.rows.map((row, ri) => (
-                    <tr key={ri} className={ri % 2 === 1 ? "bg-[#FAFAFA]" : "bg-white"}>
-                      {row.map((cell, ci) => (
-                        <td
-                          key={ci}
-                          className="px-4 py-3 border-b border-[#EBEBEB] text-[#565656] align-top"
-                        >
-                          {cell}
-                        </td>
-                      ))}
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          );
-        }
-
-        return (
-          <p key={i} className="text-[#565656] text-base md:text-[1.05rem] leading-[1.85] mb-5">
-            {block.text}
-          </p>
-        );
-      })}
-    </div>
-  );
-}
-
 // ─── Related Card ─────────────────────────────────────────
-function RelatedCard({ blog }: { blog: Blog }) {
+function RelatedCard({ blog }: { blog: BlogFrontmatter }) {
   return (
     <Link
       href={`/blogs/${blog.slug}`}
@@ -193,6 +75,20 @@ function RelatedCard({ blog }: { blog: Blog }) {
   );
 }
 
+// Tailwind arbitrary-variant classes applied to the rendered Markdown HTML,
+// matching the look of the old heading/paragraph/list/table/callout blocks.
+const PROSE_CLASSES = `
+  [&_h2]:text-[#1C1C1C] [&_h2]:font-black [&_h2]:text-2xl md:[&_h2]:text-[1.75rem] [&_h2]:mt-10 [&_h2]:mb-4 [&_h2]:leading-snug
+  [&_p]:text-[#565656] [&_p]:text-base md:[&_p]:text-[1.05rem] [&_p]:leading-[1.85] [&_p]:mb-5
+  [&_ul]:list-disc [&_ul]:list-outside [&_ul]:pl-6 [&_ul]:mb-6 [&_ul]:space-y-2 [&_ul_li]:marker:text-[#813DFF]
+  [&_li]:text-[#565656] [&_li]:text-base md:[&_li]:text-[1.05rem] [&_li]:leading-relaxed
+  [&_table]:w-full [&_table]:border-collapse [&_table]:text-sm md:[&_table]:text-[0.95rem] [&_table]:my-8 [&_table]:block [&_table]:overflow-x-auto [&_table]:rounded-2xl [&_table]:border [&_table]:border-[#EBEBEB]
+  [&_thead]:bg-[#F3EEFF]
+  [&_th]:text-left [&_th]:font-black [&_th]:text-[#1C1C1C] [&_th]:px-4 [&_th]:py-3 [&_th]:border-b [&_th]:border-[#EBEBEB] [&_th]:whitespace-nowrap
+  [&_td]:px-4 [&_td]:py-3 [&_td]:border-b [&_td]:border-[#EBEBEB] [&_td]:text-[#565656] [&_td]:align-top
+  [&_blockquote]:my-8 [&_blockquote]:relative [&_blockquote]:pl-6 [&_blockquote]:pr-5 [&_blockquote]:py-5 [&_blockquote]:border-l-4 [&_blockquote]:border-[#813DFF] [&_blockquote]:text-[#1C1C1C] [&_blockquote]:font-semibold [&_blockquote]:text-base md:[&_blockquote]:text-lg [&_blockquote]:leading-relaxed [&_blockquote]:italic [&_blockquote_p]:mb-0
+`;
+
 // ─── Page ─────────────────────────────────────────────────
 export default async function BlogDetailPage({
   params,
@@ -200,21 +96,12 @@ export default async function BlogDetailPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const blog = (blogsData as Blog[]).find((b) => b.slug === slug);
+  const blog = await getBlogBySlug(slug);
   if (!blog) notFound();
 
-  const moreBlogs = (blogsData as Blog[])
+  const moreBlogs = getAllBlogsMeta()
     .filter((b) => b.slug !== slug)
     .slice(0, 3);
-
-  // Pull the dynamic CTA entry (if any) out of the content array so it isn't
-  // rendered as a stray paragraph, and use it to drive the sidebar CTA card.
-  // Works regardless of how many list/table blocks sit alongside it, since
-  // isCTABlock only checks for the presence of a "cta" key.
-  const ctaBlock = blog.content.find(isCTABlock);
-  const articleBlocks = blog.content.filter(
-    (b): b is ContentBlock => !isCTABlock(b)
-  );
 
   const webPageSchema = generateWebPageSchema({
     url: `https://www.adrefresh.com/blogs/${slug}/`,
@@ -332,7 +219,12 @@ export default async function BlogDetailPage({
               <span className="w-3 h-[3px] rounded-full bg-[#DFFA33]" />
             </div>
 
-            <RenderContent blocks={articleBlocks} />
+            {/* Markdown body, rendered to HTML at build time by remark
+                and styled via the Tailwind arbitrary-variant classes above */}
+            <div
+              className={PROSE_CLASSES}
+              dangerouslySetInnerHTML={{ __html: blog.contentHtml }}
+            />
 
             {/* Tags */}
             <div className="mt-14 pt-8 border-t border-[#EBEBEB]">
@@ -382,13 +274,13 @@ export default async function BlogDetailPage({
               <div className="bg-[#1A0F2E] p-6 text-white">
                 <p className="text-[11px] font-bold tracking-widest uppercase text-white/40 mb-2">Work With Us</p>
                 <h3 className="font-black text-xl leading-snug mb-3">
-                  {ctaBlock?.cta ?? "Turn these insights into real results."}
+                  {blog.ctaTitle ?? "Turn these insights into real results."}
                 </h3>
                 <p className="text-white/60 text-sm mb-6 leading-relaxed">
-                  {ctaBlock?.text ?? "AdRefresh builds media strategies that compound. Let's talk about your brand."}
+                  {blog.ctaText ?? "AdRefresh builds media strategies that compound. Let's talk about your brand."}
                 </p>
                 <Link
-                  href="/contact-us"
+                  href="/contact-us#form"
                   className="block text-center bg-[#813DFF] text-white font-black py-3 px-5 rounded-full text-sm hover:bg-[#6B2FD9] transition-colors duration-200"
                 >
                   Get In Touch →
