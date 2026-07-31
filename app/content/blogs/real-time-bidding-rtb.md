@@ -4,7 +4,7 @@ excerpt: "Learn what Real-Time Bidding (RTB) is, how it works in under 100 milli
 category: "Programmatic Advertising"
 date: "14/07/2026"
 readTime: ""
-coverImage: "/images/blogs/real-time-bidding.png"
+coverImage: "/images/real-time-bidding.png"
 coverImageAspect: "2 / 1"
 coverImageFit: "contain"
 coverImageBg: "#0A0E23"
