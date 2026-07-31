@@ -2,12 +2,8 @@
 title: "The Future of AI-Powered Advertising: How Google Ads & Meta Ads Are Transforming Marketing in 2026"
 excerpt: "Discover how AI is transforming Google Ads and Meta Ads in 2026. Learn the latest AI advertising trends, automation features, and strategies to improve campaign performance and ROI."
 category: "AI Advertising"
-date: "2026-07-16"
+date: "09/07/2026"
 readTime: ""
-author:
-  name: "Manasa"
-  role: "Subject Matter Expert"
-  avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZjRzh4cB2lg4zaCJZjr0qd5wBPFpoLnckncZE3cJdgg&s=10"
 coverImage: "/images/blogs/ai-advertising.jpg"
 tags:
   - "AI Advertising"

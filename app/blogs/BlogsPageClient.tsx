@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import type { BlogFrontmatter } from "@/libraries/blogs";
+import { parseBlogDate } from "@/libraries/date";
 import ListenPerform from "../components/homePageComponents/we-listen";
 
 // ─── Types ────────────────────────────────────────────────
@@ -11,7 +12,7 @@ type Blog = BlogFrontmatter;
 
 // ─── Helpers ──────────────────────────────────────────────
 function formatDate(d: string) {
-  return new Date(d).toLocaleDateString("en-IN", {
+  return parseBlogDate(d).toLocaleDateString("en-IN", {
     day: "numeric",
     month: "long",
     year: "numeric",
@@ -26,13 +27,19 @@ function BlogCard({ blog }: { blog: Blog }) {
       className="group flex flex-col rounded-2xl overflow-hidden bg-white border border-[#DADADA] hover:border-[#813DFF]/50 hover:shadow-[0_8px_40px_rgba(129,61,255,0.10)] transition-all duration-300"
     >
       {/* cover */}
-      <div className="relative w-full h-52 overflow-hidden">
+      <div
+        className="relative w-full h-52 overflow-hidden bg-[#F3EEFF]"
+        style={blog.coverImageBg ? { backgroundColor: blog.coverImageBg } : undefined}
+      >
         <Image
           src={blog.coverImage}
           alt={blog.title}
           fill
           sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw"
-          className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+          className={`transition-transform duration-500 group-hover:scale-[1.04] ${
+            blog.coverImageFit === "contain" ? "object-contain" : "object-cover"
+          }`}
+          style={{ objectPosition: blog.coverImagePosition ?? "center" }}
         />
         {/* <span className="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase bg-[#813DFF] text-white">
           {blog.category}dfsdf

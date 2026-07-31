@@ -7,6 +7,7 @@ import {
   getAllBlogsMeta,
   type BlogFrontmatter,
 } from "@/libraries/blogs";
+import { parseBlogDate } from "@/libraries/date";
 import ListenPerform from "@/app/components/homePageComponents/we-listen";
 import { generateWebPageSchema } from "@/libraries/schema/webPageSchema";
 
@@ -37,7 +38,7 @@ export async function generateMetadata({
 
 // ─── Helpers ──────────────────────────────────────────────
 function formatDate(d: string) {
-  return new Date(d).toLocaleDateString("en-IN", {
+  return parseBlogDate(d).toLocaleDateString("en-IN", {
     day: "numeric",
     month: "long",
     year: "numeric",
@@ -51,7 +52,10 @@ function RelatedCard({ blog }: { blog: BlogFrontmatter }) {
       href={`/blogs/${blog.slug}`}
       className="group flex gap-4 rounded-2xl border border-[#EBEBEB] hover:border-[#813DFF]/40 bg-white p-4 transition-all duration-300 hover:shadow-[0_4px_24px_rgba(129,61,255,0.10)]"
     >
-      <div className="relative w-20 h-16 rounded-xl overflow-hidden flex-shrink-0">
+      <div
+        className="relative w-20 h-16 rounded-xl overflow-hidden flex-shrink-0 bg-[#F3EEFF]"
+        style={blog.coverImageBg ? { backgroundColor: blog.coverImageBg } : undefined}
+      >
         <Image
           src={blog.coverImage}
           alt={blog.title}
@@ -59,7 +63,8 @@ function RelatedCard({ blog }: { blog: BlogFrontmatter }) {
           priority
           quality={100}
           sizes="100vw"
-          className="object-cover"
+          className={blog.coverImageFit === "contain" ? "object-contain" : "object-cover"}
+          style={{ objectPosition: blog.coverImagePosition ?? "center" }}
         />
       </div>
       <div className="flex flex-col justify-between min-w-0 py-0.5">
@@ -79,7 +84,7 @@ function RelatedCard({ blog }: { blog: BlogFrontmatter }) {
 // matching the look of the old heading/paragraph/list/table/callout blocks.
 const PROSE_CLASSES = `
   [&_h2]:text-[#1C1C1C] [&_h2]:font-black [&_h2]:text-2xl md:[&_h2]:text-[1.75rem] [&_h2]:mt-10 [&_h2]:mb-4 [&_h2]:leading-snug
-  [&_p]:text-[#565656] [&_p]:text-base md:[&_p]:text-[1.05rem] [&_p]:leading-[1.85] [&_p]:mb-5
+  [&_p]:text-[#565656] [&_p]:text-base md:[&_p]:text-[1.05rem] [&_p]:leading-[1.3] [&_p]:mb-5
   [&_ul]:list-disc [&_ul]:list-outside [&_ul]:pl-6 [&_ul]:mb-6 [&_ul]:space-y-2 [&_ul_li]:marker:text-[#813DFF]
   [&_li]:text-[#565656] [&_li]:text-base md:[&_li]:text-[1.05rem] [&_li]:leading-relaxed
   [&_table]:w-full [&_table]:border-collapse [&_table]:text-sm md:[&_table]:text-[0.95rem] [&_table]:my-8 [&_table]:block [&_table]:overflow-x-auto [&_table]:rounded-2xl [&_table]:border [&_table]:border-[#EBEBEB]
@@ -165,7 +170,7 @@ export default async function BlogDetailPage({
           </h1>
 
           {/* excerpt */}
-          <p className="text-white/55 text-sm md:text-lg max-w-2xl leading-relaxed">
+          <p className="text-white/55 text-sm md:text-lg max-w-2xl leading-relaxed mb-4">
             {blog.excerpt}
           </p>
         </div>
@@ -181,24 +186,23 @@ export default async function BlogDetailPage({
       ══════════════════════════════════════════ */}
       <div className="relative z-20 max-w-6xl mx-auto px-5 md:px-10 lg:px-0 -mt-[160px] sm:-mt-[230px] md:-mt-[270px] lg:-mt-[320px] xl:-mt-[350px] mb-2">
         <div
-          className="
-            relative w-full
-            aspect-[16/9] sm:aspect-auto
-            sm:h-[380px] md:h-[460px] lg:h-[560px] xl:h-[620px]
-            rounded-[1.75rem] sm:rounded-[2rem]
-            overflow-hidden
-            border-1 border-white
-            shadow-[0_25px_70px_-15px_rgba(61,8,161,0.45)]
-            mt-10
-            bg-white
-          "
+          className={
+            blog.coverImageAspect
+              ? "relative w-full rounded-[1.75rem] sm:rounded-[2rem] overflow-hidden border-1 border-white shadow-[0_25px_70px_-15px_rgba(61,8,161,0.45)] mt-10 bg-white"
+              : "relative w-full aspect-[16/9] sm:aspect-auto sm:h-[380px] md:h-[460px] lg:h-[560px] xl:h-[620px] rounded-[1.75rem] sm:rounded-[2rem] overflow-hidden border-1 border-white shadow-[0_25px_70px_-15px_rgba(61,8,161,0.45)] mt-10 bg-white"
+          }
+          style={{
+            aspectRatio: blog.coverImageAspect || undefined,
+            backgroundColor: blog.coverImageBg || undefined,
+          }}
         >
           <Image
             src={blog.coverImage}
             alt={blog.title}
             fill
             sizes="(max-width:768px) 100vw, 1200px"
-            className="object-cover"
+            className={blog.coverImageFit === "contain" ? "object-contain" : "object-cover"}
+            style={{ objectPosition: blog.coverImagePosition ?? "center" }}
             priority
           />
         </div>
