@@ -4,7 +4,7 @@ excerpt: "Discover why brands partner with AdRefresh for Ad Operations. Learn ho
 category: "Ad Operations"
 date: "22/07/2026"
 readTime: ""
-coverImage: "/images/why-brands-choose.png"
+coverImage: "/images/blogs/why-brands-choose.png"
 tags:
   - "Ad Operations"
   - "Campaign Management"
