@@ -6,8 +6,6 @@ date: "22/07/2026"
 readTime: ""
 coverImage: "/images/blogs/ad-operations-teamwork.png"
 coverImageAspect: "3 / 2"
-coverImageFit: "contain"
-coverImageBg: "#09051E"
 tags:
   - "Ad Operations"
   - "AdOps"

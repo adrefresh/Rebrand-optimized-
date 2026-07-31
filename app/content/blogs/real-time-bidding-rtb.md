@@ -6,8 +6,6 @@ date: "14/07/2026"
 readTime: ""
 coverImage: "/images/blogs/real-time-bidding.png"
 coverImageAspect: "2 / 1"
-coverImageFit: "contain"
-coverImageBg: "#0A0E23"
 tags:
   - "Real-Time Bidding"
   - "Programmatic Advertising"
