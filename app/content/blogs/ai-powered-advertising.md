@@ -12,8 +12,8 @@ tags:
   - "Performance Marketing"
   - "Digital Marketing"
   - "Marketing Automation"
-ctaTitle: "Ready to Future-Proof Your Digital Advertising?"
-ctaText: "Let's transform your advertising strategy with AI. Contact AdRefresh today to discover how our performance marketing experts can help your business grow faster in 2026 and beyond."
+ctaTitle: "🚀 Let's transform your advertising strategy with AI."
+ctaText: "Contact AdRefresh today to discover how our performance marketing experts can help your business grow faster in 2026 and beyond."
 ---
 
 Artificial Intelligence (AI) is no longer a futuristic concept in digital marketing—it's the driving force behind today's most successful advertising campaigns. In 2026, both Google Ads and Meta Ads are evolving into AI-first platforms, helping businesses reach the right audience, improve campaign performance, and maximize return on investment (ROI) with less manual effort.
@@ -219,4 +219,3 @@ Our team combines cutting-edge AI tools with expert performance marketing to hel
 - Scale campaigns efficiently
 - Stay ahead of the latest advertising trends
 
-> 🚀 Let's transform your advertising strategy with AI. Contact AdRefresh today to discover how our performance marketing experts can help your business grow faster in 2026 and beyond.

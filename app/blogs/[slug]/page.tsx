@@ -88,6 +88,7 @@ const PROSE_CLASSES = `
   [&_h4]:text-[#1C1C1C] [&_h4]:font-semibold [&_h4]:text-[0.9rem] md:[&_h4]:text-base [&_h4]:mt-6 [&_h4]:mb-2 [&_h4]:leading-snug
   [&_p]:text-[#565656] [&_p]:text-base md:[&_p]:text-[1.05rem] [&_p]:leading-[1.6] [&_p]:mb-5
   [&_ul]:list-disc [&_ul]:list-outside [&_ul]:pl-6 [&_ul]:mb-6 [&_ul]:space-y-2 [&_ul_li]:marker:text-[#813DFF]
+  [&_ol]:list-decimal [&_ol]:list-outside [&_ol]:pl-6 [&_ol]:mb-6 [&_ol]:space-y-2 [&_ol_li]:marker:text-[#813DFF] [&_ol_li]:marker:font-bold
   [&_li]:text-[#565656] [&_li]:text-base md:[&_li]:text-[1.05rem] [&_li]:leading-relaxed
   [&_table]:w-full [&_table]:border-collapse [&_table]:text-sm md:[&_table]:text-[0.95rem] [&_table]:my-8 [&_table]:block [&_table]:overflow-x-auto [&_table]:rounded-2xl [&_table]:border [&_table]:border-[#EBEBEB]
   [&_thead]:bg-[#F3EEFF]
@@ -262,9 +263,7 @@ export default async function BlogDetailPage({
                 <div>
                   <p className="text-[#1C1C1C] font-black text-base mb-0.5">{blog.author.name}</p>
                   <p className="text-[#813DFF] text-xs font-bold mb-2">{blog.author.role} at AdRefresh</p>
-                  {/* <p className="text-[#565656] text-sm leading-relaxed">
-                    Helping brands navigate the intersection of data, creative, and media strategy. Passionate about building advertising systems that create real competitive advantage.
-                  </p> */}
+                 
                 </div>
               </div>
             </div>

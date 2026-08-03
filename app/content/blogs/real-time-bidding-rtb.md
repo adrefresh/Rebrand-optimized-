@@ -53,12 +53,12 @@ Real-Time Bidding transformed digital advertising by making campaign execution a
 
 The RTB process completes in less than 100 milliseconds and follows six simple steps:
 
-1. Users visit a website or app.
-2. The publisher sends an ad request.
-3. SSP forwards the request to an Ad Exchange.
-4. DSPs evaluate the opportunity and place bids.
-5. The highest eligible bid wins the auction.
-6. The winning advertisement is displayed instantly.
+- Users visit a website or app.
+- The publisher sends an ad request.
+- SSP forwards the request to an Ad Exchange.
+- DSPs evaluate the opportunity and place bids.
+- The highest eligible bid wins the auction.
+- The winning advertisement is displayed instantly.
 
 ## Real-World Example
 

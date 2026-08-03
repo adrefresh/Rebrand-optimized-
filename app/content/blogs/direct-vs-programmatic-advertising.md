@@ -118,21 +118,13 @@ By connecting buyers and sellers in real time, ad exchanges help advertisers rea
 
 Not all programmatic advertising works the same way. Advertisers and publishers can choose different types of deals based on their goals, budget, and the level of control they need.
 
-### 1. Open Auction
+- **Open Auction:** Open Auction is the most common type of programmatic deal. Any advertiser can participate in a real-time bidding (RTB) auction, and the highest bidder wins the ad impression.
 
-Open Auction is the most common type of programmatic deal. Any advertiser can participate in a real-time bidding (RTB) auction, and the highest bidder wins the ad impression.
+- **Private Marketplace(PMP):** A Private Marketplace is an exclusive, invitation-only auction where publishers make premium ad inventory available to selected advertisers. This provides advertisers with access to high-quality placements while giving publishers greater control over who can bid.
 
-### 2. Private Marketplace
+- **Programmatic Guaranteed(PG):** In a Programmatic Guaranteed deal, advertisers and publishers agree on a fixed price for a reserved amount of ad inventory before the campaign begins. While the transaction is automated, the inventory is secured in advance, ensuring guaranteed delivery.
 
-A Private Marketplace is an exclusive, invitation-only auction where publishers make premium ad inventory available to selected advertisers. This provides advertisers with access to high-quality placements while giving publishers greater control over who can bid.
-
-### 3. Programmatic Guaranteed
-
-In a Programmatic Guaranteed deal, advertisers and publishers agree on a fixed price for a reserved amount of ad inventory before the campaign begins. While the transaction is automated, the inventory is secured in advance, ensuring guaranteed delivery.
-
-### 4. Preferred Deals
-
-Preferred Deals let advertisers negotiate a fixed price with a publisher before the inventory is offered through an open auction. Advertisers receive the first opportunity to purchase the available impressions, but they are not obligated to buy them.
+- **Preferred Deals:** Preferred Deals let advertisers negotiate a fixed price with a publisher before the inventory is offered through an open auction. Advertisers receive the first opportunity to purchase the available impressions, but they are not obligated to buy them.
 
 Each deal type offers a different balance of cost, control, and access, allowing advertisers to choose the option that best fits their campaign objectives.
 
