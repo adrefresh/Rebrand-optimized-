@@ -26,7 +26,7 @@ export default function WhyUsSection() {
 
 
       {/* ================= DESKTOP / LAPTOP ================= */}
-      <div className="relative ml-auto max-w-[1400px] pr-[2vw] pl-[1vw] pb-[80px] hidden sm:block mr-15">
+      <div className="relative ml-auto max-w-[1400px] pr-[2vw] pl-[1vw] pb-[80px] hidden lg:block mr-15">
 
         {/* Vertical line */}
 <div className="absolute left-1/2 top-[10%] h-[80%] w-[2px] bg-white -translate-x-1/2" />
@@ -146,7 +146,7 @@ export default function WhyUsSection() {
       </div>
 
       {/* ================= MOBILE (UNCHANGED) ================= */}
-      <div className="sm:hidden relative px-4 pb-10">
+      <div className="lg:hidden relative px-4 pb-10">
         <div className="absolute left-6 top-0 h-full w-[2px] bg-white" />
 
         {/* ITEM 1 */}

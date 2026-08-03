@@ -66,7 +66,7 @@ useEffect(() => {
         <div className="w-full max-w-225 px-4 sm:px-6 text-white -mb-10">
           
           {/* TITLE ROW */}
-         <div className="flex items-center justify-start md:justify-center gap-3 sm:gap-4 mb-2">
+         <div className="flex items-center justify-start lg:justify-center gap-3 sm:gap-4 mb-2">
 
             <h2
               className="
@@ -75,10 +75,10 @@ useEffect(() => {
                 tracking-[-2px]
                 text-[2rem]
                 sm:text-[3.2rem]
-                md:text-[4rem]
+                lg:text-[4rem]
                 lg:text-[5rem]
-                md:mb-[-2%]
-                md:ml-12.5
+                lg:mb-[-2%]
+                lg:ml-12.5
                 text-left
               "
             >
@@ -90,7 +90,7 @@ useEffect(() => {
   width={88}
   height={58}
   loading="lazy"
-  className="w-12.5 sm:w-15 md:w-30 md:h-20"
+  className="w-12.5 sm:w-15 lg:w-30 lg:h-20"
 />
           </div>
 
@@ -100,10 +100,10 @@ useEffect(() => {
               mx-auto
               grid
               grid-cols-1
-              md:grid-cols-[70px_1fr]
-              gap-2 md:gap-3
+              lg:grid-cols-[70px_1fr]
+              gap-2 lg:gap-3
               items-start
-              text-center md:text-left
+              text-center lg:text-left
             "
           >
             {/* WE ARE */}
@@ -112,7 +112,7 @@ useEffect(() => {
     text-white
     font-black
     tracking-[1px]
-    md:tracking-[6px]
+    lg:tracking-[6px]
 
     /* MOBILE — left aligned */
     absolute
@@ -124,13 +124,13 @@ useEffect(() => {
     p-0
 
     /* DESKTOP (unchanged) */
-    md:static
-    md:flex
-    md:justify-center
-    md:text-[4.2rem]
-    md:[writing-mode:vertical-rl]
-    md:rotate-180
-    md:ml-[177%]
+    lg:static
+    lg:flex
+    lg:justify-center
+    lg:text-[4.2rem]
+    lg:[writing-mode:vertical-rl]
+    lg:rotate-180
+    lg:ml-[177%]
     whitespace-nowrap
   "
 >
@@ -145,12 +145,12 @@ useEffect(() => {
                   reveal
                       text-[17px]
                   sm:text-[19px]
-                  md:text-[16px]
+                  lg:text-[16px]
                   lg:text-[20px]
                   leading-[1.7]
                   mb-8
                   ml-0
-                  md:ml-[10%]
+                  lg:ml-[10%]
     
    
                 "
@@ -164,12 +164,12 @@ useEffect(() => {
                   text-left
                   text-[17px]
                   sm:text-[19px]
-                  md:text-[16px]
+                  lg:text-[16px]
                   lg:text-[20px]
                   leading-[1.7]
                   mb-8
                   ml-0
-                  md:ml-[10%]
+                  lg:ml-[10%]
                   
  
                 "
@@ -184,15 +184,15 @@ useEffect(() => {
     className="
       flex
       items-center
-      justify-center md:justify-start
+      justify-center lg:justify-start
       gap-2
       font-bold
       text-[1.6rem]
       sm:text-[1.8rem]
-      md:text-[2.2rem]
+      lg:text-[2.2rem]
 
       -ml-10        /* MOBILE only */
-      md:ml-[15%]
+      lg:ml-[15%]
 
      mb-10
       cursor-pointer

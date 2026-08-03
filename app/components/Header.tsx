@@ -121,7 +121,7 @@ export default function Header() {
       <div
         onClick={closeMenu}
         className={`
-          fixed inset-0 z-[999998] transition-all duration-[350ms] 
+          fixed inset-0 z-[999998] transition-all duration-[350ms]
           ${
             menuOpen
               ? "backdrop-blur-[5px] bg-black/25 pointer-events-auto"
@@ -151,12 +151,12 @@ export default function Header() {
         </div>
 
         {/* LINKS */}
-        <nav className="mt-[80px] sm:mt-[90px] pr-4 sm:pr-[20px] flex flex-col gap-4.5 text-right">
+        <nav className="mt-[80px] sm:mt-[90px] pr-4 sm:pr-[20px] flex flex-col gap-[14px] sm:gap-[18px] md:gap-[17px] lg:gap-[16px] xl:gap-[15px] text-right">
           <Link
             onClick={() => navigate("/")}
             href="/"
             prefetch
-            className="text-[2.6rem] font-semibold hover:text-[#813DFF]"
+            className="text-[1.6rem] sm:text-[2.6rem] md:text-[2.5rem] lg:text-[2.4rem] xl:text-[2.3rem] font-semibold hover:text-[#813DFF]"
           >
             Home
           </Link>
@@ -165,10 +165,14 @@ export default function Header() {
           <div className="flex flex-col items-end group w-full">
             <div
               onClick={mobileOpen}
-              className="flex items-center gap-1 text-[2.6rem] font-semibold cursor-pointer"
+              className="flex items-center gap-1 text-[1.6rem] sm:text-[2.6rem] md:text-[2.5rem] lg:text-[2.4rem] xl:text-[2.3rem] font-semibold cursor-pointer"
             >
               Services
-              <span className="text-[2.6rem] transition-transform duration-300 group-hover:rotate-180">
+              <span
+                className={`text-[1.6rem] sm:text-[2.6rem] md:text-[2.5rem] lg:text-[2.4rem] xl:text-[2.3rem] transition-transform duration-300 group-hover:rotate-180 ${
+                  open ? "rotate-180" : ""
+                }`}
+              >
                 <IoIosArrowDown />
               </span>
             </div>
@@ -190,7 +194,7 @@ export default function Header() {
                 onClick={() => navigate("/services/digital-marketing")}
                 href="/services/digital-marketing"
                 prefetch
-                className="text-[1.8rem] font-medium hover:text-[#813DFF]"
+                className="text-[1.2rem] sm:text-[1.8rem] md:text-[1.7rem] lg:text-[1.6rem] xl:text-[1.5rem] font-medium hover:text-[#813DFF]"
               >
                 Digital Marketing
               </Link>
@@ -199,7 +203,7 @@ export default function Header() {
                 onClick={() => navigate("/services/ad-operations")}
                 href="/services/ad-operations"
                 prefetch
-                className="mt-1 text-[1.8rem] font-medium hover:text-[#813DFF]"
+                className="mt-1 text-[1.2rem] sm:text-[1.8rem] md:text-[1.7rem] lg:text-[1.6rem] xl:text-[1.5rem] font-medium hover:text-[#813DFF]"
               >
                 Advertising Operations
               </Link>
@@ -210,7 +214,7 @@ export default function Header() {
             onClick={() => navigate("/client-success")}
             href="/client-success"
             prefetch
-            className="text-[2.6rem] font-semibold hover:text-[#813DFF]"
+            className="text-[1.6rem] sm:text-[2.6rem] md:text-[2.5rem] lg:text-[2.4rem] xl:text-[2.3rem] font-semibold hover:text-[#813DFF]"
           >
             Client Success
           </Link>
@@ -219,19 +223,26 @@ export default function Header() {
             onClick={() => navigate("/about-us")}
             href="/about-us"
             prefetch
-            className="text-[2.6rem] font-semibold hover:text-[#813DFF]"
+            className="text-[1.6rem] sm:text-[2.6rem] md:text-[2.5rem] lg:text-[2.4rem] xl:text-[2.3rem] font-semibold hover:text-[#813DFF]"
           >
             About Us
           </Link>
 
           {/* BLOGS */}
-      
+          <Link
+            onClick={() => navigate("/blogs")}
+            href="/blogs"
+            prefetch
+            className="text-[1.6rem] sm:text-[2.6rem] md:text-[2.5rem] lg:text-[2.4rem] xl:text-[2.3rem] font-semibold hover:text-[#813DFF]"
+          >
+            Blogs
+          </Link>
 
           <Link
             onClick={() => navigate("/contact-us")}
             href="/contact-us"
             prefetch
-            className="text-[2.6rem] font-semibold hover:text-[#813DFF]"
+            className="text-[1.6rem] sm:text-[2.6rem] md:text-[2.5rem] lg:text-[2.4rem] xl:text-[2.3rem] font-semibold hover:text-[#813DFF]"
           >
             Contact
           </Link>
@@ -240,7 +251,7 @@ export default function Header() {
             onClick={() => navigate("/careers")}
             href="/careers"
             prefetch
-            className="text-[2.6rem] font-semibold hover:text-[#813DFF]"
+            className="text-[1.6rem] sm:text-[2.6rem] md:text-[2.5rem] lg:text-[2.4rem] xl:text-[2.3rem] font-semibold hover:text-[#813DFF]"
           >
             Careers
           </Link>
