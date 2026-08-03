@@ -130,33 +130,20 @@ Each deal type offers a different balance of cost, control, and access, allowing
 
 ## Why Ad Exchanges Are Better Than Direct Buying
 
-### Reach a Larger Audience
-
+ 
 Access thousands of websites and apps through a single platform, making it easy to scale campaigns.
 
-### Improve Campaign Performance
+ - **Improve Campaign Performance:** Campaigns are automatically optimized using live performance data to deliver better results.
 
-Campaigns are automatically optimized using live performance data to deliver better results.
+ - **Reach the Right People:** Ads are shown to users based on their interests, browsing behavior, location, and other real-time signals.
 
-### Reach the Right People
+- **Get More Value from Your Budget:** Advertisers bid only on valuable impressions, helping reduce wasted ad spend.
 
-Ads are shown to users based on their interests, browsing behavior, location, and other real-time signals.
+ - **Track Everything Clearly:** Detailed reports provide insights into campaign performance, pricing, and inventory.
 
-### Get More Value from Your Budget
+- **Advertise Across Multiple Channels:** Run campaigns across websites, mobile apps, Connected TV (CTV), and other digital platforms from one place.
 
-Advertisers bid only on valuable impressions, helping reduce wasted ad spend.
-
-### Track Everything Clearly
-
-Detailed reports provide insights into campaign performance, pricing, and inventory.
-
-### Advertise Across Multiple Channels
-
-Run campaigns across websites, mobile apps, Connected TV (CTV), and other digital platforms from one place.
-
-## The Future of Programmatic Advertising
-
-Programmatic advertising continues to grow as privacy regulations evolve, AI becomes more advanced, and businesses rely more on first-party data. Ad exchanges will remain essential by providing transparent, data-driven, and scalable advertising solutions.
+- **The Future of Programmatic Advertising:** Programmatic advertising continues to grow as privacy regulations evolve, AI becomes more advanced, and businesses rely more on first-party data. Ad exchanges will remain essential by providing transparent, data-driven, and scalable advertising solutions.
 
 ## Conclusion
 
