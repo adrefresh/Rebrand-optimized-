@@ -6,6 +6,8 @@ date: "14/07/2026"
 readTime: ""
 coverImage: "/images/blogs/real-time-bidding.png"
 coverImageAspect: "2 / 1"
+coverImageFit: "contain"
+coverImageBg: "#0A0E23"
 tags:
   - "Real-Time Bidding"
   - "Programmatic Advertising"
@@ -38,7 +40,7 @@ Traditional media buying relied on direct negotiations, fixed contracts, and bul
 
 Real-Time Bidding transformed digital advertising by making campaign execution automated, scalable, and data-driven.
 
-**Benefits**
+### Benefits
 
 - Automated media buying
 - Smarter audience targeting
@@ -70,7 +72,7 @@ This demonstrates how RTB delivers relevant ads while improving campaign perform
 
 ## Benefits of RTB
 
-**For Advertisers**
+### For Advertisers
 
 - Better audience targeting
 - Higher campaign performance
@@ -78,14 +80,14 @@ This demonstrates how RTB delivers relevant ads while improving campaign perform
 - Better ROI
 - Access to premium inventory
 
-**For Publishers**
+### For Publishers
 
 - Higher fill rates
 - Increased revenue
 - Automated inventory sales
 - More competition for inventory
 
-**For Users**
+### For Users
 
 - Relevant advertisements
 - Better browsing experience

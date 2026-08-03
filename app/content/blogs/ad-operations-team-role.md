@@ -27,17 +27,29 @@ Ad Operations (Ad Ops) is the team that manages the technical side of digital ad
 
 ## The Role of an Ad Operations Team
 
-**Campaign Setup:** The Ad Ops team prepares campaigns by uploading creatives, setting dates, defining the target audience, managing budgets, adding tracking pixels, and scheduling ads. A proper setup helps campaigns launch smoothly without delays or technical issues.
+### Campaign Setup
 
-**Quality Assurance (QA):** The Ad Ops team checks creative sizes, landing pages, tracking, and device compatibility before a campaign goes live. These checks help avoid errors and ensure the campaign runs smoothly.
+The Ad Ops team prepares campaigns by uploading creatives, setting dates, defining the target audience, managing budgets, adding tracking pixels, and scheduling ads. A proper setup helps campaigns launch smoothly without delays or technical issues.
 
-**Campaign Monitoring:** Launching a campaign is just the beginning. Ad Operations teams continuously monitor performance to ensure campaigns stay on track. By continuously monitoring the campaign, the team can quickly identify discrepancies and optimize performance.
+### Quality Assurance (QA)
 
-**Troubleshooting Issues:** The Ad Ops team identifies and fixes issues such as low ad delivery, creative rejections, and tracking errors. They quickly find the cause and resolve problems to keep campaigns running smoothly.
+The Ad Ops team checks creative sizes, landing pages, tracking, and device compatibility before a campaign goes live. These checks help avoid errors and ensure the campaign runs smoothly.
 
-**Campaign Optimization:** Successful campaigns are continuously optimized and improvements help maximize performance while making efficient use of advertising budgets.
+### Campaign Monitoring
 
-**Reporting and Performance Analysis:** Once the campaign ends, the Ad Operations team prepares a performance report to review the results and identify areas for improvement.
+Launching a campaign is just the beginning. Ad Operations teams continuously monitor performance to ensure campaigns stay on track. By continuously monitoring the campaign, the team can quickly identify discrepancies and optimize performance.
+
+### Troubleshooting Issues
+
+The Ad Ops team identifies and fixes issues such as low ad delivery, creative rejections, and tracking errors. They quickly find the cause and resolve problems to keep campaigns running smoothly.
+
+### Campaign Optimization
+
+Successful campaigns are continuously optimized and improvements help maximize performance while making efficient use of advertising budgets.
+
+### Reporting and Performance Analysis
+
+Once the campaign ends, the Ad Operations team prepares a performance report to review the results and identify areas for improvement.
 
 ## Why Ad Operations Matters More Than Ever
 

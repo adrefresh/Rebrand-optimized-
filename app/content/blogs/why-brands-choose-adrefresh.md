@@ -48,13 +48,13 @@ By focusing on both execution and optimization, AdOps helps turn advertising inv
 
 ## Why Brands Partner with AdRefresh
 
-## Expertise That Drives Better Campaigns
+### Expertise That Drives Better Campaigns
 
 Managing digital advertising requires both technical knowledge and practical experience. At AdRefresh, our team works across multiple advertising platforms and campaign types, helping brands navigate the complexities of modern digital advertising.
 
 From campaign setup to ongoing optimization, we focus on delivering campaigns that perform efficiently and align with business objectives.
 
-## Data-Driven Decision Making
+### Data-Driven Decision Making
 
 Every successful campaign begins with understanding the data.
 
@@ -62,7 +62,7 @@ At AdRefresh, we use campaign insights and performance metrics to support inform
 
 Our goal is not just to launch campaigns—but to continuously make them better.
 
-## Continuous Campaign Optimization
+### Continuous Campaign Optimization
 
 Digital advertising is constantly evolving. Consumer behavior changes, competition shifts, and performance varies throughout the day.
 
@@ -70,7 +70,7 @@ Our AdOps team continuously monitors campaign performance, making timely adjustm
 
 This proactive approach helps brands stay competitive in an ever-changing digital environment.
 
-## Programmatic Advertising Expertise
+### Programmatic Advertising Expertise
 
 Programmatic advertising has transformed how digital media is bought and sold.
 
@@ -78,7 +78,7 @@ AdRefresh supports businesses in managing programmatic campaigns by helping opti
 
 Using automation and data-driven strategies, brands can reach the right audience while improving campaign efficiency.
 
-## Transparency at Every Stage
+### Transparency at Every Stage
 
 Trust is an essential part of every successful business relationship.
 

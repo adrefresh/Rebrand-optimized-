@@ -27,7 +27,10 @@ function BlogCard({ blog }: { blog: Blog }) {
       className="group flex flex-col rounded-2xl overflow-hidden bg-white border border-[#DADADA] hover:border-[#813DFF]/50 hover:shadow-[0_8px_40px_rgba(129,61,255,0.10)] transition-all duration-300"
     >
       {/* cover */}
-      <div className="relative w-full h-52 overflow-hidden">
+      <div
+        className="relative w-full h-52 overflow-hidden"
+        style={{ backgroundColor: blog.coverImageBg || undefined }}
+      >
         <Image
           src={blog.coverImage}
           alt={blog.title}
