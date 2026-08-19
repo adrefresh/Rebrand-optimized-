@@ -99,7 +99,7 @@ export default function RootLayout({
         <link
           rel="preload"
           as="image"
-          href="/images/client-images/hero-img.png"
+          href="/images/client-images/hero-img.webp"
         />
 
         {/* ✅ PERF FIX: Preload conference background */}

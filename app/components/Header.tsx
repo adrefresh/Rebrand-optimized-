@@ -6,7 +6,7 @@ import Link from "next/link";
 import { IoIosArrowDown } from "react-icons/io";
 import { useRouter } from "next/navigation";
 
-import WhiteLogo from "@/public/images/HeaderImages/White.png";
+import WhiteLogo from "@/public/images/HeaderImages/White-logo.webp";
 import colorLogo from "@/public/images/HeaderImages/second.svg";
 
 export default function Header() {

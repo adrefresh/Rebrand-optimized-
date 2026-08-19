@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { useEffect } from "react";
-import start from "@/public/images/HomePageImages/5stars.png";
+import start from "@/public/images/HomePageImages/5stars.webp";
 
 // ✅ PERF FIX: Removed `import conference from "..."` — we now use a native <img> tag
 // with fetchPriority="high" directly on the element. Next.js <Image priority> is silently
@@ -49,6 +49,8 @@ useEffect(() => {
 <img
   src="/images/HomePageImages/conference-40kb.webp"
   alt="AdRefresh Team"
+  width={1000}
+  height={600}
   fetchPriority="high"
   decoding="async"
   style={{

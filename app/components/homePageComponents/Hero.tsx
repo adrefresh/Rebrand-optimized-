@@ -21,7 +21,7 @@ export default function Hero() {
           loop
           playsInline
           preload="none"
-          poster="/images/client-images/hero-img.png"
+          poster="/images/client-images/hero-img.webp"
           className="absolute inset-0 w-full h-full object-cover"
           width={1920}
           height={1080}
