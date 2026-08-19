@@ -6,7 +6,14 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
 
   // ── Turbopack (Next.js 16) ───────────────────────────────────────────────
-  turbopack: {},
+  // resolveAlias strips Next's own unconditional legacy-browser polyfill
+  // module (~13-16KB) — see lib/modern-polyfill.js for the full explanation.
+  turbopack: {
+    resolveAlias: {
+      "../build/polyfills/polyfill-module": "./lib/modern-polyfill.js",
+      "next/dist/build/polyfills/polyfill-module": "./lib/modern-polyfill.js",
+    },
+  },
 
   // ── Images: must be unoptimized for static export ───────────────────────
   images: {

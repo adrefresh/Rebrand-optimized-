@@ -102,17 +102,24 @@ export default function RootLayout({
           href="/images/client-images/hero-img.webp"
         />
 
-        {/* ✅ PERF FIX: Preload conference background */}
+        {/* ✅ PERF FIX: Preload conference background — fetchPriority="high" required
+            for the "fetchpriority=high should be applied to the image preload request"
+            LCP audit (this image is the actual LCP element on mobile). */}
         <link
           rel="preload"
           as="image"
           href="/images/HomePageImages/conference-40kb.webp"
+          fetchPriority="high"
         />
 
-        {/* ✅ PERF FIX: Preconnect to third-party origins */}
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
-        <link rel="preconnect" href="https://connect.facebook.net" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://snap.licdn.com" crossOrigin="anonymous" />
+        {/* ✅ PERF FIX: Preconnect to GTM only when it's actually enabled — the
+            Meta/LinkedIn preconnects were removed entirely since nothing in this
+            codebase requests those origins directly (Lighthouse flagged both as
+            "Unused preconnect"); GTM itself only loads scripts from those origins
+            after a user grants cookie consent, so a static preconnect can't help. */}
+        {process.env.NEXT_PUBLIC_ENABLE_GTM === "true" && (
+          <link rel="preconnect" href="https://www.googletagmanager.com" />
+        )}
 
         {/* ORGANIZATION STRUCTURED DATA */}
         <script
