@@ -4,7 +4,7 @@ excerpt: "Discover what an Ad Operations team really does — from campaign setu
 category: "Ad Operations"
 date: "22/07/2026"
 readTime: ""
-coverImage: "/images/blogs/ad-operations-teamwork.png"
+coverImage: "/images/blogs/ad-operations-teamwork.webp"
 coverImageAspect: "3 / 2"
 tags:
   - "Ad Operations"

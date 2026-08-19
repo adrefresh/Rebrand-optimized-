@@ -4,7 +4,7 @@ excerpt: "Discover how AI is transforming Google Ads and Meta Ads in 2026. Learn
 category: "AI Advertising"
 date: "09/07/2026"
 readTime: ""
-coverImage: "/images/blogs/ai-advertising.jpg"
+coverImage: "/images/blogs/ai-advertising.webp"
 tags:
   - "AI Advertising"
   - "Google Ads"
