@@ -4,7 +4,7 @@ excerpt: "Learn how ad operations works in the AI advertising era, including pro
 category: "Ad Operations"
 date: "24/06/2026"
 readTime: "8 min read"
-coverImage: "/images/blogs/ai-powered.png"
+coverImage: "/images/blogs/ai-powered.webp"
 tags:
   - "Ad Operations"
   - "AI Advertising"

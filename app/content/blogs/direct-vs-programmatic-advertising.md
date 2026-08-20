@@ -4,7 +4,7 @@ excerpt: "Learn the key differences between direct and programmatic advertising,
 category: "Programmatic Advertising"
 date: "01/07/2026"
 readTime: "10 min read"
-coverImage: "/images/blogs/direct-vs-prog.png"
+coverImage: "/images/blogs/direct-vs-prog.webp"
 tags:
   - "Programmatic Advertising"
   - "Ad Exchanges"

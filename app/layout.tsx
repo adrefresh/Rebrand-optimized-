@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { preload, preconnect } from "react-dom";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -70,6 +71,22 @@ export default function RootLayout({
 
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "https://www.adrefresh.com";
 
+  // ✅ PERF FIX: use React 19's resource-preloading API instead of hand-written
+  // <link rel="preload"> tags in <head>. Manually-written <link> elements get
+  // auto-hoisted by React's own resource system *in addition to* rendering in
+  // place, producing two copies of the same preload in the final HTML —
+  // wasted bytes on every page load. preload()/preconnect() register with
+  // that same system directly, so React dedupes correctly and only one tag
+  // is ever emitted.
+  preload("/images/client-images/hero-img.webp", { as: "image" });
+  preload("/images/HomePageImages/conference-40kb.webp", {
+    as: "image",
+    fetchPriority: "high",
+  });
+  if (process.env.NEXT_PUBLIC_ENABLE_GTM === "true") {
+    preconnect("https://www.googletagmanager.com");
+  }
+
   return (
     <html
       lang="en"
@@ -95,24 +112,11 @@ export default function RootLayout({
           }}
         />
 
-        {/* ✅ PERF FIX: Preload hero poster using stable public path */}
-        <link
-          rel="preload"
-          as="image"
-          href="/images/client-images/hero-img.png"
-        />
+        {/* ✅ PERF FIX: hero poster + conference-background preloads, and the GTM
+            preconnect, are now registered via React's preload()/preconnect()
+            API above (see comment there) instead of raw <link> tags — this
+            avoids the double-preload bug that a hand-written <link> caused. */}
 
-        {/* ✅ PERF FIX: Preload conference background */}
-        <link
-          rel="preload"
-          as="image"
-          href="/images/HomePageImages/conference-40kb.webp"
-        />
-
-        {/* ✅ PERF FIX: Preconnect to third-party origins */}
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
-        <link rel="preconnect" href="https://connect.facebook.net" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://snap.licdn.com" crossOrigin="anonymous" />
 
         {/* ORGANIZATION STRUCTURED DATA */}
         <script

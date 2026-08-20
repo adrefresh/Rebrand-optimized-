@@ -1,10 +1,10 @@
 ---
 title: "Behind Every Successful Campaign: What an Ad Operations Team Really Does"
-excerpt: "Discover what an Ad Operations team really does — from campaign setup and quality assurance to monitoring, troubleshooting, and reporting — and why their work is essential to every successful digital ad campaign."
+excerpt: "Discover what an Ad Operations team really does-from campaign setup and quality assurance to monitoring, troubleshooting, and reporting-and why their work is essential to every successful digital ad campaign."
 category: "Ad Operations"
 date: "22/07/2026"
 readTime: ""
-coverImage: "/images/blogs/ad-operations-teamwork.png"
+coverImage: "/images/blogs/ad-operations-teamwork.webp"
 coverImageAspect: "3 / 2"
 tags:
   - "Ad Operations"

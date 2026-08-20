@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
+import { getAllBlogsMeta } from '../../libraries/blogs';
 
 export const dynamic = 'force-static';
 
@@ -106,17 +107,15 @@ export async function GET() {
         }))
       : [];
 
-  // blogs.json is also an array — same treatment
-  const blogsPath = path.join(APP_DIR, 'json-data', 'blogs.json');
-  type BlogEntry = { slug: string; title: string; excerpt?: string };
+  // Blog posts live as markdown files in app/content/blogs/ — read via
+  // getAllBlogsMeta() (same source of truth sitemap.ts uses), not the
+  // separate blogs.json file, which is stale and only tracks 1 of the posts.
   const blogRoutes: Array<{ route: string; title: string; description: string }> =
-    fs.existsSync(blogsPath)
-      ? (JSON.parse(fs.readFileSync(blogsPath, 'utf8')) as BlogEntry[]).map((entry) => ({
-          route: `/blogs/${entry.slug}`,
-          title: entry.title,
-          description: entry.excerpt ?? '',
-        }))
-      : [];
+    getAllBlogsMeta().map((blog) => ({
+      route: `/blogs/${blog.slug}`,
+      title: blog.title,
+      description: blog.excerpt ?? '',
+    }));
 
   const content = [
     `# AdRefresh`,

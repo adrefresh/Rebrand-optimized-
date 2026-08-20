@@ -179,8 +179,10 @@ const cases = [
     <button
       key={i}
       type="button"
+      role="tab"
       aria-label={`Go to case study ${i + 1}`}
-      aria-current={index === i}
+      aria-selected={index === i}
+      tabIndex={index === i ? 0 : -1}
       onClick={() => setIndex(i)}
       className="
         flex items-center justify-center
