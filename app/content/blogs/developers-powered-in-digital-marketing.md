@@ -1,7 +1,7 @@
 ---
 title: "How Developers Build Internal Tools That Power Digital Marketing"
 excerpt: "Discover how developers support digital marketing and AdOps with dashboards, reporting systems, lead management, automation, and ad performance monitoring tools."
-category: "Ad Operations"
+category: "Web Development"
 date: "25/07/2026"
 readTime: "7 min read"
 coverImage: "/images/blogs/developer-powered-in-dm.png"
@@ -12,7 +12,10 @@ tags:
   - "Internal Tools"
   - "Next.js"
   - "MarTech"
+ctaTitle: "Build Smarter Marketing Workflows"
+ctaText: "From campaign dashboards and automated reporting to lead management and AdOps monitoring, the right web applications can make your marketing operations faster and more efficient. Let’s build solutions that work for your business."
 ---
+
 
 Digital marketing teams work with campaign data, leads, advertisements, reports, and performance metrics every day. Managing all of this information manually can become difficult as campaigns and operations grow.
 
@@ -154,13 +157,13 @@ Developers can look at existing marketing processes and identify repetitive step
 
 For example:
 
-**Manual Process**
+**Manual Process :-**
 
-Collect data → Update spreadsheet → Calculate metrics → Create report → Send report
+>Collect data → Update spreadsheet → Calculate metrics → Create report → Send report
 
-**Improved Workflow**
+**Improved Workflow :-**
 
-Data collection → Automated processing → Dashboard → Report generation
+>Data collection → Automated processing → Dashboard → Report generation
 
 The result is less manual work and a more efficient workflow for the marketing team.
 
