@@ -59,7 +59,9 @@ vanshika:
   name: "Vanshika"
   role: "Ad Operations Professional"
   avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZjRzh4cB2lg4zaCJZjr0qd5wBPFpoLnckncZE3cJdgg&s=10"
-  posts: []
+  posts:
+    - "will-ai-replace-digital-marketers"
+    - "how-do-tracking-pixels-work"
 saivachavai:
   name: "Sai Vachavai"
   role: "Digital Media Strategist"
@@ -69,7 +71,8 @@ revanth:
   name: "Revanth"
   role: "Full Stack Developer"
   avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZjRzh4cB2lg4zaCJZjr0qd5wBPFpoLnckncZE3cJdgg&s=10"
-  posts: []
+  posts:
+    - "developers-powered-in-digital-marketing"
 ---
 This file is the single source of truth for both employee details AND which
 posts they wrote. A blog post's own .md file has no author field at all —
